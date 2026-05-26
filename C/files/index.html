@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NY Rental Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="2" y="8" width="7" height="10" rx="1" fill="white"/>
+          <rect x="11" y="4" width="7" height="14" rx="1" fill="rgba(255,255,255,0.7)"/>
+          <rect x="4" y="3" width="4" height="3" rx="0.5" fill="rgba(255,255,255,0.5)"/>
+        </svg>
+      </div>
+      <div>
+        <h1>NY Rental Map</h1>
+        <p>NYC · NJ · Long Island</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="map-style-toggle" id="mapStyleToggle">
+        <button class="style-btn active" data-style="light" title="Light map">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M8 5v6M5 8h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Map
+        </button>
+        <button class="style-btn" data-style="satellite" title="Satellite">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>
+          Satellite
+        </button>
+        <button class="style-btn" data-style="osm" title="Street map">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12 L6 5 L10 9 L14 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Street
+        </button>
+      </div>
+      <div class="unit-count" id="unitCount">— listings</div>
+    </div>
+  </header>
+
+  <main class="layout" id="layout">
+    <section class="mapWrap">
+      <div id="map"></div>
+
+      <!-- Nearby toolbar floating at bottom of map -->
+      <div class="nearbyToolbar hidden" id="nearbyToolbar">
+        <div class="toolbarInfo">
+          <span class="toolbarLabel">📍 Nearby</span>
+          <strong id="toolbarBuilding">Select a building</strong>
+        </div>
+        <div class="toolbarDivider"></div>
+        <div class="toolbarActions">
+          <button class="toolbar-btn" data-nearby-toolbar="restaurant">
+            <span class="btn-icon">🍽</span>Restaurants
+          </button>
+          <button class="toolbar-btn" data-nearby-toolbar="store">
+            <span class="btn-icon">🛒</span>Stores
+          </button>
+          <button class="toolbar-btn" data-nearby-toolbar="subway">
+            <span class="btn-icon">🚇</span>Subway
+          </button>
+          <button class="toolbar-btn ghost" data-nearby-toolbar="clear">
+            <span class="btn-icon">✕</span>Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading overlay -->
+      <div class="mapOverlay hidden" id="mapOverlay">
+        <div class="loadingCard">
+          <div class="loadingSpinner"></div>
+          <span>Loading map data…</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="detailPanel hidden" id="detailPanel">
+      <div class="panelHeader">
+        <button class="closeBtn" id="closeDetail" aria-label="Close panel">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div id="detailContent"></div>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
