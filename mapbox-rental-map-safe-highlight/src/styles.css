@@ -15,11 +15,12 @@ button { font: inherit; }
 .mapboxgl-ctrl-top-left { top: 88px !important; left: 18px !important; }
 .hint-card { position: absolute; left: 18px; bottom: 24px; z-index: 10; background: rgba(255,255,255,.94); border: 1px solid rgba(15,23,42,.12); border-radius: 16px; padding: 11px 13px; box-shadow: 0 12px 30px rgba(15,23,42,.13); color: #475569; font-size: 12px; line-height: 1.45; }
 .hint-card strong { color: #111827; font-size: 16px; }
-.building-marker { position: relative; width: 44px; height: 62px; border: 0; background: transparent; padding: 0; cursor: pointer; transform: translateY(0); transition: transform .16s ease, filter .16s ease; }
+.building-marker { position: relative; width: 40px; height: 52px; border: 0; background: transparent; padding: 0; cursor: pointer; transform: translateY(0); transition: transform .2s ease, filter .2s ease; }
 .building-marker.hover, .building-marker:hover { transform: translateY(-4px) scale(1.04); filter: drop-shadow(0 12px 18px rgba(15,23,42,.25)); }
-.building-marker.active { transform: translateY(-5px) scale(1.10); filter: drop-shadow(0 16px 24px rgba(245,158,11,.48)); }
-.bldg-top { position: absolute; left: 9px; top: 0; width: 26px; height: 10px; background: #4b5563; transform: skewX(-26deg); border-radius: 4px 4px 1px 1px; }
-.bldg-body { position: absolute; left: 7px; top: 9px; width: 30px; height: 42px; background: linear-gradient(145deg, #6b7280 0%, #9ca3af 100%); border: 1px solid rgba(17,24,39,.28); border-radius: 4px 4px 7px 7px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 7px 6px; box-shadow: inset -5px 0 0 rgba(17,24,39,.15); }
+.building-marker.active { transform: translateY(-6px) scale(1.12); filter: drop-shadow(0 18px 28px rgba(245,158,11,.52)); animation: markerPulse 1.9s ease-in-out infinite; }
+@keyframes markerPulse { 0%,100% { filter: drop-shadow(0 18px 28px rgba(245,158,11,.40)); } 50% { filter: drop-shadow(0 24px 34px rgba(245,158,11,.66)); } }
+.bldg-top { position: absolute; left: 8px; top: 0; width: 24px; height: 9px; background: #4b5563; transform: skewX(-26deg); border-radius: 4px 4px 1px 1px; }
+.bldg-body { position: absolute; left: 6px; top: 8px; width: 28px; height: 34px; background: linear-gradient(145deg, #6b7280 0%, #9ca3af 100%); border: 1px solid rgba(17,24,39,.28); border-radius: 4px 4px 7px 7px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 7px 6px; box-shadow: inset -5px 0 0 rgba(17,24,39,.15); }
 .bldg-body i { background: rgba(255,255,255,.72); border-radius: 2px; min-height: 5px; }
 .building-marker.active .bldg-top { background: #b45309; }
 .building-marker.active .bldg-body { background: linear-gradient(145deg, #f59e0b 0%, #fbbf24 100%); border-color: rgba(120,53,15,.5); box-shadow: inset -5px 0 0 rgba(120,53,15,.18); }
@@ -71,3 +72,13 @@ button { font: inherit; }
   .nearby-toolbar { left: 10px; right: 10px; transform: none; bottom: 12px; overflow-x: auto; justify-content: flex-start; border-radius: 18px; }
   .hint-card { display: none; }
 }
+
+
+.cluster-popup .mapboxgl-popup-content { background: transparent; box-shadow: none; padding: 0; }
+.cluster-popup .mapboxgl-popup-tip { display: none; }
+.cluster-chip { border: 0; border-radius: 999px; background: #111827; color: #fff; padding: 8px 14px; font-weight: 800; box-shadow: 0 10px 20px rgba(17,24,39,.24); cursor: pointer; }
+.cluster-chip:hover { background: #1d4ed8; }
+
+.building-marker.mini { width: 14px; height: 14px; border-radius: 999px; background: #334155; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(15,23,42,.25); }
+.building-marker.mini .bldg-top, .building-marker.mini .bldg-body, .building-marker.mini .bldg-price { display: none; }
+.building-marker.mini:hover, .building-marker.mini.hover { transform: none; filter: none; }
