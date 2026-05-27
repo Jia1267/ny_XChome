@@ -13,8 +13,9 @@ const MAP_STYLES = {
 
 const NYC_CENTER = [-73.97, 40.76];
 const OVERVIEW_ZOOM = 9.6;
-const BUILDING_ZOOM = 17;
-const MAX_BUILDING_HIGHLIGHT_DISTANCE_METERS = 85;
+const BUILDING_ZOOM = 17.2;
+const BUILDING_FOCUS_ZOOM = 18;
+const MAX_BUILDING_HIGHLIGHT_DISTANCE_METERS = 65;
 const OVERPASS_ENDPOINT = 'https://overpass-api.de/api/interpreter';
 
 function splitCSVLine(line) {
@@ -60,6 +61,8 @@ function groupListings(rows) {
         amenities: r.amenities || 'Ask leasing office',
         nearby: r.nearby || '',
         height: Number(r.height) || 110,
+        highlight_lat: Number(r.highlight_lat),
+        highlight_lng: Number(r.highlight_lng),
         units: []
       });
     }
@@ -268,7 +271,7 @@ function App() {
       style: MAP_STYLES[mapStyle],
       center: NYC_CENTER,
       zoom: OVERVIEW_ZOOM,
-      pitch: 0,
+      pitch: 8,
       bearing: 0,
       antialias: true,
       cooperativeGestures: false,
@@ -280,6 +283,7 @@ function App() {
     map.on('load', () => {
       setReady(true);
       map.resize();
+      applyZillow3DLook(map);
       addMapbox3DBuildings(map);
     });
 
@@ -287,6 +291,7 @@ function App() {
       setReady(true);
       setTimeout(() => {
         map.resize();
+        applyZillow3DLook(map);
         addMapbox3DBuildings(map);
         addOpenRailwayLayer(false);
       }, 80);
@@ -338,6 +343,28 @@ function App() {
     }, 260);
   }, [mapStyle]);
 
+
+  function applyZillow3DLook(map) {
+    if (!map) return;
+    try {
+      map.setFog({
+        color: 'rgb(244,247,252)',
+        'high-color': 'rgb(225,235,250)',
+        'horizon-blend': 0.06,
+        'space-color': 'rgb(240,245,255)',
+        'star-intensity': 0
+      });
+      map.setLight({
+        anchor: 'viewport',
+        color: '#ffffff',
+        intensity: 0.42,
+        position: [1.2, 180, 28]
+      });
+    } catch (e) {
+      console.warn('Could not set 3D atmosphere', e);
+    }
+  }
+
   function addMapbox3DBuildings(map) {
     if (!map || map.getLayer('mapbox-grey-3d-buildings')) return;
     const style = map.getStyle();
@@ -350,19 +377,21 @@ function App() {
       'source-layer': 'building',
       filter: ['==', ['get', 'extrude'], 'true'],
       type: 'fill-extrusion',
-      minzoom: 14,
+      minzoom: 15,
       paint: {
         'fill-extrusion-color': '#b8bcc4',
-        'fill-extrusion-opacity': 0.72,
+        'fill-extrusion-opacity': 0.06,
         'fill-extrusion-height': [
           'interpolate', ['linear'], ['zoom'],
-          14, 0,
-          14.6, ['coalesce', ['get', 'height'], 18]
+          15, 0,
+          17, ['*', 0.15, ['coalesce', ['get', 'height'], 18]],
+          18.5, ['*', 0.25, ['coalesce', ['get', 'height'], 18]]
         ],
         'fill-extrusion-base': [
           'interpolate', ['linear'], ['zoom'],
-          14, 0,
-          14.6, ['coalesce', ['get', 'min_height'], 0]
+          15, 0,
+          17, ['*', 0.15, ['coalesce', ['get', 'min_height'], 0]],
+          18.5, ['*', 0.25, ['coalesce', ['get', 'min_height'], 0]]
         ]
       }
     }, labelLayerId);
@@ -421,6 +450,33 @@ function App() {
     selectedBuildingFeatureRef.current = feature;
   }
 
+  function createFallbackTowerFeature(anchor, b) {
+    const meters = 18;
+    const dLat = meters / 111320;
+    const dLng = meters / (111320 * Math.cos(anchor.lat * Math.PI / 180));
+    return {
+      type: 'Feature',
+      geometry: {
+        type: 'Polygon',
+        coordinates: [[
+          [anchor.lng - dLng, anchor.lat - dLat],
+          [anchor.lng + dLng, anchor.lat - dLat],
+          [anchor.lng + dLng, anchor.lat + dLat],
+          [anchor.lng - dLng, anchor.lat + dLat],
+          [anchor.lng - dLng, anchor.lat - dLat]
+        ]]
+      },
+      properties: { height: Number(b?.height) || 120, min_height: 0 }
+    };
+  }
+
+  function getHighlightAnchor(b) {
+    const hlLat = Number(b.highlight_lat);
+    const hlLng = Number(b.highlight_lng);
+    if (Number.isFinite(hlLat) && Number.isFinite(hlLng)) return { lat: hlLat, lng: hlLng };
+    return { lat: b.lat, lng: b.lng };
+  }
+
   function highlightNearestMapboxBuilding(b) {
     const map = mapRef.current;
     if (!map || !b || !map.getLayer('mapbox-grey-3d-buildings')) return;
@@ -428,7 +484,8 @@ function App() {
     // Keep the marker at the exact CSV coordinate. Do NOT snap it to a random
     // Mapbox building center, because nearby buildings can be ambiguous and can
     // move NJ/LIC buildings to the wrong place.
-    const centerPoint = map.project([b.lng, b.lat]);
+    const anchor = getHighlightAnchor(b);
+    const centerPoint = map.project([anchor.lng, anchor.lat]);
     const radii = [18, 30, 44, 58];
     let candidates = [];
 
@@ -441,7 +498,7 @@ function App() {
     }
 
     if (!candidates.length) {
-      clearSelectedBuildingHighlight();
+      addSelectedBuildingHighlight(createFallbackTowerFeature(anchor, b));
       return;
     }
 
@@ -451,7 +508,7 @@ function App() {
       const c = centroidOfGeometry(f.geometry);
       if (!c) continue;
       const meters = distanceMeters(
-        { lat: b.lat, lng: b.lng },
+        { lat: anchor.lat, lng: anchor.lng },
         { lat: c[1], lng: c[0] }
       );
       if (meters < bestMeters) {
@@ -464,8 +521,8 @@ function App() {
     // highlight it. This prevents the selected NJ building from jumping/highlighting
     // a wrong building in Long Island or another area.
     if (!best || bestMeters > MAX_BUILDING_HIGHLIGHT_DISTANCE_METERS) {
-      clearSelectedBuildingHighlight();
-      console.warn(`No safe Mapbox building match for ${b.name}. Nearest was ${Math.round(bestMeters)}m away.`);
+      addSelectedBuildingHighlight(createFallbackTowerFeature(anchor, b));
+      console.warn(`Fallback 3D tower for ${b.name}. Nearest base building was ${Math.round(bestMeters)}m away.`);
       return;
     }
 
@@ -553,7 +610,7 @@ function App() {
     map.fitBounds(bounds, {
       padding: { top: 110, bottom: 110, left: 110, right: 110 },
       maxZoom: 10.8,
-      pitch: 0,
+      pitch: 8,
       bearing: 0,
       duration
     });
@@ -562,16 +619,30 @@ function App() {
   function flyToBuilding(b) {
     const map = mapRef.current;
     if (!map) return;
-    map.flyTo({
+    map.easeTo({
       center: [b.lng, b.lat],
       zoom: BUILDING_ZOOM,
-      pitch: 58,
-      bearing: -22,
-      duration: 850,
+      pitch: 52,
+      bearing: -16,
+      padding: { top: 80, bottom: 90, left: 70, right: 420 },
+      duration: 900,
+      easing: t => 1 - Math.pow(1 - t, 3),
       essential: true
     });
-    // The 3D building layer must be rendered before queryRenderedFeatures can find the building shape.
-    setTimeout(() => highlightNearestMapboxBuilding(b), 950);
+
+    setTimeout(() => {
+      map.easeTo({
+        center: [b.lng, b.lat],
+        zoom: BUILDING_FOCUS_ZOOM,
+        pitch: 60,
+        bearing: -18,
+        padding: { top: 80, bottom: 90, left: 70, right: 420 },
+        duration: 760,
+        easing: t => 1 - Math.pow(1 - t, 4),
+        essential: true
+      });
+      highlightNearestMapboxBuilding(b);
+    }, 520);
   }
 
   function selectBuilding(b) {
