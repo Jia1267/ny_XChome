@@ -1,0 +1,12 @@
+v8: Subway markers are hidden by default.
+
+Default map shows buildings + universities + restaurants/groceries/malls/community POIs.
+Subway stations only appear after clicking the Subway button for a selected building.
+
+Run:
+python -m http.server 5500
+
+Open:
+http://localhost:5500/?v=final-good-v8-hide-default-subway
+
+Press Ctrl+Shift+R if Chrome keeps old cache.
