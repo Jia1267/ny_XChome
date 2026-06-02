@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NY Rental Map · Student Housing Search</title>
+  <meta name="description" content="A polished Leaflet-based NYC rental map for students and new renters." />
+
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://a.basemaps.cartocdn.com" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="appShell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NY Rental Map home">
+        <span class="brandMark">NY</span>
+        <span>
+          <strong>NY Rental Map</strong>
+          <small>Student-friendly apartment discovery</small>
+        </span>
+      </a>
+
+      <form class="searchBar" id="searchForm" autocomplete="off">
+        <span class="searchIcon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search building, neighborhood, school, address" />
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="quickSchools" aria-label="Quick school filters">
+        <button type="button" data-school="columbia">Columbia</button>
+        <button type="button" data-school="nyu">NYU</button>
+        <button type="button" data-school="baruch">Baruch</button>
+        <button type="button" data-school="clear">All</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="listPanel" aria-label="Rental results">
+        <section class="filterCard">
+          <div class="filterHeader">
+            <div>
+              <span class="eyebrow">NYC rentals</span>
+              <h1>Find a place near school</h1>
+            </div>
+            <button class="ghostButton" type="button" id="resetFilters">Reset</button>
+          </div>
+
+          <div class="filtersGrid">
+            <label>
+              Area
+              <select id="areaFilter">
+                <option value="">All areas</option>
+              </select>
+            </label>
+            <label>
+              Bedrooms
+              <select id="bedFilter">
+                <option value="">Any beds</option>
+                <option value="0">Studio</option>
+                <option value="1">1 bed</option>
+                <option value="2">2+ beds</option>
+              </select>
+            </label>
+            <label>
+              Max rent
+              <select id="rentFilter">
+                <option value="">No max</option>
+                <option value="2500">$2,500</option>
+                <option value="3500">$3,500</option>
+                <option value="4500">$4,500</option>
+                <option value="6000">$6,000</option>
+              </select>
+            </label>
+            <label>
+              Sort
+              <select id="sortFilter">
+                <option value="recommended">Recommended</option>
+                <option value="rentAsc">Rent low to high</option>
+                <option value="unitsDesc">Most availability</option>
+                <option value="nameAsc">Building name</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <div class="resultsHeader">
+          <strong id="resultCount">Loading...</strong>
+          <span id="dataSummary">Preparing map data</span>
+        </div>
+
+        <div class="listingList" id="listingList" aria-live="polite"></div>
+      </aside>
+
+      <section class="mapPanel" aria-label="Interactive rental map">
+        <div id="map"></div>
+
+        <div class="mapFloatingCard mapModeCard">
+          <span>Map view</span>
+          <button type="button" data-map-mode="rent" class="active">Rent</button>
+          <button type="button" data-map-mode="school">Schools</button>
+          <button type="button" data-map-mode="life">Life</button>
+        </div>
+
+        <div class="nearbyToolbar hidden" id="nearbyToolbar">
+          <div class="nearbyTitle">
+            <span>Nearby</span>
+            <strong id="nearbyBuildingName">Select a building</strong>
+          </div>
+          <div class="nearbyActions">
+            <button type="button" data-nearby="subway">🚇 Subway</button>
+            <button type="button" data-nearby="chineseStore">🛒 Grocery</button>
+            <button type="button" data-nearby="chineseFood">🍜 Food</button>
+            <button type="button" data-nearby="university">🎓 Schools</button>
+            <button type="button" data-nearby="clear" class="ghost">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="detailDrawer hidden" id="detailDrawer" aria-label="Selected building details">
+        <button class="closeDrawer" type="button" id="closeDrawer" aria-label="Close details">×</button>
+        <div id="detailContent"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
