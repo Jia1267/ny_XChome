@@ -1,0 +1,307 @@
+poi_id,building_id,category,name,address,distance_miles,lat,lng,notes,source_url,source_last_checked
+poi_3,10_hanover_square,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",2.27,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_4,10_hanover_square,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.20,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_1,10_hanover_square,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",0.35,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_2,10_hanover_square,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",0.96,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_6,10_hanover_square,school,Pace University,"1 Pace Plaza, New York, NY 10038",0.52,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_7,10_hanover_square,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",1.64,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_5,10_hanover_square,shopping_mall,Westfield World Trade Center,"185 Greenwich St, New York, NY 10007",0.50,40.7115,-74.0113,Shopping center; fallback POI,https://www.westfield.com/united-states/worldtradecenter,2026-05-28
+poi_8,10_hanover_square,transit,Fulton Street Station,"Fulton St, New York, NY",0.41,40.7104,-74.0084,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_9,10_hanover_square,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",2.07,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_12,1214_fifth_avenue,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",1.94,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_13,1214_fifth_avenue,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",2.93,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_10,1214_fifth_avenue,chinese_restaurant,Xi'an Famous Foods - Columbia University,"2814 Broadway, New York, NY 10025",1.13,40.8039,-73.9662,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_11,1214_fifth_avenue,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.64,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_15,1214_fifth_avenue,school,Columbia University,"116th St & Broadway, New York, NY 10027",1.23,40.8075,-73.9626,University; fallback POI,https://www.columbia.edu/,2026-05-28
+poi_16,1214_fifth_avenue,school,The City College of New York,"160 Convent Ave, New York, NY 10031",1.95,40.8196,-73.9495,College; fallback POI,https://www.ccny.cuny.edu/,2026-05-28
+poi_14,1214_fifth_avenue,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",3.06,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_17,1214_fifth_avenue,transit,116 St-Columbia University Station,"Broadway & W 116th St, New York, NY",1.28,40.8077,-73.9641,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_18,1214_fifth_avenue,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",2.89,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_21,1440,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",3.30,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_22,1440,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",4.78,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_19,1440,chinese_restaurant,Xi'an Famous Foods - Columbia University,"2814 Broadway, New York, NY 10025",1.19,40.8039,-73.9662,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_20,1440,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",2.96,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_24,1440,school,The City College of New York,"160 Convent Ave, New York, NY 10031",0.26,40.8196,-73.9495,College; fallback POI,https://www.ccny.cuny.edu/,2026-05-28
+poi_25,1440,school,Columbia University,"116th St & Broadway, New York, NY 10027",0.88,40.8075,-73.9626,University; fallback POI,https://www.columbia.edu/,2026-05-28
+poi_23,1440,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",4.91,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_26,1440,transit,116 St-Columbia University Station,"Broadway & W 116th St, New York, NY",0.91,40.8077,-73.9641,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_27,1440,transit,Times Sq-42 St Station,"Times Square, New York, NY",4.70,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_30,21_chelsea,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.56,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_31,21_chelsea,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.57,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_28,21_chelsea,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",1.83,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_29,21_chelsea,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.06,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_33,21_chelsea,school,Baruch College,"55 Lexington Ave, New York, NY 10010",0.56,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_34,21_chelsea,school,Pace University,"1 Pace Plaza, New York, NY 10038",2.18,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_32,21_chelsea,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.92,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_35,21_chelsea,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.99,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_36,21_chelsea,transit,Fulton Street Station,"Fulton St, New York, NY",2.30,40.7104,-74.0084,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_39,235_grand,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.42,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_40,235_grand,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.60,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_37,235_grand,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.10,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_38,235_grand,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.87,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_42,235_grand,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.15,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_43,235_grand,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.25,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_41,235_grand,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.77,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_44,235_grand,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.24,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_45,235_grand,transit,Newport PATH,"Newport, Jersey City, NJ",0.88,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_48,47_05_center_boulevard,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.95,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_49,47_05_center_boulevard,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",1.58,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_46,47_05_center_boulevard,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.21,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_47,47_05_center_boulevard,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",2.71,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_51,47_05_center_boulevard,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",1.10,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_52,47_05_center_boulevard,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.47,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_50,47_05_center_boulevard,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.93,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_53,47_05_center_boulevard,transit,Court Square Station,"Court Square, Long Island City, NY",0.60,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_54,47_05_center_boulevard,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.91,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_57,555ten,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.92,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_58,555ten,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.94,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_55,555ten,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.76,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_56,555ten,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.48,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_60,555ten,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.46,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_61,555ten,school,Pace University,"1 Pace Plaza, New York, NY 10038",3.28,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_59,555ten,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.38,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_62,555ten,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.55,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_63,555ten,transit,Court Square Station,"Court Square, Long Island City, NY",2.85,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_66,70_greene_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.71,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_67,70_greene_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.45,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_64,70_greene_apartments,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.36,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_65,70_greene_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.57,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_69,70_greene_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.07,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_70,70_greene_apartments,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.17,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_68,70_greene_apartments,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.85,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_71,70_greene_apartments,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.50,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_72,70_greene_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",0.91,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_75,71_broadway_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",2.05,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_76,71_broadway_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.08,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_73,71_broadway_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",0.30,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_74,71_broadway_apartments,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",0.93,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_78,71_broadway_apartments,school,Pace University,"1 Pace Plaza, New York, NY 10038",0.46,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_79,71_broadway_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",1.41,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_77,71_broadway_apartments,shopping_mall,Westfield World Trade Center,"185 Greenwich St, New York, NY 10007",0.28,40.7115,-74.0113,Shopping center; fallback POI,https://www.westfield.com/united-states/worldtradecenter,2026-05-28
+poi_80,71_broadway_apartments,transit,Fulton Street Station,"Fulton St, New York, NY",0.28,40.7104,-74.0084,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_81,71_broadway_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",1.82,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_84,777_6th_avenue_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.32,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_85,777_6th_avenue_apartments,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.32,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_82,777_6th_avenue_apartments,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",1.93,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_83,777_6th_avenue_apartments,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",2.06,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_87,777_6th_avenue_apartments,school,Baruch College,"55 Lexington Ave, New York, NY 10010",0.53,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_88,777_6th_avenue_apartments,school,Pace University,"1 Pace Plaza, New York, NY 10038",2.43,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_86,777_6th_avenue_apartments,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.81,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_89,777_6th_avenue_apartments,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.74,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_90,777_6th_avenue_apartments,transit,Court Square Station,"Court Square, Long Island City, NY",2.43,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_93,95_wall,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",2.34,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_94,95_wall,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.17,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_91,95_wall,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",0.33,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_92,95_wall,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",0.91,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_96,95_wall,school,Pace University,"1 Pace Plaza, New York, NY 10038",0.49,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_97,95_wall,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",1.71,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_95,95_wall,shopping_mall,Westfield World Trade Center,"185 Greenwich St, New York, NY 10007",0.52,40.7115,-74.0113,Shopping center; fallback POI,https://www.westfield.com/united-states/worldtradecenter,2026-05-28
+poi_98,95_wall,transit,Fulton Street Station,"Fulton St, New York, NY",0.40,40.7104,-74.0084,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_99,95_wall,transit,Newport PATH,"Newport, Jersey City, NJ",2.12,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_102,columbus_square,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",1.55,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_103,columbus_square,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",3.39,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_100,columbus_square,chinese_restaurant,Xi'an Famous Foods - Columbia University,"2814 Broadway, New York, NY 10025",0.64,40.8039,-73.9662,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_101,columbus_square,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.21,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_105,columbus_square,school,Columbia University,"116th St & Broadway, New York, NY 10027",0.91,40.8075,-73.9626,University; fallback POI,https://www.columbia.edu/,2026-05-28
+poi_106,columbus_square,school,The City College of New York,"160 Convent Ave, New York, NY 10031",1.94,40.8196,-73.9495,College; fallback POI,https://www.ccny.cuny.edu/,2026-05-28
+poi_104,columbus_square,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",3.35,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_107,columbus_square,transit,116 St-Columbia University Station,"Broadway & W 116th St, New York, NY",0.91,40.8077,-73.9641,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_108,columbus_square,transit,Times Sq-42 St Station,"Times Square, New York, NY",2.93,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_111,eagle_lofts,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.22,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_112,eagle_lofts,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.44,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_109,eagle_lofts,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.83,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_110,eagle_lofts,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",3.14,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_114,eagle_lofts,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.28,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_115,eagle_lofts,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.34,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_113,eagle_lofts,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.11,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_116,eagle_lofts,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.25,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_117,eagle_lofts,transit,Court Square Station,"Court Square, Long Island City, NY",0.28,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_120,haus25,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.59,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_121,haus25,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.42,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_118,haus25,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.17,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_119,haus25,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.74,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_123,haus25,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.20,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_124,haus25,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.22,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_122,haus25,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.66,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_125,haus25,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.29,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_126,haus25,transit,Newport PATH,"Newport, Jersey City, NJ",0.74,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_129,hayden,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.24,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_130,hayden,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.30,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_127,hayden,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.72,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_128,hayden,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",3.01,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_132,hayden,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.42,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_133,hayden,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.21,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_131,hayden,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.19,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_134,hayden,transit,Court Square Station,"Court Square, Long Island City, NY",0.15,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_135,hayden,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.23,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_138,hudson_crossing_apartments,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.67,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_139,hudson_crossing_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.70,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_136,hudson_crossing_apartments,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.90,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_137,hudson_crossing_apartments,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.28,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_141,hudson_crossing_apartments,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.20,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_142,hudson_crossing_apartments,school,Pace University,"1 Pace Plaza, New York, NY 10038",3.08,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_140,hudson_crossing_apartments,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.35,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_143,hudson_crossing_apartments,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.39,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_144,hudson_crossing_apartments,transit,Court Square Station,"Court Square, Long Island City, NY",2.67,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_147,hudson_point_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.55,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_148,hudson_point_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.70,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_145,hudson_point_apartments,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.37,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_146,hudson_point_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.74,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_150,hudson_point_apartments,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.16,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_151,hudson_point_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.19,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_149,hudson_point_apartments,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",1.01,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_152,hudson_point_apartments,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.51,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_153,hudson_point_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",1.09,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_156,inwood_living,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",7.17,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_157,inwood_living,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",8.19,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_154,inwood_living,chinese_restaurant,Xi'an Famous Foods - Columbia University,"2814 Broadway, New York, NY 10025",5.06,40.8039,-73.9662,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_155,inwood_living,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",6.83,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_159,inwood_living,school,The City College of New York,"160 Convent Ave, New York, NY 10031",3.69,40.8196,-73.9495,College; fallback POI,https://www.ccny.cuny.edu/,2026-05-28
+poi_160,inwood_living,school,Columbia University,"116th St & Broadway, New York, NY 10027",4.75,40.8075,-73.9626,University; fallback POI,https://www.columbia.edu/,2026-05-28
+poi_158,inwood_living,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",8.31,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_161,inwood_living,transit,116 St-Columbia University Station,"Broadway & W 116th St, New York, NY",4.77,40.8077,-73.9641,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_162,inwood_living,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",8.17,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_165,jackson_park,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.09,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_166,jackson_park,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.50,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_163,jackson_park,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.93,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_164,jackson_park,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",3.07,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_168,jackson_park,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.35,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_169,jackson_park,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.42,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_167,jackson_park,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.04,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_170,jackson_park,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.14,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_171,jackson_park,transit,Court Square Station,"Court Square, Long Island City, NY",0.36,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_174,linc_lic,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.22,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_175,linc_lic,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.28,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_172,linc_lic,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.73,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_173,linc_lic,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",2.94,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_177,linc_lic,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.49,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_178,linc_lic,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.20,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_176,linc_lic,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.21,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_179,linc_lic,transit,Court Square Station,"Court Square, Long Island City, NY",0.16,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_180,linc_lic,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.19,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_183,longacre_house_apartments,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",0.97,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_184,longacre_house_apartments,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",1.00,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_181,longacre_house_apartments,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.29,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_182,longacre_house_apartments,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.14,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_186,longacre_house_apartments,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.54,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_187,longacre_house_apartments,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",2.94,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_185,longacre_house_apartments,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.98,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_188,longacre_house_apartments,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.49,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_189,longacre_house_apartments,transit,Court Square Station,"Court Square, Long Island City, NY",2.41,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_192,lyra,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.94,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_193,lyra,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.96,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_190,lyra,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.84,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_191,lyra,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.53,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_195,lyra,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.46,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_196,lyra,school,Pace University,"1 Pace Plaza, New York, NY 10038",3.22,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_194,lyra,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.30,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_197,lyra,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.61,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_198,lyra,transit,Newport PATH,"Newport, Jersey City, NJ",2.78,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_201,madox_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.47,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_202,madox_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.68,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_199,madox_apartments,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.27,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_200,madox_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.81,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_204,madox_apartments,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.10,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_205,madox_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.19,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_203,madox_apartments,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.92,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_206,madox_apartments,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.40,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_207,madox_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",1.02,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_210,miramar,asian_grocery_or_chinese_facility,H Mart - Upper West Side,"210 Amsterdam Ave, New York, NY 10023",7.06,40.7762,-73.9836,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_211,miramar,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",8.11,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_208,miramar,chinese_restaurant,Xi'an Famous Foods - Columbia University,"2814 Broadway, New York, NY 10025",4.94,40.8039,-73.9662,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_209,miramar,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",6.72,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_213,miramar,school,The City College of New York,"160 Convent Ave, New York, NY 10031",3.58,40.8196,-73.9495,College; fallback POI,https://www.ccny.cuny.edu/,2026-05-28
+poi_214,miramar,school,Columbia University,"116th St & Broadway, New York, NY 10027",4.63,40.8075,-73.9626,University; fallback POI,https://www.columbia.edu/,2026-05-28
+poi_212,miramar,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",8.23,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_215,miramar,transit,116 St-Columbia University Station,"Broadway & W 116th St, New York, NY",4.66,40.8077,-73.9641,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_216,miramar,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",8.09,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_219,newport_rentals,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",1.15,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_220,newport_rentals,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.83,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_217,newport_rentals,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.80,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_218,newport_rentals,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.90,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_222,newport_rentals,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.94,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_223,newport_rentals,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.94,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_221,newport_rentals,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.19,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_224,newport_rentals,transit,Newport PATH,"Newport, Jersey City, NJ",0.01,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_225,newport_rentals,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.75,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_228,ocean,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",1.86,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_229,ocean,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.34,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_226,ocean,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",0.60,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_227,ocean,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",1.23,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_231,ocean,school,Pace University,"1 Pace Plaza, New York, NY 10038",0.77,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_232,ocean,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",1.24,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_230,ocean,shopping_mall,Westfield World Trade Center,"185 Greenwich St, New York, NY 10007",0.52,40.7115,-74.0113,Shopping center; fallback POI,https://www.westfield.com/united-states/worldtradecenter,2026-05-28
+poi_233,ocean,transit,Fulton Street Station,"Fulton St, New York, NY",0.57,40.7104,-74.0084,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_234,ocean,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",1.69,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_237,portside_towers_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.64,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_238,portside_towers_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.65,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_235,portside_towers_apartments,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.41,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_236,portside_towers_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.66,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_240,portside_towers_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.15,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_241,portside_towers_apartments,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.18,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_239,portside_towers_apartments,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",1.01,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_242,portside_towers_apartments,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.55,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_243,portside_towers_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",1.08,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_246,sky,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",1.12,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_247,sky,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",1.15,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_244,sky,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",1.65,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_245,sky,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",2.64,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_249,sky,school,Baruch College,"55 Lexington Ave, New York, NY 10010",1.66,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_250,sky,school,Pace University,"1 Pace Plaza, New York, NY 10038",3.46,40.7114,-74.0048,University; fallback POI,https://www.pace.edu/,2026-05-28
+poi_248,sky,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",0.52,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_251,sky,transit,Times Sq-42 St Station,"Times Square, New York, NY",0.72,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_252,sky,transit,Newport PATH,"Newport, Jersey City, NJ",2.95,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_255,the_blvd_collection,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.80,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_256,the_blvd_collection,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.15,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_253,the_blvd_collection,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.42,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_254,the_blvd_collection,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.82,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_258,the_blvd_collection,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.56,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_259,the_blvd_collection,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.57,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_257,the_blvd_collection,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.30,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_260,the_blvd_collection,transit,Newport PATH,"Newport, Jersey City, NJ",0.37,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_261,the_blvd_collection,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.40,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_264,the_cove,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.23,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_265,the_cove,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.30,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_262,the_cove,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.72,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_263,the_cove,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",2.99,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_267,the_cove,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.44,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_268,the_cove,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.21,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_266,the_cove,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.19,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_269,the_cove,transit,Court Square Station,"Court Square, Long Island City, NY",0.15,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_270,the_cove,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.22,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_273,the_lively,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.62,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_274,the_lively,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.34,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_271,the_lively,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.20,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_272,the_lively,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.80,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_276,the_lively,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.34,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_277,the_lively,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.37,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_275,the_lively,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.51,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_278,the_lively,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.24,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_279,the_lively,transit,Newport PATH,"Newport, Jersey City, NJ",0.60,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_282,the_orchard_lic,asian_grocery_or_chinese_facility,TESO Life - Long Island City,"42-38 27th St, Long Island City, NY 11101",0.09,40.7502,-73.9392,Asian lifestyle/grocery retail; fallback POI,https://www.google.com/search?q=TESO+Life+Long+Island+City+42-38+27th+St,2026-05-28
+poi_283,the_orchard_lic,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",2.56,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_280,the_orchard_lic,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",1.04,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_281,the_orchard_lic,chinese_restaurant,Xi'an Famous Foods - Upper West Side,"309 Amsterdam Ave, New York, NY 10023",3.03,40.7804,-73.9802,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_285,the_orchard_lic,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",0.44,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_286,the_orchard_lic,school,Baruch College,"55 Lexington Ave, New York, NY 10010",2.51,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_284,the_orchard_lic,shopping_mall,JACX&CO,"28-17 Jackson Ave, Long Island City, NY 11101",0.18,40.7484,-73.9388,Food hall / retail; fallback POI,https://www.jacxandco.com/,2026-05-28
+poi_287,the_orchard_lic,transit,Queensboro Plaza Station,"Queens Plaza, Long Island City, NY",0.14,40.7506,-73.9402,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_288,the_orchard_lic,transit,Court Square Station,"Court Square, Long Island City, NY",0.47,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_291,the_pier_apartments,asian_grocery_or_chinese_facility,99 Ranch Market - Jersey City,"420 Grand St, Jersey City, NJ 07302",0.97,40.7162,-74.0494,Asian supermarket; fallback POI,https://www.99ranch.com/,2026-05-28
+poi_292,the_pier_apartments,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",3.06,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_289,the_pier_apartments,chinese_restaurant,Taste of North China,"75 Montgomery St, Jersey City, NJ 07302",0.54,40.7179,-74.0415,Chinese restaurant; fallback POI,https://www.google.com/search?q=Taste+of+North+China+75+Montgomery+St+Jersey+City,2026-05-28
+poi_290,the_pier_apartments,chinese_restaurant,Dim Sum Palace - Financial District,"123 William St, New York, NY 10038",1.45,40.7094,-74.0069,Chinese restaurant; fallback POI,https://www.dimsumpalace.com/,2026-05-28
+poi_294,the_pier_apartments,school,Jersey City Public School 16,"96 Sussex St, Jersey City, NJ 07302",0.46,40.7145,-74.0373,School; fallback POI,https://ps16.jcboe.org/,2026-05-28
+poi_295,the_pier_apartments,school,Waterfront Montessori,"150 Warren St, Jersey City, NJ 07302",0.52,40.7149,-74.0393,School; fallback POI,https://waterfrontmontessori.com/,2026-05-28
+poi_293,the_pier_apartments,shopping_mall,Newport Centre,"30 Mall Dr W, Jersey City, NJ 07310",0.62,40.7271,-74.0373,Shopping mall; fallback POI,https://www.simon.com/mall/newport-centre,2026-05-28
+poi_296,the_pier_apartments,transit,Newport PATH,"Newport, Jersey City, NJ",0.60,40.7278,-74.034,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_297,the_pier_apartments,transit,Grove Street PATH,"Grove Street, Jersey City, NJ",0.62,40.7196,-74.0431,PATH station; fallback POI,https://www.panynj.gov/path/,2026-05-28
+poi_300,view_34,asian_grocery_or_chinese_facility,Food Gallery 32,"11 W 32nd St, New York, NY 10001",0.76,40.7476,-73.9863,Koreatown food hall; fallback POI,https://foodgallery32nyc.com/,2026-05-28
+poi_301,view_34,asian_grocery_or_chinese_facility,H Mart - Koreatown,"38 W 32nd St, New York, NY 10001",0.78,40.7479,-73.9865,Asian grocery; fallback POI,https://www.hmart.com/,2026-05-28
+poi_298,view_34,chinese_restaurant,Hupo,"10-07 50th Ave, Long Island City, NY 11101",0.94,40.7429,-73.9545,Sichuan restaurant; fallback POI,https://www.hupolic.com/,2026-05-28
+poi_299,view_34,chinese_restaurant,Xi'an Famous Foods - Chinatown,"45 Bayard St, New York, NY 10013",2.42,40.7156,-73.9978,Chinese noodles; fallback POI,https://www.xianfoods.com/locations,2026-05-28
+poi_303,view_34,school,Baruch College,"55 Lexington Ave, New York, NY 10010",0.66,40.7402,-73.9834,College; fallback POI,https://baruch.cuny.edu/,2026-05-28
+poi_304,view_34,school,LaGuardia Community College,"31-10 Thomson Ave, Long Island City, NY 11101",1.94,40.7447,-73.9352,College; fallback POI,https://www.laguardia.edu/,2026-05-28
+poi_302,view_34,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",1.64,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
+poi_305,view_34,transit,Times Sq-42 St Station,"Times Square, New York, NY",1.08,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+poi_306,view_34,transit,Court Square Station,"Court Square, Long Island City, NY",1.44,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
