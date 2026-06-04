@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJB024cABZwokR9uBxTdQTSM4",
+      "formattedAddress": "486 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7553942,
+        "longitude": -73.9945986
+      },
+      "rating": 4.7,
+      "userRatingCount": 125,
+      "displayName": {
+        "text": "1.50 Pizza Store",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJQd-COlxZwokRCpkapprys7Y",
+      "formattedAddress": "480 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7550573,
+        "longitude": -73.9947818
+      },
+      "rating": 4.9,
+      "userRatingCount": 1816,
+      "displayName": {
+        "text": "Samsaen Thai",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    },
+    {
+      "id": "ChIJKbzI-R9ZwokRjlLrxmC9y_I",
+      "formattedAddress": "480 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7550573,
+        "longitude": -73.9947818
+      },
+      "displayName": {
+        "text": "Prayathai",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    },
+    {
+      "id": "ChIJ557MHjpZwokRy6uA1gGPGZE",
+      "formattedAddress": "480 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7550573,
+        "longitude": -73.9947818
+      },
+      "rating": 4.2,
+      "userRatingCount": 362,
+      "displayName": {
+        "text": "Aiyara Thai",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    },
+    {
+      "id": "ChIJUyp-nbJZwokRQ19Hn_KgwpM",
+      "formattedAddress": "480 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7550573,
+        "longitude": -73.9947818
+      },
+      "rating": 3.6,
+      "userRatingCount": 43,
+      "displayName": {
+        "text": "AM-PM Deli Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ6YfGPlRZwokRbZod6gdHkqY",
+      "formattedAddress": "484 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.755292,
+        "longitude": -73.9945623
+      },
+      "rating": 3.6,
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJQdQ5mwdZwokRQXDOTRzWhU4",
+      "formattedAddress": "488 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7554185,
+        "longitude": -73.9945485
+      },
+      "rating": 4.3,
+      "userRatingCount": 686,
+      "displayName": {
+        "text": "Tavola Hells Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "italian_restaurant"
+    },
+    {
+      "id": "ChIJY5uUGABZwokRUJGIQvhzFFk",
+      "formattedAddress": "486 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.755348,
+        "longitude": -73.9945161
+      },
+      "rating": 4.6,
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Bubble tea store",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJszU4E8VZwokRvfj3Xmug3Bk",
+      "formattedAddress": "478 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7549932,
+        "longitude": -73.99487359999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 351,
+      "displayName": {
+        "text": "Kashmir9",
+        "languageCode": "en"
+      },
+      "primaryType": "north_indian_restaurant"
+    },
+    {
+      "id": "ChIJYYpwNA5ZwokRYImQw6JRNfI",
+      "formattedAddress": "492 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7554594,
+        "longitude": -73.9944725
+      },
+      "rating": 4.7,
+      "userRatingCount": 2600,
+      "displayName": {
+        "text": "Chi Restaurant & Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    }
+  ]
+}

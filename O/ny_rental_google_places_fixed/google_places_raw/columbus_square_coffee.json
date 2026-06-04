@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJvxcSIQb3wokRVbWrgdR-5xE",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7939441,
+        "longitude": -73.9670282
+      },
+      "rating": 2,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "WFM Coffee Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJNyIdFSf2wokRfRwZJlYvHyg",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.793966999999995,
+        "longitude": -73.96711599999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 28,
+      "displayName": {
+        "text": "Westside Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_stand"
+    },
+    {
+      "id": "ChIJdzpdZ_v3wokR_Gnta_v5XQY",
+      "formattedAddress": "784 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7942183,
+        "longitude": -73.96752959999999
+      },
+      "displayName": {
+        "text": "arf cafe",
+        "languageCode": "tr"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJkUFYzCb2wokRqX17UTyDQPs",
+      "formattedAddress": "805 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.795230000000004,
+        "longitude": -73.96552
+      },
+      "rating": 3.7,
+      "userRatingCount": 595,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJVQZ5bif2wokRdOKgFt-pfL4",
+      "formattedAddress": "750 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.793337,
+        "longitude": -73.967587
+      },
+      "rating": 4.3,
+      "userRatingCount": 767,
+      "displayName": {
+        "text": "Birch Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJzbPOWyb2wokR6FO7x5ezBbc",
+      "formattedAddress": "801 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.796453899999996,
+        "longitude": -73.9683902
+      },
+      "rating": 2.5,
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ43E6GQD3wokR4ZEVh1g7wbo",
+      "formattedAddress": "774 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.795381,
+        "longitude": -73.969779
+      },
+      "rating": 4.8,
+      "userRatingCount": 250,
+      "displayName": {
+        "text": "Sipsteria UWS",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ10yifCf2wokRu4Xkx2tDvcE",
+      "formattedAddress": "730 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7924442,
+        "longitude": -73.9681688
+      },
+      "rating": 3.7,
+      "userRatingCount": 223,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJUWPo2Cf2wokRi0jGZKfO2fU",
+      "formattedAddress": "723 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.793551799999996,
+        "longitude": -73.970475
+      },
+      "rating": 4.2,
+      "userRatingCount": 334,
+      "displayName": {
+        "text": "PlantShed",
+        "languageCode": "en"
+      },
+      "primaryType": "florist"
+    },
+    {
+      "id": "ChIJDzShU873wokR8lYdcz_zHx0",
+      "formattedAddress": "2600 Broadway, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.795947,
+        "longitude": -73.97041899999999
+      },
+      "rating": 2.5,
+      "userRatingCount": 84,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

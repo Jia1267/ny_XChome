@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJF1muovbzwokRPR4nlL73TCA",
+      "formattedAddress": "4986 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681592,
+        "longitude": -73.9190507
+      },
+      "rating": 4.2,
+      "userRatingCount": 192,
+      "displayName": {
+        "text": "Cocina Latina Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "latin_american_restaurant"
+    },
+    {
+      "id": "ChIJQ4fwPdbzwokRXDd6QM-8Qu4",
+      "formattedAddress": "4996 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8682021,
+        "longitude": -73.9188868
+      },
+      "rating": 4.6,
+      "userRatingCount": 24,
+      "displayName": {
+        "text": "Room 4996",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJLXy7jUHzwokRtca-EmRERt0",
+      "formattedAddress": "4979 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8683847,
+        "longitude": -73.9193203
+      },
+      "rating": 4.3,
+      "userRatingCount": 255,
+      "displayName": {
+        "text": "Serrano Salsa",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJQZshvvbzwokRyi-Ol3UYiXc",
+      "formattedAddress": "4973 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.868364199999995,
+        "longitude": -73.9195828
+      },
+      "rating": 4,
+      "userRatingCount": 472,
+      "displayName": {
+        "text": "Grandpa's Brick Oven Pizza",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJNfohXe3zwokRrDzXlvmkOQg",
+      "formattedAddress": "3950 10th Ave Suite B, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867249799999996,
+        "longitude": -73.9171547
+      },
+      "rating": 4.5,
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Isla Bonita NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJgTDROfTzwokRV59N1irITHI",
+      "formattedAddress": "3950 10th Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8673144,
+        "longitude": -73.9171157
+      },
+      "rating": 3.9,
+      "userRatingCount": 971,
+      "displayName": {
+        "text": "Made In Mexico",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJuxz4OPTzwokROFNmtyjyvH0",
+      "formattedAddress": "3964 10th Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867371,
+        "longitude": -73.9170465
+      },
+      "rating": 3.5,
+      "userRatingCount": 253,
+      "displayName": {
+        "text": "11:11 Restaurant & Lounge",
+        "languageCode": "en"
+      },
+      "primaryType": "lounge_bar"
+    },
+    {
+      "id": "ChIJZW9K_cfzwokREv5ARiUipR0",
+      "formattedAddress": "4961 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681653,
+        "longitude": -73.92052799999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 406,
+      "displayName": {
+        "text": "Buunni Coffee - Inwood",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ6TCT6PbzwokRfsZUbEWFNWk",
+      "formattedAddress": "4961 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681653,
+        "longitude": -73.92052799999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 492,
+      "displayName": {
+        "text": "Garden Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJF_AN5vbzwokRbc-YF7tU2GY",
+      "formattedAddress": "4959 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8680872,
+        "longitude": -73.92059549999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 762,
+      "displayName": {
+        "text": "Yummy Thai",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    }
+  ]
+}

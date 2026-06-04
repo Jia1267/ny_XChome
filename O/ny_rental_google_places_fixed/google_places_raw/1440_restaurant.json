@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJvTIHfD_3wokRj4TgLe2sr1o",
+      "formattedAddress": "1484 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.817931099999996,
+        "longitude": -73.95328610000001
+      },
+      "rating": 4.1,
+      "userRatingCount": 34,
+      "displayName": {
+        "text": "La Casita Taqueria Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJBUc4LG_2wokRyzm0iRbMV8I",
+      "formattedAddress": "1484 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.817931099999996,
+        "longitude": -73.95328610000001
+      },
+      "rating": 3.6,
+      "userRatingCount": 123,
+      "displayName": {
+        "text": "Mi Casita",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJefRCMG_2wokRotti4ItPKxc",
+      "formattedAddress": "1496 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.818205,
+        "longitude": -73.95298
+      },
+      "rating": 4.7,
+      "userRatingCount": 163,
+      "displayName": {
+        "text": "Fruces",
+        "languageCode": "en"
+      },
+      "primaryType": "juice_shop"
+    },
+    {
+      "id": "ChIJ8zsdSxT3wokRGruWSzNqaKc",
+      "formattedAddress": "1502 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8184517,
+        "longitude": -73.9528819
+      },
+      "rating": 4.8,
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "Kennedy Chicken & Burgers",
+        "languageCode": "en"
+      },
+      "primaryType": "chicken_restaurant"
+    },
+    {
+      "id": "ChIJT_WgiJz3wokRl5UJn83-VtQ",
+      "formattedAddress": "1502 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8184517,
+        "longitude": -73.9528819
+      },
+      "rating": 3.8,
+      "userRatingCount": 63,
+      "displayName": {
+        "text": "Makana",
+        "languageCode": "en"
+      },
+      "primaryType": "hawaiian_restaurant"
+    },
+    {
+      "id": "ChIJTUtvR2_2wokRpW-cAN02zrE",
+      "formattedAddress": "1512 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.818706999999996,
+        "longitude": -73.952629
+      },
+      "displayName": {
+        "text": "Isara Mexican Taqueria Llc",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJB_bboIH3wokRv7sjQv4RK4M",
+      "formattedAddress": "1516 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8187892,
+        "longitude": -73.95253149999999
+      },
+      "rating": 3.8,
+      "userRatingCount": 70,
+      "displayName": {
+        "text": "Ten Dragon",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJY3CwCIT3wokReNnkV6ZC0rM",
+      "formattedAddress": "1518 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.818866899999996,
+        "longitude": -73.9525458
+      },
+      "rating": 4,
+      "userRatingCount": 185,
+      "displayName": {
+        "text": "Amsterdam Sushi",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJcRgR0W72wokRfT2l0W4NVIs",
+      "formattedAddress": "1467 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.817197,
+        "longitude": -73.9532661
+      },
+      "rating": 4.1,
+      "userRatingCount": 228,
+      "displayName": {
+        "text": "RAIRAIKEN UPTOWN",
+        "languageCode": "en"
+      },
+      "primaryType": "ramen_restaurant"
+    },
+    {
+      "id": "ChIJgU5J8In3wokRm6LwVpHvV8E",
+      "formattedAddress": "1467 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.8171345,
+        "longitude": -73.9531741
+      },
+      "rating": 4.8,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "American Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    }
+  ]
+}

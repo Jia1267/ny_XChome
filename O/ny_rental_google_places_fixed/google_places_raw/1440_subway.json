@@ -1,0 +1,34 @@
+{
+  "places": [
+    {
+      "id": "ChIJMQ1veGb2wokRiKENnz-Nu1A",
+      "formattedAddress": "New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8214867,
+        "longitude": -73.9542445
+      },
+      "rating": 3.9,
+      "userRatingCount": 199,
+      "displayName": {
+        "text": "137 St-City College",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJHZCcHmr2wokRVq25Hs9snkA",
+      "formattedAddress": "New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.815417200000006,
+        "longitude": -73.9585001
+      },
+      "rating": 4.4,
+      "userRatingCount": 89,
+      "displayName": {
+        "text": "125 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

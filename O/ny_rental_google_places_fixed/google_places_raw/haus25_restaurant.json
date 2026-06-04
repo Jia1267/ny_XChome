@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJi2ibzVVRwokRfYKVXmQa4TQ",
+      "formattedAddress": "25 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7178764,
+        "longitude": -74.0384601
+      },
+      "rating": 4.6,
+      "userRatingCount": 1742,
+      "displayName": {
+        "text": "Meximodo Jersey City – Cocina Mexicana & Tequila Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJPdCTOgBRwokRe8lNJJoejxw",
+      "formattedAddress": "25 Christopher Columbus Dr (Montgomery St &, Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7171059,
+        "longitude": -74.0388333
+      },
+      "displayName": {
+        "text": "Punjab Meet House",
+        "languageCode": "en"
+      },
+      "primaryType": "indian_restaurant"
+    },
+    {
+      "id": "ChIJnecxlfBRwokRdrMFP2v9s1U",
+      "formattedAddress": "97 Montgomery St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7168031,
+        "longitude": -74.03873209999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 1252,
+      "displayName": {
+        "text": "Jiangnan NJC",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJIXyruXRRwokRO0x6gWqeLBA",
+      "formattedAddress": "50 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.718266,
+        "longitude": -74.0391444
+      },
+      "rating": 4.5,
+      "userRatingCount": 137,
+      "displayName": {
+        "text": "Chennai Flavors Food Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "indian_restaurant"
+    },
+    {
+      "id": "ChIJVdtgUXZRwokRDXOpMVSnTi4",
+      "formattedAddress": "103 Montgomery St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716780799999995,
+        "longitude": -74.0389343
+      },
+      "rating": 4.2,
+      "userRatingCount": 383,
+      "displayName": {
+        "text": "East Hana JC",
+        "languageCode": "en"
+      },
+      "primaryType": "japanese_restaurant"
+    },
+    {
+      "id": "ChIJu0Mjg-VRwokR_PMi-iqCN_Y",
+      "formattedAddress": "75 Montgomery St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7166226,
+        "longitude": -74.037703
+      },
+      "rating": 2.6,
+      "userRatingCount": 266,
+      "displayName": {
+        "text": "Taco Bell",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJi-iKm75XwokRDr3qXKjHuFs",
+      "formattedAddress": "50 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7185643,
+        "longitude": -74.0390591
+      },
+      "rating": 3.3,
+      "userRatingCount": 29,
+      "displayName": {
+        "text": "Papa Chicken Food Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "chicken_restaurant"
+    },
+    {
+      "id": "ChIJqZYi0a1RwokRBnP4XLYKIi4",
+      "formattedAddress": "50 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7182993,
+        "longitude": -74.0394428
+      },
+      "rating": 4.8,
+      "userRatingCount": 102,
+      "displayName": {
+        "text": "Chicken Station food truck",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJt-j4Vq5QwokR3rYW77qtWuI",
+      "formattedAddress": "260 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716592,
+        "longitude": -74.039039
+      },
+      "rating": 4.6,
+      "userRatingCount": 284,
+      "displayName": {
+        "text": "Pizzeria Las Americas",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJV9m36K5QwokRtBokw01d_24",
+      "formattedAddress": "75 Montgomery St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716522,
+        "longitude": -74.03758839999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 1142,
+      "displayName": {
+        "text": "Taste of North China 聚缘轩",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    }
+  ]
+}

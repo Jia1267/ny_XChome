@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJdWypDltbwokR02sSJV-DryY",
+      "formattedAddress": "10 Hanover Square, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7045907,
+        "longitude": -74.00890369999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "Rice Bowl Cart",
+        "languageCode": "en"
+      },
+      "primaryType": "meal_takeaway"
+    },
+    {
+      "id": "ChIJQW9VeBZawokRXXEkUzWfmiQ",
+      "formattedAddress": "110 Pearl St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7046,
+        "longitude": -74.00912
+      },
+      "rating": 3.7,
+      "userRatingCount": 335,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJcVReeRZawokRejD22zhlkwg",
+      "formattedAddress": "Pearl St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7047173,
+        "longitude": -74.0089982
+      },
+      "displayName": {
+        "text": "Alhorno Lean Mexican Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ3YhxGgBbwokRu4bXBKLIB6c",
+      "formattedAddress": "10 Hanover Square, Hanover Square, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.704603999999996,
+        "longitude": -74.0091772
+      },
+      "rating": 4.7,
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "Aileen Thai",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    },
+    {
+      "id": "ChIJD60JexZawokRKjQevWj9NKg",
+      "formattedAddress": "10 Hanover Square, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.704492599999995,
+        "longitude": -74.0091932
+      },
+      "rating": 4.6,
+      "userRatingCount": 117,
+      "displayName": {
+        "text": "Banh Mi Cart",
+        "languageCode": "en"
+      },
+      "primaryType": "vietnamese_restaurant"
+    },
+    {
+      "id": "ChIJnVNUeBZawokR6cnhe7_o7PQ",
+      "formattedAddress": "10 Hanover Square, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7048093,
+        "longitude": -74.0088201
+      },
+      "rating": 4.1,
+      "userRatingCount": 246,
+      "displayName": {
+        "text": "LENWICH",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJdTSNiydbwokRGwQBsf6_vTQ",
+      "formattedAddress": "26-20 Old Slip, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7041611,
+        "longitude": -74.0085954
+      },
+      "rating": 3.8,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Souvlaki GR Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "greek_restaurant"
+    },
+    {
+      "id": "ChIJRS19JOhbwokRkKKBoi8ZqCw",
+      "formattedAddress": "7 Hanover Square, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7043305,
+        "longitude": -74.00944849999999
+      },
+      "rating": 5,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "John's Corner Food Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJJ0daaxZawokRG_CF1AM2878",
+      "formattedAddress": "128 Pearl St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7049874,
+        "longitude": -74.00856999999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 1264,
+      "displayName": {
+        "text": "Wall Street Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "steak_house"
+    },
+    {
+      "id": "ChIJ2VpwXwBbwokRabzSsxelPU8",
+      "formattedAddress": "5 Hanover Square, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7050237,
+        "longitude": -74.0092588
+      },
+      "rating": 4.3,
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "Wonder Financial District",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    }
+  ]
+}

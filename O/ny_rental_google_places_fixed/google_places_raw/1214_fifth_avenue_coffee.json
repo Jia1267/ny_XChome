@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJN2hvcgBZwokRYlAnncj7pdE",
+      "formattedAddress": "1468 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.789913399999996,
+        "longitude": -73.95245059999999
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Arbero",
+        "languageCode": "fr"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ8es6Q5FZwokRUwepwh3cgBk",
+      "formattedAddress": "1400 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7881444,
+        "longitude": -73.95367639999999
+      },
+      "rating": 3.1,
+      "userRatingCount": 184,
+      "displayName": {
+        "text": "JOE & THE JUICE",
+        "languageCode": "en"
+      },
+      "primaryType": "juice_shop"
+    },
+    {
+      "id": "ChIJq57nqof3wokRmCB925nzhr8",
+      "formattedAddress": "1590 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.793998099999996,
+        "longitude": -73.94950039999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 81,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJaz4QVx32wokRfpu9QxuGV-w",
+      "formattedAddress": "129E E 102nd St, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7898734,
+        "longitude": -73.9483415
+      },
+      "rating": 4.5,
+      "userRatingCount": 488,
+      "displayName": {
+        "text": "Frenchy Coffee NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJV8iHKqdYwokRWIyEYRMLCSw",
+      "formattedAddress": "1399 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7879563,
+        "longitude": -73.953435
+      },
+      "rating": 4.1,
+      "userRatingCount": 746,
+      "displayName": {
+        "text": "Le Pain Quotidien",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJbQ4shqRYwokRrqOwwJIVvpA",
+      "formattedAddress": "1391 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7877132,
+        "longitude": -73.9535207
+      },
+      "rating": 4.4,
+      "userRatingCount": 576,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ9zwmKaFYwokRq-KCipBS2rE",
+      "formattedAddress": "1392 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.787679399999995,
+        "longitude": -73.9540001
+      },
+      "rating": 4.5,
+      "userRatingCount": 474,
+      "displayName": {
+        "text": "Da Capo Aperitivo e Caffè",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ-92D8n33wokRyTP3DvAdP0w",
+      "formattedAddress": "1631 Lexington Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790330499999996,
+        "longitude": -73.947419
+      },
+      "rating": 4.5,
+      "userRatingCount": 286,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJL-2JdQBZwokRybO9RBNmoPE",
+      "formattedAddress": "1567 Lexington Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7884591,
+        "longitude": -73.9488851
+      },
+      "rating": 4.8,
+      "userRatingCount": 89,
+      "displayName": {
+        "text": "Café D'Anvers",
+        "languageCode": "en"
+      },
+      "primaryType": "belgian_restaurant"
+    },
+    {
+      "id": "ChIJv0YILaFYwokRPSLTmrCty7A",
+      "formattedAddress": "1389 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7874877,
+        "longitude": -73.95380159999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 319,
+      "displayName": {
+        "text": "Champignon Café",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    }
+  ]
+}

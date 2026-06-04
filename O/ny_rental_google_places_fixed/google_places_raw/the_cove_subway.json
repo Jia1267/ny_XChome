@@ -1,0 +1,79 @@
+{
+  "places": [
+    {
+      "id": "ChIJMUNFDilZwokR_As1Iyhgeys",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.746316199999995,
+        "longitude": -73.9443629
+      },
+      "rating": 3.9,
+      "userRatingCount": 133,
+      "displayName": {
+        "text": "Court Sq",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJIYtq-ShZwokRe7nT0AVsaxY",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.7468031,
+        "longitude": -73.94528369999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 106,
+      "displayName": {
+        "text": "Court Sq",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ0ZT0XChZwokRBlNVLFgJEU4",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.7478273,
+        "longitude": -73.9459507
+      },
+      "rating": 4,
+      "userRatingCount": 113,
+      "displayName": {
+        "text": "Court Sq-23 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ1cApudVYwokRr9uZCrpbzjM",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.7506276,
+        "longitude": -73.9402356
+      },
+      "rating": 3.9,
+      "userRatingCount": 409,
+      "displayName": {
+        "text": "Queensboro Plaza",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ0Qw2XNVYwokRF8t0ORLp5FI",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.74900160000001,
+        "longitude": -73.9371845
+      },
+      "rating": 4.1,
+      "userRatingCount": 228,
+      "displayName": {
+        "text": "Queens Plaza",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

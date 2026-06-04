@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJxWox_vbzwokRfjU-4l8ItBc",
+      "formattedAddress": "608 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867396,
+        "longitude": -73.921301
+      },
+      "rating": 3.7,
+      "userRatingCount": 853,
+      "displayName": {
+        "text": "McDonald's",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJn9vA_PbzwokR4YBjwhcRsPQ",
+      "formattedAddress": "4942 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867646300000004,
+        "longitude": -73.9208444
+      },
+      "rating": 3.9,
+      "userRatingCount": 239,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJZW9K_cfzwokREv5ARiUipR0",
+      "formattedAddress": "4961 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681653,
+        "longitude": -73.92052799999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 406,
+      "displayName": {
+        "text": "Buunni Coffee - Inwood",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ6TCT6PbzwokRfsZUbEWFNWk",
+      "formattedAddress": "4961 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681653,
+        "longitude": -73.92052799999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 492,
+      "displayName": {
+        "text": "Garden Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJHyUHBz_zwokR0FBBhbiISWk",
+      "formattedAddress": "527 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.86541220000001,
+        "longitude": -73.91956789999999
+      },
+      "displayName": {
+        "text": "207 Mocha cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJC_UsH_fzwokR_KOBLgO8uDc",
+      "formattedAddress": "634 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8683421,
+        "longitude": -73.9218655
+      },
+      "rating": 4.8,
+      "userRatingCount": 251,
+      "displayName": {
+        "text": "G's Coffee Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ5eZL1_XzwokRc8qu-mfDlFA",
+      "formattedAddress": "Bp Gas Station, 3936 10th Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.866138899999996,
+        "longitude": -73.91825349999999
+      },
+      "rating": 4,
+      "userRatingCount": 248,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ9eeYba3zwokRbQpFDrx9MVw",
+      "formattedAddress": "4857 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8670001,
+        "longitude": -73.92436289999999
+      },
+      "rating": 5,
+      "userRatingCount": 40,
+      "displayName": {
+        "text": "Tomy Rivero Beauty Café Nail Salon and Spa",
+        "languageCode": "en"
+      },
+      "primaryType": "nail_salon"
+    },
+    {
+      "id": "ChIJwRBVCQj0wokRTY610m1S-b0",
+      "formattedAddress": "135 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8641873,
+        "longitude": -73.9238924
+      },
+      "rating": 4.9,
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Jochy's Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJFyRugGDzwokRrCKuL1n7hGQ",
+      "formattedAddress": "4795 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8663303,
+        "longitude": -73.925784
+      },
+      "rating": 4.4,
+      "userRatingCount": 286,
+      "displayName": {
+        "text": "Kuro Kirin Espresso & Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

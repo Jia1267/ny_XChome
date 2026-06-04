@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJnYcYiQVZwokRR-_pJu4S6kY",
+      "formattedAddress": "New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7443301,
+        "longitude": -73.97514
+      },
+      "rating": 4.7,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Midtown Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ_wuzEQBZwokRFFwqALsuoQk",
+      "formattedAddress": "395 E 39th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7471914,
+        "longitude": -73.9714864
+      },
+      "rating": 4.7,
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Heavenly Food Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJw3ZS8QRZwokRc1tuMJmRhZo",
+      "formattedAddress": "710 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.747358,
+        "longitude": -73.973765
+      },
+      "rating": 3.9,
+      "userRatingCount": 81,
+      "displayName": {
+        "text": "710 Quick Stop Inc.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJWwaacQBZwokRuclH-vuVaLg",
+      "formattedAddress": "716 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7475558,
+        "longitude": -73.9736491
+      },
+      "displayName": {
+        "text": "2ndavegrocerystore",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJLZenjXpZwokRZ5a8E2rakX8",
+      "formattedAddress": "720 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.747606999999995,
+        "longitude": -73.97351119999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 92,
+      "displayName": {
+        "text": "39 K Food",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ2SgP9ARZwokR6wr__1zbLwU",
+      "formattedAddress": "705 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.747319999999995,
+        "longitude": -73.9744073
+      },
+      "rating": 3,
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "705 BRBR Inc.",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJASJDjQRZwokREmFFYMhjnqw",
+      "formattedAddress": "300 E 39th St Frnt 1, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.747724999999996,
+        "longitude": -73.9734328
+      },
+      "rating": 3.3,
+      "userRatingCount": 56,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJx-lchPVZwokRT_EREUj9KMo",
+      "formattedAddress": "237 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.745250999999996,
+        "longitude": -73.976282
+      },
+      "rating": 2.2,
+      "userRatingCount": 17,
+      "displayName": {
+        "text": "Gopuff",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJLzKNFN1ZwokRNfXTi6btiaQ",
+      "formattedAddress": "231 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7453558,
+        "longitude": -73.9765462
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "NYC Hill",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJY4w6_QVZwokRXMhNatMnGY4",
+      "formattedAddress": "222 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7449583,
+        "longitude": -73.9766052
+      },
+      "rating": 2.7,
+      "userRatingCount": 140,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    }
+  ]
+}

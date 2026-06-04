@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJnVNUeBZawokRWw06mlwrXJ4",
+      "formattedAddress": "10 Hanover Square, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7044536,
+        "longitude": -74.00899129999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "CBXT",
+        "languageCode": "en"
+      },
+      "primaryType": "health"
+    },
+    {
+      "id": "ChIJQW9VeBZawokRXXEkUzWfmiQ",
+      "formattedAddress": "110 Pearl St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7046,
+        "longitude": -74.00912
+      },
+      "rating": 3.7,
+      "userRatingCount": 335,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJnVNUeBZawokR6cnhe7_o7PQ",
+      "formattedAddress": "10 Hanover Square, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7048093,
+        "longitude": -74.0088201
+      },
+      "rating": 4.1,
+      "userRatingCount": 246,
+      "displayName": {
+        "text": "LENWICH",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJATp7v95bwokRkvO0TnWh_qU",
+      "formattedAddress": "85 Beaver St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.705416799999995,
+        "longitude": -74.0087406
+      },
+      "rating": 4.8,
+      "userRatingCount": 312,
+      "displayName": {
+        "text": "Best Sicily Bottega",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJgTMBOPtbwokR1Y0sSidhvqI",
+      "formattedAddress": "6 Hanover St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7054353,
+        "longitude": -74.0091413
+      },
+      "rating": 4.4,
+      "userRatingCount": 847,
+      "displayName": {
+        "text": "Conwell Coffee & Cocktail Hall",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJLwbpaRZawokRKM1sp6QXOjE",
+      "formattedAddress": "67 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.705709899999995,
+        "longitude": -74.0085244
+      },
+      "rating": 3.6,
+      "userRatingCount": 579,
+      "displayName": {
+        "text": "JOE & THE JUICE",
+        "languageCode": "en"
+      },
+      "primaryType": "juice_shop"
+    },
+    {
+      "id": "ChIJMwm7aRZawokR9y8LTeJddIc",
+      "formattedAddress": "67 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.705709899999995,
+        "longitude": -74.0085244
+      },
+      "rating": 4.5,
+      "userRatingCount": 595,
+      "displayName": {
+        "text": "La Colombe Coffee Workshop",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJmxcFEBZawokRssqAzUb-j7k",
+      "formattedAddress": "99 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.704809999999995,
+        "longitude": -74.00722999999999
+      },
+      "rating": 3.8,
+      "userRatingCount": 488,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJdRcXAgBbwokRTnLvfwlayac",
+      "formattedAddress": "99 Wall St #4330, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7049069,
+        "longitude": -74.00723649999999
+      },
+      "displayName": {
+        "text": "کافه پوریا",
+        "languageCode": "fa"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJzb6WZQBbwokRr09rf0Qt_gQ",
+      "formattedAddress": "110 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.70487490000001,
+        "longitude": -74.0065836
+      },
+      "rating": 4.8,
+      "userRatingCount": 168,
+      "displayName": {
+        "text": "Bagel Market",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    }
+  ]
+}

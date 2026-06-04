@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJU6H3mFdRwokRKOJgARaie9g",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7187775,
+        "longitude": -74.032607
+      },
+      "rating": 4.5,
+      "userRatingCount": 73,
+      "displayName": {
+        "text": "The District",
+        "languageCode": "en"
+      },
+      "primaryType": "lounge_bar"
+    },
+    {
+      "id": "ChIJD55omqxQwokRhrGgc7FQ3s4",
+      "formattedAddress": "3 2nd St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7204439,
+        "longitude": -74.0321436
+      },
+      "rating": 4.3,
+      "userRatingCount": 765,
+      "displayName": {
+        "text": "Smorgasbar",
+        "languageCode": "en"
+      },
+      "primaryType": "beer_garden"
+    },
+    {
+      "id": "ChIJQ30vtnFRwokRYInoLlxHi2o",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7192329,
+        "longitude": -74.0330362
+      },
+      "rating": 4.9,
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Harry’s Pizza",
+        "languageCode": "en"
+      },
+      "primaryType": "meal_takeaway"
+    },
+    {
+      "id": "ChIJn69AMgBRwokRjlqjU-KiIxY",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7192329,
+        "longitude": -74.0330362
+      },
+      "rating": 4.6,
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Pie Oh My Pizza",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJGVknyMxRwokRKRzS6aCJEoo",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7192329,
+        "longitude": -74.0330362
+      },
+      "rating": 4.6,
+      "userRatingCount": 86,
+      "displayName": {
+        "text": "Chin Xi'an Style Restaurant 秦张记",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJ1yLUafRRwokRHky6jBicelA",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7192329,
+        "longitude": -74.0330362
+      },
+      "rating": 4.2,
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "Sweet Kneads",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJkygkwX9RwokRBgNRvnL9WGs",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.719281699999996,
+        "longitude": -74.0332615
+      },
+      "rating": 4.7,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "Fried Rice Fellas",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    },
+    {
+      "id": "ChIJqeSjgQ9RwokRR001huTZEl4",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7190744,
+        "longitude": -74.0333534
+      },
+      "rating": 4.4,
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "Jerrell's BETR BRGR - Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "hamburger_restaurant"
+    },
+    {
+      "id": "ChIJJ1hEwqtQwokRGTR0tn_UKoA",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7190744,
+        "longitude": -74.0333534
+      },
+      "rating": 4.4,
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "The Belgian Plate by @waffleitandco",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJUadraABRwokRJrrONLIKZy0",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.719063399999996,
+        "longitude": -74.03339079999999
+      },
+      "rating": 4.9,
+      "userRatingCount": 1541,
+      "displayName": {
+        "text": "Mala Town 自选麻辣烫",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    }
+  ]
+}

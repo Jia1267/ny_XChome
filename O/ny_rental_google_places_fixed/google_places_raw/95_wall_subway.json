@@ -1,0 +1,49 @@
+{
+  "places": [
+    {
+      "id": "ChIJBzCfVBZawokR6_Qcq-KQA28",
+      "formattedAddress": "New York, NY 10038, USA",
+      "location": {
+        "latitude": 40.7064014,
+        "longitude": -74.00945089999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 142,
+      "displayName": {
+        "text": "Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJXy7mwhZawokRC_tiZTQds28",
+      "formattedAddress": "New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7063239,
+        "longitude": -74.01122079999999
+      },
+      "rating": 4,
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Broad St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ7zQkKRdawokR0JKr2_7uzBM",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707664,
+        "longitude": -74.01181799999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 183,
+      "displayName": {
+        "text": "Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

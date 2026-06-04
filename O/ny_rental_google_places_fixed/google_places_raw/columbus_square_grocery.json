@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJEUkGRSD3wokRsFfFctSLxVk",
+      "formattedAddress": "795 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.794446099999995,
+        "longitude": -73.9658766
+      },
+      "rating": 3.7,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "Target Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ-6ZxFif2wokRaRaETTJc_9Q",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7939667,
+        "longitude": -73.9671163
+      },
+      "rating": 4.2,
+      "userRatingCount": 2957,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJk1xQHyH2wokRpxS5p6gTcWg",
+      "formattedAddress": "23 W 100th St, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.794809699999995,
+        "longitude": -73.96389549999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "Felo Deli Corporation",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJzbPOWyb2wokR6FO7x5ezBbc",
+      "formattedAddress": "801 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.796453899999996,
+        "longitude": -73.9683902
+      },
+      "rating": 2.5,
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ48rKFSH2wokRSc8XxlSawD4",
+      "formattedAddress": "20 Manhattan Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7953295,
+        "longitude": -73.963719
+      },
+      "rating": 3.7,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Smoke Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJfXL5GyH2wokREZJGwUpnzjk",
+      "formattedAddress": "13 15 W 100th St, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7946027,
+        "longitude": -73.9634696
+      },
+      "rating": 4.1,
+      "userRatingCount": 167,
+      "displayName": {
+        "text": "Associated Supermarket / Pizza Hut",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJ180qwCf2wokRClPtGDyFji4",
+      "formattedAddress": "743 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.794171899999995,
+        "longitude": -73.9699172
+      },
+      "rating": 2.8,
+      "userRatingCount": 357,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJucAzxif2wokRCjzR46Fk3JE",
+      "formattedAddress": "733 Amsterdam Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7935939,
+        "longitude": -73.97024449999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 620,
+      "displayName": {
+        "text": "Key Food Supermarkets",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJJeQuFib2wokR3bAzGy1K4cY",
+      "formattedAddress": "Q2WH+HW5, 2618 Broadway, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.796349299999996,
+        "longitude": -73.970197
+      },
+      "rating": 4.5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "2618 Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ52K2PSb2wokR91lvjYJXlbY",
+      "formattedAddress": "New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7963623,
+        "longitude": -73.9702496
+      },
+      "rating": 4,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Gigi Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

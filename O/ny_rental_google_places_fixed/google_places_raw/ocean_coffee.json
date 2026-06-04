@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-14Y8hFawokRAxpOV3qCC0o",
+      "formattedAddress": "38 Little W St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7064252,
+        "longitude": -74.0169031
+      },
+      "rating": 4.3,
+      "userRatingCount": 198,
+      "displayName": {
+        "text": "Inatteso Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ5ZvEAw5awokR3Otot5JKNdU",
+      "formattedAddress": "36 Battery Pl, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.706165,
+        "longitude": -74.01856819999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 137,
+      "displayName": {
+        "text": "Lox Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJQcyILodbwokR1Nc3km4VCrk",
+      "formattedAddress": "25 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7055953,
+        "longitude": -74.0139712
+      },
+      "displayName": {
+        "text": "Animanga 2020",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJVVUVaBFawokR0M0TpSFZJTA",
+      "formattedAddress": "25 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7057809,
+        "longitude": -74.0139724
+      },
+      "displayName": {
+        "text": "Jack Rockwell Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ43cjAv9bwokRn4BpiNS7irg",
+      "formattedAddress": "PX2M+PR, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.702429699999996,
+        "longitude": -74.01621759999999
+      },
+      "rating": 3.8,
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Pixie Scout Canteen",
+        "languageCode": "es"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJR4q4lhNawokRlXuf3R_uwv0",
+      "formattedAddress": "1 Battery Pl, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.703283899999995,
+        "longitude": -74.014119
+      },
+      "rating": 3.7,
+      "userRatingCount": 1124,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJbza3-hNawokRdv01g6UhHgg",
+      "formattedAddress": "2 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.70467,
+        "longitude": -74.01302
+      },
+      "rating": 4.1,
+      "userRatingCount": 549,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJJU1Oi8hbwokRoM6DncbDVY0",
+      "formattedAddress": "32 Broadway ste 1, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.70587150000001,
+        "longitude": -74.0129819
+      },
+      "rating": 1,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Stir Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJi4ejSRFawokRzGyNxb9rFHk",
+      "formattedAddress": "42 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7059925,
+        "longitude": -74.01296099999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 436,
+      "displayName": {
+        "text": "Gregorys Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ6Rdrc0FbwokRUwLgPMIX4b4",
+      "formattedAddress": "71 Greenwich St, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7073148,
+        "longitude": -74.01374280000002
+      },
+      "rating": 4.5,
+      "userRatingCount": 226,
+      "displayName": {
+        "text": "Ateaz Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    }
+  ]
+}

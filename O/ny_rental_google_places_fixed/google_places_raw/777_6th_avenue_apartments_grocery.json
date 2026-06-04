@@ -1,0 +1,145 @@
+{
+  "places": [
+    {
+      "id": "ChIJi6wqqaVZwokRGr5R0dVtAbg",
+      "formattedAddress": "766 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7445028,
+        "longitude": -73.99142499999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 2090,
+      "displayName": {
+        "text": "Fairway Market of Chelsea",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ9-GDqKVZwokR8XQl6V_Qdy0",
+      "formattedAddress": "765 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.744646599999996,
+        "longitude": -73.9917813
+      },
+      "rating": 4.5,
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "765 Sixth Avenue Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJta4Ej6VZwokRLECXxLn6GHs",
+      "formattedAddress": "765 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7445942,
+        "longitude": -73.9917877
+      },
+      "rating": 4.2,
+      "userRatingCount": 649,
+      "displayName": {
+        "text": "Sunac Fancy Food",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ-0Qxvo1ZwokReIAU4YX1xdI",
+      "formattedAddress": "800 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7455269,
+        "longitude": -73.9906645
+      },
+      "rating": 2.3,
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJs33TkaVZwokR5F7p5c2E4I0",
+      "formattedAddress": "801 6th Ave A, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.74575180000001,
+        "longitude": -73.9909895
+      },
+      "rating": 4.8,
+      "userRatingCount": 1084,
+      "displayName": {
+        "text": "Sixth Ave Garden Gourmet Deli",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJw4sx_qRZwokRFJiwvvo5mJM",
+      "formattedAddress": "745 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7440351,
+        "longitude": -73.99226329999999
+      },
+      "displayName": {
+        "text": "Gourmet Bay Spirits Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJdXFfo8VZwokRoyEgeIUZg2Y",
+      "formattedAddress": "112 W 25th St Floor 38 & 39, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7443203,
+        "longitude": -73.9926957
+      },
+      "displayName": {
+        "text": "TYTime",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ80s8AKVZwokRAuLuDsAyjrQ",
+      "formattedAddress": "750 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7437466,
+        "longitude": -73.99183889999999
+      },
+      "rating": 3.3,
+      "userRatingCount": 216,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJs5Cx1KVZwokRE6Qh9DjFWXY",
+      "formattedAddress": "1133 Broadway, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.743783900000004,
+        "longitude": -73.9893618
+      },
+      "displayName": {
+        "text": "Medors Biotech LLC",
+        "languageCode": "en"
+      }
+    },
+    {
+      "id": "ChIJV1rJC6ZZwokRz2GKJxceB4I",
+      "formattedAddress": "1170 Broadway, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7449462,
+        "longitude": -73.98849349999999
+      },
+      "displayName": {
+        "text": "7 By 7 Translation Market Group",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

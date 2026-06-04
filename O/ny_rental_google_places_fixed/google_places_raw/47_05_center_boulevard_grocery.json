@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJF9lZMyJZwokRRMRyCnyUhOM",
+      "formattedAddress": "4-85 47th Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.745550099999996,
+        "longitude": -73.9563318
+      },
+      "rating": 4.1,
+      "userRatingCount": 853,
+      "displayName": {
+        "text": "Foodcellar Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJ5wsSzyNZwokRFfl2rBL3rpI",
+      "formattedAddress": "47-02 5th St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.745543999999995,
+        "longitude": -73.9559917
+      },
+      "rating": 3.1,
+      "userRatingCount": 102,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJnbwm47BZwokRwbLB1EXCP4I",
+      "formattedAddress": "45-45 Center Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7477594,
+        "longitude": -73.9562766
+      },
+      "rating": 4,
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "Prestige Marketplace",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJN_OkqSZZwokRfqL2CzmpeTI",
+      "formattedAddress": "46-30 Vernon Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7460751,
+        "longitude": -73.9533217
+      },
+      "rating": 3.8,
+      "userRatingCount": 69,
+      "displayName": {
+        "text": "Yashi Deli & Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJEx4JgLBT9q4Re9Y2VZJiLf8",
+      "formattedAddress": "47-36 Vernon Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7445078,
+        "longitude": -73.9536668
+      },
+      "rating": 4.1,
+      "userRatingCount": 35,
+      "displayName": {
+        "text": "VARIETIES CONVENIENCE & CIGAR SHOP",
+        "languageCode": "en"
+      },
+      "primaryType": "store"
+    },
+    {
+      "id": "ChIJ42gGEQBZwokRQaxOQK8-ebI",
+      "formattedAddress": "2-57 50th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7433716,
+        "longitude": -73.9566034
+      },
+      "rating": 4.1,
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "Dumbo Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJvU8G7CJZwokR2z-3o4qt3Jg",
+      "formattedAddress": "50-01 2nd St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7434432,
+        "longitude": -73.958277
+      },
+      "rating": 3.9,
+      "userRatingCount": 398,
+      "displayName": {
+        "text": "Urban Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJWyRbPtBZwokRBbX5ruPYqVQ",
+      "formattedAddress": "5-60 49th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7434206,
+        "longitude": -73.9540778
+      },
+      "rating": 5,
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "LIC FRUIT STAND",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJk0UTnCJZwokRyHqpBqi393E",
+      "formattedAddress": "1-50 50th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.743491,
+        "longitude": -73.9587208
+      },
+      "rating": 2.8,
+      "userRatingCount": 149,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJGauWeiNZwokRekL_-X5wmK4",
+      "formattedAddress": "49-12 Vernon Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7430556,
+        "longitude": -73.9541667
+      },
+      "rating": 3.8,
+      "userRatingCount": 160,
+      "displayName": {
+        "text": "E & I Deli & Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

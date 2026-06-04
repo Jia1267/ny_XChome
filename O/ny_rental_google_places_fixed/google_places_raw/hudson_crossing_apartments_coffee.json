@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ6YfGPlRZwokRbZod6gdHkqY",
+      "formattedAddress": "484 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.755292,
+        "longitude": -73.9945623
+      },
+      "rating": 3.6,
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJPfO8aJdZwokRbVFA0m-Cc0g",
+      "formattedAddress": "502 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7559371,
+        "longitude": -73.9941049
+      },
+      "rating": 4.5,
+      "userRatingCount": 1129,
+      "displayName": {
+        "text": "Cafe Aroma",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJTTCzMJZZwokRRFcmxSz_te8",
+      "formattedAddress": "340 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.754671599999995,
+        "longitude": -73.99401859999999
+      },
+      "rating": 4.7,
+      "userRatingCount": 763,
+      "displayName": {
+        "text": "ARVACI coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJC0l4rYNZwokR6YEA9ftwNqo",
+      "formattedAddress": "347 W 36th St., New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.754443599999995,
+        "longitude": -73.9943495
+      },
+      "rating": 3.9,
+      "userRatingCount": 432,
+      "displayName": {
+        "text": "Afternoon Tea NYC | The PARISIAN TEA ROOM – Brunch, Lunch & Live Jazz",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJBbfon65ZwokRT39Khud3XTw",
+      "formattedAddress": "330 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7553285,
+        "longitude": -73.99346349999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 116,
+      "displayName": {
+        "text": "Saranda Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJcZ-icLpZwokRx76Ko2MG-jY",
+      "formattedAddress": "454 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.754176,
+        "longitude": -73.9953772
+      },
+      "rating": 4.8,
+      "userRatingCount": 299,
+      "displayName": {
+        "text": "Starstruck Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ06CfSrBZwokRrYVRDkLYV2w",
+      "formattedAddress": "320 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.754456499999996,
+        "longitude": -73.9932668
+      },
+      "rating": 4,
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "The People's Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJcb_8p0xZwokR_obSRVX_siw",
+      "formattedAddress": "320 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.754450399999996,
+        "longitude": -73.99326429999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 173,
+      "displayName": {
+        "text": "The People's Forum",
+        "languageCode": "en"
+      },
+      "primaryType": "community_center"
+    },
+    {
+      "id": "ChIJce1baq1ZwokRXubtK6DmsUE",
+      "formattedAddress": "330 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7545208,
+        "longitude": -73.99668989999999
+      },
+      "rating": 4,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Coffee & Crumbs",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJAU8dFZZZwokRCjj6ZXJNJL0",
+      "formattedAddress": "528 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756620399999996,
+        "longitude": -73.99366599999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 343,
+      "displayName": {
+        "text": "Pio Bagel On 9th",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    }
+  ]
+}

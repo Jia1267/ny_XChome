@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJC7MfJlpZwokRAyXHkdVJLgs",
+      "formattedAddress": "28-18 41st Ave store, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7509571,
+        "longitude": -73.9371187
+      },
+      "rating": 4.8,
+      "userRatingCount": 35,
+      "displayName": {
+        "text": "NYC Greens plaza deli",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ2Yv-OE1ZwokRskhcMIqAVmY",
+      "formattedAddress": "41-10 29th St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.750912,
+        "longitude": -73.9370728
+      },
+      "rating": 4.6,
+      "userRatingCount": 364,
+      "displayName": {
+        "text": "FER",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJwfhsFJpZwokRVHElWdLDzf4",
+      "formattedAddress": "27-01 Queens Plz N Located in the 7th Floor Break Room, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.75084,
+        "longitude": -73.93867
+      },
+      "displayName": {
+        "text": "Farmer's Fridge",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJB2eut9VYwokRytSAbWCgn0g",
+      "formattedAddress": "27-01 Queens Plaza N, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7505811,
+        "longitude": -73.9388853
+      },
+      "rating": 4.6,
+      "userRatingCount": 311,
+      "displayName": {
+        "text": "Terry and Yaki",
+        "languageCode": "en"
+      },
+      "primaryType": "japanese_restaurant"
+    },
+    {
+      "id": "ChIJ4c7wULlZwokR3bVocv0INKk",
+      "formattedAddress": "41-04 27th St, Astoria, NY 11101, USA",
+      "location": {
+        "latitude": 40.7517047,
+        "longitude": -73.93864409999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 226,
+      "displayName": {
+        "text": "LIC Bagels & Deli",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJm9WKv4NZwokRHmQ-zHL9eQ8",
+      "formattedAddress": "41-04 27th St Store S1, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.751804199999995,
+        "longitude": -73.9385557
+      },
+      "rating": 3.9,
+      "userRatingCount": 104,
+      "displayName": {
+        "text": "Banh Mi Stop",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJjRU5PwBZwokR8QNSmGMUnLA",
+      "formattedAddress": "41-32 27th St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.751147100000004,
+        "longitude": -73.93927049999999
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Irvan’s Table",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    },
+    {
+      "id": "ChIJS4GEa2pZwokR1iDH2UkAXmU",
+      "formattedAddress": "41-14 27th St #1B, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7516544,
+        "longitude": -73.9389672
+      },
+      "rating": 4.3,
+      "userRatingCount": 241,
+      "displayName": {
+        "text": "AnnTremet Cake LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "dessert_shop"
+    },
+    {
+      "id": "ChIJTRPxVABZwokRj42naw9exqk",
+      "formattedAddress": "41-07 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.751948000000006,
+        "longitude": -73.939098
+      },
+      "displayName": {
+        "text": "Cafe Hunan",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJRcKKLwBZwokRotZf2RqAdy4",
+      "formattedAddress": "41-07 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.751948000000006,
+        "longitude": -73.939098
+      },
+      "rating": 2.1,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Yaso Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "places": [
+    {
+      "id": "ChIJY6q6vqxZwokR3X1qxq3EWkU",
+      "formattedAddress": "775 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.745008999999996,
+        "longitude": -73.9915697
+      },
+      "rating": 4.1,
+      "userRatingCount": 384,
+      "displayName": {
+        "text": "Gregorys Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJm977xR5ZwokR1IlUEsz8laE",
+      "formattedAddress": "769 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7447842,
+        "longitude": -73.991721
+      },
+      "rating": 4.4,
+      "userRatingCount": 131,
+      "displayName": {
+        "text": "IndiCo Coffee Co.",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJqxpOlqVZwokRSwmhZdfPLl4",
+      "formattedAddress": "The Capitol At, 776 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.74521,
+        "longitude": -73.99087
+      },
+      "rating": 3.9,
+      "userRatingCount": 223,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJK2tXHgBZwokRNxlYQo1kbkE",
+      "formattedAddress": "86 W 26th St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7445622,
+        "longitude": -73.9913011
+      },
+      "displayName": {
+        "text": "Bodega",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ-0Qxvo1ZwokReIAU4YX1xdI",
+      "formattedAddress": "800 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7455269,
+        "longitude": -73.9906645
+      },
+      "rating": 2.3,
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJo7aE7KVZwokRTFQSEMeHNhM",
+      "formattedAddress": "49 W 27th St, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7452234,
+        "longitude": -73.9902283
+      },
+      "rating": 4.4,
+      "userRatingCount": 197,
+      "displayName": {
+        "text": "Patent Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJM4fINABZwokRZ0qc__CHT3A",
+      "formattedAddress": "800 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7456659,
+        "longitude": -73.9905921
+      },
+      "rating": 4.2,
+      "userRatingCount": 310,
+      "displayName": {
+        "text": "Luckin Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ0ZMNPzlZwokRrYjntORHHkA",
+      "formattedAddress": "109 W 25th St, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7445733,
+        "longitude": -73.99237839999999
+      },
+      "displayName": {
+        "text": "The Brownstone Social",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJz7g82KtZwokRsXU0FMeLpmU",
+      "formattedAddress": "809 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7460246,
+        "longitude": -73.99089210000001
+      },
+      "rating": 3.9,
+      "userRatingCount": 2198,
+      "displayName": {
+        "text": "McDonald's",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    }
+  ]
+}

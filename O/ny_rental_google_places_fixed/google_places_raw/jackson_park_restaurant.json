@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJKZoKe2hZwokRvSk2WGnq-b8",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7489589,
+        "longitude": -73.9387376
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Master spicy hot pot 冒大仙",
+        "languageCode": "zh-TW"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJ1bDZ3xlZwokRHXUjymCS08M",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7489589,
+        "longitude": -73.9387376
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Kimbo Beef Noodle",
+        "languageCode": "zh-TW"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ6d5LokpZwokRlrAwll2NArU",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7489589,
+        "longitude": -73.9387376
+      },
+      "rating": 4.5,
+      "userRatingCount": 236,
+      "displayName": {
+        "text": "Bobwhite Counter",
+        "languageCode": "en"
+      },
+      "primaryType": "chicken_restaurant"
+    },
+    {
+      "id": "ChIJldOvrUxZwokRNM0jAvLECGk",
+      "formattedAddress": "Nagaiki Ramen, 28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7489589,
+        "longitude": -73.9387376
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Nagaiki Ramen METTRA",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJ1TezG91ZwokRXkW5qEgj-Pw",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7489589,
+        "longitude": -73.9387376
+      },
+      "rating": 4.8,
+      "userRatingCount": 102,
+      "displayName": {
+        "text": "Siam Thai Express",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    },
+    {
+      "id": "ChIJY-NyAixZwokRfCIxjxnX_Tc",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748849,
+        "longitude": -73.9386253
+      },
+      "rating": 3.9,
+      "userRatingCount": 80,
+      "displayName": {
+        "text": "Ace's Pizza LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJ-9pePqFZwokRtWTSBnERmZg",
+      "formattedAddress": "28-17 Jackson Ave 2nd Flr, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488331,
+        "longitude": -73.9385089
+      },
+      "rating": 4.5,
+      "userRatingCount": 157,
+      "displayName": {
+        "text": "Sushi Nikko NY",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJpWPsdw9ZwokRh9CSATRBrrY",
+      "formattedAddress": "28-07 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748894799999995,
+        "longitude": -73.9388294
+      },
+      "rating": 3.6,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Franky's Souvlaki",
+        "languageCode": "en"
+      },
+      "primaryType": "greek_restaurant"
+    },
+    {
+      "id": "ChIJpRaITSRZwokRji4cRJdtswE",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748855899999995,
+        "longitude": -73.9384513
+      },
+      "rating": 4.5,
+      "userRatingCount": 1045,
+      "displayName": {
+        "text": "METTRA",
+        "languageCode": "en"
+      },
+      "primaryType": "food_court"
+    },
+    {
+      "id": "ChIJBes4BABZwokRfQJv-BqVIRE",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748643799999996,
+        "longitude": -73.9386081
+      },
+      "rating": 2,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Ziyan Chicken",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    }
+  ]
+}

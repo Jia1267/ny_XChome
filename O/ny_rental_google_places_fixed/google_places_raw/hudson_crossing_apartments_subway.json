@@ -1,0 +1,34 @@
+{
+  "places": [
+    {
+      "id": "ChIJT35y6K1ZwokRF8Y4AiKVQzM",
+      "formattedAddress": "New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.752185999999995,
+        "longitude": -73.993454
+      },
+      "rating": 4.1,
+      "userRatingCount": 963,
+      "displayName": {
+        "text": "34 St-Penn Station",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ0SEkaFNYwokReNXzJdBV0Uc",
+      "formattedAddress": "625 8th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7572134,
+        "longitude": -73.9896862
+      },
+      "rating": 3.9,
+      "userRatingCount": 469,
+      "displayName": {
+        "text": "42 St-Port Authority Bus Terminal",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

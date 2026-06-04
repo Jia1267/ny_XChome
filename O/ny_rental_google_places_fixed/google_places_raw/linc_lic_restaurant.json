@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJnelMReNZwokRXqa1GK4myCk",
+      "formattedAddress": "43-10 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.74884850000001,
+        "longitude": -73.9423915
+      },
+      "rating": 4.2,
+      "userRatingCount": 479,
+      "displayName": {
+        "text": "Vert Frais",
+        "languageCode": "en"
+      },
+      "primaryType": "japanese_restaurant"
+    },
+    {
+      "id": "ChIJ9Srcyg9ZwokRbQUFlMSE-sM",
+      "formattedAddress": "43-18 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748214999999995,
+        "longitude": -73.942964
+      },
+      "rating": 4,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "FER at Foodcellar",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJF-lxAgBZwokR6LboySOdOs4",
+      "formattedAddress": "43-12 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748273999999995,
+        "longitude": -73.9424163
+      },
+      "rating": 4.7,
+      "userRatingCount": 419,
+      "displayName": {
+        "text": "Westville Long Island City",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJRatSnCRZwokRK_u2FQFpRb0",
+      "formattedAddress": "44-05 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7480963,
+        "longitude": -73.9427207
+      },
+      "rating": 5,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "The Loaded Potato",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ1co9IwBZwokRfc8YY3aeP9Q",
+      "formattedAddress": "25-20 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7482804,
+        "longitude": -73.9421204
+      },
+      "rating": 5,
+      "userRatingCount": 119,
+      "displayName": {
+        "text": "Soothr Khao Mun Gai",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJo9ihKT5ZwokRlgYJy-w_N3o",
+      "formattedAddress": "42-60 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7491627,
+        "longitude": -73.9421105
+      },
+      "rating": 4.1,
+      "userRatingCount": 594,
+      "displayName": {
+        "text": "Softbite | Soufflé Pancakes",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJZ91hZptZwokROuDqavKBT_M",
+      "formattedAddress": "Rooftop, 42-59 Crescent St 8th FL, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488909,
+        "longitude": -73.94183029999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "EVEN IHG Sky Lounge and Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ4RKaDwBZwokRKQRpjlpmObQ",
+      "formattedAddress": "25-20 43rd Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7482943,
+        "longitude": -73.94189390000001
+      },
+      "rating": 4.9,
+      "userRatingCount": 5364,
+      "displayName": {
+        "text": "Soothr LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "thai_restaurant"
+    },
+    {
+      "id": "ChIJq10eVxpZwokR1ahkZRWbeFU",
+      "formattedAddress": "44-05 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7477115,
+        "longitude": -73.9431017
+      },
+      "rating": 4.4,
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Corgi Jianbing LIC 可吉煎饼",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJp9WpPSxZwokR9e5KFVB9lWQ",
+      "formattedAddress": "27-10 43rd Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747839,
+        "longitude": -73.941735
+      },
+      "rating": 4.3,
+      "userRatingCount": 814,
+      "displayName": {
+        "text": "Tacombi - Long Island City",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    }
+  ]
+}

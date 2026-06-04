@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ1zmOU_bzwokRx89eaDxJ9Hg",
+      "formattedAddress": "584 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.866858199999996,
+        "longitude": -73.92105389999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 239,
+      "displayName": {
+        "text": "Boca Chica Seafood",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJt_ZHpCDzwokR8kPoMe5kOmI",
+      "formattedAddress": "586 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8669331,
+        "longitude": -73.921011
+      },
+      "rating": 4.7,
+      "userRatingCount": 47,
+      "displayName": {
+        "text": "Taco Mix",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJEyAHVazzwokRqeDuj6t3bvo",
+      "formattedAddress": "586 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8669331,
+        "longitude": -73.921011
+      },
+      "rating": 4.8,
+      "userRatingCount": 182,
+      "displayName": {
+        "text": "Unique",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_fusion_restaurant"
+    },
+    {
+      "id": "ChIJ10dSg5XzwokRoKVTfwII-f0",
+      "formattedAddress": "588 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867000499999996,
+        "longitude": -73.9210233
+      },
+      "rating": 4.2,
+      "userRatingCount": 26,
+      "displayName": {
+        "text": "Katrin Tapas-Lounge",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJM72y7c_zwokR5GE8rEiyNRQ",
+      "formattedAddress": "575 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8667205,
+        "longitude": -73.9203661
+      },
+      "rating": 4.8,
+      "userRatingCount": 381,
+      "displayName": {
+        "text": "Galicia Tapas",
+        "languageCode": "en"
+      },
+      "primaryType": "tapas_restaurant"
+    },
+    {
+      "id": "ChIJ-RwUAv7zwokRezIRBc3lUag",
+      "formattedAddress": "570 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8663187,
+        "longitude": -73.9207666
+      },
+      "rating": 5,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "El Carajo Mix Burger",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJiQk-YV_zwokR_LgzfVX2HB0",
+      "formattedAddress": "595 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8672659,
+        "longitude": -73.920698
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Frituras NY",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJnXTVg_jzwokRODvoi95Aqrw",
+      "formattedAddress": "565 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8664779,
+        "longitude": -73.9200851
+      },
+      "rating": 4.4,
+      "userRatingCount": 470,
+      "displayName": {
+        "text": "Dyckman Bar & Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ9XXu_vbzwokR5oc5Xx1PqHw",
+      "formattedAddress": "606 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867325,
+        "longitude": -73.9212398
+      },
+      "rating": 4.1,
+      "userRatingCount": 718,
+      "displayName": {
+        "text": "La Nueva España Restaurant & Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "latin_american_restaurant"
+    },
+    {
+      "id": "ChIJv-bh-PbzwokR-AR_g9KRXLY",
+      "formattedAddress": "597 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8673791,
+        "longitude": -73.9206974
+      },
+      "rating": 4.4,
+      "userRatingCount": 1617,
+      "displayName": {
+        "text": "Guadalupe Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    }
+  ]
+}

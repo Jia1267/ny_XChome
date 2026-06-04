@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJb1ng8xFawokRLcG2ng6A3Uk",
+      "formattedAddress": "28 Little W St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7060556,
+        "longitude": -74.0172087
+      },
+      "rating": 4.3,
+      "userRatingCount": 723,
+      "displayName": {
+        "text": "Inatteso Pizzabar",
+        "languageCode": "en"
+      },
+      "primaryType": "italian_restaurant"
+    },
+    {
+      "id": "ChIJi3A9SVtbwokRR4CkaQHZyk4",
+      "formattedAddress": "Terravita Downtown, 17 Battery Pl, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7050738,
+        "longitude": -74.01562009999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 145,
+      "displayName": {
+        "text": "Terravita Downtown",
+        "languageCode": "es"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ-14Y8hFawokRAxpOV3qCC0o",
+      "formattedAddress": "38 Little W St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7064252,
+        "longitude": -74.0169031
+      },
+      "rating": 4.3,
+      "userRatingCount": 198,
+      "displayName": {
+        "text": "Inatteso Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ5ZvEAw5awokR3Otot5JKNdU",
+      "formattedAddress": "36 Battery Pl, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.706165,
+        "longitude": -74.01856819999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 137,
+      "displayName": {
+        "text": "Lox Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJq0kJVBBawokRHvPhHRwHcFk",
+      "formattedAddress": "21 West St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.706363599999996,
+        "longitude": -74.01561699999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 185,
+      "displayName": {
+        "text": "West Bank Gourmet Deli in Battery Park",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJjdGaMABbwokRbg1D4OzNPLM",
+      "formattedAddress": "11 Greenwich St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7053112,
+        "longitude": -74.0146015
+      },
+      "displayName": {
+        "text": "Abdullha",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJf5NFLhNbwokRm4Uo4pOOL0U",
+      "formattedAddress": "1 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7049658,
+        "longitude": -74.0144968
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Hom Hom Dog",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJFdlGXhFawokR7lPqXwaGirc",
+      "formattedAddress": "11 Broadway Unit #155, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.705120099999995,
+        "longitude": -74.01404629999999
+      },
+      "rating": 3.7,
+      "userRatingCount": 389,
+      "displayName": {
+        "text": "Subway",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJWUf6PBFawokRifmCHSgp17w",
+      "formattedAddress": "11 Trinity Pl, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7063523,
+        "longitude": -74.01380859999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 385,
+      "displayName": {
+        "text": "Blarney Stone",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    },
+    {
+      "id": "ChIJd1YvYgBbwokR5eX6Vn3JNA4",
+      "formattedAddress": "New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7038704,
+        "longitude": -74.0138541
+      },
+      "rating": 2.8,
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Nathan's Famous",
+        "languageCode": "en"
+      },
+      "primaryType": "hot_dog_stand"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "places": [
+    {
+      "id": "ChIJpQg2TvbzwokRjWca57Ds4cY",
+      "formattedAddress": "572 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8664501,
+        "longitude": -73.9207588
+      },
+      "rating": 4.2,
+      "userRatingCount": 178,
+      "displayName": {
+        "text": "Dan's Supermarket",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ7d84V_bzwokReyFPsM-uQQ8",
+      "formattedAddress": "581 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8669367,
+        "longitude": -73.9205486
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "581 U & G Food Corp.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJd7HpBvfzwokR2YDxeHDT6n8",
+      "formattedAddress": "4918 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867300300000004,
+        "longitude": -73.92160729999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 870,
+      "displayName": {
+        "text": "CTown Supermarkets",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJx3vi-07zwokRimsXdsEh5d4",
+      "formattedAddress": "561 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.866216099999995,
+        "longitude": -73.9200355
+      },
+      "displayName": {
+        "text": "Halu Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJK6LsIADzwokRMxAjgYhB0rg",
+      "formattedAddress": "4900 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8671672,
+        "longitude": -73.9220489
+      },
+      "displayName": {
+        "text": "CTown Farmers Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJeYXWF6LzwokRLSIkR2Q02dI",
+      "formattedAddress": "4950 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8676692,
+        "longitude": -73.92041309999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 37,
+      "displayName": {
+        "text": "DII Deals & Discounts",
+        "languageCode": "en"
+      },
+      "primaryType": "discount_store"
+    },
+    {
+      "id": "ChIJi_erOGfzwokREFye3Xzqdmo",
+      "formattedAddress": "New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8677145,
+        "longitude": -73.9212019
+      },
+      "displayName": {
+        "text": "BARBIE PLACE",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJX0aHcCbzwokRGQs_EylkC7w",
+      "formattedAddress": "204 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8656924,
+        "longitude": -73.92125
+      },
+      "rating": 4,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "El Bodegon",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJh3ZBWgDzwokRya9lkJgP6ME",
+      "formattedAddress": "616 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8678017,
+        "longitude": -73.9215498
+      },
+      "displayName": {
+        "text": "Comida",
+        "languageCode": "es"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJydSTbvbzwokRg6Zpxuo2kJ8",
+      "formattedAddress": "242 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8661931,
+        "longitude": -73.91944269999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "New Generation Mini Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

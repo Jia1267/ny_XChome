@@ -1,0 +1,148 @@
+{
+  "places": [
+    {
+      "id": "ChIJE8qH8vhZwokRZmSYZCmKF7U",
+      "formattedAddress": "486 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7553413,
+        "longitude": -73.9945485
+      },
+      "displayName": {
+        "text": "Biko Sleek",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJG_YhcK1ZwokRybbJ5PPLd0U",
+      "formattedAddress": "340 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7547759,
+        "longitude": -73.9939259
+      },
+      "displayName": {
+        "text": "Biko Sleek Luxury",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJM78Cca1ZwokRpL16MF6FsA0",
+      "formattedAddress": "334 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7545926,
+        "longitude": -73.9938329
+      },
+      "rating": 4,
+      "userRatingCount": 28,
+      "displayName": {
+        "text": "Deepchhaya Deli & Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJgybXXMdZwokR5k_6N58fLA0",
+      "formattedAddress": "411 W 35th St room 6d, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7546209,
+        "longitude": -73.9964688
+      },
+      "displayName": {
+        "text": "AURIX MARKET INC",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJEVzKxrJZwokR9P9raTunFws",
+      "formattedAddress": "431 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756101199999996,
+        "longitude": -73.99646709999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 592,
+      "displayName": {
+        "text": "Brooklyn Fare",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJvV7ksVJYwokRPYAfjoujX1k",
+      "formattedAddress": "533 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.757014999999996,
+        "longitude": -73.99399199999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 58,
+      "displayName": {
+        "text": "Terra Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ707CarJZwokR804KNElmBT0",
+      "formattedAddress": "373 West 34th Street, 432 9th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.753493899999995,
+        "longitude": -73.9959939
+      },
+      "rating": 4.1,
+      "userRatingCount": 272,
+      "displayName": {
+        "text": "B&W Deli & Pizzeria",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJM0ApqK1ZwokR4Udb5QtPHQ0",
+      "formattedAddress": "535 8th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7539787,
+        "longitude": -73.99264540000001
+      },
+      "rating": 2.7,
+      "userRatingCount": 108,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJK2ohXKdZwokRTfQpDjJfffc",
+      "formattedAddress": "466 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7559907,
+        "longitude": -73.9976803
+      },
+      "rating": 2.5,
+      "userRatingCount": 20,
+      "displayName": {
+        "text": "Atlantis",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJD8meuVJYwokR--2BNsYoquE",
+      "formattedAddress": "543 9th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7573977,
+        "longitude": -73.9937398
+      },
+      "rating": 4.8,
+      "userRatingCount": 175,
+      "displayName": {
+        "text": "Ninth Avenue International Foods",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJtanK3UpZwokRc0PGtQiUr-4",
+      "formattedAddress": "26-20 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7472874,
+        "longitude": -73.94149999999999
+      },
+      "rating": 3.5,
+      "userRatingCount": 142,
+      "displayName": {
+        "text": "Pom's Gourmet Market",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJrxoW7ilZwokR4TE0795R2DQ",
+      "formattedAddress": "43-18 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748214999999995,
+        "longitude": -73.942964
+      },
+      "rating": 4.1,
+      "userRatingCount": 1056,
+      "displayName": {
+        "text": "Foodcellar Market Court Square",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJI5EO2PVZwokREmt1MRyBpWM",
+      "formattedAddress": "25-01 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7472594,
+        "longitude": -73.9443527
+      },
+      "rating": 3.9,
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "Target Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJhz64Xh1ZwokRRTc_fYm-CVs",
+      "formattedAddress": "28-02 42nd Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748621799999995,
+        "longitude": -73.9395663
+      },
+      "rating": 3.9,
+      "userRatingCount": 184,
+      "displayName": {
+        "text": "Koufuku Market",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_grocery_store"
+    },
+    {
+      "id": "ChIJRTlCFmNZwokRfh_8x7yJ-1s",
+      "formattedAddress": "21-51 44th Dr, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7480249,
+        "longitude": -73.94528989999999
+      },
+      "rating": 4.9,
+      "userRatingCount": 85,
+      "displayName": {
+        "text": "Ai Mart",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_grocery_store"
+    },
+    {
+      "id": "ChIJT-mONTNZwokRMc00RRBOEwA",
+      "formattedAddress": "45-16 23rd St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7465147,
+        "longitude": -73.9456517
+      },
+      "rating": 5,
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "Quick Stop Deli & Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJx2JgHaBZwokRjJCMy0xM9iM",
+      "formattedAddress": "25-12 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7502652,
+        "longitude": -73.940252
+      },
+      "rating": 3.9,
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "GREEN VALLEY organic market",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJiQ7jiA5ZwokRBk7Y7X9S7rE",
+      "formattedAddress": "27-26 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7498161,
+        "longitude": -73.9392342
+      },
+      "rating": 1.9,
+      "userRatingCount": 111,
+      "displayName": {
+        "text": "Walgreens",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJieKUCG5ZwokRcFYGfu1T0Sc",
+      "formattedAddress": "22-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7459172,
+        "longitude": -73.9460076
+      },
+      "rating": 4.6,
+      "userRatingCount": 1978,
+      "displayName": {
+        "text": "Trader Joe's",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJXzhOvqtZwokRSOOfSdybUvM",
+      "formattedAddress": "29-18 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7490586,
+        "longitude": -73.9382112
+      },
+      "rating": 4.1,
+      "userRatingCount": 610,
+      "displayName": {
+        "text": "City Acres Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

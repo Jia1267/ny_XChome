@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ00bJSkxYwokRANhaRyRiMeU",
+      "formattedAddress": "555 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.760868699999996,
+        "longitude": -73.99795139999999
+      },
+      "rating": 2.5,
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJw64iS0xYwokRdz3mg2xumKA",
+      "formattedAddress": "555 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.760791499999996,
+        "longitude": -73.9977372
+      },
+      "rating": 4.5,
+      "userRatingCount": 1207,
+      "displayName": {
+        "text": "Romeo and Juliet Colombian Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJs8ET5mhZwokR_YZBOGcWjDQ",
+      "formattedAddress": "572 11th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7616087,
+        "longitude": -73.9974723
+      },
+      "rating": 4.1,
+      "userRatingCount": 305,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJvz_vl01YwokR-Zb5blfISlI",
+      "formattedAddress": "515 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7601073,
+        "longitude": -73.9961734
+      },
+      "rating": 4.6,
+      "userRatingCount": 294,
+      "displayName": {
+        "text": "Broadway Deli & Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ5_kcsapZwokRKvEjFSJxFG8",
+      "formattedAddress": "W 41st St &, 12th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.761800099999995,
+        "longitude": -74.0025005
+      },
+      "rating": 2,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "The Pier 81 BEAST'ro",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJScuN5lhZwokRg_F7nV5Jado",
+      "formattedAddress": "595 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7606421,
+        "longitude": -73.9951122
+      },
+      "rating": 3.9,
+      "userRatingCount": 94,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJPY2yZV9ZwokRaFYiLjSepNQ",
+      "formattedAddress": "561 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.759247900000005,
+        "longitude": -73.9960668
+      },
+      "rating": 4.4,
+      "userRatingCount": 251,
+      "displayName": {
+        "text": "Le Cafe Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJL3o9j41ZwokRMibBtFLT1Ys",
+      "formattedAddress": "555 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7584306,
+        "longitude": -73.99971889999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Caffe Vento Espresso & Boba",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJzbAoythZwokRVHGfpMevDww",
+      "formattedAddress": "550 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.758555699999995,
+        "longitude": -73.99595
+      },
+      "rating": 4.2,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Luckin Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ-ciUeE1YwokRoDqDjSYrS3I",
+      "formattedAddress": "480 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.759258599999995,
+        "longitude": -73.9950468
+      },
+      "rating": 4.2,
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Signature Café and Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJse9usvBRwokRbPeIFguNvRI",
+      "formattedAddress": "127 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7196726,
+        "longitude": -74.0386925
+      },
+      "rating": 4.8,
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Frankie Express",
+        "languageCode": "en"
+      },
+      "primaryType": "breakfast_restaurant"
+    },
+    {
+      "id": "ChIJoynx6s1RwokRI3-SX3yn50k",
+      "formattedAddress": "120 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7199603,
+        "longitude": -74.0387071
+      },
+      "rating": 4.5,
+      "userRatingCount": 986,
+      "displayName": {
+        "text": "Peppercorn Station 青花椒 Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJRVo9rm9RwokR2QlOWzr6OJs",
+      "formattedAddress": "107 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7192621,
+        "longitude": -74.037999
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "好好食米线BROTH & FIRE Fresh Rice Noodle Bowls",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJO-x0685RwokRbtCSWHlIzCo",
+      "formattedAddress": "10 Provost St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.720481199999995,
+        "longitude": -74.03854369999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 233,
+      "displayName": {
+        "text": "Pizza Twist",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJbZRwLWBRwokR0PT_Rw1SNRM",
+      "formattedAddress": "10 Provost St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7203958,
+        "longitude": -74.0389826
+      },
+      "rating": 4.6,
+      "userRatingCount": 523,
+      "displayName": {
+        "text": "Rui Tea",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJMRSVZQBRwokRP4cPpbmg-7g",
+      "formattedAddress": "132 Bay St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7206991,
+        "longitude": -74.0388826
+      },
+      "rating": 3.9,
+      "userRatingCount": 113,
+      "displayName": {
+        "text": "Daily Provisions - Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJAybGum5RwokRfC_DtwpsdRw",
+      "formattedAddress": "319 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7189206,
+        "longitude": -74.03891
+      },
+      "rating": 4.8,
+      "userRatingCount": 1922,
+      "displayName": {
+        "text": "Shang Gong Chu 尚宫厨",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJVZeHSjVRwokR_yRmfAN6IhQ",
+      "formattedAddress": "153 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7198334,
+        "longitude": -74.0399705
+      },
+      "rating": 4.8,
+      "userRatingCount": 88,
+      "displayName": {
+        "text": "Tart-Da",
+        "languageCode": "en"
+      },
+      "primaryType": "dessert_shop"
+    },
+    {
+      "id": "ChIJcWqMDZpRwokRpukhymE6ykE",
+      "formattedAddress": "50 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7187198,
+        "longitude": -74.0391562
+      },
+      "rating": 4.5,
+      "userRatingCount": 195,
+      "displayName": {
+        "text": "Sahara Grill & Pita",
+        "languageCode": "en"
+      },
+      "primaryType": "meal_takeaway"
+    },
+    {
+      "id": "ChIJJY9bnp9RwokRKU0JJDPvWAM",
+      "formattedAddress": "159 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.719851299999995,
+        "longitude": -74.040144
+      },
+      "displayName": {
+        "text": "Canopy Bar & Bistro",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    }
+  ]
+}

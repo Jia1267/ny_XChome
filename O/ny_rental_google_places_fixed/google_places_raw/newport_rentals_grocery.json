@@ -1,0 +1,94 @@
+{
+  "places": [
+    {
+      "id": "ChIJ0_2eXQBXwokR5twCVydA1u8",
+      "formattedAddress": "560 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7284888,
+        "longitude": -74.03413019999999
+      },
+      "rating": 4.9,
+      "userRatingCount": 79,
+      "displayName": {
+        "text": "TesoLife",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ1WvEP1RXwokRCw1N7ry1g6U",
+      "formattedAddress": "Newport Tower, 545 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.727653,
+        "longitude": -74.0351132
+      },
+      "rating": 1.3,
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "K & P Newstand Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJP6A6P1RXwokRQME4jThRTao",
+      "formattedAddress": "115 Town Square Pl, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726427799999996,
+        "longitude": -74.0338739
+      },
+      "rating": 3.6,
+      "userRatingCount": 69,
+      "displayName": {
+        "text": "Fresca Gourmet",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJk2nha1ZXwokRMlf179oameo",
+      "formattedAddress": "52 River Dr S, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7281427,
+        "longitude": -74.03179779999999
+      },
+      "rating": 3.2,
+      "userRatingCount": 131,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJhT_zRVZXwokRGXxdWtapxz0",
+      "formattedAddress": "105 River Dr S, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.729724499999996,
+        "longitude": -74.0323762
+      },
+      "rating": 3.9,
+      "userRatingCount": 1155,
+      "displayName": {
+        "text": "MORTON WILLIAMS SUPERMARKETS",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJr9ky0VNXwokRdZhT06FpL5A",
+      "formattedAddress": "Above Cheesecake Factory, 30 Mall Dr W, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726840599999996,
+        "longitude": -74.0379931
+      },
+      "rating": 4.5,
+      "userRatingCount": 17,
+      "displayName": {
+        "text": "STREET CORNER CONVENIENCE STORE",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

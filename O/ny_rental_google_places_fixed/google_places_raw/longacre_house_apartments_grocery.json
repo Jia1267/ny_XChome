@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJpziWEgBZwokR-1gIHKePSAM",
+      "formattedAddress": "301 W 50th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762656299999996,
+        "longitude": -73.9862255
+      },
+      "rating": 4,
+      "userRatingCount": 129,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJuWO59FZYwokRDbvnB6y8iBg",
+      "formattedAddress": "810 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7617385,
+        "longitude": -73.98619040000001
+      },
+      "rating": 4,
+      "userRatingCount": 1634,
+      "displayName": {
+        "text": "The Food Emporium",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJZfGxWABZwokR0UGlFajIIPE",
+      "formattedAddress": "858 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.763155499999996,
+        "longitude": -73.98515669999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 52,
+      "displayName": {
+        "text": "Mini Market ミニマーケット - Times Square",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_grocery_store"
+    },
+    {
+      "id": "ChIJ6TdCLBFZwokRDSAWFCTW5P0",
+      "formattedAddress": "355 W 49th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762491999999995,
+        "longitude": -73.98822899999999
+      },
+      "displayName": {
+        "text": "Delightful Zen",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJDRVmvVdYwokRFLYseWlSELU",
+      "formattedAddress": "881 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7639979,
+        "longitude": -73.9851384
+      },
+      "rating": 3,
+      "userRatingCount": 125,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJn9TzYQBZwokR_9t7MI_PQRc",
+      "formattedAddress": "1630 Broadway, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.761291,
+        "longitude": -73.983893
+      },
+      "displayName": {
+        "text": "Akm Convenience Store Corp",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJoZjaFVZYwokRdsDvFvO01AE",
+      "formattedAddress": "1657 Broadway Frnt 2, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7626182,
+        "longitude": -73.9835025
+      },
+      "rating": 3.6,
+      "userRatingCount": 101,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJgYq_8ldYwokRu_m3nJZGTNU",
+      "formattedAddress": "900 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7642512,
+        "longitude": -73.9844203
+      },
+      "rating": 3.1,
+      "userRatingCount": 96,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJC3bMKgBZwokRlpu1SOdrAWw",
+      "formattedAddress": "1585 Broadway, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7600547,
+        "longitude": -73.9855324
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Brooklyn Nueva York",
+        "languageCode": "es"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJv8GZdldYwokR7JtwIgTcV3g",
+      "formattedAddress": "328 W 53rd St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.764890799999996,
+        "longitude": -73.9861682
+      },
+      "rating": 1,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "West 53rd Street Rehab",
+        "languageCode": "en"
+      },
+      "primaryType": "medical_clinic"
+    }
+  ]
+}

@@ -305,3 +305,4 @@ poi_304,view_34,school,LaGuardia Community College,"31-10 Thomson Ave, Long Isla
 poi_302,view_34,shopping_mall,The Shops & Restaurants at Hudson Yards,"20 Hudson Yards, New York, NY 10001",1.64,40.7539,-74.0013,Shopping mall; fallback POI,https://www.hudsonyardsnewyork.com/shop,2026-05-28
 poi_305,view_34,transit,Times Sq-42 St Station,"Times Square, New York, NY",1.08,40.7553,-73.9875,Subway station; fallback POI,https://new.mta.info/,2026-05-28
 poi_306,view_34,transit,Court Square Station,"Court Square, Long Island City, NY",1.44,40.747,-73.945,Subway station; fallback POI,https://new.mta.info/,2026-05-28
+school-nyu-main,,school,New York University,"Washington Square, New York, NY",,40.7295,-73.9965,NYU main campus area near Washington Square Park,,2026-05-28

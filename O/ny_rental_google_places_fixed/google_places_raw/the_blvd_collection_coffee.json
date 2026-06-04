@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJfzDtxOFXwokResBVIaiU-tk",
+      "formattedAddress": "444 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.723515,
+        "longitude": -74.0376477
+      },
+      "rating": 4.1,
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "Le Cafe Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJw_WAKN1XwokRjjAUAEG5nKM",
+      "formattedAddress": "475 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.724126399999996,
+        "longitude": -74.0365824
+      },
+      "displayName": {
+        "text": "Tienda San José",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJi3JnOlhXwokRX8sjeJPVlF0",
+      "formattedAddress": "475 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.724126399999996,
+        "longitude": -74.0365824
+      },
+      "rating": 4.4,
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "modcup coffee truck",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJw4WhBa1QwokRHr069CG63Fw",
+      "formattedAddress": "148 1st St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7215183,
+        "longitude": -74.0398348
+      },
+      "rating": 4.3,
+      "userRatingCount": 427,
+      "displayName": {
+        "text": "Hidden Grounds Chai & Coffee House",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJxy8MrK1QwokRHqDrFa-fiKY",
+      "formattedAddress": "140 Bay St Suite 1, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7207692,
+        "longitude": -74.039311
+      },
+      "rating": 4.3,
+      "userRatingCount": 475,
+      "displayName": {
+        "text": "The Warehouse Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJOx_I5mZRwokRDMynEXlohd4",
+      "formattedAddress": "175 2nd St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7219623,
+        "longitude": -74.04043709999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 539,
+      "displayName": {
+        "text": "Bleu Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJbZRwLWBRwokR0PT_Rw1SNRM",
+      "formattedAddress": "10 Provost St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7203958,
+        "longitude": -74.0389826
+      },
+      "rating": 4.6,
+      "userRatingCount": 523,
+      "displayName": {
+        "text": "Rui Tea",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJPxcowidRwokRxs7c5mCR9h0",
+      "formattedAddress": "200 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.720295,
+        "longitude": -74.03451799999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 234,
+      "displayName": {
+        "text": "Canard Café Bar Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJpbvzfnlRwokR0W7paGzIwsw",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7196983,
+        "longitude": -74.0366023
+      },
+      "rating": 4.5,
+      "userRatingCount": 473,
+      "displayName": {
+        "text": "Maggie's Farm Espresso",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ82X4zi1RwokRNSd67v9wWzg",
+      "formattedAddress": "350 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7198959,
+        "longitude": -74.0383032
+      },
+      "rating": 4.2,
+      "userRatingCount": 100,
+      "displayName": {
+        "text": "The Butler Café",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

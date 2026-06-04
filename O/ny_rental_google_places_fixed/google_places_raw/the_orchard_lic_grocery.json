@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-f_tFdVYwokR9Wa5OS0TLqQ",
+      "formattedAddress": "29-11 Queens Plaza N, Astoria, NY 11101, USA",
+      "location": {
+        "latitude": 40.7499229,
+        "longitude": -73.93727249999999
+      },
+      "rating": 3.6,
+      "userRatingCount": 343,
+      "displayName": {
+        "text": "Hudson Food Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJiQ7jiA5ZwokRBk7Y7X9S7rE",
+      "formattedAddress": "27-26 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7498161,
+        "longitude": -73.9392342
+      },
+      "rating": 1.9,
+      "userRatingCount": 111,
+      "displayName": {
+        "text": "Walgreens",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJXzhOvqtZwokRSOOfSdybUvM",
+      "formattedAddress": "29-18 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7490586,
+        "longitude": -73.9382112
+      },
+      "rating": 4.1,
+      "userRatingCount": 610,
+      "displayName": {
+        "text": "City Acres Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJx2JgHaBZwokRjJCMy0xM9iM",
+      "formattedAddress": "25-12 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7502652,
+        "longitude": -73.940252
+      },
+      "rating": 3.9,
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "GREEN VALLEY organic market",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ4We8YABfwokRZmhj2YbJL4g",
+      "formattedAddress": "29-17 40th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7520813,
+        "longitude": -73.93480509999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 20,
+      "displayName": {
+        "text": "Butterfield Market - Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJhz64Xh1ZwokRRTc_fYm-CVs",
+      "formattedAddress": "28-02 42nd Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748621799999995,
+        "longitude": -73.9395663
+      },
+      "rating": 3.9,
+      "userRatingCount": 184,
+      "displayName": {
+        "text": "Koufuku Market",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_grocery_store"
+    },
+    {
+      "id": "ChIJQWXcnNRYwokRLDoQZ7trCC0",
+      "formattedAddress": "24-16 40th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7533946,
+        "longitude": -73.9382131
+      },
+      "rating": 4.1,
+      "userRatingCount": 50,
+      "displayName": {
+        "text": "Llamamu Grocery Corporation",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJj2buftFYwokRMSeMG6Co3VY",
+      "formattedAddress": "39-12 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7544882,
+        "longitude": -73.9373035
+      },
+      "rating": 3.5,
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Alma Gourmet",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJDdrwNIRfwokRHVsYXlelDS8",
+      "formattedAddress": "27-19 39th Ave, Astoria, NY 11101, USA",
+      "location": {
+        "latitude": 40.754158499999996,
+        "longitude": -73.93522639999999
+      },
+      "rating": 3.6,
+      "userRatingCount": 151,
+      "displayName": {
+        "text": "Empire City Gourmet Deli",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJnZYhcT5ZwokRJmH-c7_R1iA",
+      "formattedAddress": "38-35 Crescent St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.754799299999995,
+        "longitude": -73.9363947
+      },
+      "rating": 4.9,
+      "userRatingCount": 63,
+      "displayName": {
+        "text": "Liberty Deli and Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    }
+  ]
+}

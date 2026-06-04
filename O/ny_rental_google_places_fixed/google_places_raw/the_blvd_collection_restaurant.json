@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJxQRi0LxXwokRchqASrQWcRo",
+      "formattedAddress": "455 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7235909,
+        "longitude": -74.0367484
+      },
+      "rating": 4,
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Hudson Grille",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJwWlZUgBXwokRh4ZMUaS_aFc",
+      "formattedAddress": "475 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7241976,
+        "longitude": -74.03659069999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 29,
+      "displayName": {
+        "text": "SuLuna",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJHxka-udRwokRjT75DaC4Hpc",
+      "formattedAddress": "110 1st St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7217511,
+        "longitude": -74.0379971
+      },
+      "rating": 4.7,
+      "userRatingCount": 860,
+      "displayName": {
+        "text": "Gulp - Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "taiwanese_restaurant"
+    },
+    {
+      "id": "ChIJQy7e76xQwokRkMTCjtzzmDA",
+      "formattedAddress": "110 1st St Retail C1, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7216613,
+        "longitude": -74.0379153
+      },
+      "rating": 3.4,
+      "userRatingCount": 251,
+      "displayName": {
+        "text": "Jimmy John's",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJhX8uXVNXwokRTQnRhkmUiL0",
+      "formattedAddress": "475 Washington Blvd City, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.724322,
+        "longitude": -74.03637739999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 824,
+      "displayName": {
+        "text": "VB3 Pizzeria",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJa_XMY1NXwokR31BbU3f9xs0",
+      "formattedAddress": "479 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.724924,
+        "longitude": -74.03626
+      },
+      "rating": 4.3,
+      "userRatingCount": 2059,
+      "displayName": {
+        "text": "Fire and Oak",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJl5QRRYFXwokRlS39YpQ8XNw",
+      "formattedAddress": "480 Washington Blvd 8th floor, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7248246,
+        "longitude": -74.0347128
+      },
+      "rating": 3,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Citigroup Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJMRSVZQBRwokRP4cPpbmg-7g",
+      "formattedAddress": "132 Bay St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7206991,
+        "longitude": -74.0388826
+      },
+      "rating": 3.9,
+      "userRatingCount": 113,
+      "displayName": {
+        "text": "Daily Provisions - Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJw4WhBa1QwokRHr069CG63Fw",
+      "formattedAddress": "148 1st St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7215183,
+        "longitude": -74.0398348
+      },
+      "rating": 4.3,
+      "userRatingCount": 427,
+      "displayName": {
+        "text": "Hidden Grounds Chai & Coffee House",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJO-x0685RwokRbtCSWHlIzCo",
+      "formattedAddress": "10 Provost St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.720481199999995,
+        "longitude": -74.03854369999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 233,
+      "displayName": {
+        "text": "Pizza Twist",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJBd69TdZRwokRZFeMWfCAUh4",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714351,
+        "longitude": -74.03480189999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 740,
+      "displayName": {
+        "text": "Semicolon Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJtwLVMqlQwokRqWUNzaVgPSs",
+      "formattedAddress": "105 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7164997,
+        "longitude": -74.0359873
+      },
+      "rating": 2.8,
+      "userRatingCount": 301,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJQfFiZRxRwokRaG54U8QVBJ8",
+      "formattedAddress": "1 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7157403,
+        "longitude": -74.03393360000001
+      },
+      "rating": 3.6,
+      "userRatingCount": 157,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJRXtT-eFRwokRyLNaP9IFlAM",
+      "formattedAddress": "70 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147173,
+        "longitude": -74.0335308
+      },
+      "rating": 4.4,
+      "userRatingCount": 1247,
+      "displayName": {
+        "text": "maman",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ9xSS7LFRwokR_Py9jNS0Oqw",
+      "formattedAddress": "30 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7134158,
+        "longitude": -74.0342965
+      },
+      "rating": 4.1,
+      "userRatingCount": 196,
+      "displayName": {
+        "text": "Bluestone Lane Jersey City Coffee Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJYy7dg69QwokRvpbe2QXnGu8",
+      "formattedAddress": "112 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714108499999995,
+        "longitude": -74.0390318
+      },
+      "rating": 4.6,
+      "userRatingCount": 1299,
+      "displayName": {
+        "text": "sam a.m.",
+        "languageCode": "en"
+      },
+      "primaryType": "breakfast_restaurant"
+    },
+    {
+      "id": "ChIJYVk4EqlQwokRcj3-nrkuirI",
+      "formattedAddress": "15 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.71604,
+        "longitude": -74.03322
+      },
+      "rating": 4,
+      "userRatingCount": 937,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ3VKHqfFRwokRJ2R9aMv_m4s",
+      "formattedAddress": "201 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7142546,
+        "longitude": -74.0397612
+      },
+      "rating": 4.2,
+      "userRatingCount": 147,
+      "displayName": {
+        "text": "One Two Cup Coffee & bagels & sandwiches Vegan & vegetarian & gluten free friendly",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJw_JFdalQwokRr1sDEuBpyVE",
+      "formattedAddress": "10 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716530399999996,
+        "longitude": -74.03297599999999
+      },
+      "rating": 4,
+      "userRatingCount": 848,
+      "displayName": {
+        "text": "Gregorys Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJBxql_hz2wokRKTQtC4W80eQ",
+      "formattedAddress": "1544 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.792743,
+        "longitude": -73.9504382
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Musheer 2 Candy Corp.",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJuTCG-Rz2wokRN9ICsPodtm0",
+      "formattedAddress": "1550 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.792907,
+        "longitude": -73.9502132
+      },
+      "rating": 3.2,
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Madison Deli & Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJY3HGQR32wokRtGi_Y5wXUxo",
+      "formattedAddress": "102 E 103rd St 1st floor, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790703,
+        "longitude": -73.94918489999999
+      },
+      "rating": 5,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Derek Deli Grocery Corp.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ2WX0VB32wokRjYMN2qw0GoI",
+      "formattedAddress": "126 E 103rd St, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790354,
+        "longitude": -73.9483583
+      },
+      "rating": 4.6,
+      "userRatingCount": 283,
+      "displayName": {
+        "text": "Dalila's Market: El Tepeyac Taqueria",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJS6Vimd_3wokRkapK1mzcYkA",
+      "formattedAddress": "1588 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7939212,
+        "longitude": -73.949713
+      },
+      "displayName": {
+        "text": "Bravo Supermarkets",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJgdwPVun3wokR1n3yinD63PE",
+      "formattedAddress": "1588 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.794002899999995,
+        "longitude": -73.94969230000001
+      },
+      "rating": 4.3,
+      "userRatingCount": 78,
+      "displayName": {
+        "text": "Associated Supermarket of Madison Avenue, New York",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJMRzsRID3wokRkR1w-wisxEY",
+      "formattedAddress": "147 E 103rd St, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7905443,
+        "longitude": -73.9478135
+      },
+      "rating": 4.5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Corner Store 103st Lex Ave",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJbe3BaAD3wokRzGnkBfNEcho",
+      "formattedAddress": "1621 Lexington Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7897664,
+        "longitude": -73.94790069999999
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Golden Star Deli&Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJQcGj_qdYwokRtce4riQA7ec",
+      "formattedAddress": "1599 Lexington Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.789429,
+        "longitude": -73.948135
+      },
+      "rating": 3.5,
+      "userRatingCount": 82,
+      "displayName": {
+        "text": "Shell",
+        "languageCode": "en"
+      },
+      "primaryType": "gas_station"
+    },
+    {
+      "id": "ChIJj-e3sgL2wokR8t7nQ1O4YVQ",
+      "formattedAddress": "1629 Lexington Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790073299999996,
+        "longitude": -73.94770079999999
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "103 St Lexington Corporation",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

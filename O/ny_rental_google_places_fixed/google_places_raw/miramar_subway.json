@@ -1,0 +1,34 @@
+{
+  "places": [
+    {
+      "id": "ChIJaUgi6_bzwokROqByq4rwNIA",
+      "formattedAddress": "New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.867702,
+        "longitude": -73.921234
+      },
+      "rating": 3.9,
+      "userRatingCount": 114,
+      "displayName": {
+        "text": "Inwood-207 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJmfW-A_bzwokRke6M_NF8dKw",
+      "formattedAddress": "New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8644337,
+        "longitude": -73.918847
+      },
+      "rating": 4.2,
+      "userRatingCount": 92,
+      "displayName": {
+        "text": "207 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

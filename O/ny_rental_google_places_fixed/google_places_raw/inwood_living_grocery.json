@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJK63L_2vzwokRf2za472JeI4",
+      "formattedAddress": "corner, Grocery Store, 4996 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8681962,
+        "longitude": -73.9184916
+      },
+      "rating": 4,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Adanis Broadway Deli & Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJVcDz0SrzwokRs0pFhXxhAnI",
+      "formattedAddress": "4996 Broadway #01, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8683494,
+        "longitude": -73.918519
+      },
+      "rating": 5,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Ameer deli&grill corp",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJd7TkbhPzwokRnjzlG7hTTP0",
+      "formattedAddress": "4996 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.868350799999995,
+        "longitude": -73.9185026
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Broadway Plus Organic Deli & Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJO6sB1fXzwokRrqpVDJo5Lgs",
+      "formattedAddress": "272 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8668355,
+        "longitude": -73.91820969999999
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Marlene Grocery Corp.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJPRrq1PXzwokRksHGH-7M5Cg",
+      "formattedAddress": "272 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.866639299999996,
+        "longitude": -73.9181771
+      },
+      "rating": 4.5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "272 Grocery Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJu8Sgf_bzwokRsLLrJJzDqS0",
+      "formattedAddress": "264 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8666032,
+        "longitude": -73.9182623
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Luna Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJeYXWF6LzwokRLSIkR2Q02dI",
+      "formattedAddress": "4950 Broadway, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8676692,
+        "longitude": -73.92041309999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 37,
+      "displayName": {
+        "text": "DII Deals & Discounts",
+        "languageCode": "en"
+      },
+      "primaryType": "discount_store"
+    },
+    {
+      "id": "ChIJ5eZL1_XzwokRWTi94yr3aSU",
+      "formattedAddress": "3936 10th Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8663083,
+        "longitude": -73.9179674
+      },
+      "rating": 3.8,
+      "userRatingCount": 40,
+      "displayName": {
+        "text": "bp",
+        "languageCode": "en"
+      },
+      "primaryType": "gas_station"
+    },
+    {
+      "id": "ChIJ7d84V_bzwokReyFPsM-uQQ8",
+      "formattedAddress": "581 W 207th St, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8669367,
+        "longitude": -73.9205486
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "581 U & G Food Corp.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJydSTbvbzwokRg6Zpxuo2kJ8",
+      "formattedAddress": "242 Sherman Ave, New York, NY 10034, USA",
+      "location": {
+        "latitude": 40.8661931,
+        "longitude": -73.91944269999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "New Generation Mini Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

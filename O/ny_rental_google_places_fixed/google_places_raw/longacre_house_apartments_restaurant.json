@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJR32J4VdYwokR5SGYbdohMnU",
+      "formattedAddress": "832 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7623663,
+        "longitude": -73.9857634
+      },
+      "rating": 4.4,
+      "userRatingCount": 2109,
+      "displayName": {
+        "text": "The Three Monkeys",
+        "languageCode": "en"
+      },
+      "primaryType": "sports_bar"
+    },
+    {
+      "id": "ChIJNUVFGtlZwokReMbMDzP1Aec",
+      "formattedAddress": "828 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7620089,
+        "longitude": -73.9860031
+      },
+      "rating": 4.5,
+      "userRatingCount": 3655,
+      "displayName": {
+        "text": "Carnegie Diner & Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "diner"
+    },
+    {
+      "id": "ChIJ0RWk_A5ZwokR-QEzcuKdpP4",
+      "formattedAddress": "309 W 50th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762662899999995,
+        "longitude": -73.9867256
+      },
+      "rating": 4.6,
+      "userRatingCount": 2173,
+      "displayName": {
+        "text": "Don Antonio",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJF1z8WVZYwokRcHYOJm2rIXA",
+      "formattedAddress": "251 W 50th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7622222,
+        "longitude": -73.98561939999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 2778,
+      "displayName": {
+        "text": "Toloache",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJa6kWrldYwokR3zpE15ww184",
+      "formattedAddress": "840 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7626089,
+        "longitude": -73.985659
+      },
+      "rating": 4.5,
+      "userRatingCount": 1675,
+      "displayName": {
+        "text": "Famous Pops Pizzas",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJ8RE48FZYwokRmsewoIJ8DSk",
+      "formattedAddress": "825 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7624345,
+        "longitude": -73.9869288
+      },
+      "rating": 4.2,
+      "userRatingCount": 326,
+      "displayName": {
+        "text": "Pret A Manger",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJcUU3kbZZwokR41XkmuyiRps",
+      "formattedAddress": "840 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7626511,
+        "longitude": -73.9856394
+      },
+      "rating": 4.5,
+      "userRatingCount": 536,
+      "displayName": {
+        "text": "Poke Bowl NY",
+        "languageCode": "en"
+      },
+      "primaryType": "hawaiian_restaurant"
+    },
+    {
+      "id": "ChIJrdFMWVZYwokReS2W7dYYK0E",
+      "formattedAddress": "250 W 50th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7619684,
+        "longitude": -73.9857193
+      },
+      "rating": 4.3,
+      "userRatingCount": 1168,
+      "displayName": {
+        "text": "The Palm – New York",
+        "languageCode": "en"
+      },
+      "primaryType": "steak_house"
+    },
+    {
+      "id": "ChIJGxgc_lZYwokRZUwtia280Uo",
+      "formattedAddress": "302 W 51st St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7629417,
+        "longitude": -73.9863029
+      },
+      "rating": 4.5,
+      "userRatingCount": 1083,
+      "displayName": {
+        "text": "Dolly's",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJC6xz-lZYwokRd5Gv26A3RMA",
+      "formattedAddress": "308 W 50th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762557199999996,
+        "longitude": -73.98696679999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 2954,
+      "displayName": {
+        "text": "The Blue Dog Cookhouse & Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    }
+  ]
+}

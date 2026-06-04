@@ -1,0 +1,64 @@
+{
+  "places": [
+    {
+      "id": "ChIJKXQp3BNawokR6gUmnJXw58c",
+      "formattedAddress": "New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.704516999999996,
+        "longitude": -74.01426699999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 158,
+      "displayName": {
+        "text": "Bowling Green",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJmXsV2BBawokRKRW4simy9As",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707972999999996,
+        "longitude": -74.013611
+      },
+      "rating": 4.1,
+      "userRatingCount": 78,
+      "displayName": {
+        "text": "Rector St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ1YLf2RBawokRyz5lBHE33p0",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7077763,
+        "longitude": -74.012963
+      },
+      "rating": 4,
+      "userRatingCount": 32,
+      "displayName": {
+        "text": "Rector St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJf7ZpaBNawokRroUHoA0MiU8",
+      "formattedAddress": "New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7020208,
+        "longitude": -74.0133728
+      },
+      "rating": 4.4,
+      "userRatingCount": 224,
+      "displayName": {
+        "text": "South Ferry",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

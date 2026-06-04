@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJtZ9yRgBbwokR5sPYk5nZ2j0",
+      "formattedAddress": "37 Battery Pl, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.7054444,
+        "longitude": -74.0174974
+      },
+      "displayName": {
+        "text": "Nathan’s",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJq0kJVBBawokRHvPhHRwHcFk",
+      "formattedAddress": "21 West St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.706363599999996,
+        "longitude": -74.01561699999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 185,
+      "displayName": {
+        "text": "West Bank Gourmet Deli in Battery Park",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ-coSxhFawokReySQi9GiEdY",
+      "formattedAddress": "77 Battery Pl, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.7071835,
+        "longitude": -74.0170512
+      },
+      "rating": 4.1,
+      "userRatingCount": 168,
+      "displayName": {
+        "text": "Battery Place Market Corp",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJqYAJ2xFawokRfFs0oI_fLa8",
+      "formattedAddress": "70 Battery Pl #104, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.707453199999996,
+        "longitude": -74.01757730000001
+      },
+      "rating": 4.8,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "MarDona Speciality Foods",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJP5bLHfVbwokRz7G_QWPgssw",
+      "formattedAddress": "98 Battery Pl, New York, NY 10280, USA",
+      "location": {
+        "latitude": 40.7078473,
+        "longitude": -74.0171134
+      },
+      "rating": 4.5,
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Battery Park Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJkwTvRxFawokRJfrZ-jo99ZY",
+      "formattedAddress": "37 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.706288099999995,
+        "longitude": -74.0131854
+      },
+      "rating": 2.8,
+      "userRatingCount": 118,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJrwwc5RNawokRVSW0TfB7YIk",
+      "formattedAddress": "2 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7045399,
+        "longitude": -74.0130866
+      },
+      "rating": 4,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Metropolitan Lobby Store Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJC1cU7MJbwokRTKwoDEOnzEI",
+      "formattedAddress": "2 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.704551599999995,
+        "longitude": -74.01300599999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Gotham Bites Gourmet & Deli",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJW3SfUQBbwokRl4x_bKquUds",
+      "formattedAddress": "42 Broadway, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.7059925,
+        "longitude": -74.01296099999999
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Stallardo's Headlines & Snacks",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ33x4yPpbwokRJsmLeBaP8Vg",
+      "formattedAddress": "82 Greenwich St, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7076413,
+        "longitude": -74.0138703
+      },
+      "rating": 3.5,
+      "userRatingCount": 92,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

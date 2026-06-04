@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJNUVFGtlZwokReMbMDzP1Aec",
+      "formattedAddress": "828 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7620089,
+        "longitude": -73.9860031
+      },
+      "rating": 4.5,
+      "userRatingCount": 3655,
+      "displayName": {
+        "text": "Carnegie Diner & Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "diner"
+    },
+    {
+      "id": "ChIJW0SMagBZwokRMfszUuCkcsE",
+      "formattedAddress": "825 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.761934,
+        "longitude": -73.98660199999999
+      },
+      "rating": 5,
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Caffeine Corner",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ8RE48FZYwokRmsewoIJ8DSk",
+      "formattedAddress": "825 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7624345,
+        "longitude": -73.9869288
+      },
+      "rating": 4.2,
+      "userRatingCount": 326,
+      "displayName": {
+        "text": "Pret A Manger",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJr4OVJihZwokR5LPZZ20_sEA",
+      "formattedAddress": "850 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762935,
+        "longitude": -73.985343
+      },
+      "rating": 4,
+      "userRatingCount": 253,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJk5I-rVdYwokREJuq-CY6pEg",
+      "formattedAddress": "253 W 51st St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7628415,
+        "longitude": -73.9851781
+      },
+      "rating": 4.5,
+      "userRatingCount": 3667,
+      "displayName": {
+        "text": "Bibble & Sip",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJSUxHwVZYwokRXFyQi9V71Xw",
+      "formattedAddress": "325 W 49th St, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.76217,
+        "longitude": -73.98746
+      },
+      "rating": 4,
+      "userRatingCount": 566,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJM51x73NZwokRXT9XXTVEI8g",
+      "formattedAddress": "IN THE SUBWAY AT, 210 W 50th St Concourse Store #2, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7614519,
+        "longitude": -73.98452309999999
+      },
+      "rating": 4.9,
+      "userRatingCount": 216,
+      "displayName": {
+        "text": "Tiny Dancer Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ82I2qYFZwokRoobvenqxQAI",
+      "formattedAddress": "1633 Broadway, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7620952,
+        "longitude": -73.9841407
+      },
+      "rating": 4.7,
+      "userRatingCount": 716,
+      "displayName": {
+        "text": "Rosetta Bakery",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJRTfffVZYwokR0qbeb5E0T64",
+      "formattedAddress": "235 W 48th St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7607554,
+        "longitude": -73.9858962
+      },
+      "rating": 4.5,
+      "userRatingCount": 425,
+      "displayName": {
+        "text": "Masseria Caffe & Bakery",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ1X3dvldYwokRyajPtakhQLk",
+      "formattedAddress": "888 8th Ave, New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.763747699999996,
+        "longitude": -73.984709
+      },
+      "rating": 4.5,
+      "userRatingCount": 1172,
+      "displayName": {
+        "text": "Ground Central Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

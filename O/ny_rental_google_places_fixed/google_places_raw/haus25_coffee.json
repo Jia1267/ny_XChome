@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJWSg47epRwokR04P7xdLULCI",
+      "formattedAddress": "135 Greene St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7178533,
+        "longitude": -74.0367812
+      },
+      "rating": 3.3,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "WFM Coffee Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJc35XdBtRwokRUP04IFJ5Zjc",
+      "formattedAddress": "60 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.718782999999995,
+        "longitude": -74.03994469999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 80,
+      "displayName": {
+        "text": "The Power Plant Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "juice_shop"
+    },
+    {
+      "id": "ChIJB1uyL8ZRwokRWPRpitWGbG4",
+      "formattedAddress": "325 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7193349,
+        "longitude": -74.038871
+      },
+      "rating": 4.6,
+      "userRatingCount": 325,
+      "displayName": {
+        "text": "LACKAWANNA COFFEE",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJtwLVMqlQwokRqWUNzaVgPSs",
+      "formattedAddress": "105 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7164997,
+        "longitude": -74.0359873
+      },
+      "rating": 2.8,
+      "userRatingCount": 301,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ82X4zi1RwokRNSd67v9wWzg",
+      "formattedAddress": "350 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7198959,
+        "longitude": -74.0383032
+      },
+      "rating": 4.2,
+      "userRatingCount": 100,
+      "displayName": {
+        "text": "The Butler Café",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJpbvzfnlRwokR0W7paGzIwsw",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7196983,
+        "longitude": -74.0366023
+      },
+      "rating": 4.5,
+      "userRatingCount": 473,
+      "displayName": {
+        "text": "Maggie's Farm Espresso",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJoZWHENhRwokR3UHz-XyzdZY",
+      "formattedAddress": "153 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7198334,
+        "longitude": -74.0399705
+      },
+      "rating": 4.1,
+      "userRatingCount": 163,
+      "displayName": {
+        "text": "Teazzi Tea Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJbZRwLWBRwokR0PT_Rw1SNRM",
+      "formattedAddress": "10 Provost St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7203958,
+        "longitude": -74.0389826
+      },
+      "rating": 4.6,
+      "userRatingCount": 523,
+      "displayName": {
+        "text": "Rui Tea",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJK8AwArJQwokRrrTMfet3vLk",
+      "formattedAddress": "95 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.71889040000001,
+        "longitude": -74.0418219
+      },
+      "rating": 4.4,
+      "userRatingCount": 2320,
+      "displayName": {
+        "text": "Krispy Kreme",
+        "languageCode": "en"
+      },
+      "primaryType": "donut_shop"
+    },
+    {
+      "id": "ChIJR4e82a9QwokR-9PA7whaVaM",
+      "formattedAddress": "170 Grand St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7158466,
+        "longitude": -74.04153149999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 151,
+      "displayName": {
+        "text": "Legal Grounds Coffee Co",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    }
+  ]
+}

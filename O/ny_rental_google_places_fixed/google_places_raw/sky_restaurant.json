@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJNYZOg01YwokRaIjCJDqYMnc",
+      "formattedAddress": "605 W 42nd St #18H, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7610574,
+        "longitude": -73.99838609999999
+      },
+      "rating": 4,
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "Halal Food Cart",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJhxUXQkxYwokRy4IsJWsC-2Q",
+      "formattedAddress": "600 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7607137,
+        "longitude": -73.9987215
+      },
+      "rating": 4.3,
+      "userRatingCount": 1301,
+      "displayName": {
+        "text": "Sunac Natural Market | Midtown west Deli | Supermarket",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJBzNwClhZwokROFNH422V-9s",
+      "formattedAddress": "620 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7606063,
+        "longitude": -73.9989801
+      },
+      "rating": 4.8,
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "Tarallucci e Vino Manhattan West",
+        "languageCode": "en"
+      },
+      "primaryType": "italian_restaurant"
+    },
+    {
+      "id": "ChIJ00bJSkxYwokRANhaRyRiMeU",
+      "formattedAddress": "555 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.760868699999996,
+        "longitude": -73.99795139999999
+      },
+      "rating": 2.5,
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJFf5p_VJYwokR89wyQzF9GhE",
+      "formattedAddress": "555 W 42nd St Suite 14, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7608898,
+        "longitude": -73.9975202
+      },
+      "rating": 3.5,
+      "userRatingCount": 243,
+      "displayName": {
+        "text": "Subway",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJs8ET5mhZwokR_YZBOGcWjDQ",
+      "formattedAddress": "572 11th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7616087,
+        "longitude": -73.9974723
+      },
+      "rating": 4.1,
+      "userRatingCount": 305,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJnbALD0xYwokRX9Z_ygcuFPw",
+      "formattedAddress": "647 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7617897,
+        "longitude": -74.0001052
+      },
+      "rating": 4.4,
+      "userRatingCount": 1524,
+      "displayName": {
+        "text": "42nd Street Pizza and Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJlaUCHbxZwokRUPWZkyNQyYg",
+      "formattedAddress": "650 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.761217599999995,
+        "longitude": -74.0003275
+      },
+      "rating": 4.5,
+      "userRatingCount": 1275,
+      "displayName": {
+        "text": "Kings of Kobe - Wagyu Kitchen & Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "steak_house"
+    },
+    {
+      "id": "ChIJrWgOzVdZwokRpDqAfno_A5Y",
+      "formattedAddress": "589 11th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7623347,
+        "longitude": -73.9974434
+      },
+      "rating": 4.9,
+      "userRatingCount": 66,
+      "displayName": {
+        "text": "Lumen Dining & Rooftop",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJzR0FPatZwokRJ8RH313T6Xo",
+      "formattedAddress": "550 W 45th St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.762344999999996,
+        "longitude": -73.9963677
+      },
+      "displayName": {
+        "text": "Solo Ceviche",
+        "languageCode": "en"
+      },
+      "primaryType": "peruvian_restaurant"
+    }
+  ]
+}

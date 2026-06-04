@@ -1,0 +1,64 @@
+{
+  "places": [
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJa0uiQmRRwokR9enIez1gWhU",
+      "formattedAddress": "70 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714711199999996,
+        "longitude": -74.0341199
+      },
+      "rating": 3,
+      "userRatingCount": 118,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJ45jCdx1RwokRnrsS04xabIE",
+      "formattedAddress": "135 Greene St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7176775,
+        "longitude": -74.0363064
+      },
+      "rating": 4.1,
+      "userRatingCount": 1136,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJF1zWFPlRwokRjUyDD89oasY",
+      "formattedAddress": "207 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714393699999995,
+        "longitude": -74.0415045
+      },
+      "rating": 3.8,
+      "userRatingCount": 36,
+      "displayName": {
+        "text": "Lenox Market",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

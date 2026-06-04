@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJ40oEXypZwokRbGnou0Aivbw",
+      "formattedAddress": "43-15 Queens St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747437999999995,
+        "longitude": -73.939071
+      },
+      "displayName": {
+        "text": "HALAL EXPRESS",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ-QaVTQpZwokR-ZEQ5kXrWAM",
+      "formattedAddress": "27-20 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7475643,
+        "longitude": -73.94032179999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 188,
+      "displayName": {
+        "text": "Jax Pizza Joint",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJrTF1P09ZwokR2Q_NT58anQ4",
+      "formattedAddress": "43-01 Dutch Kills St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7475624,
+        "longitude": -73.9403473
+      },
+      "rating": 4.7,
+      "userRatingCount": 47,
+      "displayName": {
+        "text": "Side Hustle",
+        "languageCode": "en"
+      },
+      "primaryType": "gastropub"
+    },
+    {
+      "id": "ChIJwfMHJzBZwokRI5XqqjDofik",
+      "formattedAddress": "27-24 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747660499999995,
+        "longitude": -73.940184
+      },
+      "rating": 4.9,
+      "userRatingCount": 59,
+      "displayName": {
+        "text": "Troppo Stretto",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJlXecQSpZwokRrNscE92hBzQ",
+      "formattedAddress": "27-26 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747766999999996,
+        "longitude": -73.9401307
+      },
+      "rating": 4.5,
+      "userRatingCount": 670,
+      "displayName": {
+        "text": "Sapps",
+        "languageCode": "en"
+      },
+      "primaryType": "japanese_restaurant"
+    },
+    {
+      "id": "ChIJ_8y7EABZwokRdJGxihYvW0k",
+      "formattedAddress": "26-26 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747287899999996,
+        "longitude": -73.94113569999999
+      },
+      "rating": 4.9,
+      "userRatingCount": 40,
+      "displayName": {
+        "text": "Empire Halal",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJ5fDiWcVZwokRxlWgf0RDBrw",
+      "formattedAddress": "27-23 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7480271,
+        "longitude": -73.9403597
+      },
+      "rating": 3.9,
+      "userRatingCount": 280,
+      "displayName": {
+        "text": "Dun Huang",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJBWAs9CJZwokRCpTEDldPYtI",
+      "formattedAddress": "27-35 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7481037,
+        "longitude": -73.9401752
+      },
+      "rating": 4.6,
+      "userRatingCount": 263,
+      "displayName": {
+        "text": "Hot Peppers LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJn4tLK6FZwokRYGJjrb9DJyY",
+      "formattedAddress": "28-30 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7476051,
+        "longitude": -73.93822399999999
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "226",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ5dQtsxBZwokRbBdZUxaHzFE",
+      "formattedAddress": "27-35 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7481842,
+        "longitude": -73.9400787
+      },
+      "rating": 4.5,
+      "userRatingCount": 821,
+      "displayName": {
+        "text": "Jing Li",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    }
+  ]
+}

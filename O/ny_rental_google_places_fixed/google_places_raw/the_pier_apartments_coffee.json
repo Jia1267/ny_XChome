@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "id": "ChIJox8pEwBRwokRUwDbzdXtHU0",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7190656,
+        "longitude": -74.03338509999999
+      },
+      "rating": 4,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Simple Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJYTCTQxRRwokRbiRphUf0sBE",
+      "formattedAddress": "210 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7194796,
+        "longitude": -74.0336188
+      },
+      "rating": 4.6,
+      "userRatingCount": 133,
+      "displayName": {
+        "text": "Nana's Bagels",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    },
+    {
+      "id": "ChIJPxcowidRwokRxs7c5mCR9h0",
+      "formattedAddress": "200 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.720295,
+        "longitude": -74.03451799999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 234,
+      "displayName": {
+        "text": "Canard Café Bar Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJw_JFdalQwokRr1sDEuBpyVE",
+      "formattedAddress": "10 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716530399999996,
+        "longitude": -74.03297599999999
+      },
+      "rating": 4,
+      "userRatingCount": 848,
+      "displayName": {
+        "text": "Gregorys Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJYVk4EqlQwokRcj3-nrkuirI",
+      "formattedAddress": "15 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.71604,
+        "longitude": -74.03322
+      },
+      "rating": 4,
+      "userRatingCount": 937,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJpbvzfnlRwokR0W7paGzIwsw",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7196983,
+        "longitude": -74.0366023
+      },
+      "rating": 4.5,
+      "userRatingCount": 473,
+      "displayName": {
+        "text": "Maggie's Farm Espresso",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJQfFiZRxRwokRaG54U8QVBJ8",
+      "formattedAddress": "1 Exchange Pl, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7157403,
+        "longitude": -74.03393360000001
+      },
+      "rating": 3.6,
+      "userRatingCount": 157,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJWSg47epRwokR04P7xdLULCI",
+      "formattedAddress": "135 Greene St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7178533,
+        "longitude": -74.0367812
+      },
+      "rating": 3.3,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "WFM Coffee Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

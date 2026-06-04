@@ -1,0 +1,148 @@
+{
+  "places": [
+    {
+      "id": "ChIJI5xCX6NZwokR3jdSQwsw2DI",
+      "formattedAddress": "675 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741896200000006,
+        "longitude": -73.99381679999999
+      },
+      "rating": 4.6,
+      "userRatingCount": 7201,
+      "displayName": {
+        "text": "Trader Joe's",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJT52qZqNZwokRHp0-vqg6_jk",
+      "formattedAddress": "51 W 21st St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7413671,
+        "longitude": -73.99292009999999
+      },
+      "rating": 2,
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "Gopuff",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJEdlmhdFZwokRqc5qrGdQ26Y",
+      "formattedAddress": "706 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7425389,
+        "longitude": -73.9926389
+      },
+      "displayName": {
+        "text": "Hashi Market",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_grocery_store"
+    },
+    {
+      "id": "ChIJEagRwLZZwokRtfbxXrRn4x0",
+      "formattedAddress": "650 6th Ave, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7407553,
+        "longitude": -73.99400109999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 218,
+      "displayName": {
+        "text": "DIGISO",
+        "languageCode": "en"
+      },
+      "primaryType": "home_goods_store"
+    },
+    {
+      "id": "ChIJKWk8lq9ZwokROYG-2gcV6mY",
+      "formattedAddress": "20 W 20th St, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7400486,
+        "longitude": -73.99251389999999
+      },
+      "displayName": {
+        "text": "Tibbles Gourmet Store",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ01Pln29ZwokRcuuKGnxwkEc",
+      "formattedAddress": "170 W 23rd St, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7436655,
+        "longitude": -73.9951853
+      },
+      "rating": 4.3,
+      "userRatingCount": 345,
+      "displayName": {
+        "text": "Westside Market NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ80s8AKVZwokRAuLuDsAyjrQ",
+      "formattedAddress": "750 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7437466,
+        "longitude": -73.99183889999999
+      },
+      "rating": 3.3,
+      "userRatingCount": 216,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJgciUDgBZwokRjSAxdEFPzco",
+      "formattedAddress": "194 7th Ave, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.743108899999996,
+        "longitude": -73.9965821
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "The Market On 7th",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJw4sx_qRZwokRFJiwvvo5mJM",
+      "formattedAddress": "745 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7440351,
+        "longitude": -73.99226329999999
+      },
+      "displayName": {
+        "text": "Gourmet Bay Spirits Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJCRNFj7xZwokRs4N4rGNeV6M",
+      "formattedAddress": "180 W 20th St, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7417139,
+        "longitude": -73.99708
+      },
+      "rating": 3,
+      "userRatingCount": 70,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    }
+  ]
+}

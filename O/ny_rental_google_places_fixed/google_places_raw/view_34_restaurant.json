@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJFR4I7aRZwokROPq_sLEdPn4",
+      "formattedAddress": "606 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7442426,
+        "longitude": -73.9729059
+      },
+      "rating": 3.8,
+      "userRatingCount": 233,
+      "displayName": {
+        "text": "sweetgreen - Healthy Salads, Wraps, and Bowls",
+        "languageCode": "en"
+      },
+      "primaryType": "salad_shop"
+    },
+    {
+      "id": "ChIJoecSE4VZwokRPZG_RdDVXNs",
+      "formattedAddress": "445 E 35th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.744093,
+        "longitude": -73.9717762
+      },
+      "rating": 4.8,
+      "userRatingCount": 2336,
+      "displayName": {
+        "text": "Hole In The Wall - Murray Hill",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJdX64t4dZwokR2lcELbfGAM4",
+      "formattedAddress": "East 35th Street, Viaduct at, FDR Dr, Brooklyn, NY 11201, USA",
+      "location": {
+        "latitude": 40.743832499999996,
+        "longitude": -73.9718996
+      },
+      "displayName": {
+        "text": "Grand Central Mobile Food Stop",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJP5Ldig9ZwokRDnCG-6S3rOo",
+      "formattedAddress": "401 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7436396,
+        "longitude": -73.97280669999999
+      },
+      "rating": 3.3,
+      "userRatingCount": 296,
+      "displayName": {
+        "text": "Bread & Butter",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJHabN9Q9ZwokRtdatX9FK5mw",
+      "formattedAddress": "401 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7435682,
+        "longitude": -73.97240529999999
+      },
+      "rating": 4,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Subway Station Restoration Project",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJc6o0DE1ZwokRANQE2s_vcnQ",
+      "formattedAddress": "591 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7437,
+        "longitude": -73.97380000000001
+      },
+      "rating": 3.8,
+      "userRatingCount": 169,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJKQo1YwBZwokRZHou9Tav7P8",
+      "formattedAddress": "593 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.743747299999995,
+        "longitude": -73.9738902
+      },
+      "rating": 4.7,
+      "userRatingCount": 76,
+      "displayName": {
+        "text": "The Gyro Project",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJzdnuS6FZwokR_GMbVHJkVDw",
+      "formattedAddress": "593 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.743767,
+        "longitude": -73.97393
+      },
+      "rating": 4.1,
+      "userRatingCount": 461,
+      "displayName": {
+        "text": "Sophie's Cuban Cuisine - Murray Hill",
+        "languageCode": "en"
+      },
+      "primaryType": "cuban_restaurant"
+    },
+    {
+      "id": "ChIJVeIOwYJZwokRevsEUj6wRZg",
+      "formattedAddress": "344 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.743809999999996,
+        "longitude": -73.9740305
+      },
+      "rating": 4.8,
+      "userRatingCount": 359,
+      "displayName": {
+        "text": "Previti Pizza 34th",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJe0FigQ9ZwokRY4HbTsFRudY",
+      "formattedAddress": "589 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7436364,
+        "longitude": -73.9739295
+      },
+      "rating": 3.4,
+      "userRatingCount": 134,
+      "displayName": {
+        "text": "Panini Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    }
+  ]
+}

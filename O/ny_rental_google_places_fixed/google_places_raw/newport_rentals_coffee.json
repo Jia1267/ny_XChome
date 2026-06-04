@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJvaQfLl5XwokR6eXdgQiCYwE",
+      "formattedAddress": "564 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7286134,
+        "longitude": -74.03418099999999
+      },
+      "rating": 3.6,
+      "userRatingCount": 51,
+      "displayName": {
+        "text": "Paris Baguette",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJx1PihgpXwokRAeEGs3HM_AM",
+      "formattedAddress": "575 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.728539999999995,
+        "longitude": -74.03475999999999
+      },
+      "rating": 3.8,
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJDcovFgBXwokRa9ADoedorBM",
+      "formattedAddress": "97 Town Square Pl, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726354099999995,
+        "longitude": -74.0330791
+      },
+      "displayName": {
+        "text": "Broth and fire fresh rice noodles",
+        "languageCode": "es"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ018DSVRXwokRcqtZ-szPnIE",
+      "formattedAddress": "111 Town Square Pl, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.72631,
+        "longitude": -74.03314999999999
+      },
+      "rating": 4,
+      "userRatingCount": 1134,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJKVc3c1RXwokRNuTgNz_MND0",
+      "formattedAddress": "525 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726933599999995,
+        "longitude": -74.0356625
+      },
+      "rating": 4.1,
+      "userRatingCount": 652,
+      "displayName": {
+        "text": "Gregorys Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJdyApsSBXwokRHlwM_LeFENs",
+      "formattedAddress": "Newport Office Center, 525 Washington Blvd Floor 1, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726512799999995,
+        "longitude": -74.03535719999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 256,
+      "displayName": {
+        "text": "Buongiorno Gelateria d’italia 1972",
+        "languageCode": "en"
+      },
+      "primaryType": "ice_cream_shop"
+    },
+    {
+      "id": "ChIJk8T4AQhXwokRSpoC8JsbrMk",
+      "formattedAddress": "10 River Dr S, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7265778,
+        "longitude": -74.0320349
+      },
+      "rating": 4.7,
+      "userRatingCount": 221,
+      "displayName": {
+        "text": "Roast'd Coffee - Jersey City",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_roastery"
+    },
+    {
+      "id": "ChIJ_XBxzVNXwokRKBdIK0AvtEE",
+      "formattedAddress": "30 Mall Dr W, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7269376,
+        "longitude": -74.03654
+      },
+      "rating": 3.5,
+      "userRatingCount": 208,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ9xXjK91XwokRU1pIpTEcxis",
+      "formattedAddress": "30 Mall Dr W Level 2, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7270337,
+        "longitude": -74.0368414
+      },
+      "rating": 4.2,
+      "userRatingCount": 919,
+      "displayName": {
+        "text": "Dosa Spot",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ03TdtVNXwokRHH41GpNnlcQ",
+      "formattedAddress": "30 Mall Dr W, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726762799999996,
+        "longitude": -74.03772350000001
+      },
+      "rating": 3.8,
+      "userRatingCount": 878,
+      "displayName": {
+        "text": "Panera Bread",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    }
+  ]
+}

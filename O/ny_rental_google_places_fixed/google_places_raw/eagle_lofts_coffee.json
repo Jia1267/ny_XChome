@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJY9Z4Jj5ZwokRcTWkGdHIIYI",
+      "formattedAddress": "27-35 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748101299999995,
+        "longitude": -73.9401725
+      },
+      "rating": 4.4,
+      "userRatingCount": 368,
+      "displayName": {
+        "text": "Paris Baguette",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJi_RCwARZwokRH1ONl0jWLcQ",
+      "formattedAddress": "28-10 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7482705,
+        "longitude": -73.9385274
+      },
+      "rating": 4.3,
+      "userRatingCount": 201,
+      "displayName": {
+        "text": "Sweetleaf Coffee Roasters",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJQ0MAdylZwokRTl8FGknAU3s",
+      "formattedAddress": "26-25 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747591,
+        "longitude": -73.9415456
+      },
+      "rating": 4.3,
+      "userRatingCount": 787,
+      "displayName": {
+        "text": "Partners Coffee - Long Island City",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJZw_YrsNZwokRk_RewtzR0Pk",
+      "formattedAddress": "28-02 42nd Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748621799999995,
+        "longitude": -73.9395663
+      },
+      "rating": 4.4,
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "PROGRESO",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJr3pjKSpZwokRoUoVCSYE5tg",
+      "formattedAddress": "26-14 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.747119999999995,
+        "longitude": -73.94180999999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 599,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJv102fbVZwokRt4kTkb37MjI",
+      "formattedAddress": "42-77 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748514,
+        "longitude": -73.940646
+      },
+      "rating": 4.7,
+      "userRatingCount": 485,
+      "displayName": {
+        "text": "No Stress Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJf23EAG5ZwokRNRN25MprKrM",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748807500000005,
+        "longitude": -73.93848539999999
+      },
+      "rating": 5,
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Unmei Matcha",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJS_P48-JZwokRJg4AjzBu1Yw",
+      "formattedAddress": "43-21 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7478427,
+        "longitude": -73.9421587
+      },
+      "rating": 4.1,
+      "userRatingCount": 249,
+      "displayName": {
+        "text": "Teazzi Tea Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "tea_house"
+    },
+    {
+      "id": "ChIJpUg-4JRZwokReZKtHPfEDN0",
+      "formattedAddress": "28-30 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7486416,
+        "longitude": -73.93773949999999
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Mi Casa Matcha",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJxR0IZwBZwokRPbI8q0X5mcM",
+      "formattedAddress": "28-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488691,
+        "longitude": -73.9380243
+      },
+      "displayName": {
+        "text": "Kagami maid cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

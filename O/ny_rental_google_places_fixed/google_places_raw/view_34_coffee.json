@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJs3AkJS9ZwokRikxw3bOS-mU",
+      "formattedAddress": "630 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7452124,
+        "longitude": -73.9722025
+      },
+      "rating": 4.7,
+      "userRatingCount": 363,
+      "displayName": {
+        "text": "Qahwah Valley 1st Ave",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJoecSE4VZwokRPZG_RdDVXNs",
+      "formattedAddress": "445 E 35th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.744093,
+        "longitude": -73.9717762
+      },
+      "rating": 4.8,
+      "userRatingCount": 2336,
+      "displayName": {
+        "text": "Hole In The Wall - Murray Hill",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJc6o0DE1ZwokRANQE2s_vcnQ",
+      "formattedAddress": "591 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7437,
+        "longitude": -73.97380000000001
+      },
+      "rating": 3.8,
+      "userRatingCount": 169,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJb2Tugw9ZwokRKiAKC9pa_fY",
+      "formattedAddress": "587 1st Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.743577099999996,
+        "longitude": -73.9739654
+      },
+      "rating": 4.2,
+      "userRatingCount": 374,
+      "displayName": {
+        "text": "NY Bagels & Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    },
+    {
+      "id": "ChIJrwYBsVxZwokRmCKOObG_xXc",
+      "formattedAddress": "424 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7430167,
+        "longitude": -73.9729845
+      },
+      "rating": 4.2,
+      "userRatingCount": 72,
+      "displayName": {
+        "text": "Kimmel Coffee Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJBfDVuAVZwokRjNRasFnJr5E",
+      "formattedAddress": "645 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.745711,
+        "longitude": -73.975531
+      },
+      "rating": 4.4,
+      "userRatingCount": 407,
+      "displayName": {
+        "text": "Montagu's Gusto",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJ64cvvgVZwokRVTEHtk8acis",
+      "formattedAddress": "641 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7454744,
+        "longitude": -73.9757727
+      },
+      "rating": 4.2,
+      "userRatingCount": 944,
+      "displayName": {
+        "text": "Gemini Diner",
+        "languageCode": "en"
+      },
+      "primaryType": "diner"
+    },
+    {
+      "id": "ChIJ3Vit2sJZwokRU6WxbLQe27E",
+      "formattedAddress": "623 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7450121,
+        "longitude": -73.9759608
+      },
+      "rating": 4.8,
+      "userRatingCount": 175,
+      "displayName": {
+        "text": "The Station Café",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ4xa6sTZZwokRGzn1wE9GBhI",
+      "formattedAddress": "714 2nd Ave, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.7474382,
+        "longitude": -73.9736918
+      },
+      "rating": 4.4,
+      "userRatingCount": 93,
+      "displayName": {
+        "text": "Ground Central Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJHxQI7wVZwokRpa1jgl9DR-s",
+      "formattedAddress": "243 E 34th St, New York, NY 10016, USA",
+      "location": {
+        "latitude": 40.745114699999995,
+        "longitude": -73.9762421
+      },
+      "rating": 4.7,
+      "userRatingCount": 97,
+      "displayName": {
+        "text": "NY Estonian House/Estonian Educational Society",
+        "languageCode": "en"
+      },
+      "primaryType": "non_profit_organization"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "places": [
+    {
+      "id": "ChIJF1zWFPlRwokRjUyDD89oasY",
+      "formattedAddress": "207 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714393699999995,
+        "longitude": -74.0415045
+      },
+      "rating": 3.8,
+      "userRatingCount": 36,
+      "displayName": {
+        "text": "Lenox Market",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJoXBunrpQwokRDvoGwZb2sj0",
+      "formattedAddress": "18 Park, 18 Park View Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7142275,
+        "longitude": -74.0435018
+      },
+      "rating": 3.9,
+      "userRatingCount": 78,
+      "displayName": {
+        "text": "Downtown Pharmacy",
+        "languageCode": "en"
+      },
+      "primaryType": "pharmacy"
+    },
+    {
+      "id": "ChIJFcTw5XFRwokRkLenlKOBNko",
+      "formattedAddress": "225 Grand St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7152903,
+        "longitude": -74.0434028
+      },
+      "rating": 4,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Metro Market One",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJz__8uxFRwokRW099k9HCtBk",
+      "formattedAddress": "1 Park View Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7117451,
+        "longitude": -74.0457306
+      },
+      "rating": 4.7,
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Street Corner Market Liberty Harbor",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

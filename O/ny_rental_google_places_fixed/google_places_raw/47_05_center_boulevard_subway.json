@@ -1,0 +1,19 @@
+{
+  "places": [
+    {
+      "id": "ChIJ11nwnSRZwokRREp3r3kJP3U",
+      "formattedAddress": "Queens, NY 11101, USA",
+      "location": {
+        "latitude": 40.742626,
+        "longitude": -73.95343
+      },
+      "rating": 3.8,
+      "userRatingCount": 124,
+      "displayName": {
+        "text": "Vernon Blvd-Jackson Av",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

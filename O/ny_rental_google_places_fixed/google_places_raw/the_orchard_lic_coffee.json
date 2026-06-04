@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJC7MfJlpZwokRAyXHkdVJLgs",
+      "formattedAddress": "28-18 41st Ave store, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7509571,
+        "longitude": -73.9371187
+      },
+      "rating": 4.8,
+      "userRatingCount": 35,
+      "displayName": {
+        "text": "NYC Greens plaza deli",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ78lA6UlfwokRaFawaoKUOEU",
+      "formattedAddress": "29-47 Northern Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.749977099999995,
+        "longitude": -73.9362921
+      },
+      "rating": 4.5,
+      "userRatingCount": 226,
+      "displayName": {
+        "text": "Pueblo Querido Coffee Roasters Café de Colombia",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJS4GEa2pZwokR1iDH2UkAXmU",
+      "formattedAddress": "41-14 27th St #1B, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7516544,
+        "longitude": -73.9389672
+      },
+      "rating": 4.3,
+      "userRatingCount": 241,
+      "displayName": {
+        "text": "AnnTremet Cake LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "dessert_shop"
+    },
+    {
+      "id": "ChIJOWhHPQBZwokReuo7KI34UzY",
+      "formattedAddress": "25-17 Queens Plaza N, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.750872099999995,
+        "longitude": -73.9397515
+      },
+      "displayName": {
+        "text": "Cafe Aroma",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJZ4jcDgBZwokREjgvNi0VsHc",
+      "formattedAddress": "Queens Plaza N, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7495305,
+        "longitude": -73.9361061
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Coffee House Cart",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJY8DemNVYwokRc8Ft_A8Yirc",
+      "formattedAddress": "27-10 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7499515,
+        "longitude": -73.93961399999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 435,
+      "displayName": {
+        "text": "Lucky Pizzeria & Cafe Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJex7vCi5ZwokREq4GR8Yh4uU",
+      "formattedAddress": "27-04 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7500186,
+        "longitude": -73.9397979
+      },
+      "rating": 3.2,
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJxR0IZwBZwokRPbI8q0X5mcM",
+      "formattedAddress": "28-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488691,
+        "longitude": -73.9380243
+      },
+      "displayName": {
+        "text": "Kagami maid cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJtVvG35JZwokR29AX_FygDtE",
+      "formattedAddress": "28-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488691,
+        "longitude": -73.9380243
+      },
+      "rating": 4.1,
+      "userRatingCount": 307,
+      "displayName": {
+        "text": "Spot Dessert Bar Long Island City",
+        "languageCode": "en"
+      },
+      "primaryType": "dessert_restaurant"
+    },
+    {
+      "id": "ChIJ3atUow9ZwokRqDQcVQJjQFs",
+      "formattedAddress": "25-14 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.750139999999995,
+        "longitude": -73.94018000000001
+      },
+      "rating": 4,
+      "userRatingCount": 376,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

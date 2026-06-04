@@ -1,0 +1,19 @@
+{
+  "places": [
+    {
+      "id": "ChIJ1-xItAL2wokRQQlHUl1GGgY",
+      "formattedAddress": "New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790287,
+        "longitude": -73.9478592
+      },
+      "rating": 3.8,
+      "userRatingCount": 115,
+      "displayName": {
+        "text": "103 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

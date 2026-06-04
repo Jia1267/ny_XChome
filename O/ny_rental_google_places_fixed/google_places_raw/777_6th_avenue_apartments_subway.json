@@ -1,0 +1,79 @@
+{
+  "places": [
+    {
+      "id": "ChIJqyFLBqZZwokR1R1t0SaNv_I",
+      "formattedAddress": "New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7452998,
+        "longitude": -73.9887365
+      },
+      "rating": 4,
+      "userRatingCount": 65,
+      "displayName": {
+        "text": "28 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJX67S7KRZwokRbXbOAqxiyaY",
+      "formattedAddress": "New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7427175,
+        "longitude": -73.9929568
+      },
+      "rating": 3.9,
+      "userRatingCount": 173,
+      "displayName": {
+        "text": "23 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJyw_B8q9ZwokRFcI6veLskuU",
+      "formattedAddress": "New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7470686,
+        "longitude": -73.99350919999999
+      },
+      "rating": 3.7,
+      "userRatingCount": 75,
+      "displayName": {
+        "text": "28 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJXw2qJbtZwokRTeGo_RwbFyc",
+      "formattedAddress": "New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.74408,
+        "longitude": -73.995659
+      },
+      "rating": 3.7,
+      "userRatingCount": 92,
+      "displayName": {
+        "text": "23 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ3QxIAKRZwokR9GKF9UAFs8k",
+      "formattedAddress": "E 23rd St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741203899999995,
+        "longitude": -73.9892052
+      },
+      "rating": 4,
+      "userRatingCount": 102,
+      "displayName": {
+        "text": "23 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

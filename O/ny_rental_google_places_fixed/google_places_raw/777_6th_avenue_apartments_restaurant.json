@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJt2PCp4hZwokReAAR0V9FuLY",
+      "formattedAddress": "55 W 26th St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.744720099999995,
+        "longitude": -73.9909535
+      },
+      "rating": 4.4,
+      "userRatingCount": 1169,
+      "displayName": {
+        "text": "The Grey Dog - Flatiron",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJqxpOlqVZwokRSwmhZdfPLl4",
+      "formattedAddress": "The Capitol At, 776 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.74521,
+        "longitude": -73.99087
+      },
+      "rating": 3.9,
+      "userRatingCount": 223,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJHQnUQZRZwokR4N9J0E2cfFM",
+      "formattedAddress": "793 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7454112,
+        "longitude": -73.9912547
+      },
+      "rating": 5,
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Wooga Korean BBQ",
+        "languageCode": "en"
+      },
+      "primaryType": "korean_barbecue_restaurant"
+    },
+    {
+      "id": "ChIJfdLl5zxZwokRh6d2l6kM7jk",
+      "formattedAddress": "766 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7445467,
+        "longitude": -73.9912897
+      },
+      "rating": 4.7,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "SushiLux at Fairway Market",
+        "languageCode": "en"
+      },
+      "primaryType": "meal_takeaway"
+    },
+    {
+      "id": "ChIJwZvpA3pZwokRM2P6uYIO_DU",
+      "formattedAddress": "55 W 26th St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7446728,
+        "longitude": -73.9908533
+      },
+      "rating": 4.9,
+      "userRatingCount": 225,
+      "displayName": {
+        "text": "Lin & Daughters - Flatiron",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_noodle_restaurant"
+    },
+    {
+      "id": "ChIJta4Ej6VZwokRLECXxLn6GHs",
+      "formattedAddress": "765 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7445942,
+        "longitude": -73.9917877
+      },
+      "rating": 4.2,
+      "userRatingCount": 649,
+      "displayName": {
+        "text": "Sunac Fancy Food",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJtR9TuKVZwokRIKed0tq2lRg",
+      "formattedAddress": "43 W 26th St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7446069,
+        "longitude": -73.9906322
+      },
+      "rating": 4.3,
+      "userRatingCount": 616,
+      "displayName": {
+        "text": "Grey | Bar and Restaurant",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    },
+    {
+      "id": "ChIJlyTVwr1ZwokRecdrAOSlw98",
+      "formattedAddress": "761 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7445087,
+        "longitude": -73.9918533
+      },
+      "displayName": {
+        "text": "New York Dog",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ-0Qxvo1ZwokReIAU4YX1xdI",
+      "formattedAddress": "800 6th Ave, New York, NY 10001, USA",
+      "location": {
+        "latitude": 40.7455269,
+        "longitude": -73.9906645
+      },
+      "rating": 2.3,
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJK8GfBt5ZwokRF9h65yPWS5Q",
+      "formattedAddress": "757 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7444062,
+        "longitude": -73.9919312
+      },
+      "rating": 4.3,
+      "userRatingCount": 1135,
+      "displayName": {
+        "text": "Storehouse",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    }
+  ]
+}

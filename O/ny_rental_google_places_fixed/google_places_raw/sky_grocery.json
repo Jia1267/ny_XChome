@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJV3B2R0xYwokRWWIIqe5Wo1I",
+      "formattedAddress": "610 W 42nd St #1, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7608843,
+        "longitude": -73.9988769
+      },
+      "rating": 3.6,
+      "userRatingCount": 47,
+      "displayName": {
+        "text": "Freedom News One",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJhxUXQkxYwokRy4IsJWsC-2Q",
+      "formattedAddress": "600 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7607137,
+        "longitude": -73.9987215
+      },
+      "rating": 4.3,
+      "userRatingCount": 1301,
+      "displayName": {
+        "text": "Sunac Natural Market | Midtown west Deli | Supermarket",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJ00bJSkxYwokRANhaRyRiMeU",
+      "formattedAddress": "555 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.760868699999996,
+        "longitude": -73.99795139999999
+      },
+      "rating": 2.5,
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "7-Eleven",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJoex8VaRZwokRgeyciDHCR2I",
+      "formattedAddress": "612 11th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7627777,
+        "longitude": -73.9965038
+      },
+      "rating": 4.3,
+      "userRatingCount": 182,
+      "displayName": {
+        "text": "Sunrise Market Place",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJXdWEiKtZwokR7DweyDVhBus",
+      "formattedAddress": "Inside Times Square Valet Parking Lot, 500 W 43rd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7600905,
+        "longitude": -73.99564219999999
+      },
+      "displayName": {
+        "text": "SNACKS AND BEVERAGES",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJY7RPnE1YwokRHAtBcRU_Y1s",
+      "formattedAddress": "500 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7596002,
+        "longitude": -73.995927
+      },
+      "rating": 2.9,
+      "userRatingCount": 262,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJ_2vjSQBZwokRfv6T9ylp4k8",
+      "formattedAddress": "476 11th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7584527,
+        "longitude": -73.9995804
+      },
+      "rating": 4.5,
+      "userRatingCount": 19,
+      "displayName": {
+        "text": "The Marketplace At LYRA",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJEyBGDU1YwokRFgRfsULvEmM",
+      "formattedAddress": "555 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7586282,
+        "longitude": -73.9964426
+      },
+      "rating": 3.9,
+      "userRatingCount": 141,
+      "displayName": {
+        "text": "Superior Gourmet Marketplace ٥٥٥",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJB-SQwP1ZwokRMMtya2Ls8v4",
+      "formattedAddress": "615 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.761349800000005,
+        "longitude": -73.9945568
+      },
+      "rating": 4.4,
+      "userRatingCount": 70,
+      "displayName": {
+        "text": "Target Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJGWK0cVJYwokRjrjYSgwPdMo",
+      "formattedAddress": "452 W 43rd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7598426,
+        "longitude": -73.994374
+      },
+      "rating": 3.6,
+      "userRatingCount": 1052,
+      "displayName": {
+        "text": "The Food Emporium",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    }
+  ]
+}

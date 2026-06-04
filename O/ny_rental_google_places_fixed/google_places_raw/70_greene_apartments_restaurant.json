@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJ_wF6y6hQwokR93eRLW_odk0",
+      "formattedAddress": "70 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7148472,
+        "longitude": -74.03573659999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 657,
+      "displayName": {
+        "text": "Greene Hook Bar & Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    },
+    {
+      "id": "ChIJWZ_GN69QwokRcpOVvEV2MBo",
+      "formattedAddress": "67 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714582300000004,
+        "longitude": -74.036265
+      },
+      "rating": 4.2,
+      "userRatingCount": 1342,
+      "displayName": {
+        "text": "Rumi Turkish Grill (HALAL)",
+        "languageCode": "en"
+      },
+      "primaryType": "turkish_restaurant"
+    },
+    {
+      "id": "ChIJgXR_NKlQwokR9uRHA0vNKDs",
+      "formattedAddress": "95 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.715472999999996,
+        "longitude": -74.03611599999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 1096,
+      "displayName": {
+        "text": "Honshu",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJaSEM4jZRwokRCTXtNH7PmSw",
+      "formattedAddress": "95 Greene St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.71552,
+        "longitude": -74.0360501
+      },
+      "rating": 4.5,
+      "userRatingCount": 52,
+      "displayName": {
+        "text": "Nigiri",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ7fU2K6NRwokRW2HwsmEQYNw",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7146729,
+        "longitude": -74.0348964
+      },
+      "displayName": {
+        "text": "Kimchikin",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJyWqUBRlRwokRnYk1b_GWgic",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7148488,
+        "longitude": -74.0347855
+      },
+      "rating": 4,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "BurDog",
+        "languageCode": "en"
+      },
+      "primaryType": "hamburger_restaurant"
+    },
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJ9xCdEgBRwokRMc2sxLVWR3M",
+      "formattedAddress": "62 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7137898,
+        "longitude": -74.03652319999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 603,
+      "displayName": {
+        "text": "62 Secret kitchen 中餐厅·私房菜",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJ73UCffxRwokR1nQKiLndL3w",
+      "formattedAddress": "87 Sussex St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7143807,
+        "longitude": -74.037424
+      },
+      "rating": 4.6,
+      "userRatingCount": 195,
+      "displayName": {
+        "text": "87 Sussex",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJt5ZvbK9QwokRr6KHcRsaeOc",
+      "formattedAddress": "212 Washington St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7144204,
+        "longitude": -74.0376612
+      },
+      "rating": 4.5,
+      "userRatingCount": 1015,
+      "displayName": {
+        "text": "Satis Bistro",
+        "languageCode": "en"
+      },
+      "primaryType": "bistro"
+    }
+  ]
+}

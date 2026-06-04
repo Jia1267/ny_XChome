@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "id": "ChIJF1zWFPlRwokRjUyDD89oasY",
+      "formattedAddress": "207 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714393699999995,
+        "longitude": -74.0415045
+      },
+      "rating": 3.8,
+      "userRatingCount": 36,
+      "displayName": {
+        "text": "Lenox Market",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJoXBunrpQwokRDvoGwZb2sj0",
+      "formattedAddress": "18 Park, 18 Park View Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7142275,
+        "longitude": -74.0435018
+      },
+      "rating": 3.9,
+      "userRatingCount": 78,
+      "displayName": {
+        "text": "Downtown Pharmacy",
+        "languageCode": "en"
+      },
+      "primaryType": "pharmacy"
+    },
+    {
+      "id": "ChIJFcTw5XFRwokRkLenlKOBNko",
+      "formattedAddress": "225 Grand St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7152903,
+        "longitude": -74.0434028
+      },
+      "rating": 4,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Metro Market One",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJk3S3zLFQwokR1_6O7HaaR6E",
+      "formattedAddress": "190 York St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7167545,
+        "longitude": -74.0426129
+      },
+      "rating": 4.9,
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Salman Grocery Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJVflW7rBQwokR921-CWahIkU",
+      "formattedAddress": "261 Grand St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716023899999996,
+        "longitude": -74.0456252
+      },
+      "rating": 2.7,
+      "userRatingCount": 175,
+      "displayName": {
+        "text": "Edible Arrangements",
+        "languageCode": "en"
+      },
+      "primaryType": "gift_shop"
+    },
+    {
+      "id": "ChIJfWZ6r7FQwokRJD36La-4My8",
+      "formattedAddress": "269 Grove St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7174592,
+        "longitude": -74.0444139
+      },
+      "rating": 4.1,
+      "userRatingCount": 35,
+      "displayName": {
+        "text": "Salem Grocery & Smoke Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJz__8uxFRwokRW099k9HCtBk",
+      "formattedAddress": "1 Park View Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7117451,
+        "longitude": -74.0457306
+      },
+      "rating": 4.7,
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Street Corner Market Liberty Harbor",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJxfEMuhBRwokR3dYw4BQRY_0",
+      "formattedAddress": "280 Marin Blvd, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.718384,
+        "longitude": -74.0413497
+      },
+      "rating": 4.8,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Metro Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

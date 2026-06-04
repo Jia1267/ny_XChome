@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJD7pnn6RZwokRJO3P95qqzZk",
+      "formattedAddress": "686 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741928,
+        "longitude": -73.993286
+      },
+      "rating": 3.5,
+      "userRatingCount": 808,
+      "displayName": {
+        "text": "McDonald's",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJTaean6RZwokRySirHzfCIbs",
+      "formattedAddress": "684 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741839999999996,
+        "longitude": -73.99323
+      },
+      "rating": 4.1,
+      "userRatingCount": 407,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ8ZwtWqNZwokRw8Brw5Cks-E",
+      "formattedAddress": "655 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7414369,
+        "longitude": -73.994146
+      },
+      "rating": 4.2,
+      "userRatingCount": 219,
+      "displayName": {
+        "text": "Pret A Manger",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJXcUIHylZwokRitpVUpEPoUs",
+      "formattedAddress": "64 W 21st St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7413027,
+        "longitude": -73.9934364
+      },
+      "rating": 4.3,
+      "userRatingCount": 205,
+      "displayName": {
+        "text": "Foreigner NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJO76EwRBZwokR5TtVG5enXiA",
+      "formattedAddress": "700 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.742458899999995,
+        "longitude": -73.9929125
+      },
+      "rating": 4.2,
+      "userRatingCount": 417,
+      "displayName": {
+        "text": "Paris Baguette",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJ2WvIU7tZwokRHHdQBM8iUdE",
+      "formattedAddress": "131 W 21st St, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7423201,
+        "longitude": -73.9949145
+      },
+      "rating": 4.3,
+      "userRatingCount": 165,
+      "displayName": {
+        "text": "Joe Coffee Company: Pro Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJlwL76sFZwokRQNs-EtabB7I",
+      "formattedAddress": "60 W 23rd St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7423769,
+        "longitude": -73.992369
+      },
+      "rating": 4.1,
+      "userRatingCount": 20,
+      "displayName": {
+        "text": "LifeCafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJpcpgtJlZwokRN-7iXW55x-o",
+      "formattedAddress": "34 W 22nd St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7414981,
+        "longitude": -73.9920247
+      },
+      "rating": 4.4,
+      "userRatingCount": 319,
+      "displayName": {
+        "text": "Honeybrains",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJTWAx6qRZwokRnLnJCw539ls",
+      "formattedAddress": "101 W 23rd St, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7432747,
+        "longitude": -73.99307859999999
+      },
+      "rating": 3.7,
+      "userRatingCount": 408,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJo5uAFsRZwokR-KQUGeWKDlo",
+      "formattedAddress": "29 W 21st St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7411056,
+        "longitude": -73.9919787
+      },
+      "rating": 4.6,
+      "userRatingCount": 113,
+      "displayName": {
+        "text": ":3Coffee | Flatiron",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

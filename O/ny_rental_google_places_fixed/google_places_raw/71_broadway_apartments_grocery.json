@@ -1,0 +1,146 @@
+{
+  "places": [
+    {
+      "id": "ChIJ5-eXOKFbwokRYuHJ_OBoMbw",
+      "formattedAddress": "66 Broadway, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7071125,
+        "longitude": -74.0119287
+      },
+      "rating": 4.3,
+      "userRatingCount": 1083,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJtV7w2xZawokRw4WCeUuIGuw",
+      "formattedAddress": "11 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7068661,
+        "longitude": -74.01131889999999
+      },
+      "displayName": {
+        "text": "Food Centre",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ-8YuR59bwokRbJmAVeSn6LI",
+      "formattedAddress": "57 Trinity Pl, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707817999999996,
+        "longitude": -74.01283339999999
+      },
+      "rating": 5,
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "NYC convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ5a3wRwBbwokRY6TkYJrUTV8",
+      "formattedAddress": "46 Church St, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7074511,
+        "longitude": -74.01303899999999
+      },
+      "displayName": {
+        "text": "Americas Finest Grocer",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJxdVLAQBbwokRC7q7jJLAbrQ",
+      "formattedAddress": "Rector St, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7074472,
+        "longitude": -74.0131579
+      },
+      "rating": 5,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "America’s Deli",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJtVcN3BBawokRySe5I9lfDMg",
+      "formattedAddress": "89 Greenwich St, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7078296,
+        "longitude": -74.0134837
+      },
+      "rating": 4,
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Rector Street Food Enterprises",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJgatkExdawokRIWamfy0YjsU",
+      "formattedAddress": "Equitable Life Building, 120 Broadway, New York, NY 10271, USA",
+      "location": {
+        "latitude": 40.7082281,
+        "longitude": -74.0105245
+      },
+      "rating": 3,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Freedom News NY",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJW6ou_RZawokR4e_DnR8GqRU",
+      "formattedAddress": "30 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7069208,
+        "longitude": -74.01015819999999
+      },
+      "displayName": {
+        "text": "Meawgoods",
+        "languageCode": "hi"
+      },
+      "primaryType": "hypermarket"
+    },
+    {
+      "id": "ChIJW6ou_RZawokRNcS81YvGfiw",
+      "formattedAddress": "30 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7069208,
+        "longitude": -74.01015819999999
+      },
+      "displayName": {
+        "text": "jt computers",
+        "languageCode": "en"
+      },
+      "primaryType": "hypermarket"
+    },
+    {
+      "id": "ChIJkwTvRxFawokRJfrZ-jo99ZY",
+      "formattedAddress": "37 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.706288099999995,
+        "longitude": -74.0131854
+      },
+      "rating": 2.8,
+      "userRatingCount": 118,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

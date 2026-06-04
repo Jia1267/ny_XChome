@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJf23EAG5ZwokRNRN25MprKrM",
+      "formattedAddress": "28-17 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748807500000005,
+        "longitude": -73.93848539999999
+      },
+      "rating": 5,
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Unmei Matcha",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJxR0IZwBZwokRPbI8q0X5mcM",
+      "formattedAddress": "28-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488691,
+        "longitude": -73.9380243
+      },
+      "displayName": {
+        "text": "Kagami maid cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJtVvG35JZwokR29AX_FygDtE",
+      "formattedAddress": "28-43 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7488691,
+        "longitude": -73.9380243
+      },
+      "rating": 4.1,
+      "userRatingCount": 307,
+      "displayName": {
+        "text": "Spot Dessert Bar Long Island City",
+        "languageCode": "en"
+      },
+      "primaryType": "dessert_restaurant"
+    },
+    {
+      "id": "ChIJi_RCwARZwokRH1ONl0jWLcQ",
+      "formattedAddress": "28-10 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7482705,
+        "longitude": -73.9385274
+      },
+      "rating": 4.3,
+      "userRatingCount": 201,
+      "displayName": {
+        "text": "Sweetleaf Coffee Roasters",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJpUg-4JRZwokReZKtHPfEDN0",
+      "formattedAddress": "28-30 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7486416,
+        "longitude": -73.93773949999999
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Mi Casa Matcha",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJZw_YrsNZwokRk_RewtzR0Pk",
+      "formattedAddress": "28-02 42nd Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748621799999995,
+        "longitude": -73.9395663
+      },
+      "rating": 4.4,
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "PROGRESO",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJY8DemNVYwokRc8Ft_A8Yirc",
+      "formattedAddress": "27-10 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7499515,
+        "longitude": -73.93961399999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 435,
+      "displayName": {
+        "text": "Lucky Pizzeria & Cafe Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJex7vCi5ZwokREq4GR8Yh4uU",
+      "formattedAddress": "27-04 Queens Plaza S, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7500186,
+        "longitude": -73.9397979
+      },
+      "rating": 3.2,
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Dunkin'",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJY9Z4Jj5ZwokRcTWkGdHIIYI",
+      "formattedAddress": "27-35 Jackson Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748101299999995,
+        "longitude": -73.9401725
+      },
+      "rating": 4.4,
+      "userRatingCount": 368,
+      "displayName": {
+        "text": "Paris Baguette",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJv102fbVZwokRt4kTkb37MjI",
+      "formattedAddress": "42-77 Hunter St, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.748514,
+        "longitude": -73.940646
+      },
+      "rating": 4.7,
+      "userRatingCount": 485,
+      "displayName": {
+        "text": "No Stress Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

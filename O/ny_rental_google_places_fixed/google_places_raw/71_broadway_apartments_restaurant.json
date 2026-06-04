@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJRwrYExtbwokRb3CPrVCYsXM",
+      "formattedAddress": "71 Broadway Suite 1, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7074388,
+        "longitude": -74.012209
+      },
+      "rating": 4.6,
+      "userRatingCount": 165,
+      "displayName": {
+        "text": "maman",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJTQ0bJiJbwokRIjq-0C-madM",
+      "formattedAddress": "1 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.707535299999996,
+        "longitude": -74.011648
+      },
+      "rating": 4.4,
+      "userRatingCount": 168,
+      "displayName": {
+        "text": "Maison Passerelle",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJk8-_bslbwokRBfvifkAfYpk",
+      "formattedAddress": "66 Broadway, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7071125,
+        "longitude": -74.0119287
+      },
+      "rating": 4.5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Kikka Sushi",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJXQ6pKw5bwokRd4zdAJ7CkSU",
+      "formattedAddress": "74 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.70707,
+        "longitude": -74.01191899999999
+      },
+      "displayName": {
+        "text": "El Ranchito Mexican food truck",
+        "languageCode": "es"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ8eUFKhdawokRFjMYpdzFwVk",
+      "formattedAddress": "71 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707317599999996,
+        "longitude": -74.0124258
+      },
+      "rating": 4.5,
+      "userRatingCount": 692,
+      "displayName": {
+        "text": "Bean & Bean Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ5RNGENtbwokRXUPt5SsMBbU",
+      "formattedAddress": "65 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7071762,
+        "longitude": -74.0124086
+      },
+      "rating": 4.2,
+      "userRatingCount": 638,
+      "displayName": {
+        "text": "65 Market Place",
+        "languageCode": "en"
+      },
+      "primaryType": "buffet_restaurant"
+    },
+    {
+      "id": "ChIJX8dWCnBbwokR584dKBOEuS0",
+      "formattedAddress": "66 Broadway, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706813,
+        "longitude": -74.01216699999999
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Market Plate",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJ8S4VMZpbwokRg66ZV283up8",
+      "formattedAddress": "18 New St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706836599999995,
+        "longitude": -74.01159009999999
+      },
+      "displayName": {
+        "text": "Akota Eight Corp",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ21lEwRZawokRKHm2kvFsUFA",
+      "formattedAddress": "20 Broad St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706836599999995,
+        "longitude": -74.01159009999999
+      },
+      "rating": 3.6,
+      "userRatingCount": 238,
+      "displayName": {
+        "text": "Subway",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJ2WPZKQlbwokRP85eL6NuRwE",
+      "formattedAddress": "14 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7075202,
+        "longitude": -74.0111174
+      },
+      "rating": 3.8,
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Number One Caviar Boutique & Tasting Room: Wall Street",
+        "languageCode": "en"
+      },
+      "primaryType": "clothing_store"
+    }
+  ]
+}

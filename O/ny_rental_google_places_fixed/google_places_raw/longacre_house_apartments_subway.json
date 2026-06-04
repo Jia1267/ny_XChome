@@ -1,0 +1,64 @@
+{
+  "places": [
+    {
+      "id": "ChIJP9p8-FZYwokR6xDCM4A-Bf8",
+      "formattedAddress": "New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.762344,
+        "longitude": -73.98608399999999
+      },
+      "rating": 3.7,
+      "userRatingCount": 196,
+      "displayName": {
+        "text": "50 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJpY9mO1ZYwokRsbx01J3izKs",
+      "formattedAddress": "New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.761429,
+        "longitude": -73.984055
+      },
+      "rating": 3.9,
+      "userRatingCount": 121,
+      "displayName": {
+        "text": "50 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJv6xT4VVYwokRb-AIZdrXKAc",
+      "formattedAddress": "New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7604939,
+        "longitude": -73.9837436
+      },
+      "rating": 4.1,
+      "userRatingCount": 144,
+      "displayName": {
+        "text": "49 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ91XAZ_hYwokRxQkFyGxry00",
+      "formattedAddress": "New York, NY 10019, USA",
+      "location": {
+        "latitude": 40.7629749,
+        "longitude": -73.9819021
+      },
+      "rating": 3.9,
+      "userRatingCount": 244,
+      "displayName": {
+        "text": "7 Av",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

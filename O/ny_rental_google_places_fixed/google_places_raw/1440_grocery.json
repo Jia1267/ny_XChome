@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJT9yCK2_2wokRqtxSRdMA1Lw",
+      "formattedAddress": "501 W 133rd St, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.817817999999995,
+        "longitude": -73.953423
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "501 Convenient Store Corporation",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJzd5RR2_2wokRJbhp9F2HhWY",
+      "formattedAddress": "1512 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.818689299999996,
+        "longitude": -73.95261579999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Pueblo Magico 2",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJeTCmECj3wokRQCXD2TicLxU",
+      "formattedAddress": "1512 Amsterdam Ave, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8186854,
+        "longitude": -73.9526063
+      },
+      "rating": 5,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "El pulgarcito produsts and deli",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJObRzRm_2wokRX0hCugBb_aQ",
+      "formattedAddress": "500 W 135th St #1, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8189098,
+        "longitude": -73.95265560000001
+      },
+      "rating": 4.6,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "Ant Solutions Grocery",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJf6G0IQD3wokRgNf_VBd7AJ8",
+      "formattedAddress": "500 W 135th St, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.818928899999996,
+        "longitude": -73.9526618
+      },
+      "rating": 5,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Encanto Mexicano",
+        "languageCode": "es"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJAT8wvWj2wokReKT8uGa_bYI",
+      "formattedAddress": "3320 Broadway, New York, NY 10031, USA",
+      "location": {
+        "latitude": 40.8196215,
+        "longitude": -73.95497639999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 297,
+      "displayName": {
+        "text": "CTown Supermarkets",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJhQqJJAD3wokRZqKx62CoWtw",
+      "formattedAddress": "1471 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.817243999999995,
+        "longitude": -73.95322039999999
+      },
+      "displayName": {
+        "text": "1471 DISCOUNT AND GROCERY",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJSURJ0m72wokRPqibjxciyZ4",
+      "formattedAddress": "1465 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.8170858,
+        "longitude": -73.9533178
+      },
+      "rating": 4,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Best Way Mini Market Corp",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJy1-3PQD3wokRi5CMuuJUbf0",
+      "formattedAddress": "1440 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.816873,
+        "longitude": -73.954127
+      },
+      "rating": 3,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "City Fresh Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ8-9e0m72wokRwJBS4Fa-er0",
+      "formattedAddress": "1463 Amsterdam Ave, New York, NY 10027, USA",
+      "location": {
+        "latitude": 40.8169405,
+        "longitude": -73.9532462
+      },
+      "displayName": {
+        "text": "Amsterdam Express Stop Deli Grocery Inc.",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "places": [
+    {
+      "id": "ChIJ_1ODRFBRwokRJlisG9tHR6A",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7195843,
+        "longitude": -74.035321
+      },
+      "rating": 2.8,
+      "userRatingCount": 141,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJ45jCdx1RwokRnrsS04xabIE",
+      "formattedAddress": "135 Greene St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7176775,
+        "longitude": -74.0363064
+      },
+      "rating": 4.1,
+      "userRatingCount": 1136,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJN5aJDSdRwokRYvp9FA96GX4",
+      "formattedAddress": "150 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7123225,
+        "longitude": -74.03983989999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 869,
+      "displayName": {
+        "text": "Bobwhite Counter",
+        "languageCode": "en"
+      },
+      "primaryType": "chicken_restaurant"
+    },
+    {
+      "id": "ChIJH2OLMARRwokRbuVV0thv7Rs",
+      "formattedAddress": "98 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7139893,
+        "longitude": -74.0383853
+      },
+      "rating": 4,
+      "userRatingCount": 203,
+      "displayName": {
+        "text": "Lobster Garage",
+        "languageCode": "en"
+      },
+      "primaryType": "seafood_restaurant"
+    },
+    {
+      "id": "ChIJR0ANWABRwokRPSnwA3qI760",
+      "formattedAddress": "84 1/2 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7138975,
+        "longitude": -74.03753999999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 193,
+      "displayName": {
+        "text": "Perquin",
+        "languageCode": "en"
+      },
+      "primaryType": "latin_american_restaurant"
+    },
+    {
+      "id": "ChIJJS0zaaVQwokRDFB0XJjV6Jc",
+      "formattedAddress": "179 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7132447,
+        "longitude": -74.03999
+      },
+      "rating": 4.4,
+      "userRatingCount": 992,
+      "displayName": {
+        "text": "White Star Warren St",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJR6nWeq9QwokRpkeN8zc9CJY",
+      "formattedAddress": "199 Washington St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714013099999995,
+        "longitude": -74.0382095
+      },
+      "rating": 4.4,
+      "userRatingCount": 1666,
+      "displayName": {
+        "text": "Lighthorse Tavern",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJYy7dg69QwokRvpbe2QXnGu8",
+      "formattedAddress": "112 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714108499999995,
+        "longitude": -74.0390318
+      },
+      "rating": 4.6,
+      "userRatingCount": 1299,
+      "displayName": {
+        "text": "sam a.m.",
+        "languageCode": "en"
+      },
+      "primaryType": "breakfast_restaurant"
+    },
+    {
+      "id": "ChIJ9xCdEgBRwokRMc2sxLVWR3M",
+      "formattedAddress": "62 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7137898,
+        "longitude": -74.03652319999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 603,
+      "displayName": {
+        "text": "62 Secret kitchen 中餐厅·私房菜",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJt5ZvbK9QwokRr6KHcRsaeOc",
+      "formattedAddress": "212 Washington St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7144204,
+        "longitude": -74.0376612
+      },
+      "rating": 4.5,
+      "userRatingCount": 1015,
+      "displayName": {
+        "text": "Satis Bistro",
+        "languageCode": "en"
+      },
+      "primaryType": "bistro"
+    },
+    {
+      "id": "ChIJ73UCffxRwokR1nQKiLndL3w",
+      "formattedAddress": "87 Sussex St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7143807,
+        "longitude": -74.037424
+      },
+      "rating": 4.6,
+      "userRatingCount": 195,
+      "displayName": {
+        "text": "87 Sussex",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJdWDWaJNRwokRENfTMqBqAA8",
+      "formattedAddress": "199 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7141652,
+        "longitude": -74.0398183
+      },
+      "rating": 4.6,
+      "userRatingCount": 561,
+      "displayName": {
+        "text": "Tino's Artisan Pizza Co.",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    }
+  ]
+}

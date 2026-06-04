@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJ14YWU2j3wokRp9Ttk_YXARo",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7946801,
+        "longitude": -73.9666433
+      },
+      "displayName": {
+        "text": "Market Sandwich",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJQUbUITr3wokRxaeqNVwxE6Y",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7946801,
+        "longitude": -73.9666433
+      },
+      "rating": 4.9,
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Ezra’s Falafel - Supra Factor NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "middle_eastern_restaurant"
+    },
+    {
+      "id": "ChIJFSLUSjz3wokRafZnlm2KwD8",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7946801,
+        "longitude": -73.9666433
+      },
+      "displayName": {
+        "text": "Kikka Sushi",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJR_guvub3wokRjWAoezsdVi0",
+      "formattedAddress": "795 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7943486,
+        "longitude": -73.96614129999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 3880,
+      "displayName": {
+        "text": "Bareburger",
+        "languageCode": "en"
+      },
+      "primaryType": "hamburger_restaurant"
+    },
+    {
+      "id": "ChIJpQ1bFAD3wokRkAm0BARfnHA",
+      "formattedAddress": "795 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.794325099999995,
+        "longitude": -73.9660162
+      },
+      "rating": 4.2,
+      "userRatingCount": 122,
+      "displayName": {
+        "text": "Chick-fil-A",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJ3WxY0ib2wokRyZ8BebsIIG0",
+      "formattedAddress": "805 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7949232,
+        "longitude": -73.9657893
+      },
+      "rating": 3.9,
+      "userRatingCount": 532,
+      "displayName": {
+        "text": "Chipotle Mexican Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJgXy70Sb2wokRYTWw4aQPE9c",
+      "formattedAddress": "808 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7939667,
+        "longitude": -73.9671163
+      },
+      "rating": 5,
+      "userRatingCount": 4,
+      "displayName": {
+        "text": "Market Plate",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJqyuCcQD3wokRpzn_DuC5nUg",
+      "formattedAddress": "775 Columbus Ave d, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7937662,
+        "longitude": -73.9665194
+      },
+      "rating": 4.7,
+      "userRatingCount": 87,
+      "displayName": {
+        "text": "Baya Bar - Acai & Smoothie Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJkUFYzCb2wokRqX17UTyDQPs",
+      "formattedAddress": "805 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.795230000000004,
+        "longitude": -73.96552
+      },
+      "rating": 3.7,
+      "userRatingCount": 595,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJC9ie2t_3wokRit-ANbhoDAQ",
+      "formattedAddress": "775 Columbus Ave, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7935401,
+        "longitude": -73.9667946
+      },
+      "rating": 3.8,
+      "userRatingCount": 87,
+      "displayName": {
+        "text": "JAMROCK JERK",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    }
+  ]
+}

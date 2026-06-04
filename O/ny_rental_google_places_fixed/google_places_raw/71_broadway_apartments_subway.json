@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ7zQkKRdawokR0JKr2_7uzBM",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707664,
+        "longitude": -74.01181799999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 183,
+      "displayName": {
+        "text": "Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ1YLf2RBawokRyz5lBHE33p0",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7077763,
+        "longitude": -74.012963
+      },
+      "rating": 4,
+      "userRatingCount": 32,
+      "displayName": {
+        "text": "Rector St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJXy7mwhZawokRC_tiZTQds28",
+      "formattedAddress": "New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7063239,
+        "longitude": -74.01122079999999
+      },
+      "rating": 4,
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Broad St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJmXsV2BBawokRKRW4simy9As",
+      "formattedAddress": "New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707972999999996,
+        "longitude": -74.013611
+      },
+      "rating": 4.1,
+      "userRatingCount": 78,
+      "displayName": {
+        "text": "Rector St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJBzCfVBZawokR6_Qcq-KQA28",
+      "formattedAddress": "New York, NY 10038, USA",
+      "location": {
+        "latitude": 40.7064014,
+        "longitude": -74.00945089999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 142,
+      "displayName": {
+        "text": "Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJKXQp3BNawokR6gUmnJXw58c",
+      "formattedAddress": "New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.704516999999996,
+        "longitude": -74.01426699999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 158,
+      "displayName": {
+        "text": "Bowling Green",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJEzFB6hlawokRjBSIJ-zCLq8",
+      "formattedAddress": "New York, NY 10007, USA",
+      "location": {
+        "latitude": 40.71100560000001,
+        "longitude": -74.010763
+      },
+      "rating": 4.3,
+      "userRatingCount": 164,
+      "displayName": {
+        "text": "Cortlandt St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJZRVRExhawokR_OhyrnV9EtM",
+      "formattedAddress": "New York, NY 10038, USA",
+      "location": {
+        "latitude": 40.709804999999996,
+        "longitude": -74.008156
+      },
+      "rating": 4,
+      "userRatingCount": 137,
+      "displayName": {
+        "text": "Fulton St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJIdgm1xlawokRETPkDZYXZjg",
+      "formattedAddress": "200 Broadway, New York, NY 10007, USA",
+      "location": {
+        "latitude": 40.7106484,
+        "longitude": -74.0092956
+      },
+      "rating": 4.3,
+      "userRatingCount": 288,
+      "displayName": {
+        "text": "Fulton St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJt8prFBhawokRplWLdDZKDc4",
+      "formattedAddress": "Fulton Street between Broadway &, Nassau St, New York, NY 10007, USA",
+      "location": {
+        "latitude": 40.7102465,
+        "longitude": -74.0077374
+      },
+      "rating": 4.2,
+      "userRatingCount": 142,
+      "displayName": {
+        "text": "Fulton St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

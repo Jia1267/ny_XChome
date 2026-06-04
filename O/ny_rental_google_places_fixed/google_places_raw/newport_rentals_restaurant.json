@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJq3yNJlRXwokRRs6nm2FEPuo",
+      "formattedAddress": "540 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7275756,
+        "longitude": -74.03390739999999
+      },
+      "rating": 4.2,
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "The Bistro - Eat. Drink. Connect.®",
+        "languageCode": "en"
+      },
+      "primaryType": "bistro"
+    },
+    {
+      "id": "ChIJIRY4Tp1XwokRC4bmWkW9LxA",
+      "formattedAddress": "558 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.728366799999996,
+        "longitude": -74.0342187
+      },
+      "rating": 4.3,
+      "userRatingCount": 1438,
+      "displayName": {
+        "text": "Chef Tan",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJvaQfLl5XwokR6eXdgQiCYwE",
+      "formattedAddress": "564 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7286134,
+        "longitude": -74.03418099999999
+      },
+      "rating": 3.6,
+      "userRatingCount": 51,
+      "displayName": {
+        "text": "Paris Baguette",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJR-mnw-5XwokRNQWNQofn6C0",
+      "formattedAddress": "Holland Tunnel, Jersey City, NJ 07576, USA",
+      "location": {
+        "latitude": 40.727912599999996,
+        "longitude": -74.0327439
+      },
+      "displayName": {
+        "text": "Here Sports Arena",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJIaqCllZXwokR0bdLlBSqnqY",
+      "formattedAddress": "570 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7286557,
+        "longitude": -74.0342608
+      },
+      "rating": 4,
+      "userRatingCount": 488,
+      "displayName": {
+        "text": "Menya Sandaime",
+        "languageCode": "en"
+      },
+      "primaryType": "asian_restaurant"
+    },
+    {
+      "id": "ChIJu6c9oVZXwokRneA6qyqQlKQ",
+      "formattedAddress": "555 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.728085799999995,
+        "longitude": -74.0348921
+      },
+      "rating": 4.2,
+      "userRatingCount": 937,
+      "displayName": {
+        "text": "Dorrian's Jersey City Restaurant (Comedy Club, Sports Bar, Event Space)",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJEUJZ-ChXwokRogz3upBeNwo",
+      "formattedAddress": "537 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7275675,
+        "longitude": -74.0349374
+      },
+      "rating": 4.5,
+      "userRatingCount": 426,
+      "displayName": {
+        "text": "Restaurant Yuan 小花园",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJlUrWHVRXwokRM5wKHgClnbc",
+      "formattedAddress": "535 Washington Blvd, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7274624,
+        "longitude": -74.03492779999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 412,
+      "displayName": {
+        "text": "Così",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJIU3LOidZwokRFLf9Y_G24wg",
+      "formattedAddress": "100 Town Square Pl, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7269179,
+        "longitude": -74.0333795
+      },
+      "rating": 4.5,
+      "userRatingCount": 214,
+      "displayName": {
+        "text": "The North Bowl-Acai and Smoothies",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJVzAjYgBXwokROfmdAguSSKI",
+      "formattedAddress": "525 Washington Blvd # 600, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.7272821,
+        "longitude": -74.0351909
+      },
+      "rating": 3.9,
+      "userRatingCount": 54,
+      "displayName": {
+        "text": "NAYA",
+        "languageCode": "en"
+      },
+      "primaryType": "lebanese_restaurant"
+    }
+  ]
+}

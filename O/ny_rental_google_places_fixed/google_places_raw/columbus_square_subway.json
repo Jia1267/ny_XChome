@@ -1,0 +1,49 @@
+{
+  "places": [
+    {
+      "id": "ChIJ87a7BJ5YwokR4TLbUoQMB1s",
+      "formattedAddress": "New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.791679,
+        "longitude": -73.964699
+      },
+      "rating": 4,
+      "userRatingCount": 60,
+      "displayName": {
+        "text": "96 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ09npjiH2wokRzC2gUYsgmpQ",
+      "formattedAddress": "New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7962859,
+        "longitude": -73.961648
+      },
+      "rating": 3.7,
+      "userRatingCount": 48,
+      "displayName": {
+        "text": "103 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJp7k2ESj2wokRpUzc9hsiHXQ",
+      "formattedAddress": "W 96th St, New York, NY 10025, USA",
+      "location": {
+        "latitude": 40.7941912,
+        "longitude": -73.9721368
+      },
+      "rating": 4.1,
+      "userRatingCount": 278,
+      "displayName": {
+        "text": "96 St",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

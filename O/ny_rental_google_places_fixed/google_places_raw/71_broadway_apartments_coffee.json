@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJRwrYExtbwokRb3CPrVCYsXM",
+      "formattedAddress": "71 Broadway Suite 1, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.7074388,
+        "longitude": -74.012209
+      },
+      "rating": 4.6,
+      "userRatingCount": 165,
+      "displayName": {
+        "text": "maman",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ8eUFKhdawokRFjMYpdzFwVk",
+      "formattedAddress": "71 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707317599999996,
+        "longitude": -74.0124258
+      },
+      "rating": 4.5,
+      "userRatingCount": 692,
+      "displayName": {
+        "text": "Bean & Bean Wall St",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJY2Ww8QxbwokRGBl0Gl3xdbQ",
+      "formattedAddress": "66 Broadway, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706813,
+        "longitude": -74.01216699999999
+      },
+      "rating": 2.6,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "WFM Coffee Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJfWhiubpbwokRHuViNbBWffc",
+      "formattedAddress": "14 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7075417,
+        "longitude": -74.0111541
+      },
+      "rating": 4.1,
+      "userRatingCount": 264,
+      "displayName": {
+        "text": "Ten Thousand Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ13ncjCdbwokRI_boeQYMr5w",
+      "formattedAddress": "1 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706787399999996,
+        "longitude": -74.01235489999999
+      },
+      "displayName": {
+        "text": "The Chai Sutta",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJ7TpxEzxbwokRHl68BP3-M1M",
+      "formattedAddress": "1 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.706787399999996,
+        "longitude": -74.01235489999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 44,
+      "displayName": {
+        "text": "Café Jalu",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ_yyLChpbwokRlGcz5jCAPVc",
+      "formattedAddress": "55 Broadway, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.70689000000001,
+        "longitude": -74.01301
+      },
+      "rating": 4,
+      "userRatingCount": 253,
+      "displayName": {
+        "text": "Starbucks",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJX47hPvRbwokR0M4cPSS6fuw",
+      "formattedAddress": "22 Broad St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7065505,
+        "longitude": -74.0112971
+      },
+      "rating": 4.2,
+      "userRatingCount": 241,
+      "displayName": {
+        "text": "Blue Bottle Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJL5sU4-RbwokR9JEHRXDICBo",
+      "formattedAddress": "30 New St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.706372699999996,
+        "longitude": -74.011896
+      },
+      "rating": 4.9,
+      "userRatingCount": 455,
+      "displayName": {
+        "text": "Cafe Rumi",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJmysYcqBbwokRrYNdMRSoyNI",
+      "formattedAddress": "44 Trinity Pl, New York, NY 10006, USA",
+      "location": {
+        "latitude": 40.707499299999995,
+        "longitude": -74.0133255
+      },
+      "rating": 4.4,
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Americas Coffee",
+        "languageCode": "es"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

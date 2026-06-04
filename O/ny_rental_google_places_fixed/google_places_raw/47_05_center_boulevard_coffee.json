@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ1-65vD5ZwokRT6lZFA18cls",
+      "formattedAddress": "47-20 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7461355,
+        "longitude": -73.9570392
+      },
+      "rating": 4.6,
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "The Greats of Craft - LIC Waterfront",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    },
+    {
+      "id": "ChIJWcil4SNZwokRZ028jmcU4ls",
+      "formattedAddress": "5-11 47th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7460241,
+        "longitude": -73.9553419
+      },
+      "rating": 4.3,
+      "userRatingCount": 822,
+      "displayName": {
+        "text": "Cannelle Patisserie",
+        "languageCode": "fr"
+      },
+      "primaryType": "pastry_shop"
+    },
+    {
+      "id": "ChIJ0XKsJwBZwokR8u0A8E3Az-M",
+      "formattedAddress": "46-30 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7463467,
+        "longitude": -73.95683609999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 318,
+      "displayName": {
+        "text": "Somedays Bakery - LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJ5X85BSdZwokR3kN8BYS9jvs",
+      "formattedAddress": "47-40 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7454495,
+        "longitude": -73.9574782
+      },
+      "rating": 4.9,
+      "userRatingCount": 144,
+      "displayName": {
+        "text": "Deploy Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJI_n5YyJZwokRsKIT7hf8KvQ",
+      "formattedAddress": "46-15 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.747206,
+        "longitude": -73.956011
+      },
+      "rating": 4.3,
+      "userRatingCount": 657,
+      "displayName": {
+        "text": "Sweetleaf Coffee & Cocktail Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJh4nqHodZwokRXQ_QxGDq6Cw",
+      "formattedAddress": "5-43 48th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7443605,
+        "longitude": -73.9543766
+      },
+      "rating": 4.5,
+      "userRatingCount": 190,
+      "displayName": {
+        "text": "Little Chef Little Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJkUd-KWFZwokRt_NBYp_Erck",
+      "formattedAddress": "46-36 Vernon Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7459237,
+        "longitude": -73.9533208
+      },
+      "rating": 4.7,
+      "userRatingCount": 228,
+      "displayName": {
+        "text": "Overflow Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJucJSIA1ZwokRqez3x1kXkS0",
+      "formattedAddress": "2-57 50th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7433716,
+        "longitude": -73.9566034
+      },
+      "rating": 4.2,
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Lowboys Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJUfJxHSRZwokRd6i76q8PA4c",
+      "formattedAddress": "46-35 Vernon Blvd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.745833,
+        "longitude": -73.9529025
+      },
+      "rating": 4.5,
+      "userRatingCount": 579,
+      "displayName": {
+        "text": "Manducatis Rustica VIG",
+        "languageCode": "en"
+      },
+      "primaryType": "italian_restaurant"
+    },
+    {
+      "id": "ChIJE5-BPwBZwokR0p7W6sEhH8o",
+      "formattedAddress": "5-53 49th Ave, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7435878,
+        "longitude": -73.9542592
+      },
+      "rating": 4.4,
+      "userRatingCount": 105,
+      "displayName": {
+        "text": "The Oasis Cafe LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    }
+  ]
+}

@@ -32,6 +32,8 @@ const state = {
   photosByUnit: new Map(),
   buildingMarkers: new Map(),
   selectedId: null,
+  selectedUnitId: null,
+  panelExpanded: false,
   activeNearbyType: null,
   activeSchool: '',
   filteredBuildings: [],
@@ -258,9 +260,18 @@ function buildData(buildingRows, unitRows, photoRows, poiRows) {
       unit_id: unit.unit_id,
       building_id: unit.building_id,
       priceNum: toNumber(unit.gross_rent || unit.net_effective_rent, 0),
+      grossRentNum: toNumber(unit.gross_rent, 0),
+      netRentNum: toNumber(unit.net_effective_rent, NaN),
       bedsNum: toNumber(unit.beds, 0),
       bathsNum: toNumber(unit.baths, 1),
       sqftNum: toNumber(unit.sqft, NaN),
+      defaultPeopleNum: toNumber(unit.default_people, NaN),
+      maxPeopleNum: toNumber(unit.max_people, NaN),
+      rentStepNum: toNumber(unit.rent_step_difference, 200),
+      securityDepositNum: toNumber(unit.security_deposit_amount, NaN),
+      brokerFeeNum: toNumber(unit.broker_fee_amount, NaN),
+      amenityFeeNum: toNumber(unit.amenity_fee_amount, NaN),
+      utilitiesNum: toNumber(unit.utilities_estimate_monthly, NaN),
       photos: photosByUnit.get(unit.unit_id) || [],
     };
     return normalized;
@@ -558,8 +569,14 @@ function selectBuilding(id, { fly = true } = {}) {
   const building = state.buildingMap.get(id);
   if (!building) return;
 
+  if (state.selectedId === id && !els.detailDrawer.classList.contains('hidden')) {
+    closeDrawer();
+    return;
+  }
+
   const previousId = state.selectedId;
   state.selectedId = id;
+  state.selectedUnitId = null;
   state.activeNearbyType = null;
 
   updateActiveMarker(previousId, id);
@@ -577,6 +594,7 @@ function selectBuilding(id, { fly = true } = {}) {
 
   const url = new URL(location.href);
   url.searchParams.set('building', id);
+  url.searchParams.delete('unit');
   history.replaceState({}, '', url);
 }
 
@@ -590,6 +608,7 @@ function openDrawer(building) {
 function closeDrawer() {
   const previousId = state.selectedId;
   state.selectedId = null;
+  state.selectedUnitId = null;
   state.activeNearbyType = null;
   updateActiveMarker(previousId, null);
   clearNearby(false);
@@ -599,6 +618,7 @@ function closeDrawer() {
   renderListingList(state.filteredBuildings);
   const url = new URL(location.href);
   url.searchParams.delete('building');
+  url.searchParams.delete('unit');
   history.replaceState({}, '', url);
   requestAnimationFrame(() => map.invalidateSize());
 }
@@ -611,6 +631,7 @@ function detailHtml(building) {
   const nearestSchools = nearbyItemsFor(building, 'university', CONFIG.poiRadius.university).slice(0, 4);
   return `
     <div class="detailContentInner">
+      ${actionButtonsHtml()}
       <div class="heroPhotos">
         ${[0,1,2,3].map(index => photoTileHtml(photos[index], building, index)).join('')}
       </div>
@@ -676,7 +697,7 @@ function photoTileHtml(photo, building, index) {
 function unitRowHtml(unit) {
   const sqft = Number.isFinite(unit.sqftNum) ? `${unit.sqftNum} sqft` : 'sqft N/A';
   return `
-    <div class="unitRow">
+    <button class="unitRow" type="button" data-unit-id="${escapeHtml(unit.unit_id)}">
       <div class="unitRowTop">
         <span>${escapeHtml(unit.floor_plan || 'Floor plan')} · #${escapeHtml(unit.unit_number || unit.unit_id)}</span>
         <strong>${fullMoney(unit.priceNum)}</strong>
@@ -687,8 +708,242 @@ function unitRowHtml(unit) {
         <span>${escapeHtml(sqft)}</span>
         <span>Available: ${escapeHtml(unit.available_date || 'Ask')}</span>
       </div>
-    </div>
+    </button>
   `;
+}
+
+function peopleForUnit(unit) {
+  if (Number.isFinite(unit.defaultPeopleNum) && unit.defaultPeopleNum > 0) return unit.defaultPeopleNum;
+  if (unit.bedsNum <= 0) return 1;
+  if (unit.bedsNum === 1) return 2;
+  return Math.min(4, Math.max(2, unit.bedsNum + 1));
+}
+
+function splitByPeople(totalMonthly, people, step = 200, unit = null) {
+  const count = Math.max(1, Math.floor(toNumber(people, 1)));
+  if (count === 1) return [{ label: unit?.space_1_name || 'Whole unit', amount: totalMonthly }];
+  const labelsFromUnit = [unit?.space_1_name, unit?.space_2_name, unit?.space_3_name].filter(Boolean);
+  const defaultLabels = {
+    2: ['Bedroom', 'Living room'],
+    3: ['Primary bedroom', 'Second bedroom', 'Living room'],
+    4: ['Primary bedroom', 'Second bedroom', 'Flex room', 'Living room'],
+  };
+  const labels = labelsFromUnit.length >= count ? labelsFromUnit : (defaultLabels[count] || Array.from({ length: count }, (_, index) => `Room ${index + 1}`));
+  const offsetTotal = step * (count * (count - 1) / 2);
+  const base = Math.max(0, (totalMonthly - offsetTotal) / count);
+  return Array.from({ length: count }, (_, index) => ({
+    label: labels[index] || `Room ${index + 1}`,
+    amount: base + index * step,
+  }));
+}
+
+function bestUnitFloorPlan(unit, building) {
+  const exact = unit.photos.find(photo => String(photo.photo_type || '').toLowerCase().includes('floor')) || unit.photos[0];
+  if (exact) return exact;
+  const samePlan = building.units.find(candidate =>
+    candidate.unit_id !== unit.unit_id
+    && candidate.floor_plan
+    && unit.floor_plan
+    && candidate.floor_plan.toLowerCase() === unit.floor_plan.toLowerCase()
+    && candidate.photos.length
+  );
+  return samePlan?.photos.find(photo => String(photo.photo_type || '').toLowerCase().includes('floor')) || samePlan?.photos[0] || null;
+}
+
+function renderUnitFloorPlan(unit, building) {
+  const floorPlan = bestUnitFloorPlan(unit, building);
+  if (floorPlan?.photo_url) {
+    return `<a class="floorPlanBox floorPlanImageLink" href="${escapeHtml(floorPlan.photo_url)}" target="_blank" rel="noreferrer"><img src="${escapeHtml(floorPlan.photo_url)}" alt="${escapeHtml(floorPlan.caption || unit.floor_plan || 'Floor plan')}" loading="lazy"></a>`;
+  }
+  return `<div class="floorPlanBox empty">No floor plan image for this unit yet</div>`;
+}
+
+function renderRentCalculator(building, unit) {
+  const baseRent = unit.grossRentNum || unit.priceNum;
+  const people = peopleForUnit(unit);
+  const deposit = Number.isFinite(unit.securityDepositNum) ? unit.securityDepositNum : baseRent;
+  const broker = Number.isFinite(unit.brokerFeeNum) ? unit.brokerFeeNum : 0;
+  const fees = Number.isFinite(unit.amenityFeeNum) ? unit.amenityFeeNum : 0;
+  const utilities = Number.isFinite(unit.utilitiesNum) ? unit.utilitiesNum : 180;
+  return `
+    <section>
+      <div class="sectionTitle">Rent calculator and roommate split</div>
+      <div class="calculator" id="rentCalculator">
+        <div class="calcGrid">
+          <label>Monthly gross rent<input id="calcRent" type="number" value="${Math.round(baseRent)}" readonly></label>
+          <label>Lease months<input id="calcLease" type="number" min="1" value="${toNumber(unit.lease_term, toNumber(building.lease_term_default, 12)) || 12}"></label>
+          <label>Free months<input id="calcFree" type="number" min="0" step="0.5" value="0"></label>
+          <label>People sharing<input id="calcPeople" type="number" min="1" max="6" value="${people}"></label>
+          <label>Security deposit<input id="calcDeposit" type="number" min="0" value="${Math.round(deposit)}"></label>
+          <label>Broker fee<input id="calcBroker" type="number" min="0" value="${Math.round(broker)}"></label>
+          <label>Amenity / app fees<input id="calcFees" type="number" min="0" value="${Math.round(fees)}"></label>
+          <label>Utilities / month<input id="calcUtilities" type="number" min="0" value="${Math.round(utilities)}"></label>
+        </div>
+        <button class="calcBtn" id="calcBtn" type="button">Calculate</button>
+        <div class="calcResults" id="calcResults"></div>
+        <div id="shareCalcResults"></div>
+      </div>
+    </section>`;
+}
+
+function renderDynamicSplit(totalMonthly, people, moveInParts, unit) {
+  const step = Number.isFinite(unit?.rentStepNum) ? unit.rentStepNum : 200;
+  const shares = splitByPeople(totalMonthly, people, step, unit);
+  const count = shares.length;
+  const oneTimeTotal = moveInParts.deposit + moveInParts.broker + moveInParts.fees;
+  const oneTimePerPerson = oneTimeTotal / count;
+  return `<div class="shareBox">
+    <div class="shareHeader"><strong>${count === 1 ? 'Private plan' : `${count}-person shared plan`}</strong><span>${count} ${count === 1 ? 'person' : 'people'}</span></div>
+    <div class="shareRows">${shares.map(share => `<div><span>${escapeHtml(share.label)}</span><strong>${fullMoney(share.amount)}/mo</strong><em>Move-in est. ${fullMoney(share.amount + oneTimePerPerson)}</em></div>`).join('')}</div>
+    <div class="moveInSplitBox">
+      <div><span>Deposit split</span><strong>${fullMoney(moveInParts.deposit / count)}</strong></div>
+      <div><span>Broker split</span><strong>${fullMoney(moveInParts.broker / count)}</strong></div>
+      <div><span>Fees split</span><strong>${fullMoney(moveInParts.fees / count)}</strong></div>
+      <div><span>One-time / person</span><strong>${fullMoney(oneTimePerPerson)}</strong></div>
+    </div>
+    <p>Monthly split uses a room-price difference rule. One-time fees are split equally by headcount.</p>
+  </div>`;
+}
+
+function calculateRent() {
+  const building = state.selectedId ? state.buildingMap.get(state.selectedId) : null;
+  const unit = building?.units.find(item => item.unit_id === state.selectedUnitId);
+  if (!unit) return;
+  const gross = toNumber(document.getElementById('calcRent')?.value, 0);
+  const lease = Math.max(1, toNumber(document.getElementById('calcLease')?.value, 12));
+  const free = Math.min(lease, Math.max(0, toNumber(document.getElementById('calcFree')?.value, 0)));
+  const people = Math.max(1, Math.floor(toNumber(document.getElementById('calcPeople')?.value, 1)));
+  const deposit = Math.max(0, toNumber(document.getElementById('calcDeposit')?.value, 0));
+  const broker = Math.max(0, toNumber(document.getElementById('calcBroker')?.value, 0));
+  const fees = Math.max(0, toNumber(document.getElementById('calcFees')?.value, 0));
+  const utilities = Math.max(0, toNumber(document.getElementById('calcUtilities')?.value, 0));
+  const netEffective = gross * Math.max(0, lease - free) / lease;
+  const monthlyTotal = netEffective + utilities;
+  const oneTimeFees = deposit + broker + fees;
+  const moveIn = monthlyTotal + oneTimeFees;
+  const result = document.getElementById('calcResults');
+  if (result) {
+    result.innerHTML = `
+      <div><span>Net effective</span><strong>${fullMoney(netEffective)}/mo</strong></div>
+      <div><span>Monthly total</span><strong>${fullMoney(monthlyTotal)}/mo</strong></div>
+      <div><span>Move-in total</span><strong>${fullMoney(moveIn)}</strong></div>
+      <div><span>Fees / person</span><strong>${fullMoney(oneTimeFees / people)}</strong></div>
+      <p>Formula: gross rent * paid months / lease months, then utilities are added.</p>`;
+  }
+  const share = document.getElementById('shareCalcResults');
+  if (share) share.innerHTML = renderDynamicSplit(monthlyTotal, people, { deposit, broker, fees }, unit);
+}
+
+function actionButtonsHtml() {
+  return `
+    <div class="drawerActions">
+      <button class="iconActionBtn" type="button" data-panel-expand title="${state.panelExpanded ? 'Shrink details' : 'Expand details'}" aria-label="${state.panelExpanded ? 'Shrink details' : 'Expand details'}">⤢</button>
+      <button class="iconActionBtn primary" type="button" data-share-link title="Share" aria-label="Share">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.7 10.7 15.3 6.3M8.7 13.3l6.6 4.4"></path></svg>
+      </button>
+    </div>`;
+}
+
+function shareUrlFor(building, unit = null) {
+  const url = new URL(location.href);
+  url.searchParams.set('building', building.id);
+  if (unit) url.searchParams.set('unit', unit.unit_id);
+  else url.searchParams.delete('unit');
+  return url.toString();
+}
+
+async function copyShareLink(button) {
+  const building = state.selectedId ? state.buildingMap.get(state.selectedId) : null;
+  if (!building) return;
+  const unit = state.selectedUnitId ? building.units.find(item => item.unit_id === state.selectedUnitId) : null;
+  const link = shareUrlFor(building, unit);
+  try {
+    await navigator.clipboard.writeText(link);
+    button.classList.add('copied');
+    setTimeout(() => button.classList.remove('copied'), 1300);
+  } catch (_) {
+    window.prompt('Copy this share link:', link);
+  }
+}
+
+function togglePanelExpanded() {
+  state.panelExpanded = !state.panelExpanded;
+  els.workspace.classList.toggle('panelExpanded', state.panelExpanded);
+  requestAnimationFrame(() => map.invalidateSize());
+}
+
+function unitDetailHtml(building, unit) {
+  const sqft = Number.isFinite(unit.sqftNum) ? `${unit.sqftNum} sqft` : 'sqft N/A';
+  return `
+    <div class="detailContentInner unitDetailView">
+      <div class="unitTopActions">
+        <button class="backButton" type="button" data-back-building>Back to building overview</button>
+        ${actionButtonsHtml()}
+      </div>
+      <section class="unitHero">
+        <span>${escapeHtml(building.building_name)}</span>
+        <h2>${escapeHtml(unit.floor_plan || 'Floor plan')} #${escapeHtml(unit.unit_number || unit.unit_id)}</h2>
+        <p>${escapeHtml(building.address || '')}</p>
+        <strong>${fullMoney(unit.priceNum)}/mo</strong>
+      </section>
+      <section>
+        <div class="sectionTitle">Room introduction</div>
+        <div class="roomIntroCard">
+          <p>${escapeHtml(unit.verification_notes || 'Confirm roommate rules, flex-wall approval, fees, and exact availability with the leasing office before signing.')}</p>
+          <div class="unitRowMeta">
+            <span>${bedroomText(unit.bedsNum)}</span>
+            <span>${bathText(unit.bathsNum)}</span>
+            <span>${escapeHtml(sqft)}</span>
+            <span>Available: ${escapeHtml(unit.available_date || 'Ask')}</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="sectionTitle">This unit floor plan</div>
+        ${renderUnitFloorPlan(unit, building)}
+      </section>
+      <div class="warningBox"><strong>Flex-wall note:</strong> Living-room occupancy, temporary walls, bookcase dividers, and curtain partitions may require written management approval.</div>
+      ${renderRentCalculator(building, unit)}
+      <section>
+        <div class="sectionTitle">Lease and price details</div>
+        <div class="factGrid">
+          <div class="factBox"><span>Gross rent</span><strong>${fullMoney(unit.grossRentNum || unit.priceNum)} / month</strong></div>
+          <div class="factBox"><span>Net effective</span><strong>${Number.isFinite(unit.netRentNum) ? `${fullMoney(unit.netRentNum)} / month` : 'Not listed'}</strong></div>
+          <div class="factBox"><span>Lease term</span><strong>${escapeHtml(unit.lease_term || building.lease_term_default || 'Ask agent')}</strong></div>
+          <div class="factBox"><span>Checked</span><strong>${escapeHtml(unit.source_last_checked || building.source_last_checked || 'CSV data')}</strong></div>
+        </div>
+      </section>
+      <section>
+        <div class="sectionTitle">Room-level risks to check</div>
+        <ul class="riskList">
+          <li>Ask whether this exact unit allows roommates, living-room occupancy, or flex walls.</li>
+          <li>Ask whether the listed price is gross rent or net effective rent.</li>
+          <li>Ask whether each roommate can be listed on the lease.</li>
+          <li>Ask whether discounts apply only to the first lease term.</li>
+        </ul>
+      </section>
+      <div class="ctaRow">
+        ${unit.source_url ? `<a class="ctaButton" href="${escapeHtml(unit.source_url)}" target="_blank" rel="noreferrer">Open unit source</a>` : ''}
+        ${building.availability_url ? `<a class="ctaButton secondary" href="${escapeHtml(building.availability_url)}" target="_blank" rel="noreferrer">Building availability</a>` : ''}
+      </div>
+    </div>`;
+}
+
+function openUnitDetail(unitId, { updateUrl = true } = {}) {
+  const building = state.selectedId ? state.buildingMap.get(state.selectedId) : null;
+  if (!building) return;
+  const unit = building.units.find(item => item.unit_id === unitId);
+  if (!unit) return;
+  state.selectedUnitId = unitId;
+  els.detailContent.innerHTML = unitDetailHtml(building, unit);
+  els.detailDrawer.scrollTop = 0;
+  calculateRent();
+  if (updateUrl) {
+    const url = new URL(location.href);
+    url.searchParams.set('building', building.id);
+    url.searchParams.set('unit', unitId);
+    history.replaceState({}, '', url);
+  }
 }
 
 function nearbyListHtml(items) {
@@ -795,6 +1050,46 @@ function bindEvents() {
 
   els.closeDrawer.addEventListener('click', closeDrawer);
 
+  els.detailContent.addEventListener('click', event => {
+    const unitButton = event.target.closest('[data-unit-id]');
+    if (unitButton) {
+      openUnitDetail(unitButton.dataset.unitId);
+      return;
+    }
+
+    if (event.target.closest('[data-back-building]')) {
+      const building = state.selectedId ? state.buildingMap.get(state.selectedId) : null;
+      if (!building) return;
+      state.selectedUnitId = null;
+      els.detailContent.innerHTML = detailHtml(building);
+      els.detailDrawer.scrollTop = 0;
+      const url = new URL(location.href);
+      url.searchParams.set('building', building.id);
+      url.searchParams.delete('unit');
+      history.replaceState({}, '', url);
+      return;
+    }
+
+    if (event.target.closest('#calcBtn')) {
+      calculateRent();
+      return;
+    }
+
+    const shareButton = event.target.closest('[data-share-link]');
+    if (shareButton) {
+      copyShareLink(shareButton);
+      return;
+    }
+
+    if (event.target.closest('[data-panel-expand]')) {
+      togglePanelExpanded();
+    }
+  });
+
+  els.detailContent.addEventListener('input', event => {
+    if (event.target.closest('#rentCalculator')) calculateRent();
+  });
+
   document.querySelectorAll('[data-school]').forEach(button => {
     button.addEventListener('click', () => {
       const school = button.dataset.school;
@@ -827,9 +1122,12 @@ function debounce(fn, wait) {
 }
 
 function openInitialRoute() {
-  const buildingId = new URLSearchParams(location.search).get('building');
+  const params = new URLSearchParams(location.search);
+  const buildingId = params.get('building');
+  const unitId = params.get('unit');
   if (buildingId && state.buildingMap.has(buildingId)) {
     selectBuilding(buildingId, { fly: false });
+    if (unitId) openUnitDetail(unitId);
     map.setView([state.buildingMap.get(buildingId).lat, state.buildingMap.get(buildingId).lng], 15);
   }
 }

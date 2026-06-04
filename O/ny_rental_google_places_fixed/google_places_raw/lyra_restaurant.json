@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJw10u-CdZwokRDknX7hdT15Q",
+      "formattedAddress": "515 W 38th St 2 Flr, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7575698,
+        "longitude": -73.9980642
+      },
+      "rating": 4.9,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Indienne NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "indian_restaurant"
+    },
+    {
+      "id": "ChIJA4Iy0kxYwokR88K8Cx7Bd-Q",
+      "formattedAddress": "517 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7575931,
+        "longitude": -73.9979884
+      },
+      "rating": 4.4,
+      "userRatingCount": 511,
+      "displayName": {
+        "text": "Legacy Records",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJlb7oBXlZwokRj8Wy1i6r7YQ",
+      "formattedAddress": "505 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756957299999996,
+        "longitude": -73.9980386
+      },
+      "rating": 4.7,
+      "userRatingCount": 73,
+      "displayName": {
+        "text": "The Gyro Project",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJdTl3DDJZwokRgmKkvuDO4Gg",
+      "formattedAddress": "485 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7567889,
+        "longitude": -73.9979592
+      },
+      "rating": 4.6,
+      "userRatingCount": 360,
+      "displayName": {
+        "text": "Talavera",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJs_I8qfNZwokROOIqfls8O-4",
+      "formattedAddress": "483 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756505399999995,
+        "longitude": -73.99820249999999
+      },
+      "rating": 4.7,
+      "userRatingCount": 894,
+      "displayName": {
+        "text": "Suram Sushi & Ramen",
+        "languageCode": "en"
+      },
+      "primaryType": "sushi_restaurant"
+    },
+    {
+      "id": "ChIJKaLlujlZwokR9wy3sg81s_c",
+      "formattedAddress": "477 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756310899999995,
+        "longitude": -73.9981561
+      },
+      "rating": 4.1,
+      "userRatingCount": 500,
+      "displayName": {
+        "text": "Finn's Bagels",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    },
+    {
+      "id": "ChIJG2BcTr1ZwokRPtkaKJahTTU",
+      "formattedAddress": "Hudson Yards, 524 W 36th St., New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756312799999996,
+        "longitude": -73.9996944
+      },
+      "rating": 4.3,
+      "userRatingCount": 45,
+      "displayName": {
+        "text": "Paradis in the Park",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJL87sSQBZwokRKKDWlClzS_g",
+      "formattedAddress": "455 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7565168,
+        "longitude": -73.9973261
+      },
+      "rating": 4.8,
+      "userRatingCount": 280,
+      "displayName": {
+        "text": "Casa Louie",
+        "languageCode": "en"
+      },
+      "primaryType": "italian_restaurant"
+    },
+    {
+      "id": "ChIJzcuk2LJZwokR_qugS5mN684",
+      "formattedAddress": "480 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756302,
+        "longitude": -73.9976499
+      },
+      "rating": 3,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Superior Gourmet Market Plate Inc/37th Saint Food Ma",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ-zmucqBZwokRkleMsDK5J94",
+      "formattedAddress": "555 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7586282,
+        "longitude": -73.9964426
+      },
+      "rating": 4,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Plantega (Superior Gourmet Marketplace)",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    }
+  ]
+}

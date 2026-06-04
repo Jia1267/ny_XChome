@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-zmucqBZwokRkleMsDK5J94",
+      "formattedAddress": "555 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7586282,
+        "longitude": -73.9964426
+      },
+      "rating": 4,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Plantega (Superior Gourmet Marketplace)",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJA4Iy0kxYwokR88K8Cx7Bd-Q",
+      "formattedAddress": "517 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7575931,
+        "longitude": -73.9979884
+      },
+      "rating": 4.4,
+      "userRatingCount": 511,
+      "displayName": {
+        "text": "Legacy Records",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJw10u-CdZwokRDknX7hdT15Q",
+      "formattedAddress": "515 W 38th St 2 Flr, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7575698,
+        "longitude": -73.9980642
+      },
+      "rating": 4.9,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Indienne NYC",
+        "languageCode": "en"
+      },
+      "primaryType": "indian_restaurant"
+    },
+    {
+      "id": "ChIJS57ReU1YwokRfY1qlHeRIY8",
+      "formattedAddress": "570 10th Ave #3001, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591639,
+        "longitude": -73.9956278
+      },
+      "rating": 4.4,
+      "userRatingCount": 721,
+      "displayName": {
+        "text": "Social Drink & Food",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJleB00bpZwokRZiEmvoczI-U",
+      "formattedAddress": "570 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591604,
+        "longitude": -73.99554189999999
+      },
+      "rating": 3.7,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Halal Food Cart",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJpY9Tg01YwokRCr_aQpDrqgk",
+      "formattedAddress": "570 Tenth Avenue At, W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591608,
+        "longitude": -73.9954657
+      },
+      "rating": 3.9,
+      "userRatingCount": 9606,
+      "displayName": {
+        "text": "YOTEL New York Times Square",
+        "languageCode": "en"
+      },
+      "primaryType": "hotel"
+    },
+    {
+      "id": "ChIJ31zMd01YwokReOuVMqnI4Dc",
+      "formattedAddress": "570 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591568,
+        "longitude": -73.9954561
+      },
+      "rating": 4.6,
+      "userRatingCount": 105,
+      "displayName": {
+        "text": "The Green Room 42",
+        "languageCode": "en"
+      },
+      "primaryType": "performing_arts_theater"
+    },
+    {
+      "id": "ChIJW4f9lftZwokR-3fPgQWShSk",
+      "formattedAddress": "570 10th Ave #10036, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591568,
+        "longitude": -73.9954561
+      },
+      "rating": 5,
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "TIOME SQUARE",
+        "languageCode": "fr"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJS57ReU1YwokREE4sqCNdDnE",
+      "formattedAddress": "570 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7591568,
+        "longitude": -73.9954561
+      },
+      "rating": 4,
+      "userRatingCount": 240,
+      "displayName": {
+        "text": "Green Fig",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJSYmupipZwokRKo2rbeymxCM",
+      "formattedAddress": "510 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7598158,
+        "longitude": -73.9962754
+      },
+      "rating": 3.7,
+      "userRatingCount": 3,
+      "displayName": {
+        "text": "Kafe Mohd Azrol - NYC Outlet",
+        "languageCode": "ms"
+      },
+      "primaryType": "halal_restaurant"
+    }
+  ]
+}

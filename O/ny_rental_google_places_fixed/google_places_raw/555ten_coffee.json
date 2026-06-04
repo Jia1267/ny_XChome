@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJzbAoythZwokRVHGfpMevDww",
+      "formattedAddress": "550 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.758555699999995,
+        "longitude": -73.99595
+      },
+      "rating": 4.2,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Luckin Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJA4Iy0kxYwokR88K8Cx7Bd-Q",
+      "formattedAddress": "517 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7575931,
+        "longitude": -73.9979884
+      },
+      "rating": 4.4,
+      "userRatingCount": 511,
+      "displayName": {
+        "text": "Legacy Records",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJPY2yZV9ZwokRaFYiLjSepNQ",
+      "formattedAddress": "561 10th Ave, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.759247900000005,
+        "longitude": -73.9960668
+      },
+      "rating": 4.4,
+      "userRatingCount": 251,
+      "displayName": {
+        "text": "Le Cafe Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJvz_vl01YwokR-Zb5blfISlI",
+      "formattedAddress": "515 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.7601073,
+        "longitude": -73.9961734
+      },
+      "rating": 4.6,
+      "userRatingCount": 294,
+      "displayName": {
+        "text": "Broadway Deli & Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJ-ciUeE1YwokRoDqDjSYrS3I",
+      "formattedAddress": "480 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.759258599999995,
+        "longitude": -73.9950468
+      },
+      "rating": 4.2,
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Signature Café and Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJL3o9j41ZwokRMibBtFLT1Ys",
+      "formattedAddress": "555 W 38th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7584306,
+        "longitude": -73.99971889999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Caffe Vento Espresso & Boba",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJoW8zZ0RZwokRwkoDKMS3_mQ",
+      "formattedAddress": "501 W 37th St, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7565668,
+        "longitude": -73.9978297
+      },
+      "rating": 5,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Martin's Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJWVxer0FZwokRHk28HfnjA6Q",
+      "formattedAddress": "480 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.7562924,
+        "longitude": -73.9976557
+      },
+      "rating": 4.9,
+      "userRatingCount": 173,
+      "displayName": {
+        "text": "Enoch's",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJtRaboTFZwokReZV-5ZKLkUI",
+      "formattedAddress": "477 10th Ave, New York, NY 10018, USA",
+      "location": {
+        "latitude": 40.756306699999996,
+        "longitude": -73.9981878
+      },
+      "displayName": {
+        "text": "Margay's",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJw64iS0xYwokRdz3mg2xumKA",
+      "formattedAddress": "555 W 42nd St, New York, NY 10036, USA",
+      "location": {
+        "latitude": 40.760791499999996,
+        "longitude": -73.9977372
+      },
+      "rating": 4.5,
+      "userRatingCount": 1207,
+      "displayName": {
+        "text": "Romeo and Juliet Colombian Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    }
+  ]
+}

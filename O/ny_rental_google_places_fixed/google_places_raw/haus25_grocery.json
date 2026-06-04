@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ45jCdx1RwokRnrsS04xabIE",
+      "formattedAddress": "135 Greene St, Jersey City, NJ 07311, USA",
+      "location": {
+        "latitude": 40.7176775,
+        "longitude": -74.0363064
+      },
+      "rating": 4.1,
+      "userRatingCount": 1136,
+      "displayName": {
+        "text": "Whole Foods Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJ_WIguPFRwokRY33JWcPjlU0",
+      "formattedAddress": "70 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7190231,
+        "longitude": -74.0404212
+      },
+      "rating": 3.6,
+      "userRatingCount": 526,
+      "displayName": {
+        "text": "SPROVE Market Place",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJxfEMuhBRwokR3dYw4BQRY_0",
+      "formattedAddress": "280 Marin Blvd, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.718384,
+        "longitude": -74.0413497
+      },
+      "rating": 4.8,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Metro Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ_1ODRFBRwokRJlisG9tHR6A",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7195843,
+        "longitude": -74.035321
+      },
+      "rating": 2.8,
+      "userRatingCount": 141,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJk3S3zLFQwokR1_6O7HaaR6E",
+      "formattedAddress": "190 York St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7167545,
+        "longitude": -74.0426129
+      },
+      "rating": 4.9,
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Salman Grocery Inc",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJQS4fQjVRwokRLGD7yKiMtlI",
+      "formattedAddress": "110 Newark Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.719674499999996,
+        "longitude": -74.0421197
+      },
+      "rating": 2.7,
+      "userRatingCount": 76,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    },
+    {
+      "id": "ChIJF1zWFPlRwokRjUyDD89oasY",
+      "formattedAddress": "207 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714393699999995,
+        "longitude": -74.0415045
+      },
+      "rating": 3.8,
+      "userRatingCount": 36,
+      "displayName": {
+        "text": "Lenox Market",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJa6wNw2NRwokR31UHLeyQKps",
+      "formattedAddress": "191 Bay St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7206715,
+        "longitude": -74.041889
+      },
+      "rating": 3,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Bay Street Goods",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJt7is2JRRwokRUC7eNK6y0K0",
+      "formattedAddress": "309 Grove St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7191528,
+        "longitude": -74.0434704
+      },
+      "rating": 4.6,
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "D&Y Continental Fruit, Vegetables, Grocery, Flowers & More",
+        "languageCode": "es"
+      },
+      "primaryType": "food_store"
+    }
+  ]
+}

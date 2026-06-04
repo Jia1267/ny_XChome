@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJYbJULvBZwokRv5s3Mfc6ogE",
+      "formattedAddress": "4-85 47th Rd Unit 2, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.7456508,
+        "longitude": -73.95660409999999
+      },
+      "rating": 2.3,
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "KitchenFest",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJm8F21CNZwokRy0e82y_rLAk",
+      "formattedAddress": "Avalon Riverview, 47-05 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.745622600000004,
+        "longitude": -73.95686119999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 1045,
+      "displayName": {
+        "text": "Skinnys Cantina",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJ3Yh5MCJZwokRn26xAVyciXg",
+      "formattedAddress": "47-20 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7459954,
+        "longitude": -73.95709939999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 1486,
+      "displayName": {
+        "text": "SHI",
+        "languageCode": "en"
+      },
+      "primaryType": "japanese_restaurant"
+    },
+    {
+      "id": "ChIJ0XKsJwBZwokR8u0A8E3Az-M",
+      "formattedAddress": "46-30 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7463467,
+        "longitude": -73.95683609999999
+      },
+      "rating": 4.8,
+      "userRatingCount": 318,
+      "displayName": {
+        "text": "Somedays Bakery - LIC",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJRfrNDrFZwokRPYeb1AjqDM4",
+      "formattedAddress": "5-20 47th Rd, Long Island City, NY 11101, USA",
+      "location": {
+        "latitude": 40.744929299999995,
+        "longitude": -73.9548622
+      },
+      "rating": 3.2,
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Juice Generation",
+        "languageCode": "en"
+      },
+      "primaryType": "juice_shop"
+    },
+    {
+      "id": "ChIJFwA_J3VZwokRn-jfuRMHjhE",
+      "formattedAddress": "47-40 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7453068,
+        "longitude": -73.9580495
+      },
+      "rating": 5,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Corgi Jianbing 可吉煎饼 Hunters Point",
+        "languageCode": "en"
+      },
+      "primaryType": "chinese_restaurant"
+    },
+    {
+      "id": "ChIJNa5DqJ5ZwokRjrXaoonBtsY",
+      "formattedAddress": "47-40 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7453068,
+        "longitude": -73.9580495
+      },
+      "rating": 4.6,
+      "userRatingCount": 76,
+      "displayName": {
+        "text": "J Alam Halal Food",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJI_n5YyJZwokRsKIT7hf8KvQ",
+      "formattedAddress": "46-15 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.747206,
+        "longitude": -73.956011
+      },
+      "rating": 4.3,
+      "userRatingCount": 657,
+      "displayName": {
+        "text": "Sweetleaf Coffee & Cocktail Bar",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJd00MRyJZwokRU-lmTi8kC2I",
+      "formattedAddress": "46-10 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7471944,
+        "longitude": -73.9566667
+      },
+      "rating": 4.4,
+      "userRatingCount": 2063,
+      "displayName": {
+        "text": "Maiella",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ4cPGDQBZwokR2W2kq6dzbLw",
+      "formattedAddress": "48-09 Center Blvd, Long Island City, NY 11109, USA",
+      "location": {
+        "latitude": 40.7444645,
+        "longitude": -73.95766569999999
+      },
+      "rating": 5,
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "The Greek president FOODTRUCK",
+        "languageCode": "en"
+      },
+      "primaryType": "greek_restaurant"
+    }
+  ]
+}

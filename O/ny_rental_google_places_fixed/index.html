@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NY Rental Map · Student Housing Search</title>
+  <meta name="description" content="A polished Leaflet-based NYC rental map for students and new renters." />
+
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://a.basemaps.cartocdn.com" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="appShell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NY Rental Map home">
+        <span class="brandMark">NY</span>
+        <span>
+          <strong data-i18n="brandTitle">NY Rental Map</strong>
+          <small data-i18n="brandSub">Student-friendly apartment discovery</small>
+        </span>
+      </a>
+
+      <div class="quickSchools topTools" aria-label="Page tools">
+        <button type="button" class="topbarTool" id="langToggle">中文</button>
+        <button type="button" class="topbarTool" id="policyButton" data-i18n="legal">Legal</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="listPanel" aria-label="Rental results">
+        <section class="filterCard">
+          <div class="filterHeader">
+            <div>
+              <span class="eyebrow">NYC rentals</span>
+              <h1>Find a place near school</h1>
+            </div>
+            <button class="ghostButton" type="button" id="resetFilters">Reset</button>
+          </div>
+
+          <div class="filtersGrid">
+            <label>
+              Area
+              <select id="areaFilter">
+                <option value="">All areas</option>
+              </select>
+            </label>
+            <label>
+              Bedrooms
+              <select id="bedFilter">
+                <option value="">Any beds</option>
+                <option value="0">Studio</option>
+                <option value="1">1 bed</option>
+                <option value="2">2+ beds</option>
+              </select>
+            </label>
+            <label>
+              Max rent
+              <select id="rentFilter">
+                <option value="">No max</option>
+                <option value="2500">$2,500</option>
+                <option value="3500">$3,500</option>
+                <option value="4500">$4,500</option>
+                <option value="6000">$6,000</option>
+              </select>
+            </label>
+            <label>
+              Sort
+              <select id="sortFilter">
+                <option value="recommended">Recommended</option>
+                <option value="rentAsc">Rent low to high</option>
+                <option value="unitsDesc">Most availability</option>
+                <option value="nameAsc">Building name</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <div class="resultsHeader">
+          <strong id="resultCount">Loading...</strong>
+          <span id="dataSummary">Preparing map data</span>
+        </div>
+
+        <div class="listingList" id="listingList" aria-live="polite"></div>
+      </aside>
+
+      <section class="mapPanel" aria-label="Interactive rental map">
+        <div id="map"></div>
+
+        <div class="mapFloatingCard mapModeCard">
+          <span data-i18n="mapView">Map view</span>
+          <button type="button" data-map-mode="building" class="active" data-i18n="building">Building</button>
+          <button type="button" data-map-mode="school" data-i18n="schools">Schools</button>
+          <button type="button" data-map-mode="life" data-i18n="life">Life</button>
+        </div>
+
+        <div class="mapFloatingCard commutePanel" id="commutePanel">
+          <div class="commuteHeader">
+            <span data-i18n="commuteTitle">School commute rings</span>
+            <button type="button" data-commute-clear data-i18n="clear">Clear</button>
+          </div>
+          <div class="commuteSchools">
+            <button type="button" data-commute-school="columbia">Columbia</button>
+            <button type="button" data-commute-school="nyu">NYU</button>
+            <button type="button" data-commute-school="baruch">Baruch</button>
+            <button type="button" data-commute-clear data-i18n="all">All</button>
+          </div>
+          <div class="commuteChips">
+            <button type="button" data-commute-mode="walk" data-commute-minutes="5" data-i18n="walk5">Walk 5m</button>
+            <button type="button" data-commute-mode="walk" data-commute-minutes="15" data-i18n="walk15">Walk 15m</button>
+            <button type="button" data-commute-mode="subway" data-commute-minutes="20" data-i18n="subway20">Subway 20m</button>
+            <button type="button" data-commute-mode="subway" data-commute-minutes="40" data-i18n="subway40">Subway 40m</button>
+            <button type="button" data-commute-mode="subway" data-commute-minutes="60" data-i18n="subway60">Subway 60m</button>
+          </div>
+        </div>
+
+        <div class="nearbyToolbar hidden" id="nearbyToolbar">
+          <div class="nearbyTitle">
+            <span data-i18n="nearby">Nearby</span>
+            <strong id="nearbyBuildingName">Select a building</strong>
+          </div>
+          <div class="nearbyActions">
+            <button type="button" data-nearby="restaurant" data-i18n="restaurants">Restaurants</button>
+            <button type="button" data-nearby="grocery" data-i18n="grocery">Grocery</button>
+            <button type="button" data-nearby="coffee" data-i18n="coffee">Coffee</button>
+            <button type="button" data-nearby="subway" data-i18n="subway">Subway</button>
+            <button type="button" data-nearby="clear" class="ghost" data-i18n="clear">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="detailDrawer hidden" id="detailDrawer" aria-label="Selected building details">
+        <button class="closeDrawer" type="button" id="closeDrawer" aria-label="Close details">×</button>
+        <div id="detailContent"></div>
+      </aside>
+    </main>
+
+    <div class="compareDock hidden" id="compareDock" aria-live="polite"></div>
+
+    <div class="modalOverlay hidden" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+      <form class="modalCard leadCard" id="leadForm">
+        <button class="modalClose" type="button" data-close-modal>&times;</button>
+        <span class="eyebrow" data-i18n="leadEyebrow">Connect with leasing</span>
+        <h2 id="leadTitle" data-i18n="leadTitle">Ask availability</h2>
+        <p class="modalSub"><span data-i18n="leadInterest">Interested unit</span><strong id="leadContext"></strong></p>
+        <div class="leadGrid">
+          <label><span data-i18n="leadName">Name</span><input name="name" required autocomplete="name" /></label>
+          <label><span data-i18n="leadWechat">WeChat</span><input name="wechat" required autocomplete="off" /></label>
+          <label><span data-i18n="leadSchool">School</span><input name="school" placeholder="Columbia / NYU / Baruch" /></label>
+          <label><span data-i18n="leadBudget">Budget</span><input name="budget" placeholder="$3,500" /></label>
+          <label><span data-i18n="leadMoveDate">Move-in date</span><input name="moveDate" type="date" /></label>
+          <label><span data-i18n="leadSource">Referred by agent?</span><input name="agent" placeholder="Agent name / WeChat, optional" /></label>
+        </div>
+        <label class="leadNotes"><span data-i18n="leadNotes">Notes</span><textarea name="notes" rows="3"></textarea></label>
+        <label class="consentRow"><input type="checkbox" required /> <span data-i18n="leadConsent">I agree to be contacted about this rental inquiry.</span></label>
+        <button class="ctaButton leadSubmit" type="submit" data-i18n="submitLead">Submit inquiry</button>
+        <p class="modalFine" data-i18n="leadFine">Demo storage: leads are saved locally in this browser until CRM is connected.</p>
+      </form>
+    </div>
+
+    <div class="modalOverlay hidden" id="analyticsModal" role="dialog" aria-modal="true" aria-labelledby="analyticsTitle">
+      <section class="modalCard analyticsCard">
+        <button class="modalClose" type="button" data-close-modal>&times;</button>
+        <span class="eyebrow" data-i18n="analytics">Analytics</span>
+        <h2 id="analyticsTitle" data-i18n="trialDashboard">Trial dashboard</h2>
+        <div id="analyticsContent"></div>
+        <div class="modalActions">
+          <button type="button" class="ghostButton" data-export-analytics data-i18n="exportAnalytics">Export analytics</button>
+          <button type="button" class="ghostButton" data-export-leads data-i18n="exportLeads">Export leads</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modalOverlay hidden" id="policyModal" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+      <section class="modalCard policyCard">
+        <button class="modalClose" type="button" data-close-modal>&times;</button>
+        <span class="eyebrow" data-i18n="legal">Legal</span>
+        <h2 id="policyTitle" data-i18n="policyTitle">Policies and disclosures</h2>
+        <div class="policyTabs">
+          <button type="button" data-policy-tab="disclaimer" data-i18n="disclaimer">Disclaimer</button>
+          <button type="button" data-policy-tab="fees" data-i18n="feeDisclosure">Fees</button>
+          <button type="button" data-policy-tab="privacy" data-i18n="privacy">Privacy</button>
+          <button type="button" data-policy-tab="fairHousing" data-i18n="fairHousing">Fair Housing</button>
+        </div>
+        <div id="policyContent" class="policyContent"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

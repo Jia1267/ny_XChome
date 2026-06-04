@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJ3VKHqfFRwokRJ2R9aMv_m4s",
+      "formattedAddress": "201 Warren St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7142546,
+        "longitude": -74.0397612
+      },
+      "rating": 4.2,
+      "userRatingCount": 147,
+      "displayName": {
+        "text": "One Two Cup Coffee & bagels & sandwiches Vegan & vegetarian & gluten free friendly",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJYy7dg69QwokRvpbe2QXnGu8",
+      "formattedAddress": "112 Morris St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714108499999995,
+        "longitude": -74.0390318
+      },
+      "rating": 4.6,
+      "userRatingCount": 1299,
+      "displayName": {
+        "text": "sam a.m.",
+        "languageCode": "en"
+      },
+      "primaryType": "breakfast_restaurant"
+    },
+    {
+      "id": "ChIJEdMxG_lRwokRo1oCfYe4SYA",
+      "formattedAddress": "Corner of Van Vorst and Morris, 198 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.713964,
+        "longitude": -74.0412561
+      },
+      "rating": 4.9,
+      "userRatingCount": 28,
+      "displayName": {
+        "text": "The Collective Brew",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJNbNSGQlRwokRpq02u6b3i-g",
+      "formattedAddress": "197 Van Vorst St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7141677,
+        "longitude": -74.0418571
+      },
+      "rating": 3.9,
+      "userRatingCount": 69,
+      "displayName": {
+        "text": "PrkUp Coffee",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJeRnln7pQwokRTlaBAGdSNiQ",
+      "formattedAddress": "18 Park View Ave, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714247799999995,
+        "longitude": -74.04322309999999
+      },
+      "rating": 3.9,
+      "userRatingCount": 342,
+      "displayName": {
+        "text": "B18 Coffee Kitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJR4e82a9QwokR-9PA7whaVaM",
+      "formattedAddress": "170 Grand St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7158466,
+        "longitude": -74.04153149999999
+      },
+      "rating": 4.5,
+      "userRatingCount": 151,
+      "displayName": {
+        "text": "Legal Grounds Coffee Co",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJqX19qE1RwokREX31R1zRqSk",
+      "formattedAddress": "177 York St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.716410599999996,
+        "longitude": -74.0419525
+      },
+      "rating": 4.5,
+      "userRatingCount": 447,
+      "displayName": {
+        "text": "Cafe Dream Vista Cafe/Shop/Event",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJBd69TdZRwokRZFeMWfCAUh4",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.714351,
+        "longitude": -74.03480189999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 740,
+      "displayName": {
+        "text": "Semicolon Cafe",
+        "languageCode": "en"
+      },
+      "primaryType": "cafe"
+    },
+    {
+      "id": "ChIJ9xSS7LFRwokR_Py9jNS0Oqw",
+      "formattedAddress": "30 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7134158,
+        "longitude": -74.0342965
+      },
+      "rating": 4.1,
+      "userRatingCount": 196,
+      "displayName": {
+        "text": "Bluestone Lane Jersey City Coffee Shop",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJXyL8yKhQwokRXoLtfy0ppY0",
+      "formattedAddress": "77 Hudson St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7147812,
+        "longitude": -74.0347508
+      },
+      "rating": 4.2,
+      "userRatingCount": 659,
+      "displayName": {
+        "text": "Hudson Greene Market",
+        "languageCode": "en"
+      },
+      "primaryType": "supermarket"
+    }
+  ]
+}

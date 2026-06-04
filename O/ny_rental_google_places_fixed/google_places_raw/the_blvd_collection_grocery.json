@@ -1,0 +1,94 @@
+{
+  "places": [
+    {
+      "id": "ChIJzYshu1NXwokRxVl_YLPzUgQ",
+      "formattedAddress": "400 Marin Blvd, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7227265,
+        "longitude": -74.03900879999999
+      },
+      "rating": 4.1,
+      "userRatingCount": 5236,
+      "displayName": {
+        "text": "ShopRite of Metro Plaza",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJUzZhRq1QwokR6p56OWGfYSc",
+      "formattedAddress": "396 Marin Blvd, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7228783,
+        "longitude": -74.039247
+      },
+      "rating": 3.9,
+      "userRatingCount": 844,
+      "displayName": {
+        "text": "BJ's Wholesale Club",
+        "languageCode": "en"
+      },
+      "primaryType": "store"
+    },
+    {
+      "id": "ChIJ_1ODRFBRwokRJlisG9tHR6A",
+      "formattedAddress": "88 Morgan St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7195843,
+        "longitude": -74.035321
+      },
+      "rating": 2.8,
+      "userRatingCount": 141,
+      "displayName": {
+        "text": "CVS",
+        "languageCode": "en"
+      },
+      "primaryType": "drugstore"
+    },
+    {
+      "id": "ChIJr9ky0VNXwokRdZhT06FpL5A",
+      "formattedAddress": "Above Cheesecake Factory, 30 Mall Dr W, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726840599999996,
+        "longitude": -74.0379931
+      },
+      "rating": 4.5,
+      "userRatingCount": 17,
+      "displayName": {
+        "text": "STREET CORNER CONVENIENCE STORE",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJP6A6P1RXwokRQME4jThRTao",
+      "formattedAddress": "115 Town Square Pl, Jersey City, NJ 07310, USA",
+      "location": {
+        "latitude": 40.726427799999996,
+        "longitude": -74.0338739
+      },
+      "rating": 3.6,
+      "userRatingCount": 69,
+      "displayName": {
+        "text": "Fresca Gourmet",
+        "languageCode": "en"
+      },
+      "primaryType": "deli"
+    },
+    {
+      "id": "ChIJa6wNw2NRwokR31UHLeyQKps",
+      "formattedAddress": "191 Bay St, Jersey City, NJ 07302, USA",
+      "location": {
+        "latitude": 40.7206715,
+        "longitude": -74.041889
+      },
+      "rating": 3,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Bay Street Goods",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    }
+  ]
+}

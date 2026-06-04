@@ -1,0 +1,137 @@
+{
+  "places": [
+    {
+      "id": "ChIJATp7v95bwokRkvO0TnWh_qU",
+      "formattedAddress": "85 Beaver St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.705416799999995,
+        "longitude": -74.0087406
+      },
+      "rating": 4.8,
+      "userRatingCount": 312,
+      "displayName": {
+        "text": "Best Sicily Bottega",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJYTwCEhZawokRKjiYNeSE5cE",
+      "formattedAddress": "95 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7049254,
+        "longitude": -74.0073757
+      },
+      "rating": 2.8,
+      "userRatingCount": 65,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJgeVpXHNbwokRS7PZfBCeTw0",
+      "formattedAddress": "55 Water St, New York, NY 10041, USA",
+      "location": {
+        "latitude": 40.7033226,
+        "longitude": -74.0088962
+      },
+      "rating": 1,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Josie Green's Marketplace",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJw1zkyORbwokRrZLRy-PkvfE",
+      "formattedAddress": "40 Water St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.703533799999995,
+        "longitude": -74.01025059999999
+      },
+      "rating": 3.5,
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "NYC Convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJ_1Cm_1tbwokRWe5fDcctKbI",
+      "formattedAddress": "40 Exchange Pl, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7057236,
+        "longitude": -74.0102663
+      },
+      "rating": 5,
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "NYC convenience",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJd3nnEWxbwokRSKu73v238SU",
+      "formattedAddress": "Wall St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.706384799999995,
+        "longitude": -74.00951979999999
+      },
+      "rating": 1,
+      "userRatingCount": 2,
+      "displayName": {
+        "text": "Rise and shine convenience store",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJo4ffphZawokR_OuUVH_-OsI",
+      "formattedAddress": "67 Broad St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.704883599999995,
+        "longitude": -74.0114694
+      },
+      "rating": 3,
+      "userRatingCount": 80,
+      "displayName": {
+        "text": "Duane Reade",
+        "languageCode": "en"
+      },
+      "primaryType": "convenience_store"
+    },
+    {
+      "id": "ChIJd0SndOZbwokR5KltaCBjOcU",
+      "formattedAddress": "70 Pine St, New York, NY 10270, USA",
+      "location": {
+        "latitude": 40.706347,
+        "longitude": -74.0073462
+      },
+      "rating": 4.2,
+      "userRatingCount": 784,
+      "displayName": {
+        "text": "City Acres Market",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    },
+    {
+      "id": "ChIJczjUXABbwokRlaFf8qaVVrM",
+      "formattedAddress": "29 Beaver St, New York, NY 10004, USA",
+      "location": {
+        "latitude": 40.705193799999996,
+        "longitude": -74.0117424
+      },
+      "displayName": {
+        "text": "THE GROCERY STORE, LLC",
+        "languageCode": "en"
+      },
+      "primaryType": "grocery_store"
+    }
+  ]
+}

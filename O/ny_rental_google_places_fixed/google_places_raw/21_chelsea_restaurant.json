@@ -1,0 +1,154 @@
+{
+  "places": [
+    {
+      "id": "ChIJFbnqoKRZwokR48KsTw6aULU",
+      "formattedAddress": "680 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7417581,
+        "longitude": -73.9933703
+      },
+      "rating": 3.8,
+      "userRatingCount": 563,
+      "displayName": {
+        "text": "Chipotle Mexican Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJD7pnn6RZwokRJO3P95qqzZk",
+      "formattedAddress": "686 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741928,
+        "longitude": -73.993286
+      },
+      "rating": 3.5,
+      "userRatingCount": 808,
+      "displayName": {
+        "text": "McDonald's",
+        "languageCode": "en"
+      },
+      "primaryType": "fast_food_restaurant"
+    },
+    {
+      "id": "ChIJTaean6RZwokRySirHzfCIbs",
+      "formattedAddress": "684 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.741839999999996,
+        "longitude": -73.99323
+      },
+      "rating": 4.1,
+      "userRatingCount": 407,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJXYkNQ-dZwokRfRXmkttK2_Q",
+      "formattedAddress": "678 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7416419,
+        "longitude": -73.9933102
+      },
+      "rating": 4.6,
+      "userRatingCount": 1074,
+      "displayName": {
+        "text": "CAVA",
+        "languageCode": "en"
+      },
+      "primaryType": "mediterranean_restaurant"
+    },
+    {
+      "id": "ChIJ8ZwtWqNZwokRw8Brw5Cks-E",
+      "formattedAddress": "655 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7414369,
+        "longitude": -73.994146
+      },
+      "rating": 4.2,
+      "userRatingCount": 219,
+      "displayName": {
+        "text": "Pret A Manger",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJFzq0oyBZwokRUPWXVH39hDA",
+      "formattedAddress": "688 6th Ave, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7419858,
+        "longitude": -73.9931495
+      },
+      "rating": 4.6,
+      "userRatingCount": 818,
+      "displayName": {
+        "text": "ANDIAMO PIZZA",
+        "languageCode": "en"
+      },
+      "primaryType": "pizza_restaurant"
+    },
+    {
+      "id": "ChIJrQF5ZbRZwokR4umELV1Kmz0",
+      "formattedAddress": "655 6th Ave, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7414467,
+        "longitude": -73.9942813
+      },
+      "rating": 4.6,
+      "userRatingCount": 195,
+      "displayName": {
+        "text": "Just Salad",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJeW90aQBZwokRWAcL8yRnayE",
+      "formattedAddress": "668 6th Ave, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.7413306,
+        "longitude": -73.9936523
+      },
+      "rating": 4.6,
+      "userRatingCount": 398,
+      "displayName": {
+        "text": "Madras Dosa Co.",
+        "languageCode": "en"
+      },
+      "primaryType": "south_indian_restaurant"
+    },
+    {
+      "id": "ChIJD7hlZeRZwokRdgeE2PLavEo",
+      "formattedAddress": "64 W 22nd St, New York, NY 10010, USA",
+      "location": {
+        "latitude": 40.742005999999996,
+        "longitude": -73.9930803
+      },
+      "rating": 4.7,
+      "userRatingCount": 226,
+      "displayName": {
+        "text": "Brown Bag Sandwich Co",
+        "languageCode": "en"
+      },
+      "primaryType": "sandwich_shop"
+    },
+    {
+      "id": "ChIJ2VdzSgBZwokRHnsjdIR8vwo",
+      "formattedAddress": "655 6th Ave, New York, NY 10011, USA",
+      "location": {
+        "latitude": 40.7414329,
+        "longitude": -73.9943258
+      },
+      "rating": 4,
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Pedacito De Mexico II Food Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    }
+  ]
+}

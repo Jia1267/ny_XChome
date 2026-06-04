@@ -1,0 +1,142 @@
+{
+  "places": [
+    {
+      "id": "ChIJRbu8pjr3wokRX6tCtaQkzJ8",
+      "formattedAddress": "Located in the main lobby, 5 E 102nd St, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7915828,
+        "longitude": -73.9520605
+      },
+      "displayName": {
+        "text": "Farmer's Fridge",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJ8xTyMmz3wokRsBtlt2e1DI0",
+      "formattedAddress": "1470 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7908993,
+        "longitude": -73.952055
+      },
+      "rating": 4.2,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Farmer's Fridge",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJKVDKfwD3wokRcP9ANn0_S2g",
+      "formattedAddress": "E 103rd St, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7921428,
+        "longitude": -73.95232229999999
+      },
+      "displayName": {
+        "text": "Cafe on the 5th",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJ8T-qtf1ZwokRGETcdFIDa0Q",
+      "formattedAddress": "Located in the Annenberg West Lobby near the bookstore, 1468 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.79031,
+        "longitude": -73.9521
+      },
+      "displayName": {
+        "text": "Farmer's Fridge",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJX2hYtB32wokR6_clmb3rXvA",
+      "formattedAddress": "1220 5th Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.792538,
+        "longitude": -73.9519172
+      },
+      "rating": 3.9,
+      "userRatingCount": 48,
+      "displayName": {
+        "text": "Amy's Bread",
+        "languageCode": "en"
+      },
+      "primaryType": "bakery"
+    },
+    {
+      "id": "ChIJMcJ4DwBZwokRcIzse-hJC-I",
+      "formattedAddress": "1468 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.790036799999996,
+        "longitude": -73.9524474
+      },
+      "displayName": {
+        "text": "Rico’s Halal Food",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJ3wqOeQBZwokRQWp-Wm-BlHM",
+      "formattedAddress": "1458 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7899172,
+        "longitude": -73.95237870000001
+      },
+      "displayName": {
+        "text": "Janah food truck",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJ5_3MZjL3wokR4dSST2RSId0",
+      "formattedAddress": "1234 5th Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.792922999999995,
+        "longitude": -73.9514817
+      },
+      "displayName": {
+        "text": "jadeoliveskitchen",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJOc_L_hz2wokRylTKnUe_OiU",
+      "formattedAddress": "1544 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.792733,
+        "longitude": -73.95041599999999
+      },
+      "rating": 4.3,
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Caribbean Fiesta",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJbd84-Rz2wokRK0NMu5YtaqQ",
+      "formattedAddress": "1546 Madison Ave, New York, NY 10029, USA",
+      "location": {
+        "latitude": 40.7928159,
+        "longitude": -73.9503905
+      },
+      "rating": 4.2,
+      "userRatingCount": 247,
+      "displayName": {
+        "text": "Bawarchi",
+        "languageCode": "en"
+      },
+      "primaryType": "indian_restaurant"
+    }
+  ]
+}

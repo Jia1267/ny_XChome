@@ -1,0 +1,152 @@
+{
+  "places": [
+    {
+      "id": "ChIJNzUomTVbwokRqziiasB61wA",
+      "formattedAddress": "95 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.704795499999996,
+        "longitude": -74.0076151
+      },
+      "displayName": {
+        "text": "Schmett Sizzling Steaks",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    },
+    {
+      "id": "ChIJmxcFEBZawokRssqAzUb-j7k",
+      "formattedAddress": "99 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.704809999999995,
+        "longitude": -74.00722999999999
+      },
+      "rating": 3.8,
+      "userRatingCount": 488,
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      },
+      "primaryType": "coffee_shop"
+    },
+    {
+      "id": "ChIJRRlpP_dbwokRLHC4YttUCMg",
+      "formattedAddress": "95 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7050309,
+        "longitude": -74.0073381
+      },
+      "rating": 4.6,
+      "userRatingCount": 175,
+      "displayName": {
+        "text": "NEW YORK BEST HALAL FOOD",
+        "languageCode": "en"
+      },
+      "primaryType": "halal_restaurant"
+    },
+    {
+      "id": "ChIJk5qxFw1bwokRZGFSY7tD778",
+      "formattedAddress": "75 Wall St APT 20I, New York, NY 10007, USA",
+      "location": {
+        "latitude": 40.705042,
+        "longitude": -74.0081177
+      },
+      "rating": 4,
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Centric Bar & Grill",
+        "languageCode": "en"
+      },
+      "primaryType": "bar"
+    },
+    {
+      "id": "ChIJhbwGJq1bwokRNYY028AkfIA",
+      "formattedAddress": "75 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7051691,
+        "longitude": -74.00802399999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Tacos Cholula Food Truck",
+        "languageCode": "en"
+      },
+      "primaryType": "mexican_restaurant"
+    },
+    {
+      "id": "ChIJzb6WZQBbwokRr09rf0Qt_gQ",
+      "formattedAddress": "110 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.70487490000001,
+        "longitude": -74.0065836
+      },
+      "rating": 4.8,
+      "userRatingCount": 168,
+      "displayName": {
+        "text": "Bagel Market",
+        "languageCode": "en"
+      },
+      "primaryType": "bagel_shop"
+    },
+    {
+      "id": "ChIJ363hDgBbwokRdgoSkxeqSRk",
+      "formattedAddress": "77 Water St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7041508,
+        "longitude": -74.0082737
+      },
+      "rating": 4.4,
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Ambizza Cafe (Breakfast/Lunch Food Truck)",
+        "languageCode": "en"
+      },
+      "primaryType": "mediterranean_restaurant"
+    },
+    {
+      "id": "ChIJUxgw7wxbwokRMVL70Pq7na0",
+      "formattedAddress": "75 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7053407,
+        "longitude": -74.00772769999999
+      },
+      "rating": 4.4,
+      "userRatingCount": 84,
+      "displayName": {
+        "text": "NAYA",
+        "languageCode": "en"
+      },
+      "primaryType": "middle_eastern_restaurant"
+    },
+    {
+      "id": "ChIJNa5r9j1awokR7V0YcDbff0o",
+      "formattedAddress": "110 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.7048442,
+        "longitude": -74.0064313
+      },
+      "rating": 4.5,
+      "userRatingCount": 1385,
+      "displayName": {
+        "text": "Westville Wall Street",
+        "languageCode": "en"
+      },
+      "primaryType": "american_restaurant"
+    },
+    {
+      "id": "ChIJm9CaESpbwokRSQJK-LcLILg",
+      "formattedAddress": "88 Wall St, New York, NY 10005, USA",
+      "location": {
+        "latitude": 40.705464899999996,
+        "longitude": -74.0076406
+      },
+      "rating": 4.3,
+      "userRatingCount": 233,
+      "displayName": {
+        "text": "La Marchande",
+        "languageCode": "en"
+      },
+      "primaryType": "restaurant"
+    }
+  ]
+}
