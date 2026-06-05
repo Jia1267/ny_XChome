@@ -1,0 +1,8 @@
+.next
+node_modules
+.env.local
+.data
+.places-cache
+out
+dist
+*.log
