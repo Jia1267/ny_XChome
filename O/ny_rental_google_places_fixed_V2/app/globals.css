@@ -1,14 +1,16 @@
 :root {
-  --ink: #122033;
-  --muted: #64748b;
-  --soft: #f5f8fc;
-  --line: #dbe5f0;
-  --blue: #2f6fe8;
-  --blue-strong: #1f4fa8;
+  --ink: #101828;
+  --muted: #667085;
+  --soft: #f6f8fb;
+  --line: rgba(138, 153, 175, 0.28);
+  --blue: #2f6de6;
+  --blue-strong: #214fa8;
   --teal: #0f8b8d;
   --amber: #b7791f;
-  --panel: rgba(255, 255, 255, 0.96);
-  --shadow: 0 18px 50px rgba(24, 43, 73, 0.18);
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --shadow: 0 18px 48px rgba(31, 45, 71, 0.14);
+  --shadow-soft: 0 10px 28px rgba(31, 45, 71, 0.1);
 }
 
 * {
@@ -24,9 +26,10 @@ body {
 body {
   margin: 0;
   color: var(--ink);
-  background: #eef4fa;
+  background: #f3f6fa;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: 0;
+  text-rendering: optimizeLegibility;
 }
 
 button,
@@ -34,6 +37,27 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+button,
+a,
+.priceMarker span,
+.unitCard,
+.compareMiniCard,
+.compareFullCard,
+.detailPanel,
+.nearbyDock,
+.floatingControls {
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 180ms ease, color 160ms ease, transform 180ms ease, opacity 160ms ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(47, 109, 230, 0.28);
+  outline-offset: 2px;
 }
 
 button,
@@ -47,14 +71,16 @@ a {
 }
 
 .topbar {
-  height: 92px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 28px;
-  background: var(--panel);
+  gap: 18px;
+  padding: 14px 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(249, 251, 254, 0.92));
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.82) inset;
+  backdrop-filter: blur(22px) saturate(1.15);
   position: relative;
   z-index: 1600;
 }
@@ -62,38 +88,51 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
+  min-width: 0;
+}
+
+.brand > div:last-child {
   min-width: 0;
 }
 
 .brandMark {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
   display: grid;
   place-items: center;
   color: white;
   font-weight: 900;
-  font-size: 22px;
-  background: linear-gradient(135deg, #2f6fe8, #45c2ef);
+  font-size: 21px;
+  background: linear-gradient(145deg, #2f6de6, #50b8f3);
+  box-shadow: 0 10px 22px rgba(47, 109, 230, 0.2);
 }
 
 .brand h1 {
   margin: 0;
-  font-size: 23px;
+  font-size: 22px;
   line-height: 1.1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .brand p {
-  margin: 5px 0 0;
+  margin: 4px 0 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .topActions {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 .topActions button,
@@ -106,7 +145,7 @@ a {
 .actionRow a {
   min-height: 42px;
   border: 1px solid var(--line);
-  background: white;
+  background: rgba(255, 255, 255, 0.86);
   color: var(--ink);
   border-radius: 999px;
   padding: 0 16px;
@@ -125,11 +164,13 @@ a {
 .nearbyDock button:hover,
 .panelToolbar button:hover,
 .compareDock button:hover {
-  border-color: #b8c8db;
+  border-color: rgba(70, 98, 140, 0.32);
+  box-shadow: 0 8px 20px rgba(31, 45, 71, 0.09);
+  transform: translateY(-1px);
 }
 
 .mapShell {
-  height: calc(100vh - 92px);
+  height: calc(100vh - 84px);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -164,24 +205,25 @@ a {
 }
 
 .priceMarker span {
-  min-width: 64px;
-  height: 34px;
+  min-width: 62px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
   color: var(--ink);
   background: white;
-  border: 1px solid rgba(126, 148, 171, 0.22);
-  box-shadow: 0 10px 24px rgba(22, 38, 60, 0.24);
+  border: 1px solid rgba(126, 148, 171, 0.2);
+  box-shadow: 0 10px 26px rgba(22, 38, 60, 0.18);
   font-weight: 900;
   font-size: 14px;
 }
 
 .priceMarker.active span {
   color: white;
-  background: var(--blue-strong);
+  background: linear-gradient(180deg, var(--blue), var(--blue-strong));
   border-color: var(--blue-strong);
+  box-shadow: 0 14px 30px rgba(47, 109, 230, 0.28);
 }
 
 .schoolMarker {
@@ -190,8 +232,8 @@ a {
 }
 
 .schoolMarker span {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
   margin: 0 auto;
@@ -199,7 +241,7 @@ a {
   color: #fff;
   background: linear-gradient(135deg, #2563eb, #38bdf8);
   border: 3px solid #fff;
-  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
   font-size: 12px;
   font-weight: 950;
 }
@@ -212,7 +254,7 @@ a {
   color: var(--ink);
   background: white;
   border: 1px solid var(--line);
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
   font-size: 11px;
   font-weight: 900;
   white-space: nowrap;
@@ -220,8 +262,8 @@ a {
 
 .ringLabel {
   border: 0;
-  color: #1f4fa8;
-  background: rgba(255, 255, 255, 0.78);
+  color: var(--blue-strong);
+  background: rgba(255, 255, 255, 0.82);
   border-radius: 999px;
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16);
   padding: 4px 9px;
@@ -229,15 +271,15 @@ a {
 }
 
 .poiMarker span {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
   border-radius: 999px;
   color: white;
   background: #111827;
   border: 2px solid white;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.28);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
   font-weight: 900;
   font-size: 13px;
 }
@@ -254,33 +296,55 @@ a {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   border-radius: 8px;
+  backdrop-filter: blur(20px) saturate(1.08);
 }
 
 .modeTabs {
-  top: 28px;
-  left: 28px;
-  display: flex;
-  gap: 8px;
-  padding: 10px;
+  top: 24px;
+  left: 24px;
+  width: 390px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  padding: 8px;
+}
+
+.mobilePanelToggle {
+  display: none !important;
+}
+
+.modeButtonRow {
+  display: contents;
+}
+
+.modeTabs button,
+.commutePanel button {
+  min-width: 0;
+  min-height: 36px;
+  padding: 0 11px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .floatingControls button.active,
 .nearbyDock button.active {
-  background: var(--blue);
+  background: linear-gradient(180deg, #4c7ef0, var(--blue));
   border-color: var(--blue);
   color: white;
+  box-shadow: 0 8px 18px rgba(47, 109, 230, 0.2);
 }
 
 .floatingControls button.ghost {
-  background: #f8fafc;
+  background: rgba(246, 248, 251, 0.74);
   color: var(--muted);
 }
 
 .commutePanel {
-  top: 112px;
-  left: 28px;
-  width: 360px;
-  padding: 16px;
+  top: 106px;
+  left: 24px;
+  width: 390px;
+  padding: 15px;
 }
 
 .panelHeader,
@@ -298,7 +362,7 @@ a {
 .sectionHeader h3,
 .detailContent h3 {
   margin: 0;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .panelHeader button {
@@ -309,25 +373,38 @@ a {
 .chipGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .chipGrid button {
-  min-height: 36px;
-  padding: 0 13px;
+  min-height: 34px;
+  padding: 0 11px;
+}
+
+.schoolChipRow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 13px;
+}
+
+.schoolChipRow button {
+  width: 100%;
+  padding: 0 5px;
+  font-size: 12px;
 }
 
 .mapLegend {
   position: absolute;
   z-index: 1210;
-  left: 28px;
-  bottom: 24px;
-  width: 250px;
+  left: 24px;
+  bottom: 22px;
+  width: 240px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px 12px;
-  padding: 14px;
+  padding: 13px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -376,27 +453,44 @@ a {
   position: absolute;
   z-index: 1250;
   left: 50%;
-  bottom: 24px;
+  bottom: 22px;
   transform: translateX(-50%);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 10px;
-  max-width: min(760px, calc(100vw - 40px));
-  padding: 12px 14px;
+  gap: 8px;
+  width: max-content;
+  max-width: min(860px, calc(100vw - 40px));
+  padding: 10px 11px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(20px) saturate(1.08);
 }
 
 .nearbyDock div {
-  min-width: 160px;
+  min-width: 150px;
+  max-width: 210px;
 }
 
 .mapShell:has(.detailPanel) .nearbyDock {
-  left: calc(50% - 310px);
-  max-width: min(620px, calc(100vw - 760px));
+  left: auto;
+  right: 638px;
+  transform: none;
+  max-width: calc(100vw - 700px);
+}
+
+.mapShell:has(.compareDock) .nearbyDock {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.mapShell:has(.compareDock.expanded) .commutePanel,
+.mapShell:has(.compareDock.expanded) .mapLegend {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nearbyDock span,
@@ -411,25 +505,42 @@ a {
 .nearbyDock strong {
   display: block;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nearbyDock button {
+  min-height: 36px;
+  padding: 0 13px;
+  font-size: 14px;
 }
 
 .detailPanel {
   position: absolute;
   z-index: 1300;
-  top: 28px;
-  right: 28px;
-  bottom: 24px;
-  width: min(620px, calc(100vw - 560px));
-  min-width: 540px;
+  top: 24px;
+  right: 24px;
+  bottom: 22px;
+  width: min(600px, calc(100vw - 560px));
+  min-width: 520px;
   overflow: auto;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(22px) saturate(1.08);
+  scrollbar-gutter: stable;
 }
 
 .detailPanel.expanded {
-  width: min(860px, calc(100vw - 120px));
+  width: min(840px, calc(100vw - 112px));
+}
+
+@media (min-width: 761px) {
+  .mapShell:has(.compareDock.compact) .detailPanel.expanded {
+    width: min(840px, calc(100vw - 420px));
+    min-width: min(520px, calc(100vw - 420px));
+  }
 }
 
 .panelToolbar {
@@ -439,15 +550,16 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.92);
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid rgba(219, 229, 240, 0.7);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(22px) saturate(1.08);
 }
 
 .panelToolbar button {
-  min-width: 42px;
-  padding: 0 13px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 12px;
 }
 
 .panelActions {
@@ -464,7 +576,7 @@ a {
 }
 
 .heroImage {
-  margin: 16px 16px 0;
+  margin: 14px 14px 0;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -483,29 +595,30 @@ a {
 .detailContent {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px 24px 28px;
+  gap: 18px;
+  padding: 20px 22px 26px;
 }
 
 .buildingHero {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 18px;
+  gap: 16px;
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
 
 .buildingHero h2 {
   margin: 4px 0 8px;
-  font-size: 30px;
-  line-height: 1.08;
+  font-size: 29px;
+  line-height: 1.1;
   overflow-wrap: anywhere;
 }
 
 .buildingHero p {
   margin: 4px 0;
   color: var(--muted);
+  line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
@@ -514,13 +627,14 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 112px;
-  height: 52px;
-  padding: 0 18px;
+  min-width: 108px;
+  height: 50px;
+  padding: 0 17px;
   color: var(--blue-strong);
-  background: #eef5ff;
+  background: #edf4ff;
   border-radius: 999px;
-  font-size: 24px;
+  font-size: 23px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
 }
 
 .unitHero > strong {
@@ -557,10 +671,10 @@ a {
 .roomGrid div,
 .analyticsGrid div {
   min-width: 0;
-  padding: 14px;
+  padding: 13px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f8fbff;
+  background: rgba(248, 251, 255, 0.76);
   overflow: hidden;
 }
 
@@ -579,7 +693,7 @@ a {
 .roomGrid strong {
   display: block;
   margin-top: 5px;
-  font-size: 17px;
+  font-size: 16px;
   overflow-wrap: anywhere;
   word-break: break-word;
   line-height: 1.18;
@@ -629,16 +743,17 @@ a {
   justify-content: space-between;
   gap: 14px;
   min-width: 0;
-  padding: 16px;
+  padding: 15px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0.86);
   cursor: pointer;
 }
 
 .unitCard:hover {
   border-color: #a8c2e8;
   box-shadow: 0 12px 24px rgba(37, 99, 235, 0.08);
+  transform: translateY(-1px);
 }
 
 .unitCard div {
@@ -655,10 +770,28 @@ a {
   overflow-wrap: anywhere;
 }
 
-.unitCard > span {
+.unitCardActions {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.unitCardActions > span {
   font-weight: 900;
   color: var(--blue-strong);
   font-size: 20px;
+}
+
+.unitCardActions button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(47, 109, 230, 0.28);
+  border-radius: 999px;
+  background: #f4f8ff;
+  color: var(--blue-strong);
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .actionRow {
@@ -695,10 +828,10 @@ a {
 }
 
 .calculator {
-  padding: 18px;
-  border: 1px solid #cfe4f6;
+  padding: 17px;
+  border: 1px solid rgba(126, 180, 222, 0.48);
   border-radius: 8px;
-  background: #f1f9ff;
+  background: linear-gradient(180deg, rgba(241, 249, 255, 0.88), rgba(235, 246, 252, 0.82));
 }
 
 .sectionHeader label,
@@ -721,7 +854,7 @@ a {
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--ink);
   font-weight: 800;
 }
@@ -735,8 +868,8 @@ a {
 
 .splitBox {
   padding: 14px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #cfe4f6;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(126, 180, 222, 0.48);
   border-radius: 8px;
   margin-top: 12px;
 }
@@ -761,7 +894,7 @@ a {
   margin-top: 12px;
   padding: 14px;
   background: #fff8ed;
-  border: 1px solid #f2d39b;
+  border: 1px solid rgba(242, 211, 155, 0.86);
   border-radius: 8px;
   color: #7a4d13;
 }
@@ -793,10 +926,10 @@ a {
 
 .nearbyColumn {
   min-width: 0;
-  padding: 13px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f8fbff;
+  background: rgba(248, 251, 255, 0.76);
 }
 
 .nearbyColumnTitle {
@@ -855,92 +988,190 @@ a {
 .compareDock {
   position: absolute;
   z-index: 1400;
-  right: 650px;
-  bottom: 24px;
-  width: 360px;
-  max-width: calc(100vw - 700px);
+  right: 24px;
+  top: 120px;
+  bottom: auto;
+  width: 326px;
+  max-width: calc(100vw - 48px);
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: visible;
+  backdrop-filter: blur(20px) saturate(1.08);
+  touch-action: auto;
 }
 
 .compareDock.expanded {
-  width: 720px;
-  max-width: calc(100vw - 710px);
+  top: 108px;
+  bottom: 22px;
+  right: 24px;
+  width: min(920px, calc(100vw - 48px));
+  max-width: calc(100vw - 48px);
+  overflow: auto;
 }
 
-.compareDock header {
-  padding: 14px 16px;
+.mapShell:has(.detailPanel) .compareDock.compact {
+  right: 638px;
+}
+
+@media (min-width: 761px) {
+  .mapShell:has(.detailPanel.expanded) .compareDock.compact {
+    right: calc(min(840px, calc(100vw - 420px)) + 38px);
+  }
+}
+
+.compareHeader {
+  padding: 12px 14px;
   border-bottom: 1px solid var(--line);
+  user-select: none;
+  background: rgba(255, 255, 255, 0.74);
 }
 
-.compareDock header span {
+.compareHeader span {
   display: block;
   color: var(--muted);
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 12px;
+  font-size: 11px;
 }
 
-.compareDock header strong {
+.compareHeader strong {
   color: var(--blue);
-  font-size: 24px;
+  font-size: 21px;
 }
 
-.compareCards {
+.compareClearButton {
+  min-height: 34px !important;
+  padding: 0 13px !important;
+}
+
+.compareMiniGrid,
+.compareFullGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  padding: 14px;
+  padding: 12px;
 }
 
-.compareCard,
-.comparePlaceholder {
+.compareFullGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.compareMiniCard,
+.compareFullCard {
   position: relative;
-  min-height: 260px;
-  padding: 16px;
+  padding: 15px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0.88);
 }
 
-.compareCard > span {
+.compareMiniCard {
+  min-height: 244px;
+  padding-top: 44px;
+}
+
+.compareFullCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.compareMiniCard > span {
   color: var(--muted);
   font-weight: 800;
   font-size: 13px;
 }
 
-.compareCard h3 {
-  margin: 6px 32px 8px 0;
-  font-size: 22px;
+.compareMiniCard h3 {
+  margin: 6px 0 8px;
+  font-size: 21px;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
 }
 
-.compareCard > strong {
+.compareMiniCard > strong {
   display: block;
   margin-bottom: 12px;
   color: var(--blue-strong);
-  font-size: 24px;
+  font-size: 23px;
 }
 
-.iconButton {
+.compareRemoveButton {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   min-width: 34px !important;
   width: 34px;
   height: 34px;
   padding: 0 !important;
 }
 
-.comparePlaceholder {
+.compareRemoveButton.mini {
+  left: 14px;
+  right: auto;
+}
+
+.compareMiniMeta {
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin: 12px 0;
+}
+
+.compareMiniMeta div {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(248, 251, 255, 0.84);
+}
+
+.compareMiniMeta span {
+  display: block;
   color: var(--muted);
-  font-weight: 800;
-  text-align: center;
-  border-style: dashed;
+  font-size: 12px;
+}
+
+.compareMiniMeta strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.compareHero {
+  display: block;
+  padding-right: 48px;
+}
+
+.compareHero h2 {
+  font-size: 24px;
+}
+
+.compareHero > strong {
+  margin-top: 12px;
+}
+
+.compareFullCard .trustGrid,
+.compareFullCard .factGrid,
+.compareFullCard .calcSummary,
+.compareFullCard .calcInputs,
+.compareFullCard .roomGrid,
+.compareFullCard .nearbyColumns {
+  grid-template-columns: 1fr;
+}
+
+.compareFullCard .calculator {
+  padding: 14px;
+}
+
+.compareFullCard .floorPlanBox {
+  max-height: 260px;
 }
 
 .mobileContactBar {
@@ -964,9 +1195,10 @@ a {
   max-height: calc(100vh - 40px);
   overflow: auto;
   padding: 26px;
-  background: white;
+  background: var(--panel-strong);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  border: 1px solid var(--line);
 }
 
 .analyticsPanel {
@@ -1026,7 +1258,7 @@ a {
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f8fbff;
+  background: rgba(248, 251, 255, 0.82);
 }
 
 .analyticsLists h3 {
@@ -1108,23 +1340,41 @@ a {
 
 @media (max-width: 1100px) {
   .detailPanel {
-    width: min(560px, calc(100vw - 420px));
-    min-width: 440px;
+    width: min(560px, calc(100vw - 410px));
+    min-width: 430px;
   }
 
   .commutePanel {
-    width: 330px;
+    width: 360px;
   }
 
-  .compareDock,
+  .compareDock {
+    right: 18px;
+    max-width: calc(100vw - 36px);
+  }
+
+  .compareDock.compact {
+    width: min(326px, calc(100vw - 500px));
+    min-width: 280px;
+  }
+
   .compareDock.expanded {
-    right: 590px;
-    max-width: calc(100vw - 620px);
+    right: 18px;
+    width: min(760px, calc(100vw - 36px));
+    max-width: calc(100vw - 36px);
+  }
+
+  .mapShell:has(.detailPanel) .compareDock.compact {
+    right: calc(clamp(430px, calc(100vw - 410px), 560px) + 38px);
+  }
+
+  .mapShell:has(.detailPanel.expanded) .compareDock.compact {
+    right: calc(min(840px, calc(100vw - 420px)) + 38px);
   }
 
   .mapShell:has(.detailPanel) .nearbyDock {
     left: 24px;
-    right: 600px;
+    right: 590px;
     transform: none;
     max-width: none;
   }
@@ -1137,18 +1387,20 @@ a {
   }
 
   .topbar {
-    height: 76px;
-    padding: 12px 14px;
+    height: 72px;
+    padding: 10px 12px;
+    gap: 10px;
   }
 
   .brandMark {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     font-size: 18px;
   }
 
   .brand h1 {
-    font-size: 18px;
+    max-width: 190px;
+    font-size: 17px;
   }
 
   .brand p {
@@ -1167,8 +1419,8 @@ a {
   .topActions button,
   .topActions a {
     min-height: 38px;
-    width: 42px;
-    min-width: 42px;
+    width: 38px;
+    min-width: 38px;
     padding: 0;
     font-size: 0;
   }
@@ -1178,29 +1430,151 @@ a {
   }
 
   .mapShell {
-    height: calc(100vh - 76px);
+    height: calc(100vh - 72px);
   }
 
   .modeTabs {
-    top: 12px;
+    top: 10px;
     left: 12px;
-    max-width: calc(100vw - 24px);
-    overflow-x: auto;
+    right: auto;
+    width: min(176px, calc(100vw - 24px));
+    display: block;
+    max-width: none;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .modeTabs.mobileOpen {
+    width: min(388px, calc(100vw - 24px));
+    padding: 8px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    backdrop-filter: blur(20px) saturate(1.08);
+  }
+
+  .mobilePanelToggle {
+    width: 100%;
+    min-height: 46px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 14px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 24px rgba(31, 45, 71, 0.12);
+    color: var(--ink) !important;
+  }
+
+  .mobilePanelToggle span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .mobilePanelToggle strong {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .mobilePanelToggle::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+  }
+
+  .mobileOpen > .mobilePanelToggle::after {
+    transform: translateY(2px) rotate(225deg);
+  }
+
+  .modeButtonRow {
+    display: none;
+  }
+
+  .modeTabs.mobileOpen .modeButtonRow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 8px;
   }
 
   .modeTabs button {
+    min-width: 0;
+    min-height: 38px;
+    padding: 0 8px;
+    font-size: 13px;
     white-space: nowrap;
   }
 
   .commutePanel {
-    top: 76px;
+    top: 64px;
     left: 12px;
-    width: min(352px, calc(100vw - 24px));
+    width: min(218px, calc(100vw - 24px));
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .mapShell.mobileModeOpen .commutePanel.mobileCollapsed {
+    top: 118px;
+  }
+
+  .commutePanel.mobileOpen {
+    width: min(388px, calc(100vw - 24px));
     padding: 12px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    backdrop-filter: blur(20px) saturate(1.08);
+  }
+
+  .commutePanelBody {
+    display: none;
+  }
+
+  .commutePanel.mobileOpen .commutePanelBody {
+    display: block;
+  }
+
+  .commutePanel.mobileOpen .mobilePanelToggle {
+    margin-bottom: 10px;
+  }
+
+  .mapShell:has(.detailPanel) .commutePanel {
+    display: none;
   }
 
   .chipGrid {
     gap: 8px;
+  }
+
+  .schoolChipRow {
+    gap: 6px;
+  }
+
+  .schoolChipRow button {
+    min-height: 34px;
+    padding: 0 4px;
+    font-size: 11px;
   }
 
   .chipGrid button {
@@ -1212,17 +1586,16 @@ a {
   .nearbyDock {
     left: 12px;
     right: 12px;
-    bottom: 84px;
+    bottom: 78px;
     transform: none;
     max-width: none;
-    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
   }
 
   .mapShell:has(.detailPanel) .nearbyDock {
-    left: 12px;
-    right: 12px;
-    bottom: 84px;
-    max-width: none;
+    display: none;
   }
 
   .nearbyDock div {
@@ -1247,10 +1620,10 @@ a {
     width: 100vw;
     max-width: 100vw;
     min-width: 0;
-    max-height: 74vh;
+    max-height: min(78vh, calc(100svh - 122px));
     overflow-x: hidden;
     border-radius: 8px 8px 0 0;
-    padding-bottom: 72px;
+    padding-bottom: 76px;
   }
 
   .panelToolbar,
@@ -1260,16 +1633,25 @@ a {
   }
 
   .panelToolbar {
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 9px 10px;
   }
 
   .panelActions {
     margin-left: auto;
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .panelActions button,
+  .panelToolbar > button:first-child {
+    min-width: 38px;
+    min-height: 38px;
+    height: 38px;
+    padding: 0 10px;
   }
 
   .panelToolbar > button:first-child {
-    max-width: 180px;
+    max-width: calc(100vw - 152px);
     margin-right: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1277,8 +1659,8 @@ a {
   }
 
   .detailContent {
-    padding: 16px;
-    gap: 16px;
+    padding: 16px 16px 18px;
+    gap: 15px;
   }
 
   .heroImage {
@@ -1291,11 +1673,14 @@ a {
   }
 
   .buildingHero h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .buildingHero > strong {
     margin-top: 14px;
+    min-width: 0;
+    height: 46px;
+    font-size: 22px;
   }
 
   .trustGrid {
@@ -1326,15 +1711,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    padding: 10px 14px;
-    background: white;
+    gap: 10px;
+    padding: 9px 12px calc(9px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
     border-top: 1px solid var(--line);
+    box-shadow: 0 -10px 26px rgba(31, 45, 71, 0.1);
+    backdrop-filter: blur(18px);
   }
 
   .mobileContactBar span {
     display: block;
-    max-width: 160px;
+    max-width: 180px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1351,15 +1738,21 @@ a {
   .mobileContactBar button {
     min-height: 44px;
     flex: 0 0 auto;
-    max-width: 178px;
+    min-width: 132px;
+    max-width: 164px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     border: 0;
     border-radius: 999px;
-    padding: 0 16px;
+    padding: 0 12px;
     color: white;
     background: var(--blue);
+    font-size: 13px;
     font-weight: 900;
   }
 
@@ -1372,21 +1765,101 @@ a {
     max-height: 55vh;
     overflow: auto;
     border-radius: 8px 8px 0 0;
+    touch-action: auto;
+  }
+
+  .compareDock.compact {
+    left: auto;
+    right: 14px;
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    top: auto;
+    width: 128px;
+    min-width: 0;
+    max-width: 128px;
+    max-height: none;
+    overflow: visible;
+    border-radius: 24px;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .mapShell:has(.detailPanel) .compareDock.compact,
+  .mapShell:has(.detailPanel.expanded) .compareDock.compact {
+    right: 14px;
   }
 
   .compareDock.expanded {
-    inset: 0;
+    inset: 72px 0 0 0;
+    height: calc(100svh - 72px);
     max-height: none;
     border-radius: 0;
     z-index: 1450;
+    cursor: default;
   }
 
-  .compareCards {
+  .compareMiniGrid,
+  .compareFullGrid {
     grid-template-columns: 1fr;
   }
 
-  .compareDock.expanded .compareCards {
-    min-height: calc(100vh - 80px);
+  .compareDock.compact .compareHeader {
+    display: none;
+  }
+
+  .compareDock.compact .compareMiniGrid {
+    display: block;
+    padding: 0;
+  }
+
+  .compareDock.compact .compareMiniCard {
+    min-height: 0;
+    width: 128px;
+    height: 78px;
+    padding: 12px 30px 10px 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 14px 34px rgba(31, 45, 71, 0.2);
+    overflow: hidden;
+  }
+
+  .compareDock.compact .compareMiniCard > span,
+  .compareDock.compact .compareMiniMeta,
+  .compareDock.compact .compareMiniCard .primaryButton {
+    display: none;
+  }
+
+  .compareDock.compact .compareMiniCard h3 {
+    max-height: 32px;
+    margin: 0 0 4px;
+    font-size: 14px;
+    line-height: 1.12;
+    overflow: hidden;
+  }
+
+  .compareDock.compact .compareMiniCard > strong {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .compareDock.compact .compareRemoveButton.mini {
+    top: 8px;
+    right: 8px;
+    left: auto;
+    width: 26px;
+    height: 26px;
+    min-width: 26px !important;
+    min-height: 26px !important;
+    background: rgba(246, 248, 251, 0.96);
+  }
+
+  .compareDock.expanded .compareFullGrid {
+    min-height: calc(100svh - 152px);
+  }
+
+  .compareFullCard .calculator,
+  .compareFullCard .nearbySection {
+    display: none;
   }
 
   .leadModal,
@@ -1401,5 +1874,16 @@ a {
 
   .legalPage h1 {
     font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

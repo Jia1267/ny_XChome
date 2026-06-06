@@ -31,6 +31,7 @@ function schoolColor(id: string) {
   if (id === 'columbia') return '#4169e1';
   if (id === 'nyu') return '#7c3aed';
   if (id === 'baruch') return '#0f8b8d';
+  if (id === 'pratt') return '#d97706';
   return '#2563eb';
 }
 
@@ -44,6 +45,7 @@ function poiIcon(type: NearbyPoi['type']) {
 function schoolInitials(id: string) {
   if (id === 'columbia') return 'CU';
   if (id === 'baruch') return 'BC';
+  if (id === 'pratt') return 'PR';
   return 'NYU';
 }
 

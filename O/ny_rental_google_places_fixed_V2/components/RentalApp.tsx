@@ -1,6 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BarChart3, ExternalLink, Languages, Maximize2, Phone, Scale, Share2, ShieldCheck, X } from 'lucide-react';
 import { MapCanvas } from './MapCanvas';
@@ -384,6 +385,8 @@ export function RentalApp({ dataset }: RentalAppProps) {
   const [leadContext, setLeadContext] = useState<{ buildingId?: string; unitId?: string } | null>(null);
   const [analyticsOpen, setAnalyticsOpen] = useState(false);
   const [detailExpanded, setDetailExpanded] = useState(false);
+  const [mobileModeOpen, setMobileModeOpen] = useState(false);
+  const [mobileCommuteOpen, setMobileCommuteOpen] = useState(false);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [leads, setLeads] = useState<Lead[]>([]);
 
@@ -517,11 +520,13 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
   function changeCommute(mode: CommuteMode) {
     setCommuteMode(mode);
+    setMobileCommuteOpen(false);
     track('commute_filter_click', { schoolId: selectedSchoolId, metadata: { mode } });
   }
 
   function switchMapMode(mode: 'map' | 'building' | 'schools' | 'life') {
     setMapMode(mode);
+    setMobileModeOpen(false);
     if (mode === 'map') {
       setCommuteMode('none');
       setActivePoiType('');
@@ -540,6 +545,12 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
   const showNearbyRadius = Boolean(selectedBuilding && (activePoiType || mapMode === 'life'));
   const showRailLayer = activePoiType === 'subway' || commuteMode.startsWith('subway');
+  const detailHiddenByCompare = compareIds.length >= 2;
+  const selectedSchool = dataset.schools.find(school => school.id === selectedSchoolId);
+  const mapModeLabel = mapMode === 'map' ? t('mapView') : mapMode === 'building' ? t('building') : mapMode === 'schools' ? t('schools') : t('life');
+  const commuteSummary = commuteMode === 'none'
+    ? t('commuteTitle')
+    : `${selectedSchool?.shortName || selectedSchool?.name || t('all')} - ${t(commuteMode)}`;
 
   return (
     <div className="appRoot">
@@ -558,7 +569,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
         </nav>
       </header>
 
-      <main className="mapShell">
+      <main className={`mapShell ${mobileModeOpen ? 'mobileModeOpen' : ''} ${mobileCommuteOpen ? 'mobileCommuteOpen' : ''}`}>
         <MapCanvas
           buildings={filteredBuildings}
           selectedBuildingId={selectedBuildingId}
@@ -572,29 +583,43 @@ export function RentalApp({ dataset }: RentalAppProps) {
           onSelectBuilding={selectBuilding}
         />
 
-        <section className="floatingControls modeTabs">
-          <button className={mapMode === 'map' ? 'active' : 'ghost'} type="button" onClick={() => switchMapMode('map')}>{t('mapView')}</button>
-          <button className={mapMode === 'building' ? 'active' : ''} type="button" onClick={() => switchMapMode('building')}>{t('building')}</button>
-          <button className={mapMode === 'schools' ? 'active' : ''} type="button" onClick={() => switchMapMode('schools')}>{t('schools')}</button>
-          <button className={mapMode === 'life' ? 'active' : ''} type="button" onClick={() => switchMapMode('life')}>{t('life')}</button>
+        <section className={`floatingControls modeTabs ${mobileModeOpen ? 'mobileOpen' : 'mobileCollapsed'}`}>
+          <button className="mobilePanelToggle" type="button" aria-expanded={mobileModeOpen} onClick={() => { setMobileModeOpen(value => !value); setMobileCommuteOpen(false); }}>
+            <span>{t('mapView')}</span>
+            <strong>{mapModeLabel}</strong>
+          </button>
+          <div className="modeButtonRow">
+            <button className={mapMode === 'map' ? 'active' : 'ghost'} type="button" onClick={() => switchMapMode('map')}>{t('mapView')}</button>
+            <button className={mapMode === 'building' ? 'active' : ''} type="button" onClick={() => switchMapMode('building')}>{t('building')}</button>
+            <button className={mapMode === 'schools' ? 'active' : ''} type="button" onClick={() => switchMapMode('schools')}>{t('schools')}</button>
+            <button className={mapMode === 'life' ? 'active' : ''} type="button" onClick={() => switchMapMode('life')}>{t('life')}</button>
+          </div>
         </section>
 
-        <section className="floatingControls commutePanel">
-          <div className="panelHeader">
-            <strong>{t('commuteTitle')}</strong>
-            <button type="button" onClick={() => { setCommuteMode('none'); setSelectedSchoolId('all'); }}>{t('clear')}</button>
-          </div>
-          <div className="chipGrid">
-            {[{ id: 'columbia', label: 'Columbia' }, { id: 'nyu', label: 'NYU' }, { id: 'baruch', label: 'Baruch' }, { id: 'all', label: t('all') }].map(item => (
-              <button key={item.id} className={selectedSchoolId === item.id ? 'active' : ''} type="button" onClick={() => changeSchool(item.id as SchoolId)}>
-                {item.label}
-              </button>
-            ))}
-            {(['walk5', 'walk15', 'subway20', 'subway40', 'subway60'] as Exclude<CommuteMode, 'none'>[]).map(mode => (
-              <button key={mode} className={commuteMode === mode ? 'active' : ''} type="button" onClick={() => changeCommute(mode)}>
-                {t(mode)}
-              </button>
-            ))}
+        <section className={`floatingControls commutePanel ${mobileCommuteOpen ? 'mobileOpen' : 'mobileCollapsed'}`}>
+          <button className="mobilePanelToggle" type="button" aria-expanded={mobileCommuteOpen} onClick={() => { setMobileCommuteOpen(value => !value); setMobileModeOpen(false); }}>
+            <span>{t('schools')}</span>
+            <strong>{commuteSummary}</strong>
+          </button>
+          <div className="commutePanelBody">
+            <div className="panelHeader">
+              <strong>{t('commuteTitle')}</strong>
+              <button type="button" onClick={() => { setCommuteMode('none'); setSelectedSchoolId('all'); }}>{t('clear')}</button>
+            </div>
+            <div className="schoolChipRow">
+              {[{ id: 'all', label: t('all') }, { id: 'columbia', label: 'Columbia' }, { id: 'nyu', label: 'NYU' }, { id: 'baruch', label: 'Baruch' }, { id: 'pratt', label: 'Pratt' }].map(item => (
+                <button key={item.id} className={selectedSchoolId === item.id ? 'active' : ''} type="button" onClick={() => changeSchool(item.id as SchoolId)}>
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            <div className="chipGrid">
+              {(['walk5', 'walk15', 'subway20', 'subway40', 'subway60'] as Exclude<CommuteMode, 'none'>[]).map(mode => (
+                <button key={mode} className={commuteMode === mode ? 'active' : ''} type="button" onClick={() => changeCommute(mode)}>
+                  {t(mode)}
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -617,7 +642,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
           </section>
         )}
 
-        {selectedBuilding && (
+        {selectedBuilding && !detailHiddenByCompare && (
           <DetailPanel
             building={selectedBuilding}
             unit={selectedUnit}
@@ -638,6 +663,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
           <CompareDock
             units={compareIds.map(id => dataset.units.find(unit => unit.id === id)).filter((unit): unit is RentalUnit => Boolean(unit))}
             buildings={dataset.buildings}
+            language={language}
             t={t}
             onRemove={unitId => setCompareIds(ids => ids.filter(id => id !== unitId))}
             onClear={() => setCompareIds([])}
@@ -645,7 +671,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
           />
         )}
 
-        {selectedBuilding && (
+        {selectedBuilding && !detailHiddenByCompare && (
           <div className="mobileContactBar">
             <div>
               <span>{selectedUnit ? unitTitle(selectedUnit) : selectedBuilding.name}</span>
@@ -739,7 +765,7 @@ function DetailPanel({
       {unit ? (
         <UnitDetail building={building} unit={unit} language={language} t={t} onCompare={onCompare} onLead={onLead} />
       ) : (
-        <BuildingDetail building={building} t={t} onOpenUnit={onOpenUnit} onLead={onLead} />
+        <BuildingDetail building={building} t={t} onOpenUnit={onOpenUnit} onCompare={onCompare} onLead={onLead} />
       )}
     </aside>
   );
@@ -760,7 +786,7 @@ function TrustGrid({ trust, t }: { trust: TrustInfo; t: (key: CopyKey) => string
 
 function MapLegend({ t }: { t: (key: CopyKey) => string }) {
   const rows = [
-    { className: 'building', label: t('building'), text: 'R' },
+    { className: 'building', label: t('building'), text: 'B' },
     { className: 'school', label: t('schools'), text: 'CU' },
     { className: 'restaurant', label: t('restaurants'), text: 'R' },
     { className: 'grocery', label: t('grocery'), text: 'G' },
@@ -780,10 +806,11 @@ function MapLegend({ t }: { t: (key: CopyKey) => string }) {
   );
 }
 
-function BuildingDetail({ building, t, onOpenUnit, onLead }: {
+function BuildingDetail({ building, t, onOpenUnit, onCompare, onLead }: {
   building: Building;
   t: (key: CopyKey) => string;
   onOpenUnit: (unitId: string) => void;
+  onCompare: (unitId: string) => void;
   onLead: (context: { buildingId?: string; unitId?: string }) => void;
 }) {
   return (
@@ -830,7 +857,12 @@ function BuildingDetail({ building, t, onOpenUnit, onLead }: {
                 <strong>{unitTitle(unit)}</strong>
                 <p>{bedroomsLabel(unit)} · {bathroomLabel(unit)} · {t('availableNow')}</p>
               </div>
-              <span>{money(unit.grossRent)}</span>
+              <div className="unitCardActions">
+                <span>{money(unit.grossRent)}</span>
+                <button type="button" onClick={event => { event.stopPropagation(); onCompare(unit.id); }}>
+                  <Scale size={15} />{t('compare')}
+                </button>
+              </div>
             </article>
           ))}
         </div>
@@ -1004,45 +1036,175 @@ function RentCalculator({ unit, language, t }: { unit: RentalUnit; language: Lan
   );
 }
 
-function CompareDock({ units, buildings, t, onRemove, onClear, onLead }: {
+function CompareDock({ units, buildings, language, t, onRemove, onClear, onLead }: {
   units: RentalUnit[];
   buildings: Building[];
+  language: Language;
   t: (key: CopyKey) => string;
   onRemove: (unitId: string) => void;
   onClear: () => void;
   onLead: (context: { buildingId?: string; unitId?: string }) => void;
 }) {
+  const expanded = units.length >= 2;
+  const dragRef = useRef<{ pointerId: number; offsetX: number; offsetY: number } | null>(null);
+  const [mobilePosition, setMobilePosition] = useState<{ x: number; y: number } | null>(null);
+
+  useEffect(() => {
+    if (expanded) setMobilePosition(null);
+  }, [expanded]);
+
+  const compactStyle: CSSProperties | undefined = !expanded && mobilePosition
+    ? { left: mobilePosition.x, top: mobilePosition.y, right: 'auto', bottom: 'auto' }
+    : undefined;
+
+  function startMobileDrag(event: ReactPointerEvent<HTMLElement>) {
+    if (expanded || typeof window === 'undefined' || !window.matchMedia('(max-width: 760px)').matches) return;
+    if ((event.target as HTMLElement).closest('button')) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    dragRef.current = {
+      pointerId: event.pointerId,
+      offsetX: event.clientX - rect.left,
+      offsetY: event.clientY - rect.top
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function moveMobileDrag(event: ReactPointerEvent<HTMLElement>) {
+    const drag = dragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId || typeof window === 'undefined') return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = Math.min(Math.max(event.clientX - drag.offsetX, 8), window.innerWidth - rect.width - 8);
+    const y = Math.min(Math.max(event.clientY - drag.offsetY, 84), window.innerHeight - rect.height - 12);
+    setMobilePosition({ x, y });
+  }
+
+  function endMobileDrag(event: ReactPointerEvent<HTMLElement>) {
+    const drag = dragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    dragRef.current = null;
+    event.currentTarget.releasePointerCapture(event.pointerId);
+  }
+
   return (
-    <aside className={`compareDock ${units.length >= 2 ? 'expanded' : ''}`}>
-      <header>
+    <aside
+      className={`compareDock ${expanded ? 'expanded' : 'compact'}`}
+      style={compactStyle}
+      onPointerDown={startMobileDrag}
+      onPointerMove={moveMobileDrag}
+      onPointerUp={endMobileDrag}
+      onPointerCancel={endMobileDrag}
+    >
+      <header className="compareHeader">
         <div>
           <span>{t('compareTitle')}</span>
           <strong>{units.length}/2</strong>
         </div>
-        <button type="button" onClick={onClear}>{t('clear')}</button>
+        <button className="compareClearButton" type="button" onClick={onClear}>{t('clear')}</button>
       </header>
-      <div className="compareCards">
+      <div className={expanded ? 'compareFullGrid' : 'compareMiniGrid'}>
         {units.map(unit => {
           const building = buildings.find(item => item.id === unit.buildingId);
-          return (
-            <article key={unit.id} className="compareCard">
-              <button className="iconButton" type="button" onClick={() => onRemove(unit.id)}><X size={16} /></button>
-              <span>{building?.name}</span>
-              <h3>{unitTitle(unit)}</h3>
-              <strong>{money(unit.grossRent)}/mo</strong>
-              <div className="factGrid small">
-                <div><span>Bed / bath</span><strong>{bedroomsLabel(unit)} / {bathroomLabel(unit)}</strong></div>
-                <div><span>Lease</span><strong>{unit.leaseTerm || 'Ask'}</strong></div>
-                <div><span>Updated</span><strong>{unit.trust.lastUpdated}</strong></div>
-                <div><span>Fees</span><strong>{statusLabel(unit.trust.feeStatus, t)}</strong></div>
-              </div>
-              <button className="primaryButton" type="button" onClick={() => onLead({ buildingId: unit.buildingId, unitId: unit.id })}>{t('contactAgent')}</button>
-            </article>
+          if (!building) return null;
+          return expanded ? (
+            <CompareFullCard
+              key={unit.id}
+              building={building}
+              unit={unit}
+              language={language}
+              t={t}
+              onRemove={onRemove}
+              onLead={onLead}
+            />
+          ) : (
+            <CompareMiniCard
+              key={unit.id}
+              building={building}
+              unit={unit}
+              t={t}
+              onRemove={onRemove}
+              onLead={onLead}
+            />
           );
         })}
-        {units.length === 1 && <div className="comparePlaceholder">{t('selectSecond')}</div>}
       </div>
     </aside>
+  );
+}
+
+function CompareMiniCard({ building, unit, t, onRemove, onLead }: {
+  building: Building;
+  unit: RentalUnit;
+  t: (key: CopyKey) => string;
+  onRemove: (unitId: string) => void;
+  onLead: (context: { buildingId?: string; unitId?: string }) => void;
+}) {
+  return (
+    <article className="compareMiniCard">
+      <button className="compareRemoveButton mini" type="button" aria-label={t('close')} onClick={() => onRemove(unit.id)}><X size={16} /></button>
+      <span>{building.name}</span>
+      <h3>{unitTitle(unit)}</h3>
+      <strong>{money(unit.grossRent)}/mo</strong>
+      <div className="compareMiniMeta">
+        <div><span>Bed / bath</span><strong>{bedroomsLabel(unit)} / {bathroomLabel(unit)}</strong></div>
+        <div><span>Lease</span><strong>{unit.leaseTerm || 'Ask'}</strong></div>
+        <div><span>Updated</span><strong>{unit.trust.lastUpdated}</strong></div>
+        <div><span>Fees</span><strong>{statusLabel(unit.trust.feeStatus, t)}</strong></div>
+      </div>
+      <button className="primaryButton" type="button" onClick={() => onLead({ buildingId: unit.buildingId, unitId: unit.id })}>{t('contactAgent')}</button>
+    </article>
+  );
+}
+
+function CompareFullCard({ building, unit, language, t, onRemove, onLead }: {
+  building: Building;
+  unit: RentalUnit;
+  language: Language;
+  t: (key: CopyKey) => string;
+  onRemove: (unitId: string) => void;
+  onLead: (context: { buildingId?: string; unitId?: string }) => void;
+}) {
+  const floorPlan = unit.photos.find(photo => photo.type.includes('floor'))?.url;
+
+  return (
+    <article className="compareFullCard">
+      <button className="compareRemoveButton" type="button" aria-label={t('close')} onClick={() => onRemove(unit.id)}><X size={16} /></button>
+      <section className="buildingHero unitHero compareHero">
+        <div>
+          <p className="eyebrow">{t('availableNow')}</p>
+          <h2>{unitTitle(unit)}</h2>
+          <p>{building.name}</p>
+          <p>{building.address}</p>
+        </div>
+        <strong>{money(unit.grossRent)}</strong>
+      </section>
+
+      <h3>{t('trust')}</h3>
+      <TrustGrid trust={unit.trust} t={t} />
+
+      {floorPlan && (
+        <section>
+          <h3>Floor plan</h3>
+          <div className="floorPlanBox">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={floorPlan} alt={`${unitTitle(unit)} floor plan`} loading="lazy" />
+          </div>
+        </section>
+      )}
+
+      <section className="factGrid">
+        <div><span>Gross rent</span><strong>{money(unit.grossRent)}</strong></div>
+        <div><span>Net effective</span><strong>{money(unit.netEffectiveRent)}</strong></div>
+        <div><span>Bedrooms</span><strong>{bedroomsLabel(unit)}</strong></div>
+        <div><span>Bathrooms</span><strong>{bathroomLabel(unit)}</strong></div>
+        <div><span>Lease</span><strong>{unit.leaseTerm || building.leaseTermDefault || 'Ask agent'}</strong></div>
+        <div><span>Available</span><strong>{t('availableNow')}</strong></div>
+      </section>
+
+      <RentCalculator unit={unit} language={language} t={t} />
+      <p className="notice">{t('feesNote')}</p>
+      <NearbyFacilities building={building} t={t} compact />
+      <button className="primaryButton" type="button" onClick={() => onLead({ buildingId: building.id, unitId: unit.id })}>{t('contactAgent')}</button>
+    </article>
   );
 }
 

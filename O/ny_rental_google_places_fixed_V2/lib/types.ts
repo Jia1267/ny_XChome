@@ -1,6 +1,6 @@
 export type Language = 'en' | 'zh';
 
-export type SchoolId = 'all' | 'columbia' | 'nyu' | 'baruch';
+export type SchoolId = 'all' | 'columbia' | 'nyu' | 'baruch' | 'pratt';
 
 export type CommuteMode = 'none' | 'walk5' | 'walk15' | 'subway20' | 'subway40' | 'subway60';
 

@@ -10,7 +10,8 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 export const SCHOOLS: School[] = [
   { id: 'columbia', name: 'Columbia University', shortName: 'Columbia', lat: 40.807536, lng: -73.962573 },
   { id: 'nyu', name: 'New York University', shortName: 'NYU', lat: 40.729513, lng: -73.996461 },
-  { id: 'baruch', name: 'Baruch College', shortName: 'Baruch', lat: 40.7402, lng: -73.9834 }
+  { id: 'baruch', name: 'Baruch College', shortName: 'Baruch', lat: 40.7402, lng: -73.9834 },
+  { id: 'pratt', name: 'Pratt Institute', shortName: 'Pratt', lat: 40.6911395, lng: -73.9643559 }
 ];
 
 async function readRows(fileName: string) {

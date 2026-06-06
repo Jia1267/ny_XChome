@@ -1,9 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'NY Rental Map',
   description: 'Student-friendly NYC rental discovery with verified listing context, commute filters, analytics, and lead capture.'
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#f6f8fb'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
