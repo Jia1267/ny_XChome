@@ -1,7 +1,7 @@
 import { RentalApp } from '@/components/RentalApp';
-import { getRentalDataset } from '@/lib/data';
+import { getPublicRentalDataset } from '@/lib/data';
 
 export default async function HomePage() {
-  const dataset = await getRentalDataset();
+  const dataset = await getPublicRentalDataset();
   return <RentalApp dataset={dataset} />;
 }

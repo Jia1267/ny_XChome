@@ -309,12 +309,36 @@ a {
   padding: 8px;
 }
 
+.modeTabs.withNearby {
+  width: 390px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.modeTabs.withNearby.nearbyOpen {
+  width: min(560px, calc(100vw - 48px));
+}
+
 .mobilePanelToggle {
   display: none !important;
 }
 
 .modeButtonRow {
   display: contents;
+}
+
+.nearbyMenu {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(219, 229, 240, 0.76);
+}
+
+.nearbyMenu button {
+  min-height: 34px;
+  padding: 0 9px;
+  font-size: 12px;
 }
 
 .modeTabs button,
@@ -532,6 +556,13 @@ a {
   scrollbar-gutter: stable;
 }
 
+.detailPanel.stage-half {
+  top: auto;
+  bottom: 22px;
+  height: min(50vh, calc(100vh - 132px));
+  min-height: 410px;
+}
+
 .detailPanel.expanded {
   width: min(840px, calc(100vw - 112px));
 }
@@ -560,6 +591,10 @@ a {
   min-width: 40px;
   min-height: 40px;
   padding: 0 12px;
+}
+
+.panelExpandButton {
+  display: inline-flex !important;
 }
 
 .panelActions {
@@ -989,21 +1024,27 @@ a {
   position: absolute;
   z-index: 1400;
   right: 24px;
-  top: 120px;
-  bottom: auto;
+  top: 24px;
+  bottom: 22px;
   width: 326px;
   max-width: calc(100vw - 48px);
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  overflow: visible;
+  overflow: auto;
+  scrollbar-gutter: stable;
   backdrop-filter: blur(20px) saturate(1.08);
   touch-action: auto;
 }
 
+.compareDock.compact {
+  bottom: auto;
+  max-height: calc(100vh - 132px);
+}
+
 .compareDock.expanded {
-  top: 108px;
+  top: 24px;
   bottom: 22px;
   right: 24px;
   width: min(920px, calc(100vw - 48px));
@@ -1338,7 +1379,386 @@ a {
   margin-top: 30px;
 }
 
+.adminLoginPage,
+.adminPage {
+  min-height: 100vh;
+  background: #f3f6fa;
+}
+
+.adminLoginPage {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.adminLoginCard {
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.adminLoginCard > span,
+.adminPage h2 + p,
+.adminFine,
+.adminSectionHeader span {
+  color: var(--muted);
+}
+
+.adminLoginCard > span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.adminLoginCard h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.adminLoginCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.adminLoginCard label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.adminLoginCard input {
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbff;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.adminLoginCard button,
+.adminActions button {
+  min-height: 44px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  padding: 0 18px;
+  color: white;
+  background: var(--blue);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.adminLoginCard button:disabled,
+.adminActions button:disabled {
+  opacity: 0.58;
+  cursor: wait;
+}
+
+.adminError {
+  color: #b42318;
+  font-size: 13px;
+}
+
+.adminPage {
+  padding: 26px;
+  color: var(--ink);
+}
+
+.adminTopbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.adminTopbar a {
+  color: var(--blue-strong);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.adminTopbar h1 {
+  margin: 6px 0;
+  font-size: 38px;
+  line-height: 1.05;
+}
+
+.adminTopbar p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.adminActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.adminActions span {
+  flex-basis: 100%;
+  text-align: right;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.adminActions .adminGhostButton {
+  border-color: var(--line);
+  color: var(--ink);
+  background: white;
+}
+
+.adminNotice,
+.adminMetricGrid,
+.adminTwoColumn,
+.adminSchemaGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.adminNotice {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.adminNotice > div,
+.adminMetricGrid article,
+.adminCard,
+.adminSchemaGrid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.adminNotice > div {
+  min-width: 0;
+  padding: 15px;
+}
+
+.adminNotice strong,
+.adminNotice span,
+.adminMetricGrid span,
+.adminMetricGrid strong,
+.adminMetricGrid p {
+  display: block;
+}
+
+.adminNotice strong,
+.adminMetricGrid span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.adminNotice span {
+  margin-top: 6px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.adminMetricGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.adminMetricGrid article {
+  padding: 18px;
+}
+
+.adminMetricGrid strong {
+  margin-top: 8px;
+  color: var(--blue-strong);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.adminMetricGrid p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.adminTwoColumn {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin-bottom: 16px;
+}
+
+.adminCard {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.adminCard h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
+}
+
+.adminCard h3 {
+  margin: 18px 0 8px;
+  font-size: 15px;
+}
+
+.adminList p,
+.adminLeadList > div {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(219, 229, 240, 0.78);
+}
+
+.adminList p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.adminList p strong {
+  color: var(--ink);
+}
+
+.adminLeadList {
+  display: grid;
+  gap: 0;
+}
+
+.adminLeadList strong,
+.adminLeadList span,
+.adminLeadList small {
+  display: block;
+}
+
+.adminLeadList span,
+.adminLeadList small {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.adminSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.adminSectionHeader p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.adminSectionHeader span {
+  flex: 0 0 auto;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f8fbff;
+  font-weight: 800;
+}
+
+.adminSchemaGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.adminSchemaGrid article {
+  padding: 14px;
+}
+
+.adminSchemaGrid strong,
+.adminSchemaGrid span {
+  display: block;
+}
+
+.adminSchemaGrid span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.adminFine {
+  margin: 14px 0 0;
+  line-height: 1.55;
+}
+
+.adminTableWrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.adminTable {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  background: white;
+}
+
+.adminTable th,
+.adminTable td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(219, 229, 240, 0.78);
+  text-align: left;
+  vertical-align: top;
+}
+
+.adminTable th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--muted);
+  background: #f8fbff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.adminTable td {
+  color: #26364d;
+  font-size: 13px;
+}
+
+.adminTable td strong,
+.adminTable td span {
+  display: block;
+}
+
+.adminTable td span {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.adminTable a {
+  color: var(--blue-strong);
+  font-weight: 800;
+}
+
+.adminWarnText {
+  color: #b42318 !important;
+  font-weight: 900;
+}
+
 @media (max-width: 1100px) {
+  .adminNotice,
+  .adminMetricGrid,
+  .adminSchemaGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .adminTwoColumn {
+    grid-template-columns: 1fr;
+  }
+
   .detailPanel {
     width: min(560px, calc(100vw - 410px));
     min-width: 430px;
@@ -1381,6 +1801,45 @@ a {
 }
 
 @media (max-width: 760px) {
+  .adminPage {
+    padding: 16px;
+  }
+
+  .adminTopbar {
+    display: grid;
+    align-items: start;
+  }
+
+  .adminTopbar h1 {
+    font-size: 30px;
+  }
+
+  .adminActions {
+    justify-content: flex-start;
+  }
+
+  .adminActions span {
+    text-align: left;
+  }
+
+  .adminNotice,
+  .adminMetricGrid,
+  .adminSchemaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adminMetricGrid strong {
+    font-size: 28px;
+  }
+
+  .adminSectionHeader {
+    display: grid;
+  }
+
+  .adminSectionHeader span {
+    justify-self: start;
+  }
+
   .appRoot {
     min-height: 100vh;
     overflow: hidden;
@@ -1514,6 +1973,27 @@ a {
     margin-top: 8px;
   }
 
+  .modeTabs.withNearby.mobileOpen .modeButtonRow {
+    display: none;
+  }
+
+  .modeTabs.withNearby.nearbyOpen {
+    width: min(388px, calc(100vw - 24px));
+  }
+
+  .nearbyMenu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 0;
+  }
+
+  .nearbyMenu button {
+    min-height: 38px;
+    font-size: 12px;
+  }
+
   .modeTabs button {
     min-width: 0;
     min-height: 38px;
@@ -1594,6 +2074,10 @@ a {
     overflow: visible;
   }
 
+  .desktopNearbyDock {
+    display: none;
+  }
+
   .mapShell:has(.detailPanel) .nearbyDock {
     display: none;
   }
@@ -1626,6 +2110,17 @@ a {
     padding-bottom: 76px;
   }
 
+  .detailPanel.stage-full {
+    height: min(78svh, calc(100svh - 122px));
+    max-height: min(78svh, calc(100svh - 122px));
+  }
+
+  .detailPanel.stage-half {
+    height: 50svh;
+    max-height: min(50svh, calc(100svh - 122px));
+    min-height: 320px;
+  }
+
   .panelToolbar,
   .detailContent {
     max-width: 100%;
@@ -1656,6 +2151,10 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .panelExpandButton {
+    display: inline-flex !important;
   }
 
   .detailContent {

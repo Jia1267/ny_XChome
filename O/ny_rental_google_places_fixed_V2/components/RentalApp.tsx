@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BarChart3, ExternalLink, Languages, Maximize2, Phone, Scale, Share2, ShieldCheck, X } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Languages, Maximize2, Minimize2, Phone, Scale, Share2, ShieldCheck, X } from 'lucide-react';
 import { MapCanvas } from './MapCanvas';
 import { compactMoney, distanceMeters, money } from '@/lib/format';
 import type { AnalyticsEvent, Building, CommuteMode, Language, Lead, PoiType, RentalDataset, RentalUnit, SchoolId, TrustInfo, TrustStatus } from '@/lib/types';
@@ -11,6 +11,8 @@ import type { AnalyticsEvent, Building, CommuteMode, Language, Lead, PoiType, Re
 type RentalAppProps = {
   dataset: RentalDataset;
 };
+
+type DetailStage = 'full' | 'half';
 
 const copy = {
   en: {
@@ -36,6 +38,8 @@ const copy = {
     source: 'Source',
     priceVerified: 'Price',
     feesVerified: 'Fees',
+    availabilityVerified: 'Availability',
+    availabilityChecked: 'Availability checked',
     contact: 'Contact',
     availableUnits: 'Available units',
     unitDetails: 'Unit details',
@@ -125,6 +129,8 @@ const copy = {
     source: '数据来源',
     priceVerified: '价格',
     feesVerified: '费用',
+    availabilityVerified: '可租状态',
+    availabilityChecked: '可租确认时间',
     contact: '联系人',
     availableUnits: '可租户型',
     unitDetails: '户型详情',
@@ -218,6 +224,8 @@ const zhCopy: Record<CopyKey, string> = {
   source: '数据来源',
   priceVerified: '价格',
   feesVerified: '费用',
+  availabilityVerified: '可租状态',
+  availabilityChecked: '可租确认时间',
   contact: '联系人',
   availableUnits: '可租户型',
   unitDetails: '户型详情',
@@ -346,6 +354,8 @@ function trustItems(trust: TrustInfo, t: (key: CopyKey) => string) {
     { label: t('source'), value: trust.sourceName },
     { label: t('priceVerified'), value: statusLabel(trust.priceStatus, t) },
     { label: t('feesVerified'), value: statusLabel(trust.feeStatus, t) },
+    { label: t('availabilityVerified'), value: statusLabel(trust.availabilityStatus, t) },
+    { label: t('availabilityChecked'), value: trust.availabilityCheckedAt },
     { label: t('contact'), value: trust.contactName }
   ];
 }
@@ -373,6 +383,15 @@ function nearbyPoisFor(building: Building, type?: PoiType, limit = 6) {
     .slice(0, limit);
 }
 
+function defaultDetailStageForViewport(): DetailStage {
+  if (isMobileViewport()) return 'half';
+  return 'full';
+}
+
+function isMobileViewport() {
+  return typeof window !== 'undefined' && window.matchMedia('(max-width: 760px)').matches;
+}
+
 export function RentalApp({ dataset }: RentalAppProps) {
   const [language, setLanguage] = useState<Language>('en');
   const [selectedSchoolId, setSelectedSchoolId] = useState<SchoolId>('all');
@@ -383,10 +402,10 @@ export function RentalApp({ dataset }: RentalAppProps) {
   const [mapMode, setMapMode] = useState<'map' | 'building' | 'schools' | 'life'>('building');
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [leadContext, setLeadContext] = useState<{ buildingId?: string; unitId?: string } | null>(null);
-  const [analyticsOpen, setAnalyticsOpen] = useState(false);
-  const [detailExpanded, setDetailExpanded] = useState(false);
+  const [detailStage, setDetailStage] = useState<DetailStage>('full');
   const [mobileModeOpen, setMobileModeOpen] = useState(false);
   const [mobileCommuteOpen, setMobileCommuteOpen] = useState(false);
+  const [nearbyMenuOpen, setNearbyMenuOpen] = useState(false);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [leads, setLeads] = useState<Lead[]>([]);
 
@@ -428,6 +447,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
     const unitId = params.get('unit') || '';
     if (buildingId) setSelectedBuildingId(buildingId);
     if (unitId) setSelectedUnitId(unitId);
+    if (buildingId || unitId) setDetailStage(defaultDetailStageForViewport());
   }, []);
 
   const selectedBuilding = useMemo(
@@ -471,7 +491,16 @@ export function RentalApp({ dataset }: RentalAppProps) {
     setSelectedUnitId('');
     setSelectedBuildingId(current => {
       const next = current === buildingId ? '' : buildingId;
-      if (next) track('building_click', { buildingId: next, schoolId: selectedSchoolId });
+      if (next) {
+        setDetailStage(defaultDetailStageForViewport());
+        setActivePoiType('');
+        setNearbyMenuOpen(false);
+        track('building_click', { buildingId: next, schoolId: selectedSchoolId });
+      } else {
+        setDetailStage('full');
+        setActivePoiType('');
+        setNearbyMenuOpen(false);
+      }
       return next;
     });
   }, [selectedSchoolId, track]);
@@ -479,6 +508,8 @@ export function RentalApp({ dataset }: RentalAppProps) {
   function openUnit(unitId: string) {
     const unit = dataset.units.find(item => item.id === unitId);
     setSelectedUnitId(unitId);
+    setDetailStage(defaultDetailStageForViewport());
+    setNearbyMenuOpen(false);
     if (unit) {
       setSelectedBuildingId(unit.buildingId);
       track('unit_click', { buildingId: unit.buildingId, unitId });
@@ -524,9 +555,23 @@ export function RentalApp({ dataset }: RentalAppProps) {
     track('commute_filter_click', { schoolId: selectedSchoolId, metadata: { mode } });
   }
 
+  function chooseNearbyType(type: PoiType | '') {
+    setActivePoiType(type);
+    setNearbyMenuOpen(false);
+    setMobileModeOpen(false);
+    if (type) {
+      setMapMode('life');
+      if (isMobileViewport()) setDetailStage('half');
+      track('nearby_filter_click', { buildingId: selectedBuildingId, metadata: { type } });
+    } else {
+      setMapMode('building');
+    }
+  }
+
   function switchMapMode(mode: 'map' | 'building' | 'schools' | 'life') {
     setMapMode(mode);
     setMobileModeOpen(false);
+    setNearbyMenuOpen(false);
     if (mode === 'map') {
       setCommuteMode('none');
       setActivePoiType('');
@@ -564,12 +609,11 @@ export function RentalApp({ dataset }: RentalAppProps) {
         </div>
         <nav className="topActions">
           <button type="button" onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}><Languages size={18} />{language === 'en' ? '中文' : 'EN'}</button>
-          <button type="button" onClick={() => setAnalyticsOpen(true)}><BarChart3 size={18} />{t('analytics')}</button>
           <Link href="/legal"><ShieldCheck size={18} />{t('legal')}</Link>
         </nav>
       </header>
 
-      <main className={`mapShell ${mobileModeOpen ? 'mobileModeOpen' : ''} ${mobileCommuteOpen ? 'mobileCommuteOpen' : ''}`}>
+      <main className={`mapShell ${selectedBuilding ? `detailStage-${detailStage}` : ''} ${mobileModeOpen ? 'mobileModeOpen' : ''} ${mobileCommuteOpen ? 'mobileCommuteOpen' : ''}`}>
         <MapCanvas
           buildings={filteredBuildings}
           selectedBuildingId={selectedBuildingId}
@@ -583,10 +627,26 @@ export function RentalApp({ dataset }: RentalAppProps) {
           onSelectBuilding={selectBuilding}
         />
 
-        <section className={`floatingControls modeTabs ${mobileModeOpen ? 'mobileOpen' : 'mobileCollapsed'}`}>
-          <button className="mobilePanelToggle" type="button" aria-expanded={mobileModeOpen} onClick={() => { setMobileModeOpen(value => !value); setMobileCommuteOpen(false); }}>
+        <section className={`floatingControls modeTabs ${selectedBuilding ? 'withNearby' : ''} ${mobileModeOpen ? 'mobileOpen' : 'mobileCollapsed'} ${nearbyMenuOpen ? 'nearbyOpen' : ''}`}>
+          <button
+            className="mobilePanelToggle"
+            type="button"
+            aria-expanded={selectedBuilding ? nearbyMenuOpen : mobileModeOpen}
+            onClick={() => {
+              setMobileCommuteOpen(false);
+              if (selectedBuilding) {
+                setMobileModeOpen(value => {
+                  const next = !value;
+                  setNearbyMenuOpen(next);
+                  return next;
+                });
+              } else {
+                setMobileModeOpen(value => !value);
+              }
+            }}
+          >
             <span>{t('mapView')}</span>
-            <strong>{mapModeLabel}</strong>
+            <strong>{selectedBuilding ? t('nearby') : mapModeLabel}</strong>
           </button>
           <div className="modeButtonRow">
             <button className={mapMode === 'map' ? 'active' : 'ghost'} type="button" onClick={() => switchMapMode('map')}>{t('mapView')}</button>
@@ -594,9 +654,19 @@ export function RentalApp({ dataset }: RentalAppProps) {
             <button className={mapMode === 'schools' ? 'active' : ''} type="button" onClick={() => switchMapMode('schools')}>{t('schools')}</button>
             <button className={mapMode === 'life' ? 'active' : ''} type="button" onClick={() => switchMapMode('life')}>{t('life')}</button>
           </div>
+          {selectedBuilding && nearbyMenuOpen && (
+            <div className="nearbyMenu">
+              {(['grocery', 'restaurant', 'coffee', 'subway'] as PoiType[]).map(type => (
+                <button key={type} className={activePoiType === type ? 'active' : ''} type="button" onClick={() => chooseNearbyType(type)}>
+                  {type === 'restaurant' ? t('restaurants') : type === 'grocery' ? t('grocery') : type === 'coffee' ? t('coffee') : t('subway')}
+                </button>
+              ))}
+              <button type="button" onClick={() => chooseNearbyType('')}>{t('clear')}</button>
+            </div>
+          )}
         </section>
 
-        <section className={`floatingControls commutePanel ${mobileCommuteOpen ? 'mobileOpen' : 'mobileCollapsed'}`}>
+        {!selectedBuilding && <section className={`floatingControls commutePanel ${mobileCommuteOpen ? 'mobileOpen' : 'mobileCollapsed'}`}>
           <button className="mobilePanelToggle" type="button" aria-expanded={mobileCommuteOpen} onClick={() => { setMobileCommuteOpen(value => !value); setMobileModeOpen(false); }}>
             <span>{t('schools')}</span>
             <strong>{commuteSummary}</strong>
@@ -621,25 +691,25 @@ export function RentalApp({ dataset }: RentalAppProps) {
               ))}
             </div>
           </div>
-        </section>
-
-        {(mapMode === 'schools' || mapMode === 'life' || commuteMode !== 'none' || activePoiType) && (
-          <MapLegend t={t} />
-        )}
+        </section>}
 
         {selectedBuilding && (
-          <section className="nearbyDock">
+          <section className="nearbyDock desktopNearbyDock" aria-label="Nearby tools">
             <div>
               <span>{t('nearby')}</span>
               <strong>{selectedBuilding.name}</strong>
             </div>
             {(['restaurant', 'grocery', 'coffee', 'subway'] as PoiType[]).map(type => (
-              <button key={type} className={activePoiType === type ? 'active' : ''} type="button" onClick={() => setActivePoiType(activePoiType === type ? '' : type)}>
+              <button key={type} className={activePoiType === type ? 'active' : ''} type="button" onClick={() => chooseNearbyType(type)}>
                 {type === 'restaurant' ? t('restaurants') : type === 'grocery' ? t('grocery') : type === 'coffee' ? t('coffee') : t('subway')}
               </button>
             ))}
-            <button type="button" onClick={() => setActivePoiType('')}>{t('clear')}</button>
+            <button type="button" onClick={() => chooseNearbyType('')}>{t('clear')}</button>
           </section>
+        )}
+
+        {(mapMode === 'schools' || mapMode === 'life' || commuteMode !== 'none' || activePoiType) && (
+          <MapLegend t={t} />
         )}
 
         {selectedBuilding && !detailHiddenByCompare && (
@@ -647,11 +717,11 @@ export function RentalApp({ dataset }: RentalAppProps) {
             building={selectedBuilding}
             unit={selectedUnit}
             language={language}
-            expanded={detailExpanded}
+            stage={detailStage}
             t={t}
-            onClose={() => { setSelectedBuildingId(''); setSelectedUnitId(''); setDetailExpanded(false); }}
+            onClose={() => { setSelectedBuildingId(''); setSelectedUnitId(''); setDetailStage('full'); setNearbyMenuOpen(false); }}
             onBack={() => setSelectedUnitId('')}
-            onExpand={() => setDetailExpanded(value => !value)}
+            onStageChange={setDetailStage}
             onShare={shareCurrent}
             onOpenUnit={openUnit}
             onCompare={addCompare}
@@ -700,15 +770,6 @@ export function RentalApp({ dataset }: RentalAppProps) {
         />
       )}
 
-      {analyticsOpen && (
-        <AnalyticsPanel
-          dataset={dataset}
-          events={events}
-          leads={leads}
-          t={t}
-          onClose={() => setAnalyticsOpen(false)}
-        />
-      )}
     </div>
   );
 }
@@ -717,11 +778,11 @@ function DetailPanel({
   building,
   unit,
   language,
-  expanded,
+  stage,
   t,
   onClose,
   onBack,
-  onExpand,
+  onStageChange,
   onShare,
   onOpenUnit,
   onCompare,
@@ -730,11 +791,11 @@ function DetailPanel({
   building: Building;
   unit: RentalUnit | null;
   language: Language;
-  expanded: boolean;
+  stage: DetailStage;
   t: (key: CopyKey) => string;
   onClose: () => void;
   onBack: () => void;
-  onExpand: () => void;
+  onStageChange: (stage: DetailStage) => void;
   onShare: () => void;
   onOpenUnit: (unitId: string) => void;
   onCompare: (unitId: string) => void;
@@ -743,13 +804,16 @@ function DetailPanel({
   const heroUrl = unit?.photos.find(photo => photo.type.includes('floor'))?.url
     || building.primaryPhotoUrl
     || building.photos[0]?.url;
+  const nextStage: DetailStage = stage === 'half' ? 'full' : 'half';
 
   return (
-    <aside className={`detailPanel ${expanded ? 'expanded' : ''}`}>
+    <aside className={`detailPanel stage-${stage}`}>
       <div className="panelToolbar">
         {unit && <button type="button" onClick={onBack}><ArrowLeft size={18} />{t('backToBuilding')}</button>}
         <div className="panelActions">
-          <button type="button" aria-label={t('expand')} onClick={onExpand}><Maximize2 size={18} /></button>
+          <button className="panelExpandButton" type="button" aria-label={stage === 'half' ? t('expand') : 'Collapse'} onClick={() => onStageChange(nextStage)}>
+            {stage === 'half' ? <Maximize2 size={18} /> : <Minimize2 size={18} />}
+          </button>
           <button type="button" aria-label={t('share')} onClick={onShare}><Share2 size={18} /></button>
           <button type="button" aria-label={t('close')} onClick={onClose}><X size={18} /></button>
         </div>

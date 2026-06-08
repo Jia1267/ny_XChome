@@ -1,8 +1,10 @@
 .next
 node_modules
+.env
 .env.local
 .data
 .places-cache
+data/backups/
 out
 dist
 *.log

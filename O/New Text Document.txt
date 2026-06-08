@@ -1,0 +1,58 @@
+**整体判断**
+你现在这个网站已经不是“玩具 demo”了，核心方向是对的：地图找房、学校圈层、附近设施、户型详情、对比、租金计算器、房源可信度、后台运营，这些已经构成一个可以给中介试用的 MVP。
+
+但如果要公开给全球用户访问，我会先把它定位成“内测版/中介试用版”，不要一上来就当正式商业平台。现在最需要补的是稳定性、可信度、运营闭环和发布安全。
+
+**还需要改进**
+1. **首页第一眼更明确**
+现在功能很多，但新用户第一眼可能不知道先点什么。建议默认文案变成更直接的：
+“Choose your school, commute range, and compare available units.”
+中文就是“选学校、看通勤圈、对比可租户型”。
+
+2. **房源可信度继续强化**
+你已经加了最后更新、来源、价格确认、费用确认，这很好。下一步建议在楼盘卡片和户型卡片上也露出小标签，比如：
+`Updated 2026-05-28`、`Price verified`、`Source: official site`。不要只藏在详情页里。
+
+3. **移动端要继续打磨**
+手机版方向对：地图为主、详情底部抽屉、联系按钮固定。下一步重点是手感：按钮不要挡地图、底部面板滚动要顺、对比面板要像原生 app 一样轻。
+
+4. **运营面板要变成收费证据**
+你现在有 `/admin`，很好。后面要让它能给中介看：
+哪个楼点击最多、哪个户型被比较最多、哪个学校带来最多 lead、哪个预算区间最活跃。这个就是以后收费的核心。
+
+5. **数据更新流程要产品化**
+Google Sheet 每 4 小时更新可以，但要有：
+更新成功/失败记录、change log、谁更新的、哪些价格变了、哪些户型下架了。否则中介一多会乱。
+
+6. **安全必须上线前处理**
+你之前把 Google API key 发出来过，建议上线前直接换新 key。Google 官方也明确建议限制 API key，否则被滥用产生费用你要负责，并且最好同时设置应用限制和 API 限制。([developers.google.com](https://developers.google.com/maps/api-security-best-practices)) ([developers.google.com](https://developers.google.com/maps/api-security-best-practices))  
+另外 `/admin` 不能长期用 `123456`，上线前必须换强密码，最好之后做真正账号登录。
+
+**怎么发布到全球**
+最适合你现在这个项目的是 **Vercel**。原因很简单：你现在是 `Next.js + React + TypeScript`，Vercel 对 Next.js 最顺。Next.js 官方也说明可以部署成 Node.js server、Docker、静态导出或平台适配，其中 Node.js 部署需要 `build` 和 `start` 脚本，你项目里已经有。([nextjs.org](https://nextjs.org/docs/app/building-your-application/deploying))
+
+推荐流程：
+
+1. 把 `F:\F\ny\O\ny_rental_google_places_fixed_V2` 放到一个 GitHub 私有仓库。
+2. 确认 `.env.local` 不要上传。
+3. 去 [Vercel](https://vercel.com) 新建 Project，Import GitHub repo。Vercel 官方说明，连接 Git 仓库后，每次 commit 或 PR 都可以自动触发部署。([vercel.com](https://vercel.com/docs/deployments/overview))
+4. 如果仓库里不止这一个项目，Root Directory 选择 `ny_rental_google_places_fixed_V2`。
+5. 在 Vercel 的 Environment Variables 填这些：
+   `GOOGLE_PLACES_API_KEY`
+   `ADMIN_PASSWORD`
+   `ADMIN_SESSION_SECRET`
+   `ADMIN_SYNC_TOKEN`
+   `ALLOWED_APP_ORIGINS`
+   `GOOGLE_SHEET_ID`
+   `GOOGLE_SERVICE_ACCOUNT_EMAIL`
+   `GOOGLE_PRIVATE_KEY`
+6. 点 Deploy，成功后你会得到一个 `xxx.vercel.app` 链接，全球都能访问。
+7. 买域名后，在 Vercel Project Settings → Domains 添加自己的域名。Vercel 会给你 DNS 配置，主域名一般用 A record，子域名一般用 CNAME。([vercel.com](https://vercel.com/docs/domains/working-with-domains/add-a-domain))
+8. 把 `ALLOWED_APP_ORIGINS` 改成你的正式域名和 Vercel 域名。
+9. Google Cloud 里限制 API key：只允许你的正式域名、只允许用到的 API。
+10. 做一次正式发布前测试：电脑、iPhone、Android、分享链接、详情页、后台登录、表格同步、lead 提交。
+
+Vercel 的环境变量是放在源码外面的，适合放 token、密钥这些敏感信息；但改了环境变量后，需要重新部署才会生效。([vercel.com](https://vercel.com/docs/projects/environment-variables))
+
+**我的建议**
+现在可以发布，但先不要“正式公开营销”。先发布成小范围试用版，发给 3-5 个中介和 10-20 个学生试用。收集他们真实点击和反馈后，再做正式品牌页、域名、SEO 和收费方案。现在最值得做的是：上线 Vercel + 真实域名 + 强化后台数据 + 安全限制。

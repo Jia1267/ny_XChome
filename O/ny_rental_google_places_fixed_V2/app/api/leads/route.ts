@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
+import { verifyAdminRequest } from '@/lib/admin-auth';
 import { appendJsonArray, readJsonArray } from '@/lib/server-store';
 import type { Lead } from '@/lib/types';
 
-export async function GET() {
+export async function GET(request: Request) {
+  if (!verifyAdminRequest(request)) {
+    return NextResponse.json({ error: 'Admin authorization required' }, { status: 401 });
+  }
   const leads = await readJsonArray<Lead>('leads.json');
   return NextResponse.json({ leads });
 }

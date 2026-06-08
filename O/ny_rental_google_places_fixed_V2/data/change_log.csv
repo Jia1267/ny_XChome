@@ -1,0 +1,2 @@
+change_id,entity_type,entity_id,table_name,row_id,field_name,changed_at,changed_by,change_type,before_value,old_value,after_value,new_value,notes
+initial_import_20260607044814,other,google_sheet_setup,all,initial_import,all,2026-06-07T04:48:14.888Z,system_import,initial_google_sheet_setup,,,buildings=34; units=734; photos=124; nearby_pois=1339,buildings=34; units=734; photos=124; nearby_pois=1339,Created standard Google Sheet tabs and loaded current local CSV data.

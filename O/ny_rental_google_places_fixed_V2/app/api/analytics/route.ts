@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
+import { verifyAdminRequest } from '@/lib/admin-auth';
 import { appendJsonArray, readJsonArray } from '@/lib/server-store';
 import type { AnalyticsEvent } from '@/lib/types';
 
-export async function GET() {
+export async function GET(request: Request) {
+  if (!verifyAdminRequest(request)) {
+    return NextResponse.json({ error: 'Admin authorization required' }, { status: 401 });
+  }
   const events = await readJsonArray<AnalyticsEvent>('analytics-events.json');
   return NextResponse.json({ events });
 }

@@ -14,9 +14,62 @@ export type TrustInfo = {
   sourceUrl: string;
   priceStatus: TrustStatus;
   feeStatus: TrustStatus;
+  availabilityStatus: TrustStatus;
+  availabilityCheckedAt: string;
+  contactId: string;
   contactName: string;
   contactMethod: string;
+  updatedBy: string;
+  internalNotes: string;
   verificationNote: string;
+};
+
+export type Contact = {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  email: string;
+  phone: string;
+  wechat: string;
+  sourceName: string;
+  internalNotes: string;
+};
+
+export type Agent = {
+  id: string;
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  wechat: string;
+  role: string;
+  active: boolean;
+  internalNotes: string;
+};
+
+export type DataSource = {
+  id: string;
+  name: string;
+  url: string;
+  sourceType: string;
+  owner: string;
+  refreshCadence: string;
+  lastSyncedAt: string;
+  status: string;
+  notes: string;
+};
+
+export type ChangeLogEntry = {
+  id: string;
+  entityType: 'building' | 'unit' | 'photo' | 'poi' | 'contact' | 'agent' | 'source' | 'other';
+  entityId: string;
+  changedAt: string;
+  changedBy: string;
+  changeType: string;
+  beforeValue: string;
+  afterValue: string;
+  notes: string;
 };
 
 export type School = {
@@ -63,6 +116,15 @@ export type RentalUnit = {
   sourceLastChecked: string;
   verificationStatus: string;
   verificationNotes: string;
+  lastUpdatedAt: string;
+  sourceName: string;
+  priceStatus: TrustStatus;
+  feeStatus: TrustStatus;
+  availabilityStatus: TrustStatus;
+  availabilityCheckedAt: string;
+  contactId: string;
+  updatedBy: string;
+  internalNotes: string;
   trust: TrustInfo;
   photos: Photo[];
 };
@@ -112,6 +174,15 @@ export type Building = {
   sourceLastChecked: string;
   verificationStatus: string;
   verificationNotes: string;
+  lastUpdatedAt: string;
+  sourceName: string;
+  priceStatus: TrustStatus;
+  feeStatus: TrustStatus;
+  availabilityStatus: TrustStatus;
+  availabilityCheckedAt: string;
+  contactId: string;
+  updatedBy: string;
+  internalNotes: string;
   trust: TrustInfo;
   units: RentalUnit[];
   photos: Photo[];
@@ -154,10 +225,16 @@ export type RentalDataset = {
   units: RentalUnit[];
   photos: Photo[];
   pois: NearbyPoi[];
+  contacts: Contact[];
+  agents: Agent[];
+  dataSources: DataSource[];
+  changeLog: ChangeLogEntry[];
   summary: {
     buildingCount: number;
     unitCount: number;
     poiCount: number;
     lastDataUpdate: string;
+    sheetLastSyncedAt?: string;
+    dataSourceMode?: 'google_sheet_cache' | 'local_csv';
   };
 };

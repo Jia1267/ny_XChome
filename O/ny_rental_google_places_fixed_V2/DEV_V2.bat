@@ -20,5 +20,5 @@ if not exist "node_modules\next\dist\bin\next" (
 )
 
 echo Starting NY Rental Map V2 dev server at http://localhost:5503
-node ".\node_modules\next\dist\bin\next" dev -p 5503
+call npm run dev
 pause
