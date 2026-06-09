@@ -1355,7 +1355,7 @@ function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
     await fetch('/api/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(lead)
+      body: JSON.stringify({ ...lead, website: String(formData.get('website') || '') })
     }).catch(() => undefined);
     onSaved(lead);
   }
@@ -1373,6 +1373,15 @@ function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
         <p className="eyebrow">{building?.name}</p>
         <h2>{t('leadTitle')}</h2>
         <p>{unit ? unitTitle(unit) : building?.address}</p>
+        {/* Honeypot: hidden from real users; bots that fill it are silently dropped server-side. */}
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+        />
         <div className="formGrid">
           <label>{t('name')}<input name="name" required /></label>
           <label>{t('wechat')}<input name="wechat" required /></label>

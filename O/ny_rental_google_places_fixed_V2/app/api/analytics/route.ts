@@ -3,6 +3,8 @@ import { verifyAdminRequest } from '@/lib/admin-auth';
 import { appendJsonArray, localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
 import { appendAnalyticsEventToGoogleSheet, googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet } from '@/lib/google-sheets-write';
 import { missingPersistentStoreError } from '@/lib/persistence-policy';
+import { clientIp, isAllowedOrigin, rateLimit } from '@/lib/api-guard';
+import { validateAnalyticsEvent } from '@/lib/validation';
 import type { AnalyticsEvent } from '@/lib/types';
 
 export async function GET(request: Request) {
@@ -18,33 +20,40 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const body = await request.json().catch(() => null) as Partial<AnalyticsEvent> | null;
-  if (!body?.type) {
-    return NextResponse.json({ error: 'Missing event type' }, { status: 400 });
+  if (!isAllowedOrigin(request)) {
+    return NextResponse.json({ error: 'Origin not allowed' }, { status: 403 });
   }
 
-  const event: AnalyticsEvent = {
-    id: body.id || `evt_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
-    type: String(body.type),
-    createdAt: body.createdAt || new Date().toISOString(),
-    buildingId: body.buildingId,
-    unitId: body.unitId,
-    schoolId: body.schoolId,
-    budget: body.budget,
-    source: body.source,
-    metadata: body.metadata || {}
-  };
+  // Generous limit: a single active browsing session legitimately fires many
+  // events. This only stops abusive floods.
+  const limit = rateLimit(`analytics:${clientIp(request)}`, 600, 5 * 60 * 1000);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: 'Too many requests' },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } }
+    );
+  }
+
+  const body = await request.json().catch(() => null);
+  const result = validateAnalyticsEvent(body);
+  if (!result.ok) {
+    return NextResponse.json({ error: result.error }, { status: result.status });
+  }
+  const event = result.event;
 
   const storedIn: string[] = [];
-
-  if (googleSheetsWritableConfigured()) {
-    await appendAnalyticsEventToGoogleSheet(event);
-    storedIn.push('google_sheets');
-  }
-
-  if (localFileStoreAllowed()) {
-    await appendJsonArray<AnalyticsEvent>('analytics-events.json', event);
-    storedIn.push('local_file');
+  try {
+    if (googleSheetsWritableConfigured()) {
+      await appendAnalyticsEventToGoogleSheet(event);
+      storedIn.push('google_sheets');
+    }
+    if (localFileStoreAllowed()) {
+      await appendJsonArray<AnalyticsEvent>('analytics-events.json', event);
+      storedIn.push('local_file');
+    }
+  } catch (error) {
+    console.error('[analytics] persistence failed:', error instanceof Error ? error.message : error);
+    return NextResponse.json({ error: 'Failed to record event' }, { status: 502 });
   }
 
   const storageError = missingPersistentStoreError('analytics', storedIn);

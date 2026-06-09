@@ -6,7 +6,8 @@ import { ADMIN_COOKIE_NAME, verifyAdminSessionToken } from '@/lib/admin-auth';
 import { getRentalDataset } from '@/lib/data';
 import { googleSheetsConfigured, readGoogleSheetCache, SHEET_NAMES } from '@/lib/google-sheets';
 import { googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
-import { readJsonArray } from '@/lib/server-store';
+import { localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
+import { productionEnvProblems } from '@/lib/env';
 import type { AnalyticsEvent, Building, Lead, RentalUnit, TrustStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -67,7 +68,7 @@ async function readOperationalData() {
         readAnalyticsEventsFromGoogleSheet(),
         readLeadsFromGoogleSheet()
       ]);
-      return { events, leads };
+      return { events, leads, source: 'google_sheets' as const };
     } catch {
       // Fall through to local development storage if Sheet reads are temporarily unavailable.
     }
@@ -77,7 +78,13 @@ async function readOperationalData() {
     readJsonArray<AnalyticsEvent>('analytics-events.json'),
     readJsonArray<Lead>('leads.json')
   ]);
-  return { events, leads };
+  return { events, leads, source: localFileStoreAllowed() ? 'local_file' as const : 'unconfigured' as const };
+}
+
+function storageLabel(source: 'google_sheets' | 'local_file' | 'unconfigured') {
+  if (source === 'google_sheets') return 'Google Sheets (live)';
+  if (source === 'local_file') return 'Local dev file (.data)';
+  return 'NOT configured — events are discarded';
 }
 
 function ConfidenceRow({ item, kind }: { item: Building | RentalUnit; kind: 'building' | 'unit' }) {
@@ -115,7 +122,8 @@ export default async function AdminPage() {
     readOperationalData(),
     readGoogleSheetCache()
   ]);
-  const { events, leads } = operationalData;
+  const { events, leads, source: operationalSource } = operationalData;
+  const envProblems = productionEnvProblems();
 
   const pageViews = countEvents(events, 'page_view');
   const contactClicks = countEvents(events, 'contact_click');
@@ -155,6 +163,20 @@ export default async function AdminPage() {
         <AdminActions />
       </header>
 
+      {envProblems.length > 0 && (
+        <section className="adminNotice" style={{ borderLeft: '4px solid #d33', background: '#fff5f5' }}>
+          <div>
+            <strong>⚠ Configuration problems</strong>
+            <span>These must be fixed in your Vercel environment variables, otherwise metrics stay at 0.</span>
+          </div>
+          {envProblems.map(problem => (
+            <div key={problem}>
+              <span>{problem}</span>
+            </div>
+          ))}
+        </section>
+      )}
+
       <section className="adminNotice">
         <div>
           <strong>Data source</strong>
@@ -167,6 +189,10 @@ export default async function AdminPage() {
         <div>
           <strong>Last sync</strong>
           <span>{dataset.summary.sheetLastSyncedAt || sheetCache?.syncedAt || 'Not synced yet'}</span>
+        </div>
+        <div>
+          <strong>Leads / analytics storage</strong>
+          <span>{storageLabel(operationalSource)}</span>
         </div>
         <div>
           <strong>Public safety</strong>

@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
+
+// Applied to every response. CSP is intentionally omitted for now because the
+// Leaflet map pulls tiles/inline styles from several CDNs; add it later in
+// report-only mode first (see MAINTENANCE_PLAN.md 1.4).
+const securityHeaders = [
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+  { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' }
+];
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -11,7 +23,15 @@ const nextConfig = {
       { protocol: 'https', hostname: 'www.udr.com' }
     ]
   },
-  poweredByHeader: false
+  poweredByHeader: false,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: securityHeaders
+      }
+    ];
+  }
 };
 
 export default nextConfig;

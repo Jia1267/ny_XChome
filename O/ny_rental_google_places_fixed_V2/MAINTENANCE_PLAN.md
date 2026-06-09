@@ -239,12 +239,12 @@
 - [x] 0.1 CI 流水线 — `.github/workflows/ci.yml`（路径过滤到本项目，lint/typecheck/test/build）
 - [x] 0.2 清理构建产物 — 已 untrack `tsconfig.tsbuildinfo` 并加入 `.gitignore`
 - [x] 0.3 依赖审计基线 — CI 加 `npm audit --omit=dev --audit-level=high`（advisory，首次 CI 跑出基线）
-- [ ] 1.1 POST 限流 ⭐
-- [ ] 1.2 输入校验（zod）
-- [ ] 1.3 蜜罐反垃圾
-- [ ] 1.4 安全响应头
-- [ ] 1.5 env 启动校验
-- [ ] 1.6 Origin 白名单
+- [x] 1.1 POST 限流 ⭐ — `lib/api-guard.ts` 内存限流（leads 8/10min、analytics 600/5min）。⚠️ serverless 上是 per-instance 尽力而为，后续升级 Vercel KV
+- [x] 1.2 输入校验 — `lib/validation.ts`（手写零依赖，非 zod）：字段长度上限 + 控制字符清洗 + event type 白名单
+- [x] 1.3 蜜罐反垃圾 — LeadModal 隐藏 `website` 字段，服务端命中即静默丢弃
+- [x] 1.4 安全响应头 — `next.config.mjs` headers()（HSTS / nosniff / X-Frame-Options / Referrer-Policy / Permissions-Policy；CSP 留待 report-only 灰度）
+- [x] 1.5 env 启动校验 — `lib/env.ts` `productionEnvProblems()`，在 `/admin` 顶部红色横幅显示缺失项（非抛错，避免整站挂）
+- [x] 1.6 Origin 白名单 — `lib/api-guard.ts` `isAllowedOrigin()`：同源恒放行，跨源查 `ALLOWED_APP_ORIGINS`，未配置不拦截
 - [ ] 2.1 路由测试
 - [ ] 2.2 依赖更新
 - [ ] 2.3 统一错误处理
