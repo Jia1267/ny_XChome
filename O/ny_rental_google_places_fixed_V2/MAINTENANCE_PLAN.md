@@ -252,10 +252,10 @@
 - [ ] 3.1 拆分 RentalApp ⭐
 - [ ] 3.2 错误边界 UI
 - [ ] 3.3 a11y
-- [ ] 4.1 Places 生产缓存 ⭐
-- [ ] 4.2 access token 缓存
-- [ ] 4.3 图片策略
-- [ ] 4.4 同步健壮性
-- [ ] 5.1 健康检查
-- [ ] 5.2 Sheet 备份
-- [ ] 5.3 文档同步
+- [x] 4.1 Places 生产缓存 ⭐ — refresh 结果写入进程内存缓存（30 天 TTL），生产也命中；KV 升级待办
+- [x] 4.2 access token 缓存 — `lib/google-sheets.ts` 按 scope 缓存 OAuth token，按 `expires_in` 提前 60s 失效
+- [~] 4.3 图片策略 — 详情/户型图加 `decoding="async"` + 加载失败优雅隐藏；迁移 `next/image` 仍待办（外链域名多）
+- [~] 4.4 同步健壮性 — Sheet 读探针抛出可读错误 + `/admin` 存储自检卡片 + 写入测试按钮；列校验待办
+- [x] 5.1 健康检查 — `GET /api/health`（计数 + 数据源 + 配置布尔，无密钥）
+- [x] 5.2 Sheet 备份 — `/admin` 「Download backup」+ `GET /api/admin/backup`（leads+analytics JSON 快照，可带 sync token 给定时任务）；Sheet 版本历史为就地备份
+- [x] 5.3 文档同步 — README 增加 Operations/troubleshooting、列表页、自动建表说明，修正过期的 localStorage 描述

@@ -153,15 +153,24 @@ x-admin-sync-token: your ADMIN_SYNC_TOKEN
 
 Local development can save a server-side cache at `.data/google-sheets-cache.json`. In production, local `.data` persistence is disabled by default; the app reads Google Sheets directly when configured and falls back to local CSV if Sheets is unavailable during build.
 
-Lead submissions append directly to the private `leads` tab when Google service account credentials are configured. Analytics events append to `analytics_events`. The service account needs Editor access to the Sheet for these writes.
+Lead submissions append directly to the private `leads` tab when Google service account credentials are configured. Analytics events append to `analytics_events`. The service account needs **Editor** access to the Sheet for these writes. The `leads` and `analytics_events` tabs (with headers) are **auto-created on first write** if they do not exist, so manual setup of those two tabs is optional.
 
 ## Production data and performance
 
 - The home page now sends only sanitized building summaries to the browser.
 - Building units, photos, and nearby POIs are loaded on demand through `/api/buildings/[id]`.
+- A `/listings` page provides a searchable, sortable building list (good for SEO and mobile browsing).
 - The share URL for a building is `/buildings/[id]`, with `?unit=...` for a unit.
 - Local `.data` JSON storage is disabled in production unless `ENABLE_LOCAL_DATA_STORE=1` is set explicitly.
-- Google Places refresh cache writes to `.places-cache` only in local development.
+- Google Places refresh results are cached in process memory (30-day TTL) so production benefits even though `.places-cache` file writes only happen in local development.
+- Public POST endpoints (`/api/leads`, `/api/analytics`) are rate-limited and input-validated; the lead form includes a honeypot. The rate limiter is in-memory (per instance) — upgrade to Vercel KV for a shared limit.
+
+## Operations and troubleshooting
+
+- **Health check**: `GET /api/health` returns data counts, the data-source mode, and boolean config flags (no secrets). Use it for uptime monitors.
+- **Storage self-test**: the `/admin` panel shows a "Storage diagnostics" card (live row counts + the real Sheets error) and a "Test storage write" button that writes a labelled probe row and auto-creates the operational tabs.
+- **Backup**: the `/admin` "Download backup" button (or `GET /api/admin/backup` with the `x-admin-sync-token` header) downloads a JSON snapshot of leads + analytics for off-machine storage. Google Sheets version history is the in-place backup.
+- **Metrics show 0?** It almost always means writes are failing. Open `/admin` → read the Storage diagnostics card / click "Test storage write". The common causes are: Google service-account env vars not set in Vercel, the service account not shared as Editor, or (now auto-handled) the operational tabs not existing.
 
 ## Mobile launch QA checklist
 
@@ -218,7 +227,7 @@ Production should move this into an admin dashboard backed by a database. Recomm
 
 ## Current trial limitations
 
-- Browser localStorage is still used for immediate UI analytics/lead feedback, but production server persistence uses Google Sheets when configured.
-- If Google Sheets write credentials are not configured in production, lead submission returns a storage configuration error.
+- Analytics and lead persistence rely on Google Sheets in production (Vercel has no durable local disk). If write credentials are missing, submissions return a storage configuration error and `/admin` metrics stay at 0 — see Operations and troubleshooting above.
+- The rate limiter and the Places refresh cache are in-memory (per serverless instance); move them to Vercel KV for shared, durable behavior.
 - Commute rings are estimates and not routing guarantees.
 - Nearby POIs are cached and should be refreshed before showing to paying partners.

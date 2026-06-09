@@ -218,16 +218,18 @@
 
 ## 技术债清单（审查中发现的具体项）
 
-- [ ] 死代码：`AnalyticsPanel` / `MetricList` 未使用（`RentalApp.tsx`）
-- [ ] i18n `zhCopy` 重复定义（~90 行冗余）
+- [x] 死代码：`AnalyticsPanel` / `MetricList` 已删除（含废弃的 events/leads 客户端 state）
+- [x] i18n `zhCopy` 重复定义已删除，文案抽到 `lib/i18n.ts`
+- [x] 巨型组件 `RentalApp.tsx` 已拆分到 `components/rental/*`（1455 行 → ~360 行）
+- [x] 列表/搜索视图已上线（`/listings` + `components/ListingsView.tsx`）
 - [ ] 详情图用原生 `<img>` + eslint-disable，未走 `next/image`
 - [ ] `nearby_pois.csv` 与 `building_google_nearby_pois_500m.csv` 数据重叠
 - [ ] 学校列表硬编码在 `lib/data.ts`，应数据化
 - [ ] `buildings.csv` 的 `year_built`、`units.csv` 的 `space_*_name`/`share_plan_type` 等字段已采集但未在 UI 体现
 - [ ] `.data`/`.places-cache` 文件缓存在 Vercel 无效，需换 KV
-- [ ] 线索/埋点 POST 无限流、无输入长度限制（见 `MAINTENANCE_PLAN`）
-- [ ] `tsconfig.tsbuildinfo` 被 git 跟踪
-- [ ] 无 CI（无 `.github/workflows`）
+- [x] 线索/埋点 POST 限流 + 输入长度限制（Phase 1 已做，内存版，后续升级 KV）
+- [x] `tsconfig.tsbuildinfo` 已 untrack
+- [x] CI 已建（`.github/workflows/ci.yml`）
 - [ ] 测试仅覆盖 lib 层，无路由/组件测试
 
 ---

@@ -5,7 +5,7 @@ import { AdminLogin } from '@/components/AdminLogin';
 import { ADMIN_COOKIE_NAME, verifyAdminSessionToken } from '@/lib/admin-auth';
 import { getRentalDataset } from '@/lib/data';
 import { googleSheetsConfigured, readGoogleSheetCache, SHEET_NAMES } from '@/lib/google-sheets';
-import { googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
+import { getStorageDiagnostics, googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
 import { localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
 import { productionEnvProblems } from '@/lib/env';
 import type { AnalyticsEvent, Building, Lead, RentalUnit, TrustStatus } from '@/lib/types';
@@ -117,13 +117,16 @@ export default async function AdminPage() {
     return <AdminLogin />;
   }
 
-  const [dataset, operationalData, sheetCache] = await Promise.all([
+  const [dataset, operationalData, sheetCache, storage] = await Promise.all([
     getRentalDataset(),
     readOperationalData(),
-    readGoogleSheetCache()
+    readGoogleSheetCache(),
+    getStorageDiagnostics()
   ]);
   const { events, leads, source: operationalSource } = operationalData;
   const envProblems = productionEnvProblems();
+  const writesLikelyBroken = storage.configured && storage.error === null && storage.analyticsRows === 0 && events.length === 0;
+  const tabsMissing = Boolean(storage.error && /parse range/i.test(storage.error));
 
   const pageViews = countEvents(events, 'page_view');
   const contactClicks = countEvents(events, 'contact_click');
@@ -198,6 +201,39 @@ export default async function AdminPage() {
           <strong>Public safety</strong>
           <span>Frontend receives no internal notes, agents, contacts, or change log.</span>
         </div>
+      </section>
+
+      <section className="adminNotice" style={storage.error || writesLikelyBroken ? { borderLeft: '4px solid #d33', background: '#fff5f5' } : undefined}>
+        <div>
+          <strong>Storage diagnostics</strong>
+          <span>Live check of the private Sheet write path.</span>
+        </div>
+        <div>
+          <strong>analytics_events rows</strong>
+          <span>{storage.configured ? (storage.analyticsRows ?? '—') : 'Sheets not configured'}</span>
+        </div>
+        <div>
+          <strong>leads rows</strong>
+          <span>{storage.configured ? (storage.leadRows ?? '—') : 'Sheets not configured'}</span>
+        </div>
+        {storage.error && (
+          <div>
+            <strong>Read error</strong>
+            <span>{storage.error}</span>
+          </div>
+        )}
+        {tabsMissing && (
+          <div>
+            <strong>Likely cause</strong>
+            <span>The <b>analytics_events</b> / <b>leads</b> tabs do not exist yet. Click “Test storage write” above — it auto-creates both tabs with headers. After that, browsing the site records events automatically.</span>
+          </div>
+        )}
+        {writesLikelyBroken && (
+          <div>
+            <strong>Likely cause</strong>
+            <span>Reads work but the tab is empty after browsing — writes are failing. Use “Test storage write” above; if it fails with 403, share the Sheet with the service account as <b>Editor</b>.</span>
+          </div>
+        )}
       </section>
 
       <section className="adminMetricGrid">

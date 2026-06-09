@@ -9,6 +9,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: siteUrl,
       lastModified: new Date()
     },
+    {
+      url: `${siteUrl}/listings`,
+      lastModified: new Date()
+    },
     ...dataset.buildings.map(building => ({
       url: `${siteUrl}/buildings/${encodeURIComponent(building.id)}`,
       lastModified: building.lastUpdatedAt ? new Date(building.lastUpdatedAt) : new Date()

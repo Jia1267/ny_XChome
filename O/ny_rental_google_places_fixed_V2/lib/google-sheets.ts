@@ -27,6 +27,12 @@ const STORE_DIR = path.join(process.cwd(), '.data');
 const CACHE_PATH = path.join(STORE_DIR, 'google-sheets-cache.json');
 let memoryCache: GoogleSheetCache | null = null;
 
+// Cache minted OAuth access tokens per scope so we don't sign a fresh JWT and
+// round-trip to Google on every Sheet read/write. Tokens last ~1h; we refresh
+// a minute early.
+type CachedToken = { token: string; expiresAt: number };
+const tokenCache = new Map<string, CachedToken>();
+
 function normalizePrivateKey(key: string) {
   return key.replace(/\\n/g, '\n');
 }
@@ -62,6 +68,9 @@ export async function getGoogleSheetsAccessToken(scope = 'https://www.googleapis
   const privateKey = process.env.GOOGLE_PRIVATE_KEY;
   if (!email || !privateKey) return '';
 
+  const cached = tokenCache.get(scope);
+  if (cached && cached.expiresAt > Date.now() + 60_000) return cached.token;
+
   const now = Math.floor(Date.now() / 1000);
   const header = { alg: 'RS256', typ: 'JWT' };
   const claim = {
@@ -92,8 +101,13 @@ export async function getGoogleSheetsAccessToken(scope = 'https://www.googleapis
     throw new Error(`Google service account auth failed: ${response.status} ${text.slice(0, 180)}`);
   }
 
-  const data = await response.json() as { access_token?: string };
-  return data.access_token || '';
+  const data = await response.json() as { access_token?: string; expires_in?: number };
+  const token = data.access_token || '';
+  if (token) {
+    const ttlMs = (data.expires_in ? data.expires_in : 3600) * 1000;
+    tokenCache.set(scope, { token, expiresAt: Date.now() + ttlMs });
+  }
+  return token;
 }
 
 export function googleSheetsConfigured() {

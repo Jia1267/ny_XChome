@@ -14,6 +14,13 @@ const googleTypes: Record<PoiType, string[]> = {
   subway: ['subway_station']
 };
 
+// Per-instance cache so production (where local file writes are disabled) still
+// benefits from a Places refresh. Best-effort on serverless; upgrade to Vercel KV
+// for a shared, durable cache (see DEVELOPMENT_ROADMAP.md Phase 4.1).
+type MemoryCacheEntry = { at: number; rows: NearbyPoi[] };
+const memoryCache = new Map<string, MemoryCacheEntry>();
+const MEMORY_TTL_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
+
 type GooglePlace = {
   id?: string;
   displayName?: { text?: string };
@@ -58,8 +65,14 @@ export async function GET(request: Request) {
   if (!building) return NextResponse.json({ error: 'Building not found' }, { status: 404 });
 
   const fileCached = building.pois.filter(poi => poi.type === type).slice(0, 12);
-  const jsonCached = await readCachedJson(buildingId, type);
+  const memKey = `${buildingId}_${type}`;
+  const memHit = memoryCache.get(memKey);
+  const memValid = memHit && (Date.now() - memHit.at) < MEMORY_TTL_MS;
   if (!refresh || !apiKey) {
+    if (memValid && memHit) {
+      return NextResponse.json({ source: 'memory_cache', apiKeyExposed: false, results: memHit.rows });
+    }
+    const jsonCached = await readCachedJson(buildingId, type);
     return NextResponse.json({
       source: jsonCached ? 'server_json_cache' : 'csv_cache',
       apiKeyExposed: false,
@@ -108,6 +121,7 @@ export async function GET(request: Request) {
     sourceLastChecked: new Date().toISOString().slice(0, 10)
   }));
 
+  memoryCache.set(memKey, { at: Date.now(), rows: results });
   await writeCachedJson(buildingId, type, results);
   return NextResponse.json({ source: 'google_places_server_refresh', apiKeyExposed: false, results });
 }
