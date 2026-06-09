@@ -236,9 +236,9 @@
 
 ## 跟踪清单（勾选进度）
 
-- [ ] 0.1 CI 流水线
-- [ ] 0.2 清理构建产物
-- [ ] 0.3 依赖审计基线
+- [x] 0.1 CI 流水线 — `.github/workflows/ci.yml`（路径过滤到本项目，lint/typecheck/test/build）
+- [x] 0.2 清理构建产物 — 已 untrack `tsconfig.tsbuildinfo` 并加入 `.gitignore`
+- [x] 0.3 依赖审计基线 — CI 加 `npm audit --omit=dev --audit-level=high`（advisory，首次 CI 跑出基线）
 - [ ] 1.1 POST 限流 ⭐
 - [ ] 1.2 输入校验（zod）
 - [ ] 1.3 蜜罐反垃圾
