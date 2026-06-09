@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { Circle, Layer, Map as LeafletMap, TileLayer } from 'leaflet';
+import type { Circle, Layer, Map as LeafletMap, Marker, TileLayer } from 'leaflet';
 import type { Building, CommuteMode, NearbyPoi, School, SchoolId } from '@/lib/types';
 import { compactMoney } from '@/lib/format';
 
@@ -15,6 +15,7 @@ type MapCanvasProps = {
   showSchoolMarkers: boolean;
   showNearbyRadius: boolean;
   showRailLayer: boolean;
+  hoveredBuildingId?: string;
   onSelectBuilding: (buildingId: string) => void;
 };
 
@@ -26,6 +27,15 @@ const commuteRadiusMeters: Record<CommuteMode, number> = {
   subway40: 13000,
   subway60: 20000
 };
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
 function schoolColor(id: string) {
   if (id === 'columbia') return '#4169e1';
@@ -59,6 +69,7 @@ export function MapCanvas({
   showSchoolMarkers,
   showNearbyRadius,
   showRailLayer,
+  hoveredBuildingId,
   onSelectBuilding
 }: MapCanvasProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -66,6 +77,9 @@ export function MapCanvas({
   const markerLayersRef = useRef<Layer[]>([]);
   const ringLayersRef = useRef<Circle[]>([]);
   const railLayerRef = useRef<TileLayer | null>(null);
+  const markerByBuildingRef = useRef<Map<string, Marker>>(new Map());
+  const hoveredRef = useRef<string | undefined>(hoveredBuildingId);
+  hoveredRef.current = hoveredBuildingId;
   const [leaflet, setLeaflet] = useState<typeof import('leaflet') | null>(null);
 
   useEffect(() => {
@@ -106,6 +120,7 @@ export function MapCanvas({
 
     markerLayersRef.current.forEach(layer => map.removeLayer(layer));
     markerLayersRef.current = [];
+    markerByBuildingRef.current.clear();
 
     const rendered = buildings.slice(0, 500);
     const selected = buildings.find(building => building.id === selectedBuildingId);
@@ -151,10 +166,27 @@ export function MapCanvas({
           iconAnchor: [36, 17]
         })
       });
+      const previewImg = building.primaryPhotoUrl
+        ? `<img src="${escapeHtml(building.primaryPhotoUrl)}" alt="" onerror="this.style.display='none'" />`
+        : '';
+      marker.bindTooltip(`<div class="markerPreview">${previewImg}<strong>${escapeHtml(building.name)}</strong></div>`, {
+        direction: 'top',
+        offset: [0, -14],
+        opacity: 1,
+        className: 'markerPreviewTip'
+      });
       marker.on('click', () => onSelectBuilding(active ? '' : building.id));
       marker.addTo(map);
       markerLayersRef.current.push(marker);
+      markerByBuildingRef.current.set(building.id, marker);
     });
+
+    // Re-apply the hover highlight after markers are rebuilt.
+    const hoveredId = hoveredRef.current;
+    if (hoveredId) {
+      const hoveredEl = markerByBuildingRef.current.get(hoveredId)?.getElement();
+      hoveredEl?.classList.add('hovered');
+    }
 
     pois.slice(0, 80).forEach(poi => {
       const marker = leaflet.marker([poi.lat, poi.lng], {
@@ -172,6 +204,19 @@ export function MapCanvas({
 
     if (selected) map.setView([selected.lat, selected.lng], Math.max(map.getZoom(), 14), { animate: true });
   }, [leaflet, buildings, selectedBuildingId, selectedSchoolId, schools, pois, showSchoolMarkers, showNearbyRadius, onSelectBuilding]);
+
+  // Highlight + gently pan to the building hovered in the results panel.
+  useEffect(() => {
+    if (!leaflet || !mapRef.current) return;
+    const map = mapRef.current;
+    markerByBuildingRef.current.forEach((marker, id) => {
+      marker.getElement()?.classList.toggle('hovered', id === hoveredBuildingId);
+    });
+    if (hoveredBuildingId) {
+      const marker = markerByBuildingRef.current.get(hoveredBuildingId);
+      if (marker) map.panTo(marker.getLatLng(), { animate: true });
+    }
+  }, [leaflet, hoveredBuildingId]);
 
   useEffect(() => {
     if (!leaflet || !mapRef.current) return;

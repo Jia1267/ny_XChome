@@ -1,9 +1,14 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import { ArrowLeft, Maximize2, Minimize2, Share2, X } from 'lucide-react';
 import type { Translate } from '@/lib/i18n';
 import type { Building, Language, RentalUnit } from '@/lib/types';
 import { unitTitle, type DetailStage } from './shared';
 import { BuildingDetail } from './BuildingDetail';
 import { UnitDetail } from './UnitDetail';
+import { useImageZoom } from './ImageZoom';
+import { useEscapeKey } from '../useDialog';
 
 export function DetailPanel({
   building,
@@ -11,6 +16,8 @@ export function DetailPanel({
   language,
   stage,
   loading,
+  loadFailed,
+  onRetry,
   t,
   onClose,
   onBack,
@@ -25,6 +32,8 @@ export function DetailPanel({
   language: Language;
   stage: DetailStage;
   loading: boolean;
+  loadFailed: boolean;
+  onRetry: () => void;
   t: Translate;
   onClose: () => void;
   onBack: () => void;
@@ -34,13 +43,24 @@ export function DetailPanel({
   onCompare: (unitId: string) => void;
   onLead: (context: { buildingId?: string; unitId?: string }) => void;
 }) {
+  const panelRef = useRef<HTMLElement>(null);
+  const { open } = useImageZoom();
+  useEscapeKey(true, onClose);
+
+  // Reset scroll to the top whenever the building or unit changes, so each
+  // navigation starts from the top of the panel.
+  useEffect(() => {
+    panelRef.current?.scrollTo({ top: 0 });
+  }, [building.id, unit?.id]);
+
   const heroUrl = unit?.photos.find(photo => photo.type.includes('floor'))?.url
     || building.primaryPhotoUrl
     || building.photos[0]?.url;
+  const heroAlt = unit ? unitTitle(unit) : building.name;
   const nextStage: DetailStage = stage === 'half' ? 'full' : 'half';
 
   return (
-    <aside className={`detailPanel stage-${stage}`}>
+    <aside ref={panelRef} className={`detailPanel stage-${stage}`}>
       <div className="panelToolbar">
         {unit && <button type="button" onClick={onBack}><ArrowLeft size={18} />{t('backToBuilding')}</button>}
         <div className="panelActions">
@@ -55,14 +75,22 @@ export function DetailPanel({
       {heroUrl && (
         <div className="heroImage">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={heroUrl} alt={unit ? unitTitle(unit) : building.name} loading="lazy" decoding="async" onError={event => { event.currentTarget.style.display = 'none'; }} />
+          <img
+            className="zoomable"
+            src={heroUrl}
+            alt={heroAlt}
+            loading="lazy"
+            decoding="async"
+            onClick={() => open(heroUrl, heroAlt)}
+            onError={event => { event.currentTarget.style.display = 'none'; }}
+          />
         </div>
       )}
 
       {unit ? (
         <UnitDetail building={building} unit={unit} language={language} t={t} onCompare={onCompare} onLead={onLead} />
       ) : (
-        <BuildingDetail building={building} loading={loading} t={t} onOpenUnit={onOpenUnit} onCompare={onCompare} onLead={onLead} />
+        <BuildingDetail building={building} loading={loading} loadFailed={loadFailed} onRetry={onRetry} t={t} onOpenUnit={onOpenUnit} onCompare={onCompare} onLead={onLead} />
       )}
     </aside>
   );

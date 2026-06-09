@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import type { Translate } from '@/lib/i18n';
 import type { Building, Lead, RentalUnit } from '@/lib/types';
 import { unitTitle } from './shared';
+import { useFocusTrap } from '../useDialog';
 
 export function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
   building: Building | null;
@@ -13,6 +14,8 @@ export function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
   onCancel: () => void;
   onSaved: (lead: Lead) => void;
 }) {
+  const dialogRef = useFocusTrap<HTMLFormElement>(true, onCancel);
+
   async function submit(formData: FormData) {
     const lead: Lead = {
       id: `lead_${Date.now()}`,
@@ -37,15 +40,20 @@ export function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
   }
 
   return (
-    <div className="modalBackdrop">
+    <div className="modalBackdrop" onClick={onCancel}>
       <form
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('leadTitle')}
         className="leadModal"
+        onClick={event => event.stopPropagation()}
         onSubmit={event => {
           event.preventDefault();
           submit(new FormData(event.currentTarget));
         }}
       >
-        <button className="modalClose" type="button" onClick={onCancel}><X size={18} /></button>
+        <button className="modalClose" type="button" aria-label={t('close')} onClick={onCancel}><X size={18} /></button>
         <p className="eyebrow">{building?.name}</p>
         <h2>{t('leadTitle')}</h2>
         <p>{unit ? unitTitle(unit) : building?.address}</p>

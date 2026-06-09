@@ -33,12 +33,8 @@ export function roomLabels(unit: RentalUnit, people: number, t: Translate) {
   return result;
 }
 
-export function splitMonthly(total: number, people: number, step: number) {
-  if (people <= 1) return [Math.round(total)];
-  const differenceTotal = step * ((people * (people - 1)) / 2);
-  const base = Math.max(0, (total - differenceTotal) / people);
-  return Array.from({ length: people }, (_, index) => Math.round(base + (people - 1 - index) * step));
-}
+// Single source of truth for the weighted split math lives in lib/rent-split.
+export { calculateWeightedSplit as splitMonthly } from '@/lib/rent-split';
 
 export function trustItems(trust: TrustInfo, t: Translate) {
   return [

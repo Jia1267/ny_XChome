@@ -245,12 +245,12 @@
 - [x] 1.4 安全响应头 — `next.config.mjs` headers()（HSTS / nosniff / X-Frame-Options / Referrer-Policy / Permissions-Policy；CSP 留待 report-only 灰度）
 - [x] 1.5 env 启动校验 — `lib/env.ts` `productionEnvProblems()`，在 `/admin` 顶部红色横幅显示缺失项（非抛错，避免整站挂）
 - [x] 1.6 Origin 白名单 — `lib/api-guard.ts` `isAllowedOrigin()`：同源恒放行，跨源查 `ALLOWED_APP_ORIGINS`，未配置不拦截
-- [ ] 2.1 路由测试
+- [~] 2.1 测试 — 已补核心逻辑单测（rent-split / filter-floorplans / validation / api-guard），覆盖各路由的校验/限流/Origin/筛选决策；handler 集成测试 + E2E(Playwright) 待依赖
 - [ ] 2.2 依赖更新
 - [ ] 2.3 统一错误处理
 - [ ] 2.4 错误监控（可选）
-- [ ] 3.1 拆分 RentalApp ⭐
-- [ ] 3.2 错误边界 UI
+- [x] 3.1 拆分 RentalApp ⭐ — 已拆到 `components/rental/*` + `lib/i18n.ts`
+- [x] 3.2 错误边界 UI — `app/error.tsx` + `app/global-error.tsx` + 详情加载失败"重试"
 - [ ] 3.3 a11y
 - [x] 4.1 Places 生产缓存 ⭐ — refresh 结果写入进程内存缓存（30 天 TTL），生产也命中；KV 升级待办
 - [x] 4.2 access token 缓存 — `lib/google-sheets.ts` 按 scope 缓存 OAuth token，按 `expires_in` 提前 60s 失效

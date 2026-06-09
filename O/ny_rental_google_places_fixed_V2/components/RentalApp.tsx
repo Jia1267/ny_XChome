@@ -1,17 +1,23 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { Languages, List, Phone, ShieldCheck } from 'lucide-react';
+import { Languages, List, Phone, ShieldCheck, SlidersHorizontal } from 'lucide-react';
 import { MapCanvas } from './MapCanvas';
-import { DetailPanel } from './rental/DetailPanel';
-import { CompareDock } from './rental/CompareDock';
-import { LeadModal } from './rental/LeadModal';
 import { MapLegend } from './rental/MapLegend';
+import { ImageZoomProvider } from './rental/ImageZoom';
 import { defaultDetailStageForViewport, isMobileViewport, nearbyPoisFor, unitTitle, type DetailStage } from './rental/shared';
 import { copy, type CopyKey } from '@/lib/i18n';
 import { distanceMeters, money } from '@/lib/format';
 import type { AnalyticsEvent, Building, CommuteMode, Language, PoiType, RentalDataset, RentalUnit, SchoolId } from '@/lib/types';
+
+// Non-first-paint UI is code-split: the initial bundle is just the map + chrome;
+// these chunks load on demand when the user opens a detail/compare/lead/filter.
+const DetailPanel = dynamic(() => import('./rental/DetailPanel').then(mod => ({ default: mod.DetailPanel })));
+const CompareDock = dynamic(() => import('./rental/CompareDock').then(mod => ({ default: mod.CompareDock })));
+const LeadModal = dynamic(() => import('./rental/LeadModal').then(mod => ({ default: mod.LeadModal })));
+const AdvancedSearch = dynamic(() => import('./AdvancedSearch').then(mod => ({ default: mod.AdvancedSearch })));
 
 type RentalAppProps = {
   dataset: RentalDataset;
@@ -42,6 +48,9 @@ export function RentalApp({ dataset }: RentalAppProps) {
   const [nearbyMenuOpen, setNearbyMenuOpen] = useState(false);
   const [buildingDetails, setBuildingDetails] = useState<Record<string, Building>>({});
   const [loadingBuildingId, setLoadingBuildingId] = useState('');
+  const [loadErrorId, setLoadErrorId] = useState('');
+  const [advancedOpen, setAdvancedOpen] = useState(false);
+  const [hoveredBuildingId, setHoveredBuildingId] = useState('');
 
   const t = useCallback((key: CopyKey) => copy[language][key], [language]);
 
@@ -106,13 +115,21 @@ export function RentalApp({ dataset }: RentalAppProps) {
   const loadBuildingDetail = useCallback(async (buildingId: string) => {
     if (!buildingId || buildingDetails[buildingId]) return;
     setLoadingBuildingId(buildingId);
+    setLoadErrorId(current => (current === buildingId ? '' : current));
     try {
       const response = await fetch(`/api/buildings/${encodeURIComponent(buildingId)}`, { cache: 'no-store' });
-      if (!response.ok) return;
+      if (!response.ok) {
+        setLoadErrorId(buildingId);
+        return;
+      }
       const data = await response.json() as { building?: Building };
       if (data.building) {
         setBuildingDetails(current => ({ ...current, [buildingId]: data.building as Building }));
+      } else {
+        setLoadErrorId(buildingId);
       }
+    } catch {
+      setLoadErrorId(buildingId);
     } finally {
       setLoadingBuildingId(current => (current === buildingId ? '' : current));
     }
@@ -144,6 +161,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
   }, [dataset.pois, selectedBuilding, activePoiType, mapMode]);
 
   const selectBuilding = useCallback((buildingId: string) => {
+    setAdvancedOpen(false);
     setSelectedUnitId('');
     setSelectedBuildingId(current => {
       const next = current === buildingId ? '' : buildingId;
@@ -163,6 +181,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
   function openUnit(unitId: string) {
     const unit = allUnits.find(item => item.id === unitId);
+    setAdvancedOpen(false);
     setSelectedUnitId(unitId);
     setDetailStage(defaultDetailStageForViewport());
     setNearbyMenuOpen(false);
@@ -175,6 +194,36 @@ export function RentalApp({ dataset }: RentalAppProps) {
   function openLead(context: { buildingId?: string; unitId?: string }) {
     setLeadContext(context);
     track('contact_click', context);
+  }
+
+  function openAdvanced() {
+    // Keep the commute rings as-is: the advanced filter scopes to whatever
+    // buildings are currently shown on the map.
+    setSelectedBuildingId('');
+    setSelectedUnitId('');
+    setHoveredBuildingId('');
+    setAdvancedOpen(true);
+    track('advanced_filter_open');
+  }
+
+  function openBuildingFromSearch(buildingId: string) {
+    setAdvancedOpen(false);
+    setHoveredBuildingId('');
+    setSelectedUnitId('');
+    setSelectedBuildingId(buildingId);
+    setDetailStage(defaultDetailStageForViewport());
+    loadBuildingDetail(buildingId);
+    track('building_click', { buildingId, source: 'advanced_search' });
+  }
+
+  function openUnitFromSearch(buildingId: string, unitId: string) {
+    setAdvancedOpen(false);
+    setHoveredBuildingId('');
+    setSelectedBuildingId(buildingId);
+    setSelectedUnitId(unitId);
+    setDetailStage(defaultDetailStageForViewport());
+    loadBuildingDetail(buildingId);
+    track('unit_click', { buildingId, unitId, source: 'advanced_search' });
   }
 
   function addCompare(unitId: string) {
@@ -253,6 +302,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
     : `${selectedSchool?.shortName || selectedSchool?.name || t('all')} - ${t(commuteMode)}`;
 
   return (
+    <ImageZoomProvider>
     <div className="appRoot">
       <header className="topbar">
         <div className="brand">
@@ -264,6 +314,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
         </div>
         <nav className="topActions">
           <button type="button" onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}><Languages size={18} />{language === 'en' ? '中文' : 'EN'}</button>
+          <button type="button" onClick={openAdvanced}><SlidersHorizontal size={18} />{language === 'en' ? 'Filter' : '筛选'}</button>
           <Link href="/listings"><List size={18} />{t('listings')}</Link>
           <Link href="/legal"><ShieldCheck size={18} />{t('legal')}</Link>
         </nav>
@@ -280,6 +331,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
           showSchoolMarkers={mapMode === 'schools' || commuteMode !== 'none'}
           showNearbyRadius={showNearbyRadius}
           showRailLayer={showRailLayer}
+          hoveredBuildingId={hoveredBuildingId}
           onSelectBuilding={selectBuilding}
         />
 
@@ -368,13 +420,15 @@ export function RentalApp({ dataset }: RentalAppProps) {
           <MapLegend t={t} />
         )}
 
-        {selectedBuilding && !detailHiddenByCompare && (
+        {selectedBuilding && !detailHiddenByCompare && !advancedOpen && (
           <DetailPanel
             building={selectedBuilding}
             unit={selectedUnit}
             language={language}
             stage={detailStage}
             loading={loadingBuildingId === selectedBuilding.id}
+            loadFailed={loadErrorId === selectedBuilding.id}
+            onRetry={() => loadBuildingDetail(selectedBuilding.id)}
             t={t}
             onClose={() => { setSelectedBuildingId(''); setSelectedUnitId(''); setDetailStage('full'); setNearbyMenuOpen(false); }}
             onBack={() => setSelectedUnitId('')}
@@ -398,7 +452,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
           />
         )}
 
-        {selectedBuilding && !detailHiddenByCompare && (
+        {selectedBuilding && !detailHiddenByCompare && !advancedOpen && (
           <div className="mobileContactBar">
             <div>
               <span>{selectedUnit ? unitTitle(selectedUnit) : selectedBuilding.name}</span>
@@ -406,6 +460,19 @@ export function RentalApp({ dataset }: RentalAppProps) {
             </div>
             <button type="button" onClick={() => openLead({ buildingId: selectedBuilding.id, unitId: selectedUnit?.id })}><Phone size={18} />{t('contactAgent')}</button>
           </div>
+        )}
+
+        {advancedOpen && (
+          <AdvancedSearch
+            language={language}
+            allowedBuildingIds={filteredBuildings.map(building => building.id)}
+            distanceAnchor={selectedSchool ? { lat: selectedSchool.lat, lng: selectedSchool.lng } : null}
+            onClose={() => { setAdvancedOpen(false); setHoveredBuildingId(''); }}
+            onHoverBuilding={setHoveredBuildingId}
+            onOpenBuilding={openBuildingFromSearch}
+            onOpenUnit={openUnitFromSearch}
+            onContact={(buildingId, unitId) => openLead({ buildingId, unitId: unitId || undefined })}
+          />
         )}
       </main>
 
@@ -423,5 +490,6 @@ export function RentalApp({ dataset }: RentalAppProps) {
         />
       )}
     </div>
+    </ImageZoomProvider>
   );
 }

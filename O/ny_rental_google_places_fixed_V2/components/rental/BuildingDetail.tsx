@@ -6,9 +6,11 @@ import { bathroomLabel, bedroomsLabel, unitTitle } from './shared';
 import { TrustGrid } from './TrustGrid';
 import { NearbyFacilities } from './NearbyFacilities';
 
-export function BuildingDetail({ building, loading, t, onOpenUnit, onCompare, onLead }: {
+export function BuildingDetail({ building, loading, loadFailed, onRetry, t, onOpenUnit, onCompare, onLead }: {
   building: Building;
   loading: boolean;
+  loadFailed: boolean;
+  onRetry: () => void;
   t: Translate;
   onOpenUnit: (unitId: string) => void;
   onCompare: (unitId: string) => void;
@@ -52,7 +54,18 @@ export function BuildingDetail({ building, loading, t, onOpenUnit, onCompare, on
       <section>
         <h3>{t('availableUnits')}</h3>
         <div className="unitList">
-          {loading && !building.units.length && (
+          {loadFailed && !building.units.length && (
+            <article className="unitCard loading">
+              <div>
+                <strong>加载失败 · Failed to load</strong>
+                <p>无法获取户型详情，请重试。</p>
+              </div>
+              <div className="unitCardActions">
+                <button type="button" onClick={onRetry}>重试 · Retry</button>
+              </div>
+            </article>
+          )}
+          {!loadFailed && loading && !building.units.length && (
             <article className="unitCard loading">
               <div>
                 <strong>Loading details...</strong>
@@ -60,7 +73,7 @@ export function BuildingDetail({ building, loading, t, onOpenUnit, onCompare, on
               </div>
             </article>
           )}
-          {!loading && !building.units.length && (
+          {!loadFailed && !loading && !building.units.length && (
             <article className="unitCard loading">
               <div>
                 <strong>No units loaded</strong>

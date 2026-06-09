@@ -1,3 +1,5 @@
+'use client';
+
 import { Phone, Scale } from 'lucide-react';
 import { money } from '@/lib/format';
 import type { Translate } from '@/lib/i18n';
@@ -6,6 +8,7 @@ import { bathroomLabel, bedroomsLabel, unitTitle } from './shared';
 import { TrustGrid } from './TrustGrid';
 import { NearbyFacilities } from './NearbyFacilities';
 import { RentCalculator } from './RentCalculator';
+import { useImageZoom } from './ImageZoom';
 
 export function UnitDetail({ building, unit, language, t, onCompare, onLead }: {
   building: Building;
@@ -16,6 +19,7 @@ export function UnitDetail({ building, unit, language, t, onCompare, onLead }: {
   onLead: (context: { buildingId?: string; unitId?: string }) => void;
 }) {
   const floorPlan = unit.photos.find(photo => photo.type.includes('floor'))?.url;
+  const { open } = useImageZoom();
   return (
     <div className="detailContent">
       <section className="buildingHero unitHero">
@@ -36,7 +40,7 @@ export function UnitDetail({ building, unit, language, t, onCompare, onLead }: {
           <h3>Floor plan</h3>
           <div className="floorPlanBox">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={floorPlan} alt={`${unitTitle(unit)} floor plan`} loading="lazy" decoding="async" onError={event => { event.currentTarget.style.display = 'none'; }} />
+            <img className="zoomable" src={floorPlan} alt={`${unitTitle(unit)} floor plan`} loading="lazy" decoding="async" onClick={() => open(floorPlan, `${unitTitle(unit)} floor plan`)} onError={event => { event.currentTarget.style.display = 'none'; }} />
           </div>
         </section>
       )}
