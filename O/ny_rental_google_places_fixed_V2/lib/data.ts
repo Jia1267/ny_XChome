@@ -4,6 +4,7 @@ import path from 'path';
 import { parseCsv } from './csv';
 import { dateLabel, hostName, nullableMoney, splitList, toNumber } from './format';
 import { readGoogleSheetCache } from './google-sheets';
+import { toInitialRentalDataset, toPublicBuildingDetail, toPublicRentalDataset } from './public-dataset';
 import type { Agent, Building, ChangeLogEntry, Contact, DataSource, NearbyPoi, Photo, PoiType, RentalDataset, RentalUnit, School, TrustInfo, TrustStatus } from './types';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -451,51 +452,17 @@ export const getRentalDataset = cache(async (): Promise<RentalDataset> => {
   };
 });
 
-function stripUnitForPublic(unit: RentalUnit): RentalUnit {
-  return {
-    ...unit,
-    contactId: '',
-    updatedBy: '',
-    internalNotes: '',
-    trust: {
-      ...unit.trust,
-      contactId: '',
-      updatedBy: '',
-      internalNotes: ''
-    }
-  };
-}
-
-function stripBuildingForPublic(building: Building, units: RentalUnit[]): Building {
-  return {
-    ...building,
-    contactId: '',
-    updatedBy: '',
-    internalNotes: '',
-    trust: {
-      ...building.trust,
-      contactId: '',
-      updatedBy: '',
-      internalNotes: ''
-    },
-    units: units.filter(unit => unit.buildingId === building.id)
-  };
-}
-
-function toPublicDataset(dataset: RentalDataset): RentalDataset {
-  const units = dataset.units.map(stripUnitForPublic);
-  return {
-    ...dataset,
-    buildings: dataset.buildings.map(building => stripBuildingForPublic(building, units)),
-    units,
-    contacts: [],
-    agents: [],
-    dataSources: dataset.dataSources.map(source => ({ ...source, notes: '' })),
-    changeLog: []
-  };
-}
-
 export const getPublicRentalDataset = cache(async (): Promise<RentalDataset> => {
   const dataset = await getRentalDataset();
-  return toPublicDataset(dataset);
+  return toPublicRentalDataset(dataset);
+});
+
+export const getInitialPublicRentalDataset = cache(async (): Promise<RentalDataset> => {
+  const dataset = await getRentalDataset();
+  return toInitialRentalDataset(dataset);
+});
+
+export const getPublicBuildingDetail = cache(async (buildingId: string): Promise<Building | null> => {
+  const dataset = await getRentalDataset();
+  return toPublicBuildingDetail(dataset, buildingId);
 });

@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { localFileStoreAllowed } from './server-store';
 
 export const SHEET_NAMES = [
   'buildings',
@@ -24,6 +25,13 @@ export type GoogleSheetCache = {
 
 const STORE_DIR = path.join(process.cwd(), '.data');
 const CACHE_PATH = path.join(STORE_DIR, 'google-sheets-cache.json');
+let memoryCache: GoogleSheetCache | null = null;
+
+// Cache minted OAuth access tokens per scope so we don't sign a fresh JWT and
+// round-trip to Google on every Sheet read/write. Tokens last ~1h; we refresh
+// a minute early.
+type CachedToken = { token: string; expiresAt: number };
+const tokenCache = new Map<string, CachedToken>();
 
 function normalizePrivateKey(key: string) {
   return key.replace(/\\n/g, '\n');
@@ -37,7 +45,7 @@ function base64Url(input: string | Buffer) {
     .replace(/\//g, '_');
 }
 
-function valuesToRows(values: string[][] | undefined): Record<string, string>[] {
+export function rowsFromValues(values: string[][] | undefined): Record<string, string>[] {
   if (!values?.length) return [];
   const headers = values[0].map(header => String(header || '').trim());
   return values.slice(1)
@@ -51,16 +59,23 @@ function valuesToRows(values: string[][] | undefined): Record<string, string>[] 
     });
 }
 
-async function getServiceAccountAccessToken() {
+export function googleServiceAccountConfigured() {
+  return Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY);
+}
+
+export async function getGoogleSheetsAccessToken(scope = 'https://www.googleapis.com/auth/spreadsheets.readonly') {
   const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
   const privateKey = process.env.GOOGLE_PRIVATE_KEY;
   if (!email || !privateKey) return '';
+
+  const cached = tokenCache.get(scope);
+  if (cached && cached.expiresAt > Date.now() + 60_000) return cached.token;
 
   const now = Math.floor(Date.now() / 1000);
   const header = { alg: 'RS256', typ: 'JWT' };
   const claim = {
     iss: email,
-    scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
+    scope,
     aud: 'https://oauth2.googleapis.com/token',
     exp: now + 3600,
     iat: now
@@ -86,14 +101,19 @@ async function getServiceAccountAccessToken() {
     throw new Error(`Google service account auth failed: ${response.status} ${text.slice(0, 180)}`);
   }
 
-  const data = await response.json() as { access_token?: string };
-  return data.access_token || '';
+  const data = await response.json() as { access_token?: string; expires_in?: number };
+  const token = data.access_token || '';
+  if (token) {
+    const ttlMs = (data.expires_in ? data.expires_in : 3600) * 1000;
+    tokenCache.set(scope, { token, expiresAt: Date.now() + ttlMs });
+  }
+  return token;
 }
 
 export function googleSheetsConfigured() {
   return Boolean(process.env.GOOGLE_SHEET_ID && (
     process.env.GOOGLE_SHEETS_API_KEY ||
-    (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY)
+    googleServiceAccountConfigured()
   ));
 }
 
@@ -107,9 +127,9 @@ export async function fetchGoogleSheetsRows(): Promise<GoogleSheetCache> {
   params.set('majorDimension', 'ROWS');
 
   const headers: HeadersInit = {};
-  const hasServiceAccount = Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY);
+  const hasServiceAccount = googleServiceAccountConfigured();
   if (hasServiceAccount) {
-    const token = await getServiceAccountAccessToken();
+    const token = await getGoogleSheetsAccessToken();
     if (!token) throw new Error('Google service account credentials are not configured.');
     headers.Authorization = `Bearer ${token}`;
   } else {
@@ -135,7 +155,7 @@ export async function fetchGoogleSheetsRows(): Promise<GoogleSheetCache> {
   });
   data.valueRanges?.forEach((range, index) => {
     const name = SHEET_NAMES[index];
-    if (name) sheets[name] = valuesToRows(range.values);
+    if (name) sheets[name] = rowsFromValues(range.values);
   });
 
   return {
@@ -147,6 +167,8 @@ export async function fetchGoogleSheetsRows(): Promise<GoogleSheetCache> {
 }
 
 export async function saveGoogleSheetCache(cache: GoogleSheetCache) {
+  memoryCache = cache;
+  if (!localFileStoreAllowed()) return;
   await fs.mkdir(STORE_DIR, { recursive: true });
   await fs.writeFile(CACHE_PATH, JSON.stringify(cache, null, 2), 'utf8');
 }
@@ -158,6 +180,16 @@ export async function syncGoogleSheetsToCache() {
 }
 
 export async function readGoogleSheetCache(): Promise<GoogleSheetCache | null> {
+  if (!localFileStoreAllowed()) {
+    if (memoryCache) return memoryCache;
+    if (!googleSheetsConfigured()) return null;
+    try {
+      memoryCache = await fetchGoogleSheetsRows();
+      return memoryCache;
+    } catch {
+      return null;
+    }
+  }
   try {
     const raw = await fs.readFile(CACHE_PATH, 'utf8');
     const parsed = JSON.parse(raw) as GoogleSheetCache;

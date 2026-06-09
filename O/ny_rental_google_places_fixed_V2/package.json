@@ -10,6 +10,7 @@
     "lint": "next lint",
     "pull:sheets": "node scripts/pull-google-sheets.mjs",
     "setup:sheets": "node scripts/setup-google-sheets.mjs",
+    "test": "node scripts/run-tests.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

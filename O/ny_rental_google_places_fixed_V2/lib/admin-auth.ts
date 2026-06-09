@@ -4,12 +4,22 @@ export const ADMIN_COOKIE_NAME = 'nyrm_admin_session';
 
 const SESSION_MAX_AGE_SECONDS = 60 * 60 * 12;
 
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
+
 function adminSecret() {
-  return process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_PASSWORD || 'nyrm-dev-admin-secret';
+  if (process.env.ADMIN_SESSION_SECRET) return process.env.ADMIN_SESSION_SECRET;
+  if (!isProduction()) return process.env.ADMIN_PASSWORD || 'nyrm-dev-admin-secret';
+  return '';
+}
+
+export function adminSecretConfigured() {
+  return Boolean(adminSecret());
 }
 
 export function adminPassword() {
-  return process.env.ADMIN_PASSWORD || '123456';
+  return process.env.ADMIN_PASSWORD || (isProduction() ? '' : '123456');
 }
 
 function signPayload(payload: string) {
@@ -24,6 +34,7 @@ function timingSafeEqualText(a: string, b: string) {
 }
 
 export function verifyAdminPassword(input: string) {
+  if (!adminPassword()) return false;
   return timingSafeEqualText(input, adminPassword());
 }
 
@@ -36,6 +47,7 @@ export function createAdminSessionToken() {
 }
 
 export function verifyAdminSessionToken(token?: string) {
+  if (!adminSecretConfigured()) return false;
   if (!token) return false;
   const [payload, signature] = token.split('.');
   if (!payload || !signature) return false;

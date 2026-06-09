@@ -7,4 +7,12 @@ node_modules
 data/backups/
 out
 dist
+.test-dist
 *.log
+
+# TypeScript incremental build info (build artifact)
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Local Claude Code config
+.claude/

@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { getRentalDataset } from '@/lib/data';
 import { distanceMeters } from '@/lib/format';
+import { localFileStoreAllowed } from '@/lib/server-store';
 import type { NearbyPoi, PoiType } from '@/lib/types';
 
 const allowedTypes = new Set<PoiType>(['restaurant', 'grocery', 'coffee', 'subway']);
@@ -12,6 +13,13 @@ const googleTypes: Record<PoiType, string[]> = {
   coffee: ['cafe', 'coffee_shop'],
   subway: ['subway_station']
 };
+
+// Per-instance cache so production (where local file writes are disabled) still
+// benefits from a Places refresh. Best-effort on serverless; upgrade to Vercel KV
+// for a shared, durable cache (see DEVELOPMENT_ROADMAP.md Phase 4.1).
+type MemoryCacheEntry = { at: number; rows: NearbyPoi[] };
+const memoryCache = new Map<string, MemoryCacheEntry>();
+const MEMORY_TTL_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
 
 type GooglePlace = {
   id?: string;
@@ -23,6 +31,7 @@ type GooglePlace = {
 };
 
 async function readCachedJson(buildingId: string, type: PoiType): Promise<NearbyPoi[] | null> {
+  if (!localFileStoreAllowed()) return null;
   const filePath = path.join(process.cwd(), '.places-cache', `${buildingId}_${type}.json`);
   try {
     const raw = await fs.readFile(filePath, 'utf8');
@@ -34,6 +43,7 @@ async function readCachedJson(buildingId: string, type: PoiType): Promise<Nearby
 }
 
 async function writeCachedJson(buildingId: string, type: PoiType, rows: NearbyPoi[]) {
+  if (!localFileStoreAllowed()) return;
   const dir = path.join(process.cwd(), '.places-cache');
   await fs.mkdir(dir, { recursive: true });
   await fs.writeFile(path.join(dir, `${buildingId}_${type}.json`), JSON.stringify(rows, null, 2), 'utf8');
@@ -55,8 +65,14 @@ export async function GET(request: Request) {
   if (!building) return NextResponse.json({ error: 'Building not found' }, { status: 404 });
 
   const fileCached = building.pois.filter(poi => poi.type === type).slice(0, 12);
-  const jsonCached = await readCachedJson(buildingId, type);
+  const memKey = `${buildingId}_${type}`;
+  const memHit = memoryCache.get(memKey);
+  const memValid = memHit && (Date.now() - memHit.at) < MEMORY_TTL_MS;
   if (!refresh || !apiKey) {
+    if (memValid && memHit) {
+      return NextResponse.json({ source: 'memory_cache', apiKeyExposed: false, results: memHit.rows });
+    }
+    const jsonCached = await readCachedJson(buildingId, type);
     return NextResponse.json({
       source: jsonCached ? 'server_json_cache' : 'csv_cache',
       apiKeyExposed: false,
@@ -105,6 +121,7 @@ export async function GET(request: Request) {
     sourceLastChecked: new Date().toISOString().slice(0, 10)
   }));
 
+  memoryCache.set(memKey, { at: Date.now(), rows: results });
   await writeCachedJson(buildingId, type, results);
   return NextResponse.json({ source: 'google_places_server_refresh', apiKeyExposed: false, results });
 }

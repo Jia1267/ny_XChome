@@ -1,0 +1,62 @@
+name: CI (ny_rental V2)
+
+# This repo holds several projects. This workflow only covers
+# O/ny_rental_google_places_fixed_V2 and runs when that subtree changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'O/ny_rental_google_places_fixed_V2/**'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    paths:
+      - 'O/ny_rental_google_places_fixed_V2/**'
+      - '.github/workflows/ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Lint, typecheck, test, build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: O/ny_rental_google_places_fixed_V2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: O/ny_rental_google_places_fixed_V2/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          # Placeholder values so the production build never depends on secrets.
+          # Server-only keys (Google Sheets/Places, admin) are intentionally absent;
+          # the app falls back to local CSV and disabled writes at build time.
+          NEXT_PUBLIC_SITE_URL: https://example.com
+          ALLOWED_APP_ORIGINS: https://example.com
+
+      # Advisory only: surfaces high-severity production dependency issues
+      # without failing the build. Captures the audit baseline on each run.
+      - name: Dependency audit (advisory)
+        run: npm audit --omit=dev --audit-level=high
+        continue-on-error: true

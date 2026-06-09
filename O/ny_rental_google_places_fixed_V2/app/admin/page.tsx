@@ -5,7 +5,9 @@ import { AdminLogin } from '@/components/AdminLogin';
 import { ADMIN_COOKIE_NAME, verifyAdminSessionToken } from '@/lib/admin-auth';
 import { getRentalDataset } from '@/lib/data';
 import { googleSheetsConfigured, readGoogleSheetCache, SHEET_NAMES } from '@/lib/google-sheets';
-import { readJsonArray } from '@/lib/server-store';
+import { getStorageDiagnostics, googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
+import { localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
+import { productionEnvProblems } from '@/lib/env';
 import type { AnalyticsEvent, Building, Lead, RentalUnit, TrustStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -59,6 +61,32 @@ function sourceLink(name: string, url: string) {
   return <a href={url} target="_blank" rel="noreferrer">{label}</a>;
 }
 
+async function readOperationalData() {
+  if (googleSheetsWritableConfigured()) {
+    try {
+      const [events, leads] = await Promise.all([
+        readAnalyticsEventsFromGoogleSheet(),
+        readLeadsFromGoogleSheet()
+      ]);
+      return { events, leads, source: 'google_sheets' as const };
+    } catch {
+      // Fall through to local development storage if Sheet reads are temporarily unavailable.
+    }
+  }
+
+  const [events, leads] = await Promise.all([
+    readJsonArray<AnalyticsEvent>('analytics-events.json'),
+    readJsonArray<Lead>('leads.json')
+  ]);
+  return { events, leads, source: localFileStoreAllowed() ? 'local_file' as const : 'unconfigured' as const };
+}
+
+function storageLabel(source: 'google_sheets' | 'local_file' | 'unconfigured') {
+  if (source === 'google_sheets') return 'Google Sheets (live)';
+  if (source === 'local_file') return 'Local dev file (.data)';
+  return 'NOT configured — events are discarded';
+}
+
 function ConfidenceRow({ item, kind }: { item: Building | RentalUnit; kind: 'building' | 'unit' }) {
   const title = kind === 'building'
     ? (item as Building).name
@@ -89,12 +117,16 @@ export default async function AdminPage() {
     return <AdminLogin />;
   }
 
-  const [dataset, events, leads, sheetCache] = await Promise.all([
+  const [dataset, operationalData, sheetCache, storage] = await Promise.all([
     getRentalDataset(),
-    readJsonArray<AnalyticsEvent>('analytics-events.json'),
-    readJsonArray<Lead>('leads.json'),
-    readGoogleSheetCache()
+    readOperationalData(),
+    readGoogleSheetCache(),
+    getStorageDiagnostics()
   ]);
+  const { events, leads, source: operationalSource } = operationalData;
+  const envProblems = productionEnvProblems();
+  const writesLikelyBroken = storage.configured && storage.error === null && storage.analyticsRows === 0 && events.length === 0;
+  const tabsMissing = Boolean(storage.error && /parse range/i.test(storage.error));
 
   const pageViews = countEvents(events, 'page_view');
   const contactClicks = countEvents(events, 'contact_click');
@@ -134,6 +166,20 @@ export default async function AdminPage() {
         <AdminActions />
       </header>
 
+      {envProblems.length > 0 && (
+        <section className="adminNotice" style={{ borderLeft: '4px solid #d33', background: '#fff5f5' }}>
+          <div>
+            <strong>⚠ Configuration problems</strong>
+            <span>These must be fixed in your Vercel environment variables, otherwise metrics stay at 0.</span>
+          </div>
+          {envProblems.map(problem => (
+            <div key={problem}>
+              <span>{problem}</span>
+            </div>
+          ))}
+        </section>
+      )}
+
       <section className="adminNotice">
         <div>
           <strong>Data source</strong>
@@ -148,9 +194,46 @@ export default async function AdminPage() {
           <span>{dataset.summary.sheetLastSyncedAt || sheetCache?.syncedAt || 'Not synced yet'}</span>
         </div>
         <div>
+          <strong>Leads / analytics storage</strong>
+          <span>{storageLabel(operationalSource)}</span>
+        </div>
+        <div>
           <strong>Public safety</strong>
           <span>Frontend receives no internal notes, agents, contacts, or change log.</span>
         </div>
+      </section>
+
+      <section className="adminNotice" style={storage.error || writesLikelyBroken ? { borderLeft: '4px solid #d33', background: '#fff5f5' } : undefined}>
+        <div>
+          <strong>Storage diagnostics</strong>
+          <span>Live check of the private Sheet write path.</span>
+        </div>
+        <div>
+          <strong>analytics_events rows</strong>
+          <span>{storage.configured ? (storage.analyticsRows ?? '—') : 'Sheets not configured'}</span>
+        </div>
+        <div>
+          <strong>leads rows</strong>
+          <span>{storage.configured ? (storage.leadRows ?? '—') : 'Sheets not configured'}</span>
+        </div>
+        {storage.error && (
+          <div>
+            <strong>Read error</strong>
+            <span>{storage.error}</span>
+          </div>
+        )}
+        {tabsMissing && (
+          <div>
+            <strong>Likely cause</strong>
+            <span>The <b>analytics_events</b> / <b>leads</b> tabs do not exist yet. Click “Test storage write” above — it auto-creates both tabs with headers. After that, browsing the site records events automatically.</span>
+          </div>
+        )}
+        {writesLikelyBroken && (
+          <div>
+            <strong>Likely cause</strong>
+            <span>Reads work but the tab is empty after browsing — writes are failing. Use “Test storage write” above; if it fails with 403, share the Sheet with the service account as <b>Editor</b>.</span>
+          </div>
+        )}
       </section>
 
       <section className="adminMetricGrid">
