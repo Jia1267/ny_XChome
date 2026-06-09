@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { getRentalDataset } from '@/lib/data';
 import { distanceMeters } from '@/lib/format';
+import { localFileStoreAllowed } from '@/lib/server-store';
 import type { NearbyPoi, PoiType } from '@/lib/types';
 
 const allowedTypes = new Set<PoiType>(['restaurant', 'grocery', 'coffee', 'subway']);
@@ -23,6 +24,7 @@ type GooglePlace = {
 };
 
 async function readCachedJson(buildingId: string, type: PoiType): Promise<NearbyPoi[] | null> {
+  if (!localFileStoreAllowed()) return null;
   const filePath = path.join(process.cwd(), '.places-cache', `${buildingId}_${type}.json`);
   try {
     const raw = await fs.readFile(filePath, 'utf8');
@@ -34,6 +36,7 @@ async function readCachedJson(buildingId: string, type: PoiType): Promise<Nearby
 }
 
 async function writeCachedJson(buildingId: string, type: PoiType, rows: NearbyPoi[]) {
+  if (!localFileStoreAllowed()) return;
   const dir = path.join(process.cwd(), '.places-cache');
   await fs.mkdir(dir, { recursive: true });
   await fs.writeFile(path.join(dir, `${buildingId}_${type}.json`), JSON.stringify(rows, null, 2), 'utf8');

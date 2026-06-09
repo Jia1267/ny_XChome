@@ -1977,8 +1977,22 @@ a {
     display: none;
   }
 
-  .modeTabs.withNearby.nearbyOpen {
-    width: min(388px, calc(100vw - 24px));
+  .mapShell .modeTabs.withNearby.mobileOpen {
+    left: 12px;
+    right: auto;
+    width: calc(100vw - 24px);
+  }
+
+  .mapShell .modeTabs.withNearby.mobileCollapsed {
+    left: 12px;
+    right: auto;
+    width: calc(100vw - 24px);
+  }
+
+  .mapShell .modeTabs.withNearby.nearbyOpen {
+    left: 12px;
+    right: auto;
+    width: calc(100vw - 24px);
   }
 
   .nearbyMenu {
@@ -2365,6 +2379,61 @@ a {
   .analyticsPanel {
     width: calc(100vw - 20px);
     padding: 20px;
+  }
+
+  .modalBackdrop:has(.leadModal) {
+    align-items: end;
+    place-items: end center;
+    padding: 12px 10px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(15, 23, 42, 0.22);
+  }
+
+  .leadModal {
+    width: min(420px, calc(100vw - 20px));
+    max-height: min(78svh, 620px);
+    padding: 18px 18px 14px;
+    border-radius: 8px;
+  }
+
+  .leadModal h2 {
+    margin-right: 46px;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  .leadModal .formGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 14px 0 10px;
+  }
+
+  .leadModal .formGrid label {
+    min-width: 0;
+  }
+
+  .leadModal .formGrid input,
+  .leadModal .formGrid textarea {
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  .leadModal .formGrid textarea {
+    min-height: 58px;
+  }
+
+  .leadModal .finePrint {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .leadModal .actionRow {
+    position: sticky;
+    bottom: -14px;
+    gap: 8px;
+    margin: 0 -18px;
+    padding: 10px 18px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), var(--panel-strong) 34%);
   }
 
   .legalPage {

@@ -1,14 +1,20 @@
 import { NextResponse } from 'next/server';
 import { verifyAdminRequest } from '@/lib/admin-auth';
-import { appendJsonArray, readJsonArray } from '@/lib/server-store';
+import { appendJsonArray, localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
+import { appendLeadToGoogleSheet, googleSheetsWritableConfigured, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
+import { missingPersistentStoreError } from '@/lib/persistence-policy';
 import type { Lead } from '@/lib/types';
 
 export async function GET(request: Request) {
   if (!verifyAdminRequest(request)) {
     return NextResponse.json({ error: 'Admin authorization required' }, { status: 401 });
   }
+  if (googleSheetsWritableConfigured()) {
+    const leads = await readLeadsFromGoogleSheet();
+    return NextResponse.json({ leads, source: 'google_sheets' });
+  }
   const leads = await readJsonArray<Lead>('leads.json');
-  return NextResponse.json({ leads });
+  return NextResponse.json({ leads, source: localFileStoreAllowed() ? 'local_file' : 'unconfigured' });
 }
 
 export async function POST(request: Request) {
@@ -32,6 +38,22 @@ export async function POST(request: Request) {
     source: body.source || 'site_lead_form'
   };
 
-  await appendJsonArray<Lead>('leads.json', lead);
-  return NextResponse.json({ ok: true, lead });
+  const storedIn: string[] = [];
+
+  if (googleSheetsWritableConfigured()) {
+    await appendLeadToGoogleSheet(lead);
+    storedIn.push('google_sheets');
+  }
+
+  if (localFileStoreAllowed()) {
+    await appendJsonArray<Lead>('leads.json', lead);
+    storedIn.push('local_file');
+  }
+
+  const storageError = missingPersistentStoreError('lead', storedIn);
+  if (storageError) {
+    return NextResponse.json({ error: storageError.message }, { status: storageError.status });
+  }
+
+  return NextResponse.json({ ok: true, lead, storedIn });
 }

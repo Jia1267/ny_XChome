@@ -7,4 +7,5 @@ node_modules
 data/backups/
 out
 dist
+.test-dist
 *.log

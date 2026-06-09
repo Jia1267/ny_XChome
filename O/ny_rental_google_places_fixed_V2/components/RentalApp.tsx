@@ -74,7 +74,7 @@ const copy = {
     close: 'Close',
     backToBuilding: 'Back to building',
     leadTitle: 'Ask availability',
-    leadFine: 'By submitting, you agree to be contacted about this rental inquiry. This trial stores leads locally or in the configured server store.',
+    leadFine: 'By submitting, you agree to be contacted about this rental inquiry. Production leads are sent to the configured private Google Sheet.',
     name: 'Name',
     wechat: 'WeChat',
     school: 'School',
@@ -406,6 +406,8 @@ export function RentalApp({ dataset }: RentalAppProps) {
   const [mobileModeOpen, setMobileModeOpen] = useState(false);
   const [mobileCommuteOpen, setMobileCommuteOpen] = useState(false);
   const [nearbyMenuOpen, setNearbyMenuOpen] = useState(false);
+  const [buildingDetails, setBuildingDetails] = useState<Record<string, Building>>({});
+  const [loadingBuildingId, setLoadingBuildingId] = useState('');
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [leads, setLeads] = useState<Lead[]>([]);
 
@@ -443,22 +445,35 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const buildingId = params.get('building') || '';
+    const buildingPathMatch = window.location.pathname.match(/^\/buildings\/([^/?#]+)/);
+    const buildingId = params.get('building') || (buildingPathMatch ? decodeURIComponent(buildingPathMatch[1]) : '');
     const unitId = params.get('unit') || '';
     if (buildingId) setSelectedBuildingId(buildingId);
     if (unitId) setSelectedUnitId(unitId);
     if (buildingId || unitId) setDetailStage(defaultDetailStageForViewport());
   }, []);
 
+  const loadedBuildings = useMemo(() => Object.values(buildingDetails), [buildingDetails]);
+  const allBuildings = useMemo(() => {
+    const byId = new Map(dataset.buildings.map(building => [building.id, building]));
+    loadedBuildings.forEach(building => byId.set(building.id, building));
+    return [...byId.values()];
+  }, [dataset.buildings, loadedBuildings]);
+  const allUnits = useMemo(() => {
+    const byId = new Map(dataset.units.map(unit => [unit.id, unit]));
+    loadedBuildings.flatMap(building => building.units).forEach(unit => byId.set(unit.id, unit));
+    return [...byId.values()];
+  }, [dataset.units, loadedBuildings]);
+
   const selectedBuilding = useMemo(
-    () => dataset.buildings.find(building => building.id === selectedBuildingId) || null,
-    [dataset.buildings, selectedBuildingId]
+    () => buildingDetails[selectedBuildingId] || dataset.buildings.find(building => building.id === selectedBuildingId) || null,
+    [buildingDetails, dataset.buildings, selectedBuildingId]
   );
 
   const selectedUnit = useMemo(() => {
     if (!selectedUnitId) return null;
-    return dataset.units.find(unit => unit.id === selectedUnitId) || null;
-  }, [dataset.units, selectedUnitId]);
+    return allUnits.find(unit => unit.id === selectedUnitId) || null;
+  }, [allUnits, selectedUnitId]);
 
   const filteredBuildings = useMemo(() => {
     if (selectedSchoolId === 'all' || commuteMode === 'none') return dataset.buildings;
@@ -467,6 +482,27 @@ export function RentalApp({ dataset }: RentalAppProps) {
     const radius = commuteRadiusMeters[commuteMode];
     return dataset.buildings.filter(building => distanceMeters(school, building) <= radius);
   }, [dataset.buildings, dataset.schools, selectedSchoolId, commuteMode]);
+
+  const loadBuildingDetail = useCallback(async (buildingId: string) => {
+    if (!buildingId || buildingDetails[buildingId]) return;
+    setLoadingBuildingId(buildingId);
+    try {
+      const response = await fetch(`/api/buildings/${encodeURIComponent(buildingId)}`, { cache: 'no-store' });
+      if (!response.ok) return;
+      const data = await response.json() as { building?: Building };
+      if (data.building) {
+        setBuildingDetails(current => ({ ...current, [buildingId]: data.building as Building }));
+      }
+    } finally {
+      setLoadingBuildingId(current => (current === buildingId ? '' : current));
+    }
+  }, [buildingDetails]);
+
+  useEffect(() => {
+    if (selectedBuildingId) {
+      loadBuildingDetail(selectedBuildingId);
+    }
+  }, [loadBuildingDetail, selectedBuildingId]);
 
   const activePois = useMemo(() => {
     if (selectedBuilding && activePoiType) return nearbyPoisFor(selectedBuilding, activePoiType, 18);
@@ -506,7 +542,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
   }, [selectedSchoolId, track]);
 
   function openUnit(unitId: string) {
-    const unit = dataset.units.find(item => item.id === unitId);
+    const unit = allUnits.find(item => item.id === unitId);
     setSelectedUnitId(unitId);
     setDetailStage(defaultDetailStageForViewport());
     setNearbyMenuOpen(false);
@@ -527,15 +563,15 @@ export function RentalApp({ dataset }: RentalAppProps) {
       const next = [...current, unitId].slice(-2);
       return next;
     });
-    const unit = dataset.units.find(item => item.id === unitId);
+    const unit = allUnits.find(item => item.id === unitId);
     track('compare_add', { unitId, buildingId: unit?.buildingId });
   }
 
   async function shareCurrent() {
     const params = new URLSearchParams();
-    if (selectedBuildingId) params.set('building', selectedBuildingId);
     if (selectedUnitId) params.set('unit', selectedUnitId);
-    const url = `${window.location.origin}${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}`;
+    const path = selectedBuildingId ? `/buildings/${encodeURIComponent(selectedBuildingId)}` : window.location.pathname;
+    const url = `${window.location.origin}${path}${params.toString() ? `?${params.toString()}` : ''}`;
     track('share_click', { buildingId: selectedBuildingId, unitId: selectedUnitId });
     if (navigator.share) {
       await navigator.share({ title: selectedUnit ? unitTitle(selectedUnit) : selectedBuilding?.name || 'NY Rental Map', url }).catch(() => undefined);
@@ -718,6 +754,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
             unit={selectedUnit}
             language={language}
             stage={detailStage}
+            loading={loadingBuildingId === selectedBuilding.id}
             t={t}
             onClose={() => { setSelectedBuildingId(''); setSelectedUnitId(''); setDetailStage('full'); setNearbyMenuOpen(false); }}
             onBack={() => setSelectedUnitId('')}
@@ -731,8 +768,8 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
         {!!compareIds.length && (
           <CompareDock
-            units={compareIds.map(id => dataset.units.find(unit => unit.id === id)).filter((unit): unit is RentalUnit => Boolean(unit))}
-            buildings={dataset.buildings}
+            units={compareIds.map(id => allUnits.find(unit => unit.id === id)).filter((unit): unit is RentalUnit => Boolean(unit))}
+            buildings={allBuildings}
             language={language}
             t={t}
             onRemove={unitId => setCompareIds(ids => ids.filter(id => id !== unitId))}
@@ -754,7 +791,8 @@ export function RentalApp({ dataset }: RentalAppProps) {
 
       {leadContext && (
         <LeadModal
-          dataset={dataset}
+          building={selectedBuilding || allBuildings.find(item => item.id === leadContext.buildingId) || null}
+          unit={selectedUnit || allUnits.find(item => item.id === leadContext.unitId) || null}
           context={leadContext}
           t={t}
           onCancel={() => setLeadContext(null)}
@@ -779,6 +817,7 @@ function DetailPanel({
   unit,
   language,
   stage,
+  loading,
   t,
   onClose,
   onBack,
@@ -792,6 +831,7 @@ function DetailPanel({
   unit: RentalUnit | null;
   language: Language;
   stage: DetailStage;
+  loading: boolean;
   t: (key: CopyKey) => string;
   onClose: () => void;
   onBack: () => void;
@@ -829,7 +869,7 @@ function DetailPanel({
       {unit ? (
         <UnitDetail building={building} unit={unit} language={language} t={t} onCompare={onCompare} onLead={onLead} />
       ) : (
-        <BuildingDetail building={building} t={t} onOpenUnit={onOpenUnit} onCompare={onCompare} onLead={onLead} />
+        <BuildingDetail building={building} loading={loading} t={t} onOpenUnit={onOpenUnit} onCompare={onCompare} onLead={onLead} />
       )}
     </aside>
   );
@@ -870,8 +910,9 @@ function MapLegend({ t }: { t: (key: CopyKey) => string }) {
   );
 }
 
-function BuildingDetail({ building, t, onOpenUnit, onCompare, onLead }: {
+function BuildingDetail({ building, loading, t, onOpenUnit, onCompare, onLead }: {
   building: Building;
+  loading: boolean;
   t: (key: CopyKey) => string;
   onOpenUnit: (unitId: string) => void;
   onCompare: (unitId: string) => void;
@@ -915,6 +956,22 @@ function BuildingDetail({ building, t, onOpenUnit, onCompare, onLead }: {
       <section>
         <h3>{t('availableUnits')}</h3>
         <div className="unitList">
+          {loading && !building.units.length && (
+            <article className="unitCard loading">
+              <div>
+                <strong>Loading details...</strong>
+                <p>Units, photos, and nearby POIs are loading on demand.</p>
+              </div>
+            </article>
+          )}
+          {!loading && !building.units.length && (
+            <article className="unitCard loading">
+              <div>
+                <strong>No units loaded</strong>
+                <p>Try again in a moment.</p>
+              </div>
+            </article>
+          )}
           {building.units.map(unit => (
             <article key={unit.id} className="unitCard" onClick={() => onOpenUnit(unit.id)}>
               <div>
@@ -1272,16 +1329,14 @@ function CompareFullCard({ building, unit, language, t, onRemove, onLead }: {
   );
 }
 
-function LeadModal({ dataset, context, t, onCancel, onSaved }: {
-  dataset: RentalDataset;
+function LeadModal({ building, unit, context, t, onCancel, onSaved }: {
+  building: Building | null;
+  unit: RentalUnit | null;
   context: { buildingId?: string; unitId?: string };
   t: (key: CopyKey) => string;
   onCancel: () => void;
   onSaved: (lead: Lead) => void;
 }) {
-  const building = dataset.buildings.find(item => item.id === context.buildingId);
-  const unit = dataset.units.find(item => item.id === context.unitId);
-
   async function submit(formData: FormData) {
     const lead: Lead = {
       id: `lead_${Date.now()}`,

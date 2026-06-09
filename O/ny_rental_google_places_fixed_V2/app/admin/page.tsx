@@ -5,6 +5,7 @@ import { AdminLogin } from '@/components/AdminLogin';
 import { ADMIN_COOKIE_NAME, verifyAdminSessionToken } from '@/lib/admin-auth';
 import { getRentalDataset } from '@/lib/data';
 import { googleSheetsConfigured, readGoogleSheetCache, SHEET_NAMES } from '@/lib/google-sheets';
+import { googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet, readLeadsFromGoogleSheet } from '@/lib/google-sheets-write';
 import { readJsonArray } from '@/lib/server-store';
 import type { AnalyticsEvent, Building, Lead, RentalUnit, TrustStatus } from '@/lib/types';
 
@@ -59,6 +60,26 @@ function sourceLink(name: string, url: string) {
   return <a href={url} target="_blank" rel="noreferrer">{label}</a>;
 }
 
+async function readOperationalData() {
+  if (googleSheetsWritableConfigured()) {
+    try {
+      const [events, leads] = await Promise.all([
+        readAnalyticsEventsFromGoogleSheet(),
+        readLeadsFromGoogleSheet()
+      ]);
+      return { events, leads };
+    } catch {
+      // Fall through to local development storage if Sheet reads are temporarily unavailable.
+    }
+  }
+
+  const [events, leads] = await Promise.all([
+    readJsonArray<AnalyticsEvent>('analytics-events.json'),
+    readJsonArray<Lead>('leads.json')
+  ]);
+  return { events, leads };
+}
+
 function ConfidenceRow({ item, kind }: { item: Building | RentalUnit; kind: 'building' | 'unit' }) {
   const title = kind === 'building'
     ? (item as Building).name
@@ -89,12 +110,12 @@ export default async function AdminPage() {
     return <AdminLogin />;
   }
 
-  const [dataset, events, leads, sheetCache] = await Promise.all([
+  const [dataset, operationalData, sheetCache] = await Promise.all([
     getRentalDataset(),
-    readJsonArray<AnalyticsEvent>('analytics-events.json'),
-    readJsonArray<Lead>('leads.json'),
+    readOperationalData(),
     readGoogleSheetCache()
   ]);
+  const { events, leads } = operationalData;
 
   const pageViews = countEvents(events, 'page_view');
   const contactClicks = countEvents(events, 'contact_click');

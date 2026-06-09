@@ -10,7 +10,9 @@ const SHEET_NAMES = [
   'contacts',
   'agents',
   'data_sources',
-  'change_log'
+  'change_log',
+  'leads',
+  'analytics_events'
 ];
 
 const TRUST_FIELDS = [
@@ -515,6 +517,37 @@ async function buildTables() {
         'notes'
       ],
       rows: changeLog
+    },
+    leads: {
+      headers: [
+        'id',
+        'createdAt',
+        'name',
+        'wechat',
+        'school',
+        'budget',
+        'moveInDate',
+        'interestedUnit',
+        'notes',
+        'buildingId',
+        'unitId',
+        'source'
+      ],
+      rows: []
+    },
+    analytics_events: {
+      headers: [
+        'id',
+        'createdAt',
+        'type',
+        'buildingId',
+        'unitId',
+        'schoolId',
+        'budget',
+        'source',
+        'metadata'
+      ],
+      rows: []
     }
   };
 }
@@ -556,6 +589,20 @@ async function writeSheet(token, sheetName, table) {
   });
 }
 
+async function ensureHeaderOnlySheet(token, sheetName, table) {
+  const response = await sheetsFetch(token, `/values/${encodeURIComponent(sheetRange(sheetName, 'A1:ZZ1'))}`, {
+    method: 'GET'
+  }).catch(() => null);
+  if (response?.values?.[0]?.length) return;
+  await sheetsFetch(token, `/values/${encodeURIComponent(sheetRange(sheetName, 'A1'))}?valueInputOption=RAW`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      majorDimension: 'ROWS',
+      values: [table.headers]
+    })
+  });
+}
+
 async function main() {
   await loadEnvLocal();
   const required = ['GOOGLE_SHEET_ID', 'GOOGLE_SERVICE_ACCOUNT_EMAIL', 'GOOGLE_PRIVATE_KEY'];
@@ -567,9 +614,11 @@ async function main() {
   const token = await getAccessToken();
   const tables = await buildTables();
   const ensured = await ensureSheets(token);
-  for (const sheetName of SHEET_NAMES) {
+  for (const sheetName of SHEET_NAMES.filter((name) => !['leads', 'analytics_events'].includes(name))) {
     await writeSheet(token, sheetName, tables[sheetName]);
   }
+  await ensureHeaderOnlySheet(token, 'leads', tables.leads);
+  await ensureHeaderOnlySheet(token, 'analytics_events', tables.analytics_events);
 
   const summary = Object.fromEntries(
     SHEET_NAMES.map((name) => [name, { rows: tables[name].rows.length, columns: tables[name].headers.length }])

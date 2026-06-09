@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="NY Rental Map">
+  <rect width="1200" height="630" fill="#f6f8fb"/>
+  <rect x="74" y="72" width="1052" height="486" rx="24" fill="#ffffff" stroke="#dbe5f0"/>
+  <path d="M126 504 322 220l172 158 166-226 414 352" fill="none" stroke="#bfdbfe" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="322" cy="220" r="28" fill="#2563eb"/>
+  <circle cx="660" cy="152" r="28" fill="#7c3aed"/>
+  <circle cx="946" cy="384" r="28" fill="#0f8b8d"/>
+  <text x="126" y="180" fill="#0f172a" font-family="Arial, sans-serif" font-size="72" font-weight="800">NY Rental Map</text>
+  <text x="130" y="252" fill="#475569" font-family="Arial, sans-serif" font-size="34">Student apartments near NYC campuses</text>
+  <text x="130" y="448" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="40" font-weight="700">Commute filters · Listing confidence · Direct inquiry</text>
+</svg>
