@@ -27,7 +27,9 @@ export function AdminLogin() {
   return (
     <main className="adminLoginPage">
       <form className="adminLoginCard" onSubmit={submit}>
-        <span>NY Rental Map Admin</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="adminLoginBrand" src="/logo-wordmark.png" alt="UniNest" />
+        <span>Admin</span>
         <h1>Operations panel</h1>
         <p>Private broker-facing dashboard for listing freshness, leads, and data quality.</p>
         <label>

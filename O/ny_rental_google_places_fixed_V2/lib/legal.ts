@@ -23,9 +23,23 @@ export type LegalPage = {
 };
 
 const EFFECTIVE_DATE = 'June 9, 2026';
-const OPERATOR = '[Operator legal name] ("we", "us", "the Operator")';
-const PRIVACY_EMAIL = '[privacy@your-domain.example]';
-const CONTACT_EMAIL = '[contact@your-domain.example]';
+
+// Operator identity is env-driven so real values are configured in ONE place
+// (Vercel env vars / .env.local) instead of edits scattered through this file.
+// When unset, the bracketed placeholders render as-is — visibly unfinished on
+// purpose — and /admin surfaces the missing configuration.
+const OPERATOR_LEGAL_NAME = process.env.OPERATOR_LEGAL_NAME || '[Operator legal name]';
+const OPERATOR = `${OPERATOR_LEGAL_NAME} ("we", "us", "the Operator")`;
+const PRIVACY_EMAIL = process.env.OPERATOR_PRIVACY_EMAIL || '[privacy@your-domain.example]';
+const CONTACT_EMAIL = process.env.OPERATOR_CONTACT_EMAIL || '[contact@your-domain.example]';
+
+export function operatorInfoConfigured(): boolean {
+  return Boolean(
+    process.env.OPERATOR_LEGAL_NAME &&
+    process.env.OPERATOR_PRIVACY_EMAIL &&
+    process.env.OPERATOR_CONTACT_EMAIL
+  );
+}
 
 export const legalPages: LegalPage[] = [
   {

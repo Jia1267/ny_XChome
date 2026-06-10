@@ -3,7 +3,7 @@ import { verifyAdminRequest } from '@/lib/admin-auth';
 import { appendJsonArray, localFileStoreAllowed, readJsonArray } from '@/lib/server-store';
 import { appendAnalyticsEventToGoogleSheet, googleSheetsWritableConfigured, readAnalyticsEventsFromGoogleSheet } from '@/lib/google-sheets-write';
 import { missingPersistentStoreError } from '@/lib/persistence-policy';
-import { clientIp, isAllowedOrigin, rateLimit } from '@/lib/api-guard';
+import { clientIp, isAllowedOrigin, rateLimitShared } from '@/lib/api-guard';
 import { validateAnalyticsEvent } from '@/lib/validation';
 import type { AnalyticsEvent } from '@/lib/types';
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
   // Generous limit: a single active browsing session legitimately fires many
   // events. This only stops abusive floods.
-  const limit = rateLimit(`analytics:${clientIp(request)}`, 600, 5 * 60 * 1000);
+  const limit = await rateLimitShared(`analytics:${clientIp(request)}`, 600, 5 * 60 * 1000);
   if (!limit.ok) {
     return NextResponse.json(
       { error: 'Too many requests' },

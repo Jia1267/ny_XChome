@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="UniNest logo">
+  <!-- UniNest house mark: navy line house, chimney dot forms an "i", golden window -->
+  <g fill="none" stroke="#1F3864" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 56 L60 19 L99 55"/>
+    <path d="M20 56 H30 V84 Q30 96 42 96 H51 V80 A9 9 0 0 1 69 80 V96 H76 Q88 96 88 84 V38"/>
+  </g>
+  <circle cx="88" cy="26" r="5.5" fill="#1F3864"/>
+  <g fill="#D9A441">
+    <rect x="48" y="44" width="8" height="8" rx="1.5"/>
+    <rect x="59" y="44" width="8" height="8" rx="1.5"/>
+    <rect x="48" y="55" width="8" height="8" rx="1.5"/>
+    <rect x="59" y="55" width="8" height="8" rx="1.5"/>
+  </g>
+</svg>

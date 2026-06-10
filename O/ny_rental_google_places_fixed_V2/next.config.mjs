@@ -1,3 +1,5 @@
+import { withSentryConfig } from '@sentry/nextjs';
+
 /** @type {import('next').NextConfig} */
 
 // Applied to every response. CSP is intentionally omitted for now because the
@@ -12,6 +14,10 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  // Next 14 needs the explicit flag for instrumentation.ts (Sentry init).
+  experimental: {
+    instrumentationHook: true
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'media.perchwell.com' },
@@ -34,4 +40,18 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+// Source-map upload to Sentry only happens when SENTRY_AUTH_TOKEN (+ org/project)
+// is configured; without it the wrapper just enables runtime error capture.
+export default withSentryConfig(nextConfig, {
+  silent: true,
+  telemetry: false,
+  // Errors-only on the client: strip tracing/replay/debug code from the bundle
+  // (client tracesSampleRate is 0 — keep these two in sync).
+  bundleSizeOptimizations: {
+    excludeDebugStatements: true,
+    excludeTracing: true,
+    excludeReplayIframe: true,
+    excludeReplayShadowDom: true,
+    excludeReplayWorker: true
+  }
+});

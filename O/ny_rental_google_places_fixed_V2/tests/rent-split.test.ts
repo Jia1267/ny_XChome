@@ -29,6 +29,8 @@ test('calculateWeightedSplit steps down by $200 per tier', () => {
 });
 
 test('getMatchedPrices returns only prices inside the budget', () => {
-  assert.deepEqual(getMatchedPrices([1867, 1667, 1467], 1500, 1700), [1667, 1467]);
+  // 1867 is above max and 1467 is below min — only 1667 lands in [1500, 1700].
+  assert.deepEqual(getMatchedPrices([1867, 1667, 1467], 1500, 1700), [1667]);
+  assert.deepEqual(getMatchedPrices([1867, 1667, 1467], 1400, 1700), [1667, 1467]);
   assert.deepEqual(getMatchedPrices([5000], 1500, 1700), []);
 });

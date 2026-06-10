@@ -5,11 +5,19 @@ with the code — it is the first thing future sessions read.
 
 ## Project
 
-**NY Rental Map V2** — a Next.js (App Router) + React + TypeScript app for discovering
-NYC student rentals near Columbia, NYU, Baruch, and Pratt. Map-first UI with commute
-filters, listing-confidence ("trust") metadata, nearby POIs (Google Places), unit
-comparison, a rent-split calculator, an advanced share-budget filter, a shareable
-listings page, and lead capture. There is a password-gated `/admin` operations panel.
+**UniNest** (repo name: NY Rental Map V2) — a Next.js (App Router) + React + TypeScript
+app for discovering NYC student rentals near Columbia, NYU, Baruch, and Pratt. Map-first
+UI with commute filters, listing-confidence ("trust") metadata, nearby POIs (Google
+Places), unit comparison, a rent-split calculator, an advanced share-budget filter, a
+shareable listings page, and lead capture. There is a password-gated `/admin` operations
+panel.
+
+Brand: user-facing name is **UniNest**. Assets: `public/logo-icon.svg` (SVG recreation
+of the house mark — topbar; `public/favicon.svg` is the navy tile variant),
+`public/logo-wordmark.png` (designer's cursive wordmark, transparent bg — admin login,
+og-image), `public/og-image.png` (composed 1200×630 share card; **PNG, not SVG** —
+WeChat/FB/Twitter don't render SVG og:images). The designer's original wordmark is
+backed up at `.claude/logo-wordmark-original.png`.
 
 Data comes from local CSV in `data/` and/or a private Google Sheet. Deployed on **Vercel**.
 
@@ -27,14 +35,20 @@ Status: functionally rich **trial / pre-commercial**. Roadmaps:
   - `vercel.json` is in **this** directory — Vercel's project **Root Directory must be
     set to `O/ny_rental_google_places_fixed_V2`**.
 - **Dev shell is PowerShell on Windows.** Use PowerShell syntax (`$env:VAR`, `$null`,
-  backtick continuation) or the Bash tool for POSIX. `node`/`npm` are on the user's
-  interactive PATH but **not** in non-interactive agent shells — the user runs
-  `npm run typecheck/test/lint/build` and reports results; verify with them, don't assume.
-- **Zero-new-dependency bias so far.** Recent work avoided adding npm packages
-  (validation is hand-written, not zod; rate-limiting/caches are in-memory, not KV)
-  because deps couldn't be installed/locked in-session. When a task genuinely needs a
-  dependency (Vercel KV, Sentry, Auth.js, Stripe, Playwright), say so explicitly and let
-  the user `npm install` — don't fake it with a fragile in-memory shim silently.
+  backtick continuation) or the Bash tool for POSIX. `node`/`npm` are **not** on the
+  non-interactive agent PATH, but they live at `C:\Program Files\nodejs` — prefix the
+  PATH and run directly: `$env:PATH = 'C:\Program Files\nodejs;' + $env:PATH; npm run
+  typecheck` (works for test/build too; `.claude/launch.json` + `.claude/dev-launch.cmd`
+  use the same trick for the preview dev server). Verify yourself, don't assume.
+- **Lean-dependency bias.** Most hardening is hand-written (validation, not zod;
+  shared rate limiting via Upstash REST `fetch`, no client lib). The one installed
+  monitoring dep is **`@sentry/nextjs`** (config at repo root: `sentry.{client,server,
+  edge}.config.ts` + `instrumentation.ts`; `next.config.mjs` is wrapped in
+  `withSentryConfig`; disabled unless `NEXT_PUBLIC_SENTRY_DSN` is set). `npm install`
+  works from agent shells (PATH-prefix trick below) but network can be flaky
+  (ECONNRESET → retry with `--fetch-retries=5`). When a task genuinely needs another
+  dependency (Auth.js, Stripe, Playwright), say so explicitly — don't fake it with a
+  fragile shim silently.
 
 ## Commands
 
@@ -84,7 +98,8 @@ build`. CI runs lint→typecheck→test→build on PRs/pushes (see `.github/work
 - `app/listings/page.tsx` → `components/ListingsView.tsx` — searchable/sortable building list.
 - `app/legal/[slug]/page.tsx`, `app/legal/page.tsx` — legal pages from [`lib/legal.ts`](lib/legal.ts).
 - `app/error.tsx`, `app/global-error.tsx` — route + root error boundaries (recoverable UI).
-- `app/robots.ts`, `app/sitemap.ts` — SEO (sitemap includes `/listings` + each building).
+- `app/robots.ts`, `app/sitemap.ts` — SEO (sitemap includes `/listings`, `/legal` + each
+  legal page, and each building).
 - API (`app/api/`):
   - `buildings/[id]` GET — public building detail.
   - `floorplans` GET — all buildings + floor plans (public) for the advanced filter.
@@ -117,7 +132,13 @@ build`. CI runs lint→typecheck→test→build on PRs/pushes (see `.github/work
 - [`AdvancedSearch.tsx`](components/AdvancedSearch.tsx) + [`MatchingResultsPanel.tsx`](components/MatchingResultsPanel.tsx)
   — advanced share-budget filter (see below).
 - [`ListingsView.tsx`](components/ListingsView.tsx), [`AdminActions.tsx`](components/AdminActions.tsx),
-  [`AdminLogin.tsx`](components/AdminLogin.tsx).
+  [`AdminLogin.tsx`](components/AdminLogin.tsx), [`ConsentBanner.tsx`](components/ConsentBanner.tsx)
+  (first-visit privacy notice, mounted in `app/layout.tsx`).
+- [`components/useDialog.ts`](components/useDialog.ts) — `useFocusTrap` (modal: trap Tab,
+  focus first control, Esc closes + restores focus) and `useEscapeKey` (non-modal: Esc only).
+- **Code-splitting**: `RentalApp` lazy-loads `DetailPanel`, `CompareDock`, `LeadModal`, and
+  `AdvancedSearch` via `next/dynamic` — the first-paint bundle is just the map + chrome;
+  those chunks load on demand. Keep heavy/non-first-paint UI lazy.
 
 ### Rent split & advanced filter
 - [`lib/rent-split.ts`](lib/rent-split.ts) is the **single source of truth** for split math:
@@ -144,10 +165,19 @@ build`. CI runs lint→typecheck→test→build on PRs/pushes (see `.github/work
   `/admin` banner (non-throwing — never crash the site at import time).
 
 ### Request guards & validation (public POST endpoints)
-- [`lib/api-guard.ts`](lib/api-guard.ts): `clientIp`, `isAllowedOrigin` (same-origin always
-  allowed; cross-origin checked against `ALLOWED_APP_ORIGINS`; **fails open** when unset so
-  the site's own calls never break), and an **in-memory** `rateLimit` (per-instance,
-  best-effort on serverless — KV is the upgrade).
+- [`lib/api-guard.ts`](lib/api-guard.ts):
+  - `clientIp` — anti-spoof: prefers platform-set headers (`x-vercel-forwarded-for`,
+    then `x-real-ip`); the `x-forwarded-for` fallback takes the **last** hop (appended
+    by the trusted proxy), never the client-controlled first entry.
+  - `isAllowedOrigin` — same-origin always allowed; cross-origin checked against
+    `ALLOWED_APP_ORIGINS`; **fails open** when unset so the site's own calls never break.
+  - `rateLimitShared(key, limit, windowMs)` — **the limiter routes should use.** When
+    `UPSTASH_REDIS_REST_URL`+`UPSTASH_REDIS_REST_TOKEN` are set it runs a fixed-window
+    counter in Upstash Redis via plain `fetch` (no npm dep; pipeline INCR/PEXPIRE-NX/PTTL,
+    2s timeout), shared across serverless instances. Unset or on any Upstash error it
+    falls back to the in-memory `rateLimit` (per-instance, best-effort) so requests never
+    fail because the limiter is down. Used by `leads`, `analytics`, and `admin/login`
+    (5 attempts / 15 min per IP — brute-force guard).
 - [`lib/validation.ts`](lib/validation.ts): hand-written (no zod) `validateLead` /
   `validateAnalyticsEvent` — length caps, control-char stripping, event-type allow-pattern,
   and a **honeypot** (`website` field) on the lead form that silently drops bots.
@@ -161,16 +191,38 @@ build`. CI runs lint→typecheck→test→build on PRs/pushes (see `.github/work
   missing, writes 503 and `/admin` shows 0 → the "metrics are 0" class of bug. The
   `leads`/`analytics_events` tabs are **auto-created on first write**
   (`ensureOperationalTabs` in `google-sheets-write.ts`); the service account needs **Editor**.
-- Sheet cache + Places refresh cache + rate-limit buckets are all **per-instance memory**
-  in prod. Migrating these to Vercel KV is the main scaling item.
+- Sheet cache + Places refresh cache are **per-instance memory** in prod; rate limiting
+  is per-instance too **unless** Upstash REST env vars are set (then it's shared — see
+  Request guards). Migrating the remaining caches to KV is the main scaling item.
 
 ### i18n
 - [`lib/i18n.ts`](lib/i18n.ts) holds `copy.en` / `copy.zh` and the `CopyKey`/`Translate`
   types. **The two languages MUST have identical key sets** — `copy[language][key]` is a
   typed union index; a missing key breaks typecheck. RentalApp/ListingsView use this table.
-- Some newer components (`AdvancedSearch`, `MatchingResultsPanel`) carry a **local** `copy`
-  table keyed by `language` instead of the global one, to avoid global-parity churn.
-  Either pattern is fine; match the file you're editing.
+- Some newer components (`AdvancedSearch`, `MatchingResultsPanel`, `ConsentBanner`)
+  carry a **local** `copy` table keyed by `language` instead of the global
+  one, to avoid global-parity churn. Either pattern is fine; match the file you're editing.
+
+### Legal & compliance
+- [`lib/legal.ts`](lib/legal.ts) holds all legal copy as data: `LegalPage[]` with
+  `effectiveDate` and `sections` of `{ title, body: string[], bullets? }`. 11 pages —
+  Terms, Privacy (CCPA/CPRA + NY SHIELD), Cookie, Fair Housing, Agency & Standardized
+  Operating Procedures (NY RPL §442-h), Accessibility (ADA/WCAG), plus fees/data/platform/
+  contact/maps disclaimers. Rendered by `app/legal/[slug]/page.tsx`.
+- These are **industry-aligned templates, NOT final legal text**: counsel review is
+  required before launch — do not present them as final. Operator identity (legal name,
+  privacy/contact emails) is **env-driven**: `OPERATOR_LEGAL_NAME`,
+  `OPERATOR_PRIVACY_EMAIL`, `OPERATOR_CONTACT_EMAIL` (read at module load in
+  `lib/legal.ts`). Unset → bracketed placeholders render as-is and `/admin` shows a
+  warning via `productionEnvProblems()`. A few counsel-decision placeholders (arbitration
+  clause, retention periods, agency licensing) intentionally remain in the text.
+
+### Accessibility (a11y)
+- Dialogs/panels use the hooks in [`components/useDialog.ts`](components/useDialog.ts).
+  True modals (`LeadModal`, image zoom) use `useFocusTrap` (Tab trap, initial focus,
+  Esc closes + restores focus, `role="dialog"`/`aria-modal`); non-modal side panels
+  (`AdvancedSearch`, `DetailPanel`) use `useEscapeKey` (Esc only, no trap). Keep new
+  dialogs consistent. Not yet covered: skip-links, map-marker keyboard nav, full contrast audit.
 
 ## Conventions
 
@@ -185,7 +237,10 @@ build`. CI runs lint→typecheck→test→build on PRs/pushes (see `.github/work
   images are click-to-zoom via `useImageZoom()`. Migrating to `next/image` needs the host
   added to `next.config.mjs` `remotePatterns` (only 7 hosts whitelisted today).
 - **Tests**: `node:test` only (no jest/vitest), compiled via `tsconfig.test.json` into
-  `.test-dist/`. Name `*.test.ts` under `tests/`. Coverage is **lib-only** today.
+  `.test-dist/`. Name `*.test.ts` under `tests/`. Coverage is **lib-only** but covers each
+  route's decision logic without importing the Next runtime: rent-split, filter-floorplans,
+  validation, api-guard, admin-auth, persistence-policy, public-dataset, server-store,
+  google-sheets-write. Handler integration / component / E2E need Playwright (not added).
 - **Secrets**: never log API keys/tokens. Reuse the `AIza...` / `ya29....` redaction in
   `google-sheets-write.ts` / `admin/sync` for any new external-API errors.
 - **Env**: never use `NEXT_PUBLIC_*` for secrets (bundled into the browser). Keep
@@ -207,6 +262,13 @@ ADMIN_SESSION_SECRET            # HMAC secret for the session cookie (>=32 bytes
 ADMIN_SYNC_TOKEN                # x-admin-sync-token for manual/external sync
 CRON_SECRET                     # Vercel Cron bearer for GET /api/admin/sync
 ENABLE_LOCAL_DATA_STORE=0       # allow .data writes in prod (normally 0 on Vercel)
+UPSTASH_REDIS_REST_URL          # optional: enables shared cross-instance rate limiting
+UPSTASH_REDIS_REST_TOKEN        # optional: Upstash REST token (pairs with the URL)
+OPERATOR_LEGAL_NAME             # legal-page operator identity (else placeholders render)
+OPERATOR_PRIVACY_EMAIL          # privacy contact on legal pages
+OPERATOR_CONTACT_EMAIL          # general contact on legal pages
+NEXT_PUBLIC_SENTRY_DSN          # optional: enables Sentry (unset = SDK fully disabled)
+SENTRY_AUTH_TOKEN               # optional, build-time only: source-map upload
 ```
 
 `vercel.json` defines a cron: `GET /api/admin/sync` every 4h (`0 */4 * * *`). Hobby plan
@@ -236,9 +298,14 @@ from CDNs) — add it in report-only mode first.
   push or open PRs unless explicitly asked.**
 
 ## What's NOT done yet (commercial-grade gaps)
-Data layer is CSV/Sheets (needs a real DB); rate-limit/caches are in-memory (need Vercel
-KV); single admin password (needs multi-role auth); legal pages are placeholder-grade
-(need lawyer-reviewed TOS/privacy/Fair-Housing/agency-disclosure/ADA); tests are lib-only
-(need API/component/E2E); no error monitoring (Sentry), no CSP, native `<img>` not
-`next/image`, no a11y pass. See `DEVELOPMENT_ROADMAP.md` Phases 3–5 and the
-"commercial-grade" notes.
+Data layer is CSV/Sheets (needs a real DB); Sheet/Places caches are in-memory (need KV;
+rate limiting is already shared **when Upstash env is configured**, in-memory otherwise);
+single admin password (needs multi-role auth — Auth.js/Clerk); legal pages are
+**template drafts** (operator identity is env-driven now, but counsel review is still
+required); tests are lib-only (need
+handler/component/E2E via Playwright); error monitoring is wired (`@sentry/nextjs`) but
+inert until `NEXT_PUBLIC_SENTRY_DSN` is set; no CSP; images use
+native `<img>` (blanket `next/image` is impractical with data-driven external hosts —
+needs an image CDN); a11y covers dialogs but not skip-links / map-marker keyboard nav /
+full contrast audit. The remaining items mostly need a deliberate `npm install` (Vercel
+KV, Sentry, Auth.js, Playwright). See `DEVELOPMENT_ROADMAP.md` and the commercial-grade notes.

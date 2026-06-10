@@ -242,7 +242,7 @@ export function RentalApp({ dataset }: RentalAppProps) {
     const url = `${window.location.origin}${path}${params.toString() ? `?${params.toString()}` : ''}`;
     track('share_click', { buildingId: selectedBuildingId, unitId: selectedUnitId });
     if (navigator.share) {
-      await navigator.share({ title: selectedUnit ? unitTitle(selectedUnit) : selectedBuilding?.name || 'NY Rental Map', url }).catch(() => undefined);
+      await navigator.share({ title: selectedUnit ? unitTitle(selectedUnit) : selectedBuilding?.name || 'UniNest', url }).catch(() => undefined);
     } else {
       await navigator.clipboard?.writeText(url).catch(() => undefined);
     }
@@ -306,15 +306,18 @@ export function RentalApp({ dataset }: RentalAppProps) {
     <div className="appRoot">
       <header className="topbar">
         <div className="brand">
-          <div className="brandMark">NY</div>
+          <div className="brandMark">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-icon.svg" alt="UniNest logo" />
+          </div>
           <div>
-            <h1>NY Rental Map</h1>
+            <h1>UniNest</h1>
             <p>{dataset.summary.buildingCount} {t('buildings')} · {dataset.summary.unitCount} {t('units')} · {dataset.summary.poiCount} {t('poisLoaded')}</p>
           </div>
         </div>
         <nav className="topActions">
           <button type="button" onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}><Languages size={18} />{language === 'en' ? '中文' : 'EN'}</button>
-          <button type="button" onClick={openAdvanced}><SlidersHorizontal size={18} />{language === 'en' ? 'Filter' : '筛选'}</button>
+          <button type="button" className="filterAction" onClick={openAdvanced}><SlidersHorizontal size={18} />{language === 'en' ? 'Filter' : '筛选'}</button>
           <Link href="/listings"><List size={18} />{t('listings')}</Link>
           <Link href="/legal"><ShieldCheck size={18} />{t('legal')}</Link>
         </nav>

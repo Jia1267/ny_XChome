@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NY Rental Map">
-  <rect width="64" height="64" rx="14" fill="#2563eb"/>
-  <path d="M16 47V17h8l16 18V17h8v30h-8L24 29v18z" fill="#fff"/>
-  <circle cx="46" cy="18" r="5" fill="#fbbf24"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="UniNest">
+  <rect width="120" height="120" rx="26" fill="#1F3864"/>
+  <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 58 L60 23 L97 57"/>
+    <path d="M22 58 H32 V84 Q32 95 43 95 H52 V81 A8 8 0 0 1 68 81 V95 H77 Q88 95 88 84 V40"/>
+  </g>
+  <circle cx="88" cy="29" r="5" fill="#ffffff"/>
+  <g fill="#D9A441">
+    <rect x="49" y="46" width="8" height="8" rx="1.5"/>
+    <rect x="60" y="46" width="8" height="8" rx="1.5"/>
+    <rect x="49" y="57" width="8" height="8" rx="1.5"/>
+    <rect x="60" y="57" width="8" height="8" rx="1.5"/>
+  </g>
 </svg>
