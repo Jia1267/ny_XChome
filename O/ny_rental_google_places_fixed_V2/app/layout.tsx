@@ -5,24 +5,24 @@ import { ConsentBanner } from '@/components/ConsentBanner';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ny-rental-map.example.com'),
   title: {
-    default: 'NY Rental Map | Student Apartments Near NYC Campuses',
-    template: '%s | NY Rental Map'
+    default: 'UniNest | Student Apartments Near NYC Campuses',
+    template: '%s | UniNest'
   },
   description: 'Compare NYC student rentals near Columbia, NYU, Baruch, and Pratt with commute filters, verified listing context, nearby POIs, and direct inquiry capture.',
   icons: {
     icon: '/favicon.svg'
   },
   openGraph: {
-    title: 'NY Rental Map | Student Apartments Near NYC Campuses',
+    title: 'UniNest | Student Apartments Near NYC Campuses',
     description: 'Map-first NYC apartment discovery for students, with commute rings, listing confidence, unit comparison, and inquiry capture.',
     type: 'website',
-    images: ['/og-image.svg']
+    images: ['/og-image.png']
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NY Rental Map | Student Apartments Near NYC Campuses',
+    title: 'UniNest | Student Apartments Near NYC Campuses',
     description: 'Map-first NYC apartment discovery for students.',
-    images: ['/og-image.svg']
+    images: ['/og-image.png']
   }
 };
 

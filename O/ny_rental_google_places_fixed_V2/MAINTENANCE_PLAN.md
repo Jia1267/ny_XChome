@@ -239,7 +239,7 @@
 - [x] 0.1 CI 流水线 — `.github/workflows/ci.yml`（路径过滤到本项目，lint/typecheck/test/build）
 - [x] 0.2 清理构建产物 — 已 untrack `tsconfig.tsbuildinfo` 并加入 `.gitignore`
 - [x] 0.3 依赖审计基线 — CI 加 `npm audit --omit=dev --audit-level=high`（advisory，首次 CI 跑出基线）
-- [x] 1.1 POST 限流 ⭐ — `lib/api-guard.ts` 内存限流（leads 8/10min、analytics 600/5min）。⚠️ serverless 上是 per-instance 尽力而为，后续升级 Vercel KV
+- [x] 1.1 POST 限流 ⭐ — `lib/api-guard.ts` `rateLimitShared`（leads 8/10min、analytics 600/5min、admin login 5/15min）。配置 `UPSTASH_REDIS_REST_URL/TOKEN` 时为跨实例共享限流（零依赖 REST），未配置回退内存版；`clientIp` 已防 XFF 伪造（取可信末跳）
 - [x] 1.2 输入校验 — `lib/validation.ts`（手写零依赖，非 zod）：字段长度上限 + 控制字符清洗 + event type 白名单
 - [x] 1.3 蜜罐反垃圾 — LeadModal 隐藏 `website` 字段，服务端命中即静默丢弃
 - [x] 1.4 安全响应头 — `next.config.mjs` headers()（HSTS / nosniff / X-Frame-Options / Referrer-Policy / Permissions-Policy；CSP 留待 report-only 灰度）
@@ -248,7 +248,7 @@
 - [~] 2.1 测试 — 已补核心逻辑单测（rent-split / filter-floorplans / validation / api-guard），覆盖各路由的校验/限流/Origin/筛选决策；handler 集成测试 + E2E(Playwright) 待依赖
 - [ ] 2.2 依赖更新
 - [ ] 2.3 统一错误处理
-- [ ] 2.4 错误监控（可选）
+- [x] 2.4 错误监控 — `@sentry/nextjs` 已接（client/server/edge config + instrumentation.ts + withSentryConfig + global-error 上报）。未设 `NEXT_PUBLIC_SENTRY_DSN` 时 SDK 完全停用；设 DSN 即启用
 - [x] 3.1 拆分 RentalApp ⭐ — 已拆到 `components/rental/*` + `lib/i18n.ts`
 - [x] 3.2 错误边界 UI — `app/error.tsx` + `app/global-error.tsx` + 详情加载失败"重试"
 - [ ] 3.3 a11y

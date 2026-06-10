@@ -1,6 +1,8 @@
-# NY Rental Map V2
+# UniNest (NY Rental Map V2)
 
 This folder is the Next.js + React + TypeScript rebuild of the previous Leaflet prototype.
+The user-facing brand is **UniNest** (logo assets live in `public/`); the folder/repo name
+keeps the historical "NY Rental Map V2".
 
 ## What changed
 
@@ -74,7 +76,20 @@ GOOGLE_SHEET_ID=your_private_sheet_id
 GOOGLE_SERVICE_ACCOUNT_EMAIL=service-account@project.iam.gserviceaccount.com
 GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
 ENABLE_LOCAL_DATA_STORE=0
+# Optional but recommended in production: shared cross-instance rate limiting.
+UPSTASH_REDIS_REST_URL=https://your-db.upstash.io
+UPSTASH_REDIS_REST_TOKEN=your-upstash-rest-token
+# Operator identity rendered on /legal pages (placeholders shown until set).
+OPERATOR_LEGAL_NAME="Your Company LLC"
+OPERATOR_PRIVACY_EMAIL=privacy@your-domain.example
+OPERATOR_CONTACT_EMAIL=contact@your-domain.example
+# Optional: Sentry error monitoring (unset = disabled).
+NEXT_PUBLIC_SENTRY_DSN=
 ```
+
+Rate limiting: without Upstash the limiter is per-instance memory (best-effort on
+serverless). With the two Upstash variables set, leads/analytics/admin-login share one
+fixed-window counter across all instances — no npm dependency needed (plain REST).
 
 Do not use `NEXT_PUBLIC_GOOGLE_PLACES_API_KEY`. A `NEXT_PUBLIC_*` key is bundled into browser code.
 

@@ -4,6 +4,7 @@
 
 import { adminPassword, adminSecretConfigured } from './admin-auth';
 import { googleSheetsWritableConfigured } from './google-sheets-write';
+import { operatorInfoConfigured } from './legal';
 
 export function isProduction() {
   return process.env.NODE_ENV === 'production';
@@ -44,6 +45,9 @@ export function productionEnvProblems(): string[] {
   }
   if (!status.siteUrl) {
     problems.push('NEXT_PUBLIC_SITE_URL not set — share links and sitemap use a placeholder domain.');
+  }
+  if (!operatorInfoConfigured()) {
+    problems.push('Operator identity not set (OPERATOR_LEGAL_NAME / OPERATOR_PRIVACY_EMAIL / OPERATOR_CONTACT_EMAIL) — legal pages render bracketed placeholders.');
   }
   return problems;
 }

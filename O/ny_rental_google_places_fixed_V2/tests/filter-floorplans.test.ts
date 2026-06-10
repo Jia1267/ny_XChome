@@ -45,7 +45,8 @@ test('matches a 2B via 3-person share for a 1500-1700 budget (spec example)', ()
   const threeShare = tower!.matchedOptions.find(option => option.occupants === 3);
   assert.ok(threeShare, '3-person share should be a matched option');
   assert.deepEqual(threeShare!.pricesPerPerson, [1867, 1667, 1467]);
-  assert.deepEqual(threeShare!.matchedPrices, [1667, 1467]);
+  // 1467 sits below the 1500 floor, so only the middle tier matches the budget.
+  assert.deepEqual(threeShare!.matchedPrices, [1667]);
 });
 
 test('groups results by building and counts floor plans', () => {

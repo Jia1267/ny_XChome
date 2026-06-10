@@ -99,14 +99,18 @@ a {
 .brandMark {
   width: 48px;
   height: 48px;
-  border-radius: 8px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
-  color: white;
-  font-weight: 900;
-  font-size: 21px;
-  background: linear-gradient(145deg, #2f6de6, #50b8f3);
-  box-shadow: 0 10px 22px rgba(47, 109, 230, 0.2);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 16px rgba(31, 56, 100, 0.12);
+}
+
+.brandMark img {
+  width: 82%;
+  height: 82%;
+  display: block;
 }
 
 .brand h1 {
@@ -1416,6 +1420,12 @@ a {
   font-weight: 900;
 }
 
+.adminLoginBrand {
+  width: 210px;
+  align-self: center;
+  margin-bottom: 2px;
+}
+
 .adminLoginCard h1 {
   margin: 0;
   font-size: 34px;
@@ -1854,7 +1864,6 @@ a {
   .brandMark {
     width: 42px;
     height: 42px;
-    font-size: 18px;
   }
 
   .brand h1 {
@@ -1871,10 +1880,6 @@ a {
     flex: 0 0 auto;
   }
 
-  .topActions button:nth-child(2) {
-    display: none;
-  }
-
   .topActions button,
   .topActions a {
     min-height: 38px;
@@ -1886,6 +1891,18 @@ a {
 
   .topActions svg {
     margin: 0;
+  }
+
+  /* Keep the advanced-filter entry labeled and prominent on mobile — an
+     unlabeled icon here made the feature undiscoverable on phones. */
+  .topActions .filterAction {
+    width: auto;
+    min-width: 0;
+    padding: 0 12px;
+    font-size: 13px;
+    background: var(--blue, #2563eb);
+    border-color: var(--blue, #2563eb);
+    color: #fff;
   }
 
   .mapShell {

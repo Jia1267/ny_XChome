@@ -27,7 +27,7 @@ function serverResponds() {
 
 async function main() {
   if (await serverResponds()) {
-    console.log(`NY Rental Map V2 is already running at ${LOCAL_URL}`);
+    console.log(`UniNest (NY Rental Map V2) is already running at ${LOCAL_URL}`);
     console.log('Refresh the browser tab, or stop the existing server before starting another one.');
     return;
   }

@@ -159,7 +159,7 @@ export default async function AdminPage() {
     <main className="adminPage">
       <header className="adminTopbar">
         <div>
-          <Link href="/">NY Rental Map</Link>
+          <Link href="/">UniNest</Link>
           <h1>Operations panel</h1>
           <p>Private dashboard for broker trials, listing trust, leads, and Google Sheet sync.</p>
         </div>

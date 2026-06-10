@@ -273,5 +273,5 @@ export function MapCanvas({
     }
   }, [leaflet, schools, selectedSchoolId, commuteMode]);
 
-  return <div ref={containerRef} className="mapCanvas" aria-label="NY rental map" />;
+  return <div ref={containerRef} className="mapCanvas" aria-label="UniNest rental map" />;
 }
